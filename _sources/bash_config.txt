@@ -26,12 +26,28 @@ Symlinks
     ln -s "${SOURCE}/.bashrc" ~/.bashrc
     ln -s "${SOURCE}/.bash_aliases" ~/.bash_aliases
 
+    # git configs
+    ln -s "${SOURCE}/.gitconfig" ~/.gitconfig
+    ln -s "${SOURCE}/.gitignore" ~/.gitignore
+
+    # to colorize my $less command
+    ln -s "${SOURCE}/.lessfilter" ~/.lessfilter
+
 ***************
 bashrc contents
 ***************
 .. todo:: clean this unholy mess...
 
 .. literalinclude:: ./bash_config/sbia-pc-125/.bashrc
+    :language: bash
+    :linenos:
+
+*****************
+gitconfig content
+*****************
+.. todo:: clean this unholy mess...
+
+.. literalinclude:: ./bash_config/sbia-pc-125/.gitconfig
     :language: bash
     :linenos:
 
