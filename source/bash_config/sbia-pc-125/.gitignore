@@ -1,0 +1,39 @@
+#| /TODO # only ignore the root TODO file, not subdir/TODO
+**~
+#| A question mark (?) matches a single character
+
+
+#.\#.emacs # backup files in windows system 
+#| You can negate a pattern by starting it with an exclamation point (!)
+*mexglx
+Rlibrary/
+*mexa64
+*.mat
+#| Brackets enclosing characters separated by a hyphen ([0-9]) matches any character between them.
+\#*\#
+Dataset
+#| !lib.a # but do track lib.a, even though you're ignoring .a files above
+.ssh
+*mexmac
+*mexw32
+*~
+*\#*
+*mexmaci
+#| build/ # ignore all files in the build/ directory
+#| End patterns with a forward slash (/) to specify a directory
+#|--- Examples ---|#
+*.nii
+#--------------------------------------#
+#| doc/*.txt # ignore doc/notes.txt, but not doc/server/arch.txt
+*.o
+*.a
+*.fig
+#| *.a # no .a files
+.Rhistory
+*mexmaci64
+#| *.[oa] # ignore file ending in .o or .a
+*mexw64
+*.asv
+*.eps
+*.png
+*.pyc

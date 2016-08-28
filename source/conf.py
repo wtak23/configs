@@ -74,7 +74,7 @@ master_doc = 'index'
 # General information about the project.
 project = u'My Configs'
 copyright = u'2016'
-author = u''
+author = u'Takanori Watanabe'
 
 # The version info for the project you're documenting, acts as replacement for
 # |version| and |release|, also used in various other places throughout the

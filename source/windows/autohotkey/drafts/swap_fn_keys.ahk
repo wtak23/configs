@@ -1,0 +1,25 @@
+; http://answers.microsoft.com/en-us/windows/forum/windows_8-hardware/how-to-invert-wedge-keyboard-function-keys/7a7a03ba-a801-4560-ac3c-b21ada91a7ff?page=2
+Media_Play_Pause::F1
+Volume_Mute::F2
+Volume_Down::F3
+Volume_Up::F4
+<+#F21::F5
+<!<#F21::F6
+<^<#F21::F7
+<#F21::F8
+PrintScreen::F9
+Home::F10
+End::F11
+PgUp::F12
+F1::Media_Play_Pause
+F2::Volume_Mute
+F3::Volume_Down
+F4::Volume_Up
+F5::<+#F21
+F6::<!<#F21
+F7::<^<#F21
+F8::<#F21
+F9::PrintScreen
+F10::Home
+F11::End
+F12::PgUp
