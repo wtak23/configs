@@ -26,6 +26,7 @@ Also enjoy being able to version control all of my ``rc`` files.
     sublime.rst
     R.rst
     windows.rst
+    trouble-shooting.rst
     misc.rst
 
 These substitutions are predefined in Sphinx
