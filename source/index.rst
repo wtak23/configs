@@ -9,9 +9,9 @@ Also enjoy being able to version control all of my ``rc`` files.
     :numbered:
 
     python.rst
-    gitconfig.rst
     bash_config.rst
     sublime.rst
+    misc.rst
 
 These substitutions are predefined in Sphinx
 

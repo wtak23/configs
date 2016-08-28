@@ -1,0 +1,131 @@
+#| http://stackoverflow.com/questions/2183900/how-do-i-prevent-git-diff-from-using-a-pager
+#| last update: 2/26/2013
+[user]
+	name = Takanori Watanabe (PC)
+	email = takwatanabe2004@gmail.com
+[core]
+	editor = "emacs -nw"
+	pager = cat
+	symlinks = false
+	autocrlf = false # see Progit pdf-pg.152
+	filemode = false # to suppress unix file permission change in windows 
+[color]
+     branch = true
+     diff = true
+     status = true
+     pager = true
+[alias]
+	##############################################################################
+	# Things i added post july2015
+	##############################################################################
+	# http://stackoverflow.com/questions/3801321/git-list-only-untracked-files-also-custom-commands
+	lsi = "!git ls-files -o --exclude-standard $1"
+	# aaaaa = !git add $(git ls-files -o --exclude-standard)
+	
+	#=========================================================================#
+	# Useful references
+	# - https://git.wiki.kernel.org/index.php/Aliases
+	#=========================================================================#
+	sortdiff = !sh -c 'git diff "$@" | grep "^[+-]" | sort --key=1.2 | uniq -u -s1'
+	unstage = "!git reset HEAD $"
+
+	pu = push -u
+	s = status
+
+	###########################################################################
+	# ls-files are handy for showing only: (08/20/2014)
+	# 	-d: deleted files
+	#	-m: modified files
+	#	-o: untracked files
+	#-------------------------------------------------------------------------#
+	# - use less as default, lsc to output on terminal (c for cat)
+	#-------------------------------------------------------------------------#
+	ls = "!git ls-files $1 | less -rN"
+	lsc = "!git ls-files $1"
+	###########################################################################
+
+	sl = "!git status | less -rN"
+	########## add ##########	
+	ai = add -i
+	aa = add -A
+	# au = add -u
+	
+	#| add all and comment (use with care)
+	aac = "!git add -A && git commit -m"
+	
+	#| add, then display status
+	a = "!git add $1 && git status"
+	
+	########## branches ##########	
+	b = branch
+	ba = branch -a
+	bav = branch -av
+
+	#| show commit history of branches (http://www.kernel.org/pub//software/scm/git/docs/git-show-branch.html)
+	sb = "!git show-branch --color=always | less -rN"
+
+	#| same as above, but for remote branches
+	sbr = "!git show-branch -r --color=always | less -rN"
+
+	#| same as above, but for all branches
+	sbr = "!git show-branch -a --color=always | less -rN"
+	
+	#| display only the names of the files that went through changes between two branches (remote branches are allowed)
+	#| Example: $ git dfname branch1 branch2
+	#|		  => this will show the file changed FROM branch1 to branch2
+	#| 		  => (eg: D file1.txt --- file1 that was in branch1 is deleted in branch2)
+	dfname = "!git diff --name-status $1..$2"
+	# A: addition of a file
+	# C: copy of a file into a new one
+	# D: deletion of a file
+	# M: modification of the contents or mode of a file
+	# R: renaming of a file
+	# T: change in the type of the file
+	# U: file is unmerged (you must complete the merge before it can be committed)
+	# X: "unknown" change type (most probably a bug, please report it)
+	
+	########## commits ##########	(9/23/2013 - added --reset-author so that amended commits will receive new timestamps)
+	c = commit
+	ca = commit --amend --reset-author
+	can = commit --amend --no-edit --reset-author # (09/19/2013) http://stackoverflow.com/questions/10237071/git-commit-amend-use-existing-message-no-editor-interaction
+	call = "!git add -A && git commit --amend --no-edit --reset-author" # (09/22/2013) add all and commit ammend with no edit
+	# cm = "!git commit -m $1" #| don't know how to allow argument with quotations...ask Dan in the future 2/23/2013
+	cm = commit -m
+	cam = commit --amend -m
+	
+	r = remote
+	rv = remote -v
+	
+	########## diffs ##########
+	d = diff --color=always
+	dc = diff --cached --color=always
+	
+	#| suffix "l" for "less"
+	dl = "!git diff --color=always | less -rN"	
+	dcl = "!git diff --cached --color=always | less -rN"
+	
+	########## logs ########## (see progit-pdf-pg25)
+	#| suffix "n" for "number"
+	ln = "!git log $1 --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %Creset' --abbrev-commit --date=relative --color=always"
+	ll = "!git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %Creset' --abbrev-commit --date=relative --color=always | less -rN"
+	l = "!git log -5 --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %Creset' --abbrev-commit --date=relative --color=always && echo '' "	
+	
+	########## other useful commands ##########	
+	#| checkout a file from a different branch, and give it a new file name 
+	#| ($1 = branch-names, $2 = filename $3 = output filename)
+	#| Example: $ git cho takanori-pc/develop tinit.m tinit_tmp.m
+	
+	#| ERROR: output ends messed up...
+	#|   Apparently it's not recognizing colon character ":" ...
+	#| manually do this...easy enough =)
+	#| Example: 
+	#|  $ git show takanori-pc/master:tinit.m > tinit_pc.m
+	#cho = "!git show $1:$2 > $3"
+	#sfile = "!git show $1:$2 --color=always" #| manually do pipe to output
+	
+	#| display the latest commits fo all branches (with their commit time)
+	ball = "!bash git_bra.sh" 
+
+	fall = fetch --all
+[push]
+	default = matching

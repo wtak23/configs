@@ -28,14 +28,14 @@ File-tree
 
     3 directories, 4 files
 
-- `synced_by_folders <https://github.com/wtak23/configs/tree/master/source/configs/sublime/synced_by_folder>`_
+- `synced_by_folders <https://github.com/wtak23/configs/tree/master/source/sublime/synced_by_folder>`_
 
   - contains files that must directly reside under ``~/.config/sublime-text-3/Packages/User`` (subfolders not allowed)
   - examples: ``*.sublime-settings``, ``*.sublime-macros``
-- `snippets <https://github.com/wtak23/configs/tree/master/source/configs/sublime/snippets>`_
+- `snippets <https://github.com/wtak23/configs/tree/master/source/sublime/snippets>`_
 
   - contains my sublime **snippets** (gawd I love this functionality)
-- `synced_by_files <https://github.com/wtak23/configs/tree/master/source/configs/sublime/synced_by_files>`_
+- `synced_by_files <https://github.com/wtak23/configs/tree/master/source/sublime/synced_by_files>`_
 
   - contains files that can be synced as subfolders in ``User`` directory in Sublime
 
