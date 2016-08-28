@@ -1,13 +1,17 @@
-Sphinx Skeleton
-===============
-Skeleton for creating my doc.
+Computer Setup Notes
+====================
+Personal note for keeping track of my computer **configs**, which I sync using symlinks.
+
+Also enjoy being able to version control all of my ``rc`` files.
 
 .. toctree::
-   :maxdepth: 2
-   :numbered:
-   :caption: Table of Contents
+    :maxdepth: 2
+    :numbered:
 
-   file1.rst
+    python.rst
+    gitconfig.rst
+    bash_config.rst
+    sublime.rst
 
 These substitutions are predefined in Sphinx
 
@@ -15,4 +19,3 @@ These substitutions are predefined in Sphinx
 - ``|release|`` = |release|
 - ``|today|`` = |today|
 
-All modules for which code is available (`link <./_modules/index.html>`_)
