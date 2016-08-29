@@ -59,7 +59,7 @@ symlink summary
 
     # === matplotlib rc ==== 
     MPL_TARGET=$(ipython -c "import matplotlib as mpl; from os.path import dirname; print dirname(mpl.matplotlib_fname())")
-    ln -s "${SOURCE}/matplotlibrc" "${MPL_TARGET}/"
+    ln -s "${SOURCE}/matplotlibrc" "${MPL_TARGET}"
 
     # === custom.js ====
     # (I need to remind myself what exactly this was for...)
