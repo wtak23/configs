@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>6. Miscellaneous &mdash; My Configs</title>
+  <title>7. Miscellaneous &mdash; My Configs</title>
   
 
   
@@ -26,15 +26,15 @@
 
   
   
-    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+    <link rel="stylesheet" href="_static/css/my_theme.css" type="text/css" />
   
 
   
 
   
     <link rel="top" title="My Configs" href="index.html"/>
-        <link rel="next" title="6.1. cuda-installation (old)" href="misc/cuda_stuffs.html"/>
-        <link rel="prev" title="5.1. Autohotkey" href="windows/autohotkey/AHK_helper.html"/> 
+        <link rel="next" title="7.1. cuda-installation (old)" href="misc/cuda_stuffs.html"/>
+        <link rel="prev" title="6. Trouble-shooting notes" href="trouble-shooting.html"/> 
 
   
   <script src="_static/js/modernizr.min.js"></script>
@@ -80,13 +80,25 @@
                 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="python.html">1. Python</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="python/python_sbia-pc125.html">1.1. sbia-pc125 workstation</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="python/python_sbia-pc125.html#old-notes">1.1.1. Old-notes</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="python/python_sbia-pc125.html#feb-24-2016">1.1.1.1. Feb 24, 2016</a></li>
-<li class="toctree-l4"><a class="reference internal" href="python/python_sbia-pc125.html#stuffs-installed-after-03-30-2016">1.1.1.2. Stuffs installed after 03-30-2016</a><ul>
-<li class="toctree-l5"><a class="reference internal" href="python/python_sbia-pc125.html#bleeding-edge-version-of-lasagne-04-11-2016">1.1.1.2.1. Bleeding edge version of lasagne (04/11/2016)</a></li>
-<li class="toctree-l5"><a class="reference internal" href="python/python_sbia-pc125.html#reupdate-theano-to-0-8-04-1-2016">1.1.1.2.2. Reupdate theano to 0.8 (04/1/2016)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="python/python_sbia-pc125.html#ipython-setup">1.1.1. ipython setup</a></li>
+<li class="toctree-l3"><a class="reference internal" href="python/python_sbia-pc125.html#matplotlibrc">1.1.2. matplotlibrc</a></li>
+<li class="toctree-l3"><a class="reference internal" href="python/python_sbia-pc125.html#symlink-summary">1.1.3. symlink summary</a></li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="python/python-windows.html">1.2. Windows machine setup (todo)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="python/old/python_sbia-pc125-old.html">1.3. (old-notes)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="python/old/python_sbia-pc125-old.html#feb-24-2016">1.3.1. Feb 24, 2016</a></li>
+<li class="toctree-l3"><a class="reference internal" href="python/old/python_sbia-pc125-old.html#stuffs-installed-after-03-30-2016">1.3.2. Stuffs installed after 03-30-2016</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="python/old/python_sbia-pc125-old.html#bleeding-edge-version-of-lasagne-04-11-2016">1.3.2.1. Bleeding edge version of lasagne (04/11/2016)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="python/old/python_sbia-pc125-old.html#reupdate-theano-to-0-8-04-1-2016">1.3.2.2. Reupdate theano to 0.8 (04/1/2016)</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="python/old/python_sbia-pc125-old.html#stuffs-installed-11-30-2015">1.3.3. Stuffs installed (11/30/2015)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="python/old/python_sbia-pc125-old.html#moduel-install-very-old-modules-install">1.3.4. moduel-install: VERY old modules install</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="python/old/python_sbia-pc125-old.html#module-installs-install-modules-sh">1.3.4.1. <code class="docutils literal"><span class="pre">./module-installs/install_modules.sh</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="python/old/python_sbia-pc125-old.html#module-installs-pyinstall-sh">1.3.4.2. <code class="docutils literal"><span class="pre">./module-installs/pyinstall.sh</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="python/old/python_sbia-pc125-old.html#module-installs-spams-install-sh">1.3.4.3. <code class="docutils literal"><span class="pre">./module-installs/spams_install.sh</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="python/old/python_sbia-pc125-old.html#module-installs-tak-install-sh">1.3.4.4. <code class="docutils literal"><span class="pre">./module-installs/tak_install.sh</span></code></a></li>
 </ul>
 </li>
 </ul>
@@ -143,19 +155,20 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l1 current"><a class="current reference internal" href="">6. Miscellaneous</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="misc/cuda_stuffs.html">6.1. cuda-installation (old)</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="misc/cuda_stuffs.html#installing-theano">6.1.1. Installing Theano</a></li>
-<li class="toctree-l3"><a class="reference internal" href="misc/cuda_stuffs.html#installing-cuda">6.1.2. Installing cuda</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="misc/cuda_stuffs.html#references">6.1.2.1. references</a></li>
+<li class="toctree-l1"><a class="reference internal" href="trouble-shooting.html">6. Trouble-shooting notes</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="">7. Miscellaneous</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="misc/cuda_stuffs.html">7.1. cuda-installation (old)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="misc/cuda_stuffs.html#installing-theano">7.1.1. Installing Theano</a></li>
+<li class="toctree-l3"><a class="reference internal" href="misc/cuda_stuffs.html#installing-cuda">7.1.2. Installing cuda</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="misc/cuda_stuffs.html#references">7.1.2.1. references</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="misc/cuda_stuffs.html#pre-september">6.1.3. Pre september</a></li>
-<li class="toctree-l3"><a class="reference internal" href="misc/cuda_stuffs.html#cuda-install-output">6.1.4. cuda install output</a></li>
+<li class="toctree-l3"><a class="reference internal" href="misc/cuda_stuffs.html#pre-september">7.1.3. Pre september</a></li>
+<li class="toctree-l3"><a class="reference internal" href="misc/cuda_stuffs.html#cuda-install-output">7.1.4. cuda install output</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="misc/sbia-pc125.html">6.2. SBIA workstation setup</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="misc/sbia-pc125.html#stuffs-installed">6.2.1. Stuffs installed</a></li>
+<li class="toctree-l2"><a class="reference internal" href="misc/sbia-pc125.html">7.2. SBIA workstation setup</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="misc/sbia-pc125.html#stuffs-installed">7.2.1. Stuffs installed</a></li>
 </ul>
 </li>
 </ul>
@@ -201,7 +214,7 @@
     
       <li><a href="index.html">Docs</a> &raquo;</li>
         
-      <li>6. Miscellaneous</li>
+      <li>7. Miscellaneous</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -219,20 +232,20 @@
            <div itemprop="articleBody">
             
   <div class="section" id="miscellaneous">
-<h1>6. Miscellaneous<a class="headerlink" href="#miscellaneous" title="Permalink to this headline">¶</a></h1>
+<h1>7. Miscellaneous<a class="headerlink" href="#miscellaneous" title="Permalink to this headline">¶</a></h1>
 <p>Other stuffs/notes pertaining to my computer setup.</p>
 <div class="toctree-wrapper compound" id="misc">
 <p class="caption"><span class="caption-text">Contents</span><a class="headerlink" href="#misc" title="Permalink to this toctree">¶</a></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="misc/cuda_stuffs.html">6.1. cuda-installation (old)</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="misc/cuda_stuffs.html#installing-theano">6.1.1. Installing Theano</a></li>
-<li class="toctree-l2"><a class="reference internal" href="misc/cuda_stuffs.html#installing-cuda">6.1.2. Installing cuda</a></li>
-<li class="toctree-l2"><a class="reference internal" href="misc/cuda_stuffs.html#pre-september">6.1.3. Pre september</a></li>
-<li class="toctree-l2"><a class="reference internal" href="misc/cuda_stuffs.html#cuda-install-output">6.1.4. cuda install output</a></li>
+<li class="toctree-l1"><a class="reference internal" href="misc/cuda_stuffs.html">7.1. cuda-installation (old)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="misc/cuda_stuffs.html#installing-theano">7.1.1. Installing Theano</a></li>
+<li class="toctree-l2"><a class="reference internal" href="misc/cuda_stuffs.html#installing-cuda">7.1.2. Installing cuda</a></li>
+<li class="toctree-l2"><a class="reference internal" href="misc/cuda_stuffs.html#pre-september">7.1.3. Pre september</a></li>
+<li class="toctree-l2"><a class="reference internal" href="misc/cuda_stuffs.html#cuda-install-output">7.1.4. cuda install output</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="misc/sbia-pc125.html">6.2. SBIA workstation setup</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="misc/sbia-pc125.html#stuffs-installed">6.2.1. Stuffs installed</a></li>
+<li class="toctree-l1"><a class="reference internal" href="misc/sbia-pc125.html">7.2. SBIA workstation setup</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="misc/sbia-pc125.html#stuffs-installed">7.2.1. Stuffs installed</a></li>
 </ul>
 </li>
 </ul>
@@ -246,10 +259,10 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="misc/cuda_stuffs.html" class="btn btn-neutral float-right" title="6.1. cuda-installation (old)" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="misc/cuda_stuffs.html" class="btn btn-neutral float-right" title="7.1. cuda-installation (old)" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="windows/autohotkey/AHK_helper.html" class="btn btn-neutral" title="5.1. Autohotkey" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="trouble-shooting.html" class="btn btn-neutral" title="6. Trouble-shooting notes" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
