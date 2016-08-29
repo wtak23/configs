@@ -4,12 +4,7 @@ Bash config files
    :depth: 2
    :local:
 
-.. todo:: Update below with cygwin setup info
-
-.. literalinclude:: ./bash_config/sbia-pc-125/.bashrc
-    :language: bash
-    :linenos:
-
+.. todo:: **Cygwin setup** section
 
 ############################
 SBIA-PC125 Workstation setup

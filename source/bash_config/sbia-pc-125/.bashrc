@@ -795,7 +795,7 @@ git_anonymize(){
   git config user.name "noname"
   git config user.email noname@example.com
 }
-alias twsphinx_check='firefox build/html/index.html' # 08-17-2016 (13:33)
+alias twsphinx_check='google-chrome build/html/index.html' # 08-17-2016 (13:33)
 alias twalias='alias | pygmentize -l sh' # 08-17-2016 (13:37)
 
 git_clear_author_history(){

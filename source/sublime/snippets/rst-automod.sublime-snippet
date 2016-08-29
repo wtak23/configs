@@ -1,0 +1,19 @@
+<snippet>
+    <content><![CDATA[
+.. toctree::
+    :maxdepth: 1
+
+    generated/${1:MODULE_NAME}
+
+.. autosummary::
+   :toctree:generated/
+   :template:module_custom.rst
+
+    ${1:MODULE_NAME}
+]]></content>
+    <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+    <tabTrigger>automod</tabTrigger>
+    <!-- Optional: Set a scope to limit where the snippet will trigger -->
+    <scope>text.restructuredtext</scope>
+</snippet>
+ <!--  https://gist.github.com/iambibhas/4705378 <- snippet scope -->

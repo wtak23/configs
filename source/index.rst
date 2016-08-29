@@ -4,10 +4,12 @@ Personal note for keeping track of my computer **configs**, which I sync using s
 
 Also enjoy being able to version control all of my ``rc`` files.
 
+**HTML Last compiled on:**  |today|
+
 .. todo::
 
-    
-    - https://github.com/wtak23/configs_master/tree/master/sbia-pc125-cinn/python
+    Update my **confgs** for my windows machine (SBIA workstation update complete)
+
     - https://github.com/wtak23/configs_master/tree/master/cygwin
 
       - include the ``mklink`` instruction both under **bash_confg** and **windows**
@@ -29,9 +31,6 @@ Also enjoy being able to version control all of my ``rc`` files.
     trouble-shooting.rst
     misc.rst
 
-These substitutions are predefined in Sphinx
 
-- ``|version|`` = |version|
-- ``|release|`` = |release|
-- ``|today|`` = |today|
+
 
