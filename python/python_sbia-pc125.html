@@ -81,9 +81,22 @@
                 <ul class="current">
 <li class="toctree-l1 current"><a class="reference internal" href="../python.html">1. Python</a><ul class="current">
 <li class="toctree-l2 current"><a class="current reference internal" href="">1.1. sbia-pc125 workstation</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#ipython-setup">1.1.1. ipython setup</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#matplotlibrc">1.1.2. matplotlibrc</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#symlink-summary">1.1.3. symlink summary</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#symlink-summary">1.1.1. symlink summary</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#ipython-setup">1.1.2. ipython setup</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#content-of-ipython-kernel-config">1.1.2.1. Content of <code class="docutils literal"><span class="pre">ipython_kernel_config</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#matplotlibrc">1.1.3. matplotlibrc</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#content-of-matplotlibrc">1.1.3.1. Content of <code class="docutils literal"><span class="pre">matplotlibrc</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#new-symlink-to-sitecustomize-py">1.1.4. New - symlink to sitecustomize.py</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#current-content-of-sitecustomize-py">1.1.4.1. Current content of <code class="docutils literal"><span class="pre">sitecustomize.py</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#what-does-sitecustomize-py-do">1.1.4.2. what does sitecustomize.py do?</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#current-content-of-sitecustomize-spyder-py">1.1.4.3. Current content of <code class="docutils literal"><span class="pre">sitecustomize_spyder.py</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#changes-with-original">1.1.5. Changes with _original</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="python-windows.html">1.2. Windows machine setup (todo)</a></li>
@@ -237,50 +250,8 @@
   <div class="section" id="sbia-pc125-workstation">
 <h1>1.1. sbia-pc125 workstation<a class="headerlink" href="#sbia-pc125-workstation" title="Permalink to this headline">¶</a></h1>
 <p>Python setup - sbia-pc125 workstation</p>
-<div class="section" id="ipython-setup">
-<h2>1.1.1. ipython setup<a class="headerlink" href="#ipython-setup" title="Permalink to this headline">¶</a></h2>
-<ul class="simple">
-<li><a class="reference external" href="https://ipython.org/ipython-doc/1/config/overview.html">https://ipython.org/ipython-doc/1/config/overview.html</a></li>
-</ul>
-<p class="rubric">Locating profile path</p>
-<div class="highlight-bash"><div class="highlight"><pre><span></span>$ ipython locate
-/home/takanori/.ipython
-
-$ ipython locate profile
-/home/takanori/.ipython/profile_default
-
-$ ipython locate profile foo
-/home/you/.ipython/profile_foo
-</pre></div>
-</div>
-<div class="admonition note">
-<p class="first admonition-title">Note</p>
-<p>Why I bother with <code class="docutils literal"><span class="pre">ipython_kernel_config.py</span></code></p>
-<ul class="last simple">
-<li>to configure matplotlibrc parameters in ipynb</li>
-<li><a class="reference external" href="http://stackoverflow.com/questions/17230797/how-to-set-the-matplotlib-figure-default-size-in-ipython-notebook">http://stackoverflow.com/questions/17230797/how-to-set-the-matplotlib-figure-default-size-in-ipython-notebook</a></li>
-</ul>
-</div>
-</div>
-<div class="section" id="matplotlibrc">
-<h2>1.1.2. matplotlibrc<a class="headerlink" href="#matplotlibrc" title="Permalink to this headline">¶</a></h2>
-<div class="highlight-bash"><div class="highlight"><pre><span></span><span class="c1"># get path to rc file</span>
-$ ipython -c <span class="s2">&quot;import matplotlib as mpl; from os.path import dirname; print dirname(mpl.matplotlib_fname())&quot;</span>
-/home/takanori/anaconda2/lib/python2.7/site-packages/matplotlib/mpl-data
-
-<span class="c1">#=========================================================================#</span>
-<span class="c1"># create symlink</span>
-<span class="c1">#=========================================================================#</span>
-<span class="nv">SOURCE</span><span class="o">=</span><span class="s2">&quot;</span><span class="si">${</span><span class="nv">HOME</span><span class="si">}</span><span class="s2">/Dropbox/git/configs/source/python/sbia&quot;</span>
-<span class="nv">MPL_TARGET</span><span class="o">=</span><span class="k">$(</span>ipython -c <span class="s2">&quot;import matplotlib as mpl; from os.path import dirname; print dirname(mpl.matplotlib_fname())&quot;</span><span class="k">)</span>
-
-<span class="c1"># matlotlibrc</span>
-ln -s <span class="s2">&quot;</span><span class="si">${</span><span class="nv">SOURCE</span><span class="si">}</span><span class="s2">/matplotlibrc&quot;</span> <span class="s2">&quot;</span><span class="si">${</span><span class="nv">MPL_TARGET</span><span class="si">}</span><span class="s2">/&quot;</span>
-</pre></div>
-</div>
-</div>
 <div class="section" id="symlink-summary">
-<h2>1.1.3. symlink summary<a class="headerlink" href="#symlink-summary" title="Permalink to this headline">¶</a></h2>
+<h2>1.1.1. symlink summary<a class="headerlink" href="#symlink-summary" title="Permalink to this headline">¶</a></h2>
 <div class="highlight-bash"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
  2
  3
@@ -316,14 +287,25 @@ ln -s <span class="s2">&quot;</span><span class="si">${</span><span class="nv">S
 33
 34
 35
-36</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="nv">SOURCE</span><span class="o">=</span><span class="s2">&quot;</span><span class="si">${</span><span class="nv">HOME</span><span class="si">}</span><span class="s2">/Dropbox/git/configs/source/python/sbia&quot;</span>
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="nv">SOURCE</span><span class="o">=</span><span class="s2">&quot;</span><span class="si">${</span><span class="nv">HOME</span><span class="si">}</span><span class="s2">/Dropbox/git/configs/source/python/sbia&quot;</span>
 
 <span class="c1"># === spyder template file ===</span>
 ln -s <span class="s2">&quot;</span><span class="si">${</span><span class="nv">SOURCE</span><span class="si">}</span><span class="s2">/template.py&quot;</span> <span class="s2">&quot;</span><span class="si">${</span><span class="nv">HOME</span><span class="si">}</span><span class="s2">/.spyder2/&quot;</span>
 
 <span class="c1"># === matplotlib rc ====</span>
 <span class="nv">MPL_TARGET</span><span class="o">=</span><span class="k">$(</span>ipython -c <span class="s2">&quot;import matplotlib as mpl; from os.path import dirname; print dirname(mpl.matplotlib_fname())&quot;</span><span class="k">)</span>
-ln -s <span class="s2">&quot;</span><span class="si">${</span><span class="nv">SOURCE</span><span class="si">}</span><span class="s2">/matplotlibrc&quot;</span> <span class="s2">&quot;</span><span class="si">${</span><span class="nv">MPL_TARGET</span><span class="si">}</span><span class="s2">/&quot;</span>
+ln -s <span class="s2">&quot;</span><span class="si">${</span><span class="nv">SOURCE</span><span class="si">}</span><span class="s2">/matplotlibrc&quot;</span> <span class="s2">&quot;</span><span class="si">${</span><span class="nv">MPL_TARGET</span><span class="si">}</span><span class="s2">&quot;</span>
 
 <span class="c1"># === custom.js ====</span>
 <span class="c1"># (I need to remind myself what exactly this was for...)</span>
@@ -352,8 +334,1120 @@ ln -s <span class="s2">&quot;</span><span class="si">${</span><span class="nv">S
 <span class="c1"># forgot what these are, but hey, why not (can&#39;t hurt)</span>
 ln -s <span class="s2">&quot;</span><span class="si">${</span><span class="nv">SOURCE</span><span class="si">}</span><span class="s2">/ipython/profile_default/ipython_qtconsole_config.py&quot;</span> <span class="s2">&quot;</span><span class="si">${</span><span class="nv">TARGET</span><span class="si">}</span><span class="s2">/profile_default&quot;</span>
 ln -s <span class="s2">&quot;</span><span class="si">${</span><span class="nv">SOURCE</span><span class="si">}</span><span class="s2">/ipython/profile_default/ipython_notebook_config.py&quot;</span> <span class="s2">&quot;</span><span class="si">${</span><span class="nv">TARGET</span><span class="si">}</span><span class="s2">/profile_default&quot;</span>
+
+<span class="c1">#=========================================================================#</span>
+<span class="c1"># sitecustomize.py (for spyder and for general python)</span>
+<span class="c1">#=========================================================================#</span>
+<span class="c1"># general python startup (I first needed to use this for building with Sphinx)</span>
+ln -s <span class="s2">&quot;</span><span class="si">${</span><span class="nv">HOME</span><span class="si">}</span><span class="s2">/Dropbox/git/configs/source/python/sbia/sitecustomize.py&quot;</span> <span class="se">\</span>
+      <span class="s2">&quot;</span><span class="si">${</span><span class="nv">HOME</span><span class="si">}</span><span class="s2">/.local/lib/python2.7/site-packages&quot;</span>
+
+<span class="c1"># spyder startup</span>
+ln -s <span class="s2">&quot;</span><span class="si">${</span><span class="nv">HOME</span><span class="si">}</span><span class="s2">/Dropbox/git/configs/source/python/sbia/sitecustomize_spyder.py&quot;</span> <span class="se">\</span>
+      <span class="s2">&quot;</span><span class="si">${</span><span class="nv">HOME</span><span class="si">}</span><span class="s2">/anaconda2/lib/python2.7/site-packages/spyderlib/widgets/externalshell/sitecustomize.py&quot;</span>
 </pre></div>
 </td></tr></table></div>
+</div>
+<div class="section" id="ipython-setup">
+<h2>1.1.2. ipython setup<a class="headerlink" href="#ipython-setup" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><a class="reference external" href="https://ipython.org/ipython-doc/1/config/overview.html">https://ipython.org/ipython-doc/1/config/overview.html</a></li>
+</ul>
+<p class="rubric">Locating profile path</p>
+<div class="highlight-bash"><div class="highlight"><pre><span></span>$ ipython locate
+/home/takanori/.ipython
+
+$ ipython locate profile
+/home/takanori/.ipython/profile_default
+
+$ ipython locate profile foo
+/home/you/.ipython/profile_foo
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p>Why I bother with <code class="docutils literal"><span class="pre">ipython_kernel_config.py</span></code></p>
+<ul class="last simple">
+<li>to configure matplotlibrc parameters in ipynb</li>
+<li><a class="reference external" href="http://stackoverflow.com/questions/17230797/how-to-set-the-matplotlib-figure-default-size-in-ipython-notebook">http://stackoverflow.com/questions/17230797/how-to-set-the-matplotlib-figure-default-size-in-ipython-notebook</a></li>
+</ul>
+</div>
+<div class="section" id="content-of-ipython-kernel-config">
+<h3>1.1.2.1. Content of <code class="docutils literal"><span class="pre">ipython_kernel_config</span></code><a class="headerlink" href="#content-of-ipython-kernel-config" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-rst"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">literalinclude</span><span class="p">::</span> sbia/ipython/profile_default/ipython_kernel_config.py
+    <span class="nc">:language:</span> <span class="nf">diff</span>
+    <span class="nc">:linenos:</span>
+    <span class="nc">:diff:</span> <span class="nf">sbia/ipython/profile_default/ipython_kernel_config_original.py</span>
+</pre></div>
+</div>
+<div class="highlight-diff"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>  1
+  2
+  3
+  4
+  5
+  6
+  7
+  8
+  9
+ 10
+ 11
+ 12
+ 13
+ 14
+ 15
+ 16
+ 17
+ 18
+ 19
+ 20
+ 21
+ 22
+ 23
+ 24
+ 25
+ 26
+ 27
+ 28
+ 29
+ 30
+ 31
+ 32
+ 33
+ 34
+ 35
+ 36
+ 37
+ 38
+ 39
+ 40
+ 41
+ 42
+ 43
+ 44
+ 45
+ 46
+ 47
+ 48
+ 49
+ 50
+ 51
+ 52
+ 53
+ 54
+ 55
+ 56
+ 57
+ 58
+ 59
+ 60
+ 61
+ 62
+ 63
+ 64
+ 65
+ 66
+ 67
+ 68
+ 69
+ 70
+ 71
+ 72
+ 73
+ 74
+ 75
+ 76
+ 77
+ 78
+ 79
+ 80
+ 81
+ 82
+ 83
+ 84
+ 85
+ 86
+ 87
+ 88
+ 89
+ 90
+ 91
+ 92
+ 93
+ 94
+ 95
+ 96
+ 97
+ 98
+ 99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134
+135
+136
+137
+138
+139
+140
+141
+142
+143
+144
+145
+146
+147
+148
+149
+150
+151
+152
+153
+154
+155
+156
+157
+158
+159
+160
+161
+162
+163
+164
+165
+166
+167
+168
+169
+170
+171
+172
+173
+174
+175
+176
+177
+178
+179
+180
+181
+182
+183
+184
+185
+186
+187
+188
+189
+190
+191
+192
+193
+194
+195
+196
+197
+198
+199
+200
+201
+202
+203
+204
+205
+206
+207
+208
+209
+210
+211
+212
+213
+214
+215
+216
+217
+218
+219
+220
+221
+222
+223
+224
+225
+226
+227
+228
+229
+230
+231
+232
+233
+234
+235
+236
+237
+238
+239
+240
+241
+242
+243
+244
+245
+246
+247
+248
+249
+250
+251
+252
+253
+254
+255
+256
+257
+258
+259
+260
+261
+262
+263
+264
+265
+266
+267
+268
+269
+270
+271
+272
+273
+274
+275
+276
+277
+278
+279
+280
+281
+282
+283
+284
+285
+286
+287
+288
+289
+290
+291
+292
+293
+294
+295
+296
+297
+298
+299
+300
+301
+302
+303
+304
+305
+306
+307
+308
+309
+310
+311</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="gd">--- sbia/ipython/profile_default/ipython_kernel_config_original.py</span>
+<span class="gi">+++ sbia/ipython/profile_default/ipython_kernel_config.py</span>
+<span class="gu">@@ -406,3 +406,308 @@</span>
+ # Metadata dictionary, which serves as the default top-level metadata dict for
+ # each message.
+ # c.Session.metadata = {}
+<span class="gi">+</span>
+<span class="gi">+#=============================================================================#</span>
+<span class="gi">+# This block is my stuff</span>
+<span class="gi">+# http://stackoverflow.com/questions/21176731/automatically-run-matplotlib-inline-in-ipython-notebook</span>
+<span class="gi">+#=============================================================================#</span>
+<span class="gi">+c.InlineBackend.rc = {</span>
+<span class="gi">+    &#39;figure.figsize&#39;: (6.0,4.0),</span>
+<span class="gi">+    &#39;font.weight&#39;: &#39;bold&#39;,</span>
+<span class="gi">+    &#39;axes.labelsize&#39;: 15.0,</span>
+<span class="gi">+    &#39;axes.titlesize&#39;: 15.0,</span>
+<span class="gi">+    &#39;axes.titleweight&#39;: &#39;bold&#39;,</span>
+<span class="gi">+    &#39;legend.fontsize&#39;: 10.0,</span>
+<span class="gi">+    &#39;xtick.labelsize&#39;: 10.0,</span>
+<span class="gi">+    &#39;ytick.labelsize&#39;: 10.0,</span>
+<span class="gi">+    &#39;figure.facecolor&#39;: &#39;white&#39;, </span>
+<span class="gi">+    &#39;lines.linewidth&#39;: 3.0,</span>
+<span class="gi">+    &#39;image.cmap&#39;: &#39;RdBu_r&#39;,</span>
+<span class="gi">+    &#39;image.interpolation&#39;  : &#39;none&#39;,</span>
+<span class="gi">+    &#39;axes.color_cycle&#39;: [&#39;b&#39;, &#39;g&#39;, &#39;r&#39;, &#39;c&#39;, &#39;m&#39;, &#39;y&#39;, &#39;k&#39;,&#39;#00FF00&#39;,&#39;#008B8B&#39;,&#39;#483D8B&#39;,&#39;#F4A460&#39;,&#39;#808080&#39;], #http://www.rapidtables.com/web/color/RGB_Color.htm</span>
+<span class="gi">+    # &#39;savefig.dpi&#39;: 72, </span>
+<span class="gi">+    # &#39;figure.subplot.bottom&#39;: 0.125, </span>
+<span class="gi">+    # &#39;figure.edgecolor&#39;: &#39;white&#39;,</span>
+<span class="gi">+}</span>
+<span class="gi">+</span>
+<span class="gi">+# c.InlineBackend.rc = {</span>
+<span class="gi">+#     &#39;figure.figsize&#39;: (10.0,8.0),</span>
+<span class="gi">+#     &#39;font.weight&#39;: &#39;bold&#39;,</span>
+<span class="gi">+#     &#39;axes.labelsize&#39;: 16.0,</span>
+<span class="gi">+#     &#39;axes.titlesize&#39;: 16.0,</span>
+<span class="gi">+#     &#39;axes.titleweight&#39;: &#39;bold&#39;,</span>
+<span class="gi">+#     &#39;legend.fontsize&#39;: 14.0,</span>
+<span class="gi">+#     &#39;xtick.labelsize&#39;: 14.0,</span>
+<span class="gi">+#     &#39;ytick.labelsize&#39;: 14.0,</span>
+<span class="gi">+#     &#39;figure.facecolor&#39;: &#39;white&#39;, </span>
+<span class="gi">+#     &#39;lines.linewidth&#39;: 3.0,</span>
+<span class="gi">+#     # &#39;savefig.dpi&#39;: 72, </span>
+<span class="gi">+#     # &#39;figure.subplot.bottom&#39;: 0.125, </span>
+<span class="gi">+#     # &#39;figure.edgecolor&#39;: &#39;white&#39;,</span>
+<span class="gi">+# }</span>
+<span class="gi">+</span>
+<span class="gi">+#========================================================================#</span>
+<span class="gi">+# here&#39;s a full list of options</span>
+<span class="gi">+# mpl.rc_params()</span>
+<span class="gi">+#     RcParams({&#39;agg.path.chunksize&#39;: 0,</span>
+<span class="gi">+    #               &#39;animation.avconv_args&#39;: [],</span>
+<span class="gi">+    #               &#39;animation.avconv_path&#39;: &#39;avconv&#39;,</span>
+<span class="gi">+    #               &#39;animation.bitrate&#39;: -1,</span>
+<span class="gi">+    #               &#39;animation.codec&#39;: &#39;mpeg4&#39;,</span>
+<span class="gi">+    #               &#39;animation.convert_args&#39;: [],</span>
+<span class="gi">+    #               &#39;animation.convert_path&#39;: &#39;convert&#39;,</span>
+<span class="gi">+    #               &#39;animation.ffmpeg_args&#39;: [],</span>
+<span class="gi">+    #               &#39;animation.ffmpeg_path&#39;: &#39;ffmpeg&#39;,</span>
+<span class="gi">+    #               &#39;animation.frame_format&#39;: &#39;png&#39;,</span>
+<span class="gi">+    #               &#39;animation.mencoder_args&#39;: [],</span>
+<span class="gi">+    #               &#39;animation.mencoder_path&#39;: &#39;mencoder&#39;,</span>
+<span class="gi">+    #               &#39;animation.writer&#39;: &#39;ffmpeg&#39;,</span>
+<span class="gi">+    #               &#39;axes.axisbelow&#39;: False,</span>
+<span class="gi">+    #               &#39;axes.color_cycle&#39;: [&#39;b&#39;, &#39;g&#39;, &#39;r&#39;, &#39;c&#39;, &#39;m&#39;, &#39;y&#39;, &#39;k&#39;],</span>
+<span class="gi">+    #               &#39;axes.edgecolor&#39;: &#39;k&#39;,</span>
+<span class="gi">+    #               &#39;axes.facecolor&#39;: &#39;w&#39;,</span>
+<span class="gi">+    #               &#39;axes.formatter.limits&#39;: [-7, 7],</span>
+<span class="gi">+    #               &#39;axes.formatter.use_locale&#39;: False,</span>
+<span class="gi">+    #               &#39;axes.formatter.use_mathtext&#39;: False,</span>
+<span class="gi">+    #               &#39;axes.formatter.useoffset&#39;: True,</span>
+<span class="gi">+    #               &#39;axes.grid&#39;: False,</span>
+<span class="gi">+    #               &#39;axes.grid.which&#39;: &#39;major&#39;,</span>
+<span class="gi">+    #               &#39;axes.hold&#39;: True,</span>
+<span class="gi">+    #               &#39;axes.labelcolor&#39;: &#39;k&#39;,</span>
+<span class="gi">+    #               &#39;axes.labelsize&#39;: &#39;medium&#39;,</span>
+<span class="gi">+    #               &#39;axes.labelweight&#39;: &#39;normal&#39;,</span>
+<span class="gi">+    #               &#39;axes.linewidth&#39;: 1.0,</span>
+<span class="gi">+    #               &#39;axes.titlesize&#39;: &#39;large&#39;,</span>
+<span class="gi">+    #               &#39;axes.titleweight&#39;: &#39;normal&#39;,</span>
+<span class="gi">+    #               &#39;axes.unicode_minus&#39;: True,</span>
+<span class="gi">+    #               &#39;axes.xmargin&#39;: 0.0,</span>
+<span class="gi">+    #               &#39;axes.ymargin&#39;: 0.0,</span>
+<span class="gi">+    #               &#39;axes3d.grid&#39;: True,</span>
+<span class="gi">+    #               &#39;backend&#39;: &#39;agg&#39;,</span>
+<span class="gi">+    #               &#39;backend.qt4&#39;: &#39;PyQt4&#39;,</span>
+<span class="gi">+    #               &#39;backend.qt5&#39;: &#39;PyQt5&#39;,</span>
+<span class="gi">+    #               &#39;backend_fallback&#39;: True,</span>
+<span class="gi">+    #               &#39;contour.negative_linestyle&#39;: &#39;dashed&#39;,</span>
+<span class="gi">+    #               &#39;datapath&#39;: &#39;/home/takanori/anaconda/lib/python2.7/site-packages/matplotlib/mpl-data&#39;,</span>
+<span class="gi">+    #               &#39;docstring.hardcopy&#39;: False,</span>
+<span class="gi">+    #               &#39;examples.directory&#39;: &#39;&#39;,</span>
+<span class="gi">+    #               &#39;figure.autolayout&#39;: False,</span>
+<span class="gi">+    #               &#39;figure.dpi&#39;: 80.0,</span>
+<span class="gi">+    #               &#39;figure.edgecolor&#39;: &#39;w&#39;,</span>
+<span class="gi">+    #               &#39;figure.facecolor&#39;: &#39;0.75&#39;,</span>
+<span class="gi">+    #               &#39;figure.figsize&#39;: [8.0, 6.0],</span>
+<span class="gi">+    #               &#39;figure.frameon&#39;: True,</span>
+<span class="gi">+    #               &#39;figure.max_open_warning&#39;: 20,</span>
+<span class="gi">+    #               &#39;figure.subplot.bottom&#39;: 0.1,</span>
+<span class="gi">+    #               &#39;figure.subplot.hspace&#39;: 0.2,</span>
+<span class="gi">+    #               &#39;figure.subplot.left&#39;: 0.125,</span>
+<span class="gi">+    #               &#39;figure.subplot.right&#39;: 0.9,</span>
+<span class="gi">+    #               &#39;figure.subplot.top&#39;: 0.9,</span>
+<span class="gi">+    #               &#39;figure.subplot.wspace&#39;: 0.2,</span>
+<span class="gi">+    #               &#39;font.cursive&#39;: [&#39;Apple Chancery&#39;,</span>
+<span class="gi">+    #                                 &#39;Textile&#39;,</span>
+<span class="gi">+    #                                 &#39;Zapf Chancery&#39;,</span>
+<span class="gi">+    #                                 &#39;Sand&#39;,</span>
+<span class="gi">+    #                                 &#39;cursive&#39;],</span>
+<span class="gi">+    #               &#39;font.family&#39;: [&#39;sans-serif&#39;],</span>
+<span class="gi">+    #               &#39;font.fantasy&#39;: [&#39;Comic Sans MS&#39;,</span>
+<span class="gi">+    #                                 &#39;Chicago&#39;,</span>
+<span class="gi">+    #                                 &#39;Charcoal&#39;,</span>
+<span class="gi">+    #                                 &#39;ImpactWestern&#39;,</span>
+<span class="gi">+    #                                 &#39;fantasy&#39;],</span>
+<span class="gi">+    #               &#39;font.monospace&#39;: [&#39;Bitstream Vera Sans Mono&#39;,</span>
+<span class="gi">+    #                                   &#39;DejaVu Sans Mono&#39;,</span>
+<span class="gi">+    #                                   &#39;Andale Mono&#39;,</span>
+<span class="gi">+    #                                   &#39;Nimbus Mono L&#39;,</span>
+<span class="gi">+    #                                   &#39;Courier New&#39;,</span>
+<span class="gi">+    #                                   &#39;Courier&#39;,</span>
+<span class="gi">+    #                                   &#39;Fixed&#39;,</span>
+<span class="gi">+    #                                   &#39;Terminal&#39;,</span>
+<span class="gi">+    #                                   &#39;monospace&#39;],</span>
+<span class="gi">+    #               &#39;font.sans-serif&#39;: [&#39;Bitstream Vera Sans&#39;,</span>
+<span class="gi">+    #                                    &#39;DejaVu Sans&#39;,</span>
+<span class="gi">+    #                                    &#39;Lucida Grande&#39;,</span>
+<span class="gi">+    #                                    &#39;Verdana&#39;,</span>
+<span class="gi">+    #                                    &#39;Geneva&#39;,</span>
+<span class="gi">+    #                                    &#39;Lucid&#39;,</span>
+<span class="gi">+    #                                    &#39;Arial&#39;,</span>
+<span class="gi">+    #                                    &#39;Helvetica&#39;,</span>
+<span class="gi">+    #                                    &#39;Avant Garde&#39;,</span>
+<span class="gi">+    #                                    &#39;sans-serif&#39;],</span>
+<span class="gi">+    #               &#39;font.serif&#39;: [&#39;Bitstream Vera Serif&#39;,</span>
+<span class="gi">+    #                               &#39;DejaVu Serif&#39;,</span>
+<span class="gi">+    #                               &#39;New Century Schoolbook&#39;,</span>
+<span class="gi">+    #                               &#39;Century Schoolbook L&#39;,</span>
+<span class="gi">+    #                               &#39;Utopia&#39;,</span>
+<span class="gi">+    #                               &#39;ITC Bookman&#39;,</span>
+<span class="gi">+    #                               &#39;Bookman&#39;,</span>
+<span class="gi">+    #                               &#39;Nimbus Roman No9 L&#39;,</span>
+<span class="gi">+    #                               &#39;Times New Roman&#39;,</span>
+<span class="gi">+    #                               &#39;Times&#39;,</span>
+<span class="gi">+    #                               &#39;Palatino&#39;,</span>
+<span class="gi">+    #                               &#39;Charter&#39;,</span>
+<span class="gi">+    #                               &#39;serif&#39;],</span>
+<span class="gi">+    #               &#39;font.size&#39;: 12.0,</span>
+<span class="gi">+    #               &#39;font.stretch&#39;: &#39;normal&#39;,</span>
+<span class="gi">+    #               &#39;font.style&#39;: &#39;normal&#39;,</span>
+<span class="gi">+    #               &#39;font.variant&#39;: &#39;normal&#39;,</span>
+<span class="gi">+    #               &#39;font.weight&#39;: &#39;normal&#39;,</span>
+<span class="gi">+    #               &#39;grid.alpha&#39;: 1.0,</span>
+<span class="gi">+    #               &#39;grid.color&#39;: &#39;k&#39;,</span>
+<span class="gi">+    #               &#39;grid.linestyle&#39;: &#39;:&#39;,</span>
+<span class="gi">+    #               &#39;grid.linewidth&#39;: 0.5,</span>
+<span class="gi">+    #               &#39;image.aspect&#39;: &#39;equal&#39;,</span>
+<span class="gi">+    #               &#39;image.cmap&#39;: &#39;jet&#39;,</span>
+<span class="gi">+    #               &#39;image.interpolation&#39;: &#39;bilinear&#39;,</span>
+<span class="gi">+    #               &#39;image.lut&#39;: 256,</span>
+<span class="gi">+    #               &#39;image.origin&#39;: &#39;upper&#39;,</span>
+<span class="gi">+    #               &#39;image.resample&#39;: False,</span>
+<span class="gi">+    #               &#39;interactive&#39;: False,</span>
+<span class="gi">+    #               &#39;keymap.all_axes&#39;: [&#39;a&#39;],</span>
+<span class="gi">+    #               &#39;keymap.back&#39;: [&#39;left&#39;, &#39;c&#39;, &#39;backspace&#39;],</span>
+<span class="gi">+    #               &#39;keymap.forward&#39;: [&#39;right&#39;, &#39;v&#39;],</span>
+<span class="gi">+    #               &#39;keymap.fullscreen&#39;: [&#39;f&#39;, &#39;ctrl+f&#39;],</span>
+<span class="gi">+    #               &#39;keymap.grid&#39;: [&#39;g&#39;],</span>
+<span class="gi">+    #               &#39;keymap.home&#39;: [&#39;h&#39;, &#39;r&#39;, &#39;home&#39;],</span>
+<span class="gi">+    #               &#39;keymap.pan&#39;: [&#39;p&#39;],</span>
+<span class="gi">+    #               &#39;keymap.quit&#39;: [&#39;ctrl+w&#39;, &#39;cmd+w&#39;],</span>
+<span class="gi">+    #               &#39;keymap.save&#39;: [&#39;s&#39;, &#39;ctrl+s&#39;],</span>
+<span class="gi">+    #               &#39;keymap.xscale&#39;: [&#39;k&#39;, &#39;L&#39;],</span>
+<span class="gi">+    #               &#39;keymap.yscale&#39;: [&#39;l&#39;],</span>
+<span class="gi">+    #               &#39;keymap.zoom&#39;: [&#39;o&#39;],</span>
+<span class="gi">+    #               &#39;legend.borderaxespad&#39;: 0.5,</span>
+<span class="gi">+    #               &#39;legend.borderpad&#39;: 0.4,</span>
+<span class="gi">+    #               &#39;legend.columnspacing&#39;: 2.0,</span>
+<span class="gi">+    #               &#39;legend.fancybox&#39;: False,</span>
+<span class="gi">+    #               &#39;legend.fontsize&#39;: &#39;large&#39;,</span>
+<span class="gi">+    #               &#39;legend.framealpha&#39;: None,</span>
+<span class="gi">+    #               &#39;legend.frameon&#39;: True,</span>
+<span class="gi">+    #               &#39;legend.handleheight&#39;: 0.7,</span>
+<span class="gi">+    #               &#39;legend.handlelength&#39;: 2.0,</span>
+<span class="gi">+    #               &#39;legend.handletextpad&#39;: 0.8,</span>
+<span class="gi">+    #               &#39;legend.isaxes&#39;: True,</span>
+<span class="gi">+    #               &#39;legend.labelspacing&#39;: 0.5,</span>
+<span class="gi">+    #               &#39;legend.loc&#39;: &#39;upper right&#39;,</span>
+<span class="gi">+    #               &#39;legend.markerscale&#39;: 1.0,</span>
+<span class="gi">+    #               &#39;legend.numpoints&#39;: 2,</span>
+<span class="gi">+    #               &#39;legend.scatterpoints&#39;: 3,</span>
+<span class="gi">+    #               &#39;legend.shadow&#39;: False,</span>
+<span class="gi">+    #               &#39;lines.antialiased&#39;: True,</span>
+<span class="gi">+    #               &#39;lines.color&#39;: &#39;b&#39;,</span>
+<span class="gi">+    #               &#39;lines.dash_capstyle&#39;: &#39;butt&#39;,</span>
+<span class="gi">+    #               &#39;lines.dash_joinstyle&#39;: &#39;round&#39;,</span>
+<span class="gi">+    #               &#39;lines.linestyle&#39;: &#39;-&#39;,</span>
+<span class="gi">+    #               &#39;lines.linewidth&#39;: 1.0,</span>
+<span class="gi">+    #               &#39;lines.marker&#39;: &#39;None&#39;,</span>
+<span class="gi">+    #               &#39;lines.markeredgewidth&#39;: 0.5,</span>
+<span class="gi">+    #               &#39;lines.markersize&#39;: 6.0,</span>
+<span class="gi">+    #               &#39;lines.solid_capstyle&#39;: &#39;projecting&#39;,</span>
+<span class="gi">+    #               &#39;lines.solid_joinstyle&#39;: &#39;round&#39;,</span>
+<span class="gi">+    #               &#39;mathtext.bf&#39;: &#39;serif:bold&#39;,</span>
+<span class="gi">+    #               &#39;mathtext.cal&#39;: &#39;cursive&#39;,</span>
+<span class="gi">+    #               &#39;mathtext.default&#39;: &#39;it&#39;,</span>
+<span class="gi">+    #               &#39;mathtext.fallback_to_cm&#39;: True,</span>
+<span class="gi">+    #               &#39;mathtext.fontset&#39;: &#39;cm&#39;,</span>
+<span class="gi">+    #               &#39;mathtext.it&#39;: &#39;serif:italic&#39;,</span>
+<span class="gi">+    #               &#39;mathtext.rm&#39;: &#39;serif&#39;,</span>
+<span class="gi">+    #               &#39;mathtext.sf&#39;: &#39;sans\\-serif&#39;,</span>
+<span class="gi">+    #               &#39;mathtext.tt&#39;: &#39;monospace&#39;,</span>
+<span class="gi">+    #               &#39;nbagg.transparent&#39;: True,</span>
+<span class="gi">+    #               &#39;patch.antialiased&#39;: True,</span>
+<span class="gi">+    #               &#39;patch.edgecolor&#39;: &#39;k&#39;,</span>
+<span class="gi">+    #               &#39;patch.facecolor&#39;: &#39;b&#39;,</span>
+<span class="gi">+    #               &#39;patch.linewidth&#39;: 1.0,</span>
+<span class="gi">+    #               &#39;path.effects&#39;: [],</span>
+<span class="gi">+    #               &#39;path.simplify&#39;: True,</span>
+<span class="gi">+    #               &#39;path.simplify_threshold&#39;: 0.1111111111111111,</span>
+<span class="gi">+    #               &#39;path.sketch&#39;: None,</span>
+<span class="gi">+    #               &#39;path.snap&#39;: True,</span>
+<span class="gi">+    #               &#39;pdf.compression&#39;: 6,</span>
+<span class="gi">+    #               &#39;pdf.fonttype&#39;: 3,</span>
+<span class="gi">+    #               &#39;pdf.inheritcolor&#39;: False,</span>
+<span class="gi">+    #               &#39;pdf.use14corefonts&#39;: False,</span>
+<span class="gi">+    #               &#39;pgf.debug&#39;: False,</span>
+<span class="gi">+    #               &#39;pgf.preamble&#39;: [],</span>
+<span class="gi">+    #               &#39;pgf.rcfonts&#39;: True,</span>
+<span class="gi">+    #               &#39;pgf.texsystem&#39;: &#39;xelatex&#39;,</span>
+<span class="gi">+    #               &#39;plugins.directory&#39;: &#39;.matplotlib_plugins&#39;,</span>
+<span class="gi">+    #               &#39;polaraxes.grid&#39;: True,</span>
+<span class="gi">+    #               &#39;ps.distiller.res&#39;: 6000,</span>
+<span class="gi">+    #               &#39;ps.fonttype&#39;: 3,</span>
+<span class="gi">+    #               &#39;ps.papersize&#39;: &#39;letter&#39;,</span>
+<span class="gi">+    #               &#39;ps.useafm&#39;: False,</span>
+<span class="gi">+    #               &#39;ps.usedistiller&#39;: False,</span>
+<span class="gi">+    #               &#39;savefig.bbox&#39;: None,</span>
+<span class="gi">+    #               &#39;savefig.directory&#39;: &#39;~&#39;,</span>
+<span class="gi">+    #               &#39;savefig.dpi&#39;: 100.0,</span>
+<span class="gi">+    #               &#39;savefig.edgecolor&#39;: &#39;w&#39;,</span>
+<span class="gi">+    #               &#39;savefig.facecolor&#39;: &#39;w&#39;,</span>
+<span class="gi">+    #               &#39;savefig.format&#39;: &#39;png&#39;,</span>
+<span class="gi">+    #               &#39;savefig.frameon&#39;: True,</span>
+<span class="gi">+    #               &#39;savefig.jpeg_quality&#39;: 95,</span>
+<span class="gi">+    #               &#39;savefig.orientation&#39;: &#39;portrait&#39;,</span>
+<span class="gi">+    #               &#39;savefig.pad_inches&#39;: 0.1,</span>
+<span class="gi">+    #               &#39;savefig.transparent&#39;: False,</span>
+<span class="gi">+    #               &#39;svg.fonttype&#39;: &#39;path&#39;,</span>
+<span class="gi">+    #               &#39;svg.image_inline&#39;: True,</span>
+<span class="gi">+    #               &#39;svg.image_noscale&#39;: False,</span>
+<span class="gi">+    #               &#39;text.antialiased&#39;: True,</span>
+<span class="gi">+    #               &#39;text.color&#39;: &#39;k&#39;,</span>
+<span class="gi">+    #               &#39;text.dvipnghack&#39;: None,</span>
+<span class="gi">+    #               &#39;text.hinting&#39;: True,</span>
+<span class="gi">+    #               &#39;text.hinting_factor&#39;: 8,</span>
+<span class="gi">+    #               &#39;text.latex.preamble&#39;: [],</span>
+<span class="gi">+    #               &#39;text.latex.preview&#39;: False,</span>
+<span class="gi">+    #               &#39;text.latex.unicode&#39;: False,</span>
+<span class="gi">+    #               &#39;text.usetex&#39;: False,</span>
+<span class="gi">+    #               &#39;timezone&#39;: &#39;UTC&#39;,</span>
+<span class="gi">+    #               &#39;tk.window_focus&#39;: False,</span>
+<span class="gi">+    #               &#39;toolbar&#39;: &#39;toolbar2&#39;,</span>
+<span class="gi">+    #               &#39;verbose.fileo&#39;: &#39;sys.stdout&#39;,</span>
+<span class="gi">+    #               &#39;verbose.level&#39;: &#39;silent&#39;,</span>
+<span class="gi">+    #               &#39;webagg.open_in_browser&#39;: True,</span>
+<span class="gi">+    #               &#39;webagg.port&#39;: 8988,</span>
+<span class="gi">+    #               &#39;webagg.port_retries&#39;: 50,</span>
+<span class="gi">+    #               &#39;xtick.color&#39;: &#39;k&#39;,</span>
+<span class="gi">+    #               &#39;xtick.direction&#39;: &#39;in&#39;,</span>
+<span class="gi">+    #               &#39;xtick.labelsize&#39;: &#39;medium&#39;,</span>
+<span class="gi">+    #               &#39;xtick.major.pad&#39;: 4.0,</span>
+<span class="gi">+    #               &#39;xtick.major.size&#39;: 4.0,</span>
+<span class="gi">+    #               &#39;xtick.major.width&#39;: 0.5,</span>
+<span class="gi">+    #               &#39;xtick.minor.pad&#39;: 4.0,</span>
+<span class="gi">+    #               &#39;xtick.minor.size&#39;: 2.0,</span>
+<span class="gi">+    #               &#39;xtick.minor.width&#39;: 0.5,</span>
+<span class="gi">+    #               &#39;ytick.color&#39;: &#39;k&#39;,</span>
+<span class="gi">+    #               &#39;ytick.direction&#39;: &#39;in&#39;,</span>
+<span class="gi">+    #               &#39;ytick.labelsize&#39;: &#39;medium&#39;,</span>
+<span class="gi">+    #               &#39;ytick.major.pad&#39;: 4.0,</span>
+<span class="gi">+    #               &#39;ytick.major.size&#39;: 4.0,</span>
+<span class="gi">+    #               &#39;ytick.major.width&#39;: 0.5,</span>
+<span class="gi">+    #               &#39;ytick.minor.pad&#39;: 4.0,</span>
+<span class="gi">+    #               &#39;ytick.minor.size&#39;: 2.0,</span>
+<span class="gi">+    #               &#39;ytick.minor.width&#39;: 0.5}</span>
+<span class="gi">+#========================================================================#</span>
+<span class="gi">+</span>
+<span class="gi">+# ... Any other configurables you want to set</span>
+<span class="gi">+c.InteractiveShellApp.matplotlib = &quot;inline&quot;</span>
+<span class="gi">+# c.InteractiveShellApp.matplotlib = &quot;qt4&quot;</span>
+<span class="gi">+</span>
+<span class="gi">+#========================================================================#</span>
+<span class="gi">+# change default browser</span>
+<span class="gi">+# https://ipython.org/ipython-doc/2/config/options/notebook.html</span>
+<span class="gi">+#------------------------------------</span>
+<span class="gi">+# http://stackoverflow.com/questions/15632663/launch-ipython-notebook-with-selected-browser</span>
+<span class="gi">+# http://stackoverflow.com/questions/16704588/changing-browser-for-ipython-notebook-from-system-default</span>
+<span class="gi">+# http://stackoverflow.com/questions/6042335/calling-chrome-web-browser-from-the-webbrowser-get-in-python/6042407#6042407</span>
+<span class="gi">+#========================================================================#</span>
+<span class="gi">+# # import webbrowser</span>
+<span class="gi">+# # webbrowser.register(&#39;firefox&#39;, None, webbrowser.GenericBrowser(u&#39;/usr/bin/firefox %s&#39;))</span>
+<span class="gi">+# # c.NotebookApp.browser = u&#39;/usr/bin/firefox %s&#39;</span>
+<span class="gi">+# c.NotebookApp.browser = u&#39;firefox&#39;</span>
+<span class="gi">+# # NotebookApp.browser : Unicode</span>
+<span class="gi">+</span>
+<span class="gi">+</span>
+<span class="gi">+import pandas as pd</span>
+<span class="gi">+# pd.set_option(&#39;display.max_rows&#39;, 3)</span>
+<span class="gi">+# pd.set_option(&#39;precision&#39;,4)</span>
+<span class="gi">+pd.set_option(&#39;display.max_columns&#39;,500)</span>
+</pre></div>
+</td></tr></table></div>
+</div>
+</div>
+<div class="section" id="matplotlibrc">
+<h2>1.1.3. matplotlibrc<a class="headerlink" href="#matplotlibrc" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-bash"><div class="highlight"><pre><span></span><span class="c1"># get path to rc file</span>
+$ ipython -c <span class="s2">&quot;import matplotlib as mpl; from os.path import dirname; print dirname(mpl.matplotlib_fname())&quot;</span>
+/home/takanori/anaconda2/lib/python2.7/site-packages/matplotlib/mpl-data
+
+<span class="c1">#=========================================================================#</span>
+<span class="c1"># create symlink</span>
+<span class="c1">#=========================================================================#</span>
+<span class="nv">SOURCE</span><span class="o">=</span><span class="s2">&quot;</span><span class="si">${</span><span class="nv">HOME</span><span class="si">}</span><span class="s2">/Dropbox/git/configs/source/python/sbia&quot;</span>
+<span class="nv">MPL_TARGET</span><span class="o">=</span><span class="k">$(</span>ipython -c <span class="s2">&quot;import matplotlib as mpl; from os.path import dirname; print dirname(mpl.matplotlib_fname())&quot;</span><span class="k">)</span>
+
+<span class="c1"># matlotlibrc</span>
+ln -s <span class="s2">&quot;</span><span class="si">${</span><span class="nv">SOURCE</span><span class="si">}</span><span class="s2">/matplotlibrc&quot;</span> <span class="s2">&quot;</span><span class="si">${</span><span class="nv">MPL_TARGET</span><span class="si">}</span><span class="s2">&quot;</span>
+</pre></div>
+</div>
+<div class="section" id="content-of-matplotlibrc">
+<h3>1.1.3.1. Content of <code class="docutils literal"><span class="pre">matplotlibrc</span></code><a class="headerlink" href="#content-of-matplotlibrc" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-rst"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">literalinclude</span><span class="p">::</span> sbia/matplotlibrc
+    <span class="nc">:language:</span> <span class="nf">diff</span>
+    <span class="nc">:diff:</span> <span class="nf">sbia/matplotlibrc_original</span>
+    <span class="nc">:linenos:</span>
+</pre></div>
+</div>
+<div class="highlight-diff"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>  1
+  2
+  3
+  4
+  5
+  6
+  7
+  8
+  9
+ 10
+ 11
+ 12
+ 13
+ 14
+ 15
+ 16
+ 17
+ 18
+ 19
+ 20
+ 21
+ 22
+ 23
+ 24
+ 25
+ 26
+ 27
+ 28
+ 29
+ 30
+ 31
+ 32
+ 33
+ 34
+ 35
+ 36
+ 37
+ 38
+ 39
+ 40
+ 41
+ 42
+ 43
+ 44
+ 45
+ 46
+ 47
+ 48
+ 49
+ 50
+ 51
+ 52
+ 53
+ 54
+ 55
+ 56
+ 57
+ 58
+ 59
+ 60
+ 61
+ 62
+ 63
+ 64
+ 65
+ 66
+ 67
+ 68
+ 69
+ 70
+ 71
+ 72
+ 73
+ 74
+ 75
+ 76
+ 77
+ 78
+ 79
+ 80
+ 81
+ 82
+ 83
+ 84
+ 85
+ 86
+ 87
+ 88
+ 89
+ 90
+ 91
+ 92
+ 93
+ 94
+ 95
+ 96
+ 97
+ 98
+ 99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134
+135
+136
+137
+138
+139
+140
+141
+142
+143
+144
+145
+146
+147
+148
+149
+150
+151
+152
+153
+154
+155
+156</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="gd">--- sbia/matplotlibrc_original</span>
+<span class="gi">+++ sbia/matplotlibrc</span>
+<span class="gu">@@ -66,7 +66,7 @@</span>
+ # you if backend_fallback is True
+ #backend_fallback: True
+ 
+<span class="gd">-#interactive  : False</span>
+<span class="gi">+interactive  : True</span>
+ #toolbar      : toolbar2   # None | toolbar2  (&quot;classic&quot; is deprecated)
+ #timezone     : UTC        # a pytz timezone string, e.g., US/Central or Europe/Paris
+ 
+<span class="gu">@@ -78,7 +78,7 @@</span>
+ ### LINES
+ # See http://matplotlib.org/api/artist_api.html#module-matplotlib.lines for more
+ # information on line properties.
+<span class="gd">-#lines.linewidth   : 1.0     # line width in points</span>
+<span class="gi">+lines.linewidth   : 2.5 #1.0     # line width in points</span>
+ #lines.linestyle   : -       # solid line
+ #lines.color       : blue    # has no affect on plot(); see axes.color_cycle
+ #lines.marker      : None    # the default marker
+<span class="gu">@@ -139,14 +139,14 @@</span>
+ #font.family         : sans-serif
+ #font.style          : normal
+ #font.variant        : normal
+<span class="gd">-#font.weight         : medium</span>
+<span class="gi">+font.weight         : bold #medium</span>
+ #font.stretch        : normal
+ # note that font.size controls default text sizes.  To configure
+ # special text sizes tick labels, axes, labels, title, etc, see the rc
+ # settings for axes and ticks. Special text sizes can be defined
+ # relative to font.size, using the following values: xx-small, x-small,
+ # small, medium, large, x-large, xx-large, larger, or smaller
+<span class="gd">-#font.size           : 12.0</span>
+<span class="gi">+font.size           : 20.0 #12.0 #&lt;- controls the &quot;displaytip size&quot;</span>
+ #font.serif          : Bitstream Vera Serif, New Century Schoolbook, Century Schoolbook L, Utopia, ITC Bookman, Bookman, Nimbus Roman No9 L, Times New Roman, Times, Palatino, Charter, serif
+ #font.sans-serif     : Bitstream Vera Sans, Lucida Grande, Verdana, Geneva, Lucid, Arial, Helvetica, Avant Garde, sans-serif
+ #font.cursive        : Apple Chancery, Textile, Zapf Chancery, Sand, cursive
+<span class="gu">@@ -235,14 +235,14 @@</span>
+ # default fontsizes for ticklabels, and so on.  See
+ # http://matplotlib.org/api/axes_api.html#module-matplotlib.axes
+ #axes.hold           : True    # whether to clear the axes by default on
+<span class="gd">-#axes.facecolor      : white   # axes background color</span>
+<span class="gi">+axes.facecolor      : white   # axes background color</span>
+ #axes.edgecolor      : black   # axes edge color
+<span class="gd">-#axes.linewidth      : 1.0     # edge linewidth</span>
+<span class="gd">-#axes.grid           : False   # display grid or not</span>
+<span class="gd">-#axes.titlesize      : large   # fontsize of the axes title</span>
+<span class="gd">-#axes.labelsize      : medium  # fontsize of the x any y labels</span>
+<span class="gd">-#axes.labelweight    : normal  # weight of the x and y labels</span>
+<span class="gd">-#axes.labelcolor     : black</span>
+<span class="gi">+axes.linewidth      : 1.5 #1.0     # edge linewidth</span>
+<span class="gi">+axes.grid           : False   # display grid or not</span>
+<span class="gi">+axes.titlesize      : 18.0 #large   # fontsize of the axes title</span>
+<span class="gi">+axes.labelsize      : 10.0 #medium  # fontsize of the x any y labels</span>
+<span class="gi">+axes.labelweight    : bold #normal  # weight of the x and y labels</span>
+<span class="gi">+axes.labelcolor     : black #black # &lt;- controls xlabel and ylabel font color</span>
+ #axes.axisbelow      : False   # whether axis gridlines and ticks are below
+                                # the axes elements (lines, text, etc)
+ 
+<span class="gu">@@ -264,7 +264,8 @@</span>
+ #axes.unicode_minus  : True    # use unicode for the minus symbol
+                                # rather than hyphen.  See
+                                # http://en.wikipedia.org/wiki/Plus_and_minus_signs#Character_codes
+<span class="gd">-#axes.color_cycle    : b, g, r, c, m, y, k  # color cycle for plot lines</span>
+<span class="gi">+#| this gives warning that color cyle is deprecated...                               </span>
+<span class="gi">+# axes.color_cycle    : b, r, g, m, c, y, k  # color cycle for plot lines</span>
+                                             # as list of string colorspecs:
+                                             # single letter, long name, or
+                                             # web-style hex
+<span class="gu">@@ -283,7 +284,7 @@</span>
+ #xtick.major.pad      : 4      # distance to major tick label in points
+ #xtick.minor.pad      : 4      # distance to the minor tick label in points
+ #xtick.color          : k      # color of the tick labels
+<span class="gd">-#xtick.labelsize      : medium # fontsize of the tick labels</span>
+<span class="gi">+xtick.labelsize      : 10.0 #medium # fontsize of the tick labels</span>
+ #xtick.direction      : in     # direction: in, out, or inout
+ 
+ #ytick.major.size     : 4      # major tick size in points
+<span class="gu">@@ -293,7 +294,7 @@</span>
+ #ytick.major.pad      : 4      # distance to major tick label in points
+ #ytick.minor.pad      : 4      # distance to the minor tick label in points
+ #ytick.color          : k      # color of the tick labels
+<span class="gd">-#ytick.labelsize      : medium # fontsize of the tick labels</span>
+<span class="gi">+ytick.labelsize      : 10.0 #medium # fontsize of the tick labels</span>
+ #ytick.direction      : in     # direction: in, out, or inout
+ 
+ 
+<span class="gu">@@ -308,7 +309,7 @@</span>
+                                # legend, else a rectangle
+ #legend.isaxes        : True
+ #legend.numpoints     : 2      # the number of points in the legend line
+<span class="gd">-#legend.fontsize      : large</span>
+<span class="gi">+legend.fontsize      : 10.0 #large</span>
+ #legend.borderpad     : 0.5    # border whitespace in fontsize units
+ #legend.markerscale   : 1.0    # the relative size of legend markers vs. original
+ # the following dimensions are in axes coords
+<span class="gu">@@ -325,13 +326,13 @@</span>
+ 
+ ### FIGURE
+ # See http://matplotlib.org/api/figure_api.html#matplotlib.figure.Figure
+<span class="gd">-#figure.figsize   : 8, 6    # figure size in inches</span>
+<span class="gi">+figure.figsize   : 10, 8 #8, 6    # figure size in inches</span>
+ #figure.dpi       : 80      # figure dots per inch
+<span class="gd">-#figure.facecolor : 0.75    # figure facecolor; 0.75 is scalar gray</span>
+<span class="gi">+figure.facecolor : white #0.75    # figure facecolor; 0.75 is scalar gray</span>
+ #figure.edgecolor : white   # figure edgecolor
+ #figure.autolayout : False  # When True, automatically adjust subplot
+                             # parameters to make the plot fit the figure
+<span class="gd">-#figure.max_open_warning : 20  # The maximum number of figures to open through</span>
+<span class="gi">+#figure.max_open_warning : 12  # The maximum number of figures to open through</span>
+                                # the pyplot interface before emitting a warning.
+                                # If less than one this feature is disabled.
+ 
+<span class="gu">@@ -346,8 +347,8 @@</span>
+ 
+ ### IMAGES
+ #image.aspect : equal             # equal | auto | a number
+<span class="gd">-#image.interpolation  : bilinear  # see help(imshow) for options</span>
+<span class="gd">-#image.cmap   : jet               # gray | jet etc...</span>
+<span class="gi">+image.interpolation  : none  # see help(imshow) for options</span>
+<span class="gi">+image.cmap   : RdBu_r #jet               # gray | jet etc...</span>
+ #image.lut    : 256               # the size of the colormap lookup table
+ #image.origin : upper             # lower | upper
+ #image.resample  : False
+<span class="gu">@@ -456,17 +457,17 @@</span>
+ # Customize these settings according to your needs.
+ # Leave the field(s) empty if you don&#39;t need a key-map. (i.e., fullscreen : &#39;&#39;)
+ 
+<span class="gd">-#keymap.fullscreen : f               # toggling</span>
+<span class="gd">-#keymap.home : h, r, home            # home or reset mnemonic</span>
+<span class="gi">+keymap.fullscreen : f               # toggling</span>
+<span class="gi">+keymap.home : h, r, home            # home or reset mnemonic</span>
+ #keymap.back : left, c, backspace    # forward / backward keys to enable
+ #keymap.forward : right, v           #   left handed quick navigation
+<span class="gd">-#keymap.pan : p                      # pan mnemonic</span>
+<span class="gi">+keymap.pan : p                      # pan mnemonic</span>
+ #keymap.zoom : o                     # zoom mnemonic
+ #keymap.save : s                     # saving current figure
+ #keymap.quit : ctrl+w, cmd+w         # close the current figure
+<span class="gd">-#keymap.grid : g                     # switching on/off a grid in current axes</span>
+<span class="gd">-#keymap.yscale : l                   # toggle scaling of y-axes (&#39;log&#39;/&#39;linear&#39;)</span>
+<span class="gd">-#keymap.xscale : L, k                # toggle scaling of x-axes (&#39;log&#39;/&#39;linear&#39;)</span>
+<span class="gi">+keymap.grid : g                     # switching on/off a grid in current axes</span>
+<span class="gi">+keymap.yscale : l                   # toggle scaling of y-axes (&#39;log&#39;/&#39;linear&#39;)</span>
+<span class="gi">+keymap.xscale : L, k                # toggle scaling of x-axes (&#39;log&#39;/&#39;linear&#39;)</span>
+ #keymap.all_axes : a                 # enable all axes
+ 
+ # Control location of examples data files
+<span class="gu">@@ -491,3 +492,7 @@</span>
+ #animation.convert_path: &#39;convert&#39; # Path to ImageMagick&#39;s convert binary.
+                                    # On Windows use the full path since convert
+                                    # is also the name of a system tool.
+<span class="gi">+#=============================================================================#</span>
+<span class="gi">+# my stuffs below</span>
+<span class="gi">+#=============================================================================#</span>
+<span class="gi">+#axes.titleweight=bold </span>
+</pre></div>
+</td></tr></table></div>
+</div>
+</div>
+<div class="section" id="new-symlink-to-sitecustomize-py">
+<h2>1.1.4. New - symlink to sitecustomize.py<a class="headerlink" href="#new-symlink-to-sitecustomize-py" title="Permalink to this headline">¶</a></h2>
+<p>Basically stuffs I want python to run at program startup (in case I am not using <code class="docutils literal"><span class="pre">ipython</span></code>)</p>
+<div class="highlight-bash"><div class="highlight"><pre><span></span><span class="c1"># general python startup (I first needed to use this for building with Sphinx)</span>
+ln -s <span class="s2">&quot;</span><span class="si">${</span><span class="nv">HOME</span><span class="si">}</span><span class="s2">/Dropbox/git/configs/source/python/sbia/sitecustomize.py&quot;</span> <span class="se">\</span>
+      <span class="s2">&quot;</span><span class="si">${</span><span class="nv">HOME</span><span class="si">}</span><span class="s2">/.local/lib/python2.7/site-packages&quot;</span>
+
+<span class="c1"># spyder startup</span>
+ln -s <span class="s2">&quot;</span><span class="si">${</span><span class="nv">HOME</span><span class="si">}</span><span class="s2">/Dropbox/git/configs/source/python/sbia/sitecustomize_spyder.py&quot;</span> <span class="se">\</span>
+      <span class="s2">&quot;</span><span class="si">${</span><span class="nv">HOME</span><span class="si">}</span><span class="s2">/anaconda2/lib/python2.7/site-packages/spyderlib/widgets/externalshell/sitecustomize.py&quot;</span>
+</pre></div>
+</div>
+<div class="section" id="current-content-of-sitecustomize-py">
+<h3>1.1.4.1. Current content of <code class="docutils literal"><span class="pre">sitecustomize.py</span></code><a class="headerlink" href="#current-content-of-sitecustomize-py" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-rst"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">literalinclude</span><span class="p">::</span> sbia/sitecustomize.py
+    <span class="nc">:language:</span> <span class="nf">python</span>
+</pre></div>
+</div>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="c1"># http://stackoverflow.com/questions/9942594/unicodeencodeerror-ascii-codec-cant-encode-character-u-xa0-in-position-20</span>
+<span class="c1"># http://masasuzu.hatenablog.jp/entry/20110313/1299997912</span>
+<span class="kn">import</span> <span class="nn">sys</span>
+
+<span class="c1">#| reload is somehow needed to get ``setdefaultencoding`` method</span>
+<span class="c1">#| http://stackoverflow.com/questions/2276200/changing-default-encoding-of-python</span>
+<span class="nb">reload</span><span class="p">(</span><span class="n">sys</span><span class="p">)</span>
+
+<span class="c1"># default is &#39;ascii&#39;, which raises EncodingError with some programs that uses UTF-8.</span>
+<span class="n">sys</span><span class="o">.</span><span class="n">setdefaultencoding</span><span class="p">(</span><span class="s1">&#39;UTF8&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="what-does-sitecustomize-py-do">
+<h3>1.1.4.2. what does sitecustomize.py do?<a class="headerlink" href="#what-does-sitecustomize-py-do" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><a class="reference external" href="http://stackoverflow.com/questions/10693706/creating-a-secondary-site-packages-directory-and-loading-packages-from-pth-fil">http://stackoverflow.com/questions/10693706/creating-a-secondary-site-packages-directory-and-loading-packages-from-pth-fil</a></li>
+<li><a class="reference external" href="http://masasuzu.hatenablog.jp/entry/20110313/1299997912">http://masasuzu.hatenablog.jp/entry/20110313/1299997912</a></li>
+<li><a class="reference external" href="http://nedbatchelder.com/blog/201001/running_code_at_python_startup.html">http://nedbatchelder.com/blog/201001/running_code_at_python_startup.html</a><ul>
+<li><strong>this one was the most informative</strong></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="section" id="current-content-of-sitecustomize-spyder-py">
+<h3>1.1.4.3. Current content of <code class="docutils literal"><span class="pre">sitecustomize_spyder.py</span></code><a class="headerlink" href="#current-content-of-sitecustomize-spyder-py" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-rst"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">literalinclude</span><span class="p">::</span> sbia/sitecustomize_spyder.py
+    <span class="nc">:language:</span> <span class="nf">diff</span>
+    <span class="nc">:linenos:</span>
+    <span class="nc">:diff:</span> <span class="nf">sbia/sitecustomize_spyder_original.py</span>
+</pre></div>
+</div>
+<div class="highlight-diff"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="gd">--- sbia/sitecustomize_spyder_original.py</span>
+<span class="gi">+++ sbia/sitecustomize_spyder.py</span>
+<span class="gu">@@ -11,6 +11,14 @@</span>
+ import pdb
+ import bdb
+ 
+<span class="gi">+#=============================================================================#</span>
+<span class="gi">+# MY SNIPPETS (TAK)</span>
+<span class="gi">+#=============================================================================#</span>
+<span class="gi">+# empty for now.</span>
+<span class="gi">+</span>
+<span class="gi">+#-----------------------------------------------------------------------------#</span>
+<span class="gi">+# \end tak snippets</span>
+<span class="gi">+#-----------------------------------------------------------------------------#</span>
+ 
+ PY2 = sys.version[0] == &#39;2&#39;
+ 
+</pre></div>
+</td></tr></table></div>
+</div>
+</div>
+<div class="section" id="changes-with-original">
+<h2>1.1.5. Changes with _original<a class="headerlink" href="#changes-with-original" title="Permalink to this headline">¶</a></h2>
+<p>Use <code class="docutils literal"><span class="pre">diff</span></code> or better yet, <code class="docutils literal"><span class="pre">colordiff</span></code> to see the changes I made</p>
+<div class="highlight-diff"><div class="highlight"><pre><span></span>$ colordiff sitecustomize_spyder.py sitecustomize_original.py
+14,23d13
+&lt; #=============================================================================#
+&lt; # MY SNIPPETS (TAK)
+&lt; #=============================================================================#
+&lt; import sys
+&lt; reload(sys)
+&lt; sys.setdefaultencoding(&#39;UTF8&#39;)
+&lt;
+&lt; #-----------------------------------------------------------------------------#
+&lt; # \end tak snippets
+&lt; #-----------------------------------------------------------------------------#
+</pre></div>
+</div>
 </div>
 </div>
 
