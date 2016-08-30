@@ -309,7 +309,7 @@ ytick.labelsize      : 10.0 #medium # fontsize of the tick labels
                                # legend, else a rectangle
 #legend.isaxes        : True
 #legend.numpoints     : 2      # the number of points in the legend line
-legend.fontsize      : 10.0 #large
+legend.fontsize      : 16.0 #large
 #legend.borderpad     : 0.5    # border whitespace in fontsize units
 #legend.markerscale   : 1.0    # the relative size of legend markers vs. original
 # the following dimensions are in axes coords

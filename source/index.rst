@@ -4,7 +4,8 @@ Personal note for keeping track of my computer **configs**, which I sync using s
 
 Also enjoy being able to version control all of my ``rc`` files.
 
-**HTML Last compiled on:**  |today|
+
+**HTML last built:**  |today|
 
 .. todo::
 
