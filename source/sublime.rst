@@ -6,6 +6,7 @@ Sublime Text Setup
     :maxdepth: 2
     :caption: Contents
     :name: configs.sublime
+    :numbered:
 
     ./sublime/sublime.sbia.setup.rst
     ./sublime/sublime.windows.setup.rst

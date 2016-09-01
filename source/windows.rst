@@ -7,5 +7,9 @@ Files related to my windows machine setup.
     :maxdepth: 2
     :caption: Contents
     :name: windows
+    :numbered:
 
     ./windows/autohotkey/AHK_helper.rst
+    ./windows/office-setup/office-setup.rst
+    ./windows/asus.rst
+    ./windows/old-notes
