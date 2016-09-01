@@ -1,6 +1,7 @@
 ############################
 SBIA-PC125 Workstation setup
 ############################
+``bash_sbia.rst``
 
 .. contents:: `Contents`
    :depth: 2

@@ -1,5 +1,5 @@
-Windows machine setup
-"""""""""""""""""""""
+Windows machine setup (``windows.rst``)
+"""""""""""""""""""""""""""""""""""""""
 
 Files related to my windows machine setup.
 

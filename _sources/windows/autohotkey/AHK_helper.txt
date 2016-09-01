@@ -1,5 +1,7 @@
 Autohotkey
 """"""""""
+``AHK_helper.rst``
+
 .. contents:: `Contents`
    :depth: 2
    :local:

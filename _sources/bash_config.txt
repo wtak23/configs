@@ -1,5 +1,7 @@
-Bash config files
-"""""""""""""""""
+Bash config files (``bash_config.rst``)
+"""""""""""""""""""""""""""""""""""""""
+
+
 .. toctree::
     :maxdepth: 2
     :numbered:

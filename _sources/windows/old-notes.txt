@@ -1,11 +1,14 @@
+
+Stuffs to do on a new computer
+""""""""""""""""""""""""""""""
+``old-notes.rst``
+
 .. important::
 
   Brought this from my old repos.
 
   https://github.com/wtak23/configs_master/blob/master/cygwin/windows-setup.rst
 
-Stuffs to do on a new computer
-""""""""""""""""""""""""""""""
 .. contents:: **Table of Contents**
     :depth: 2
 

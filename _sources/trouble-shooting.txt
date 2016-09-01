@@ -1,5 +1,5 @@
-Trouble-shooting notes
-""""""""""""""""""""""
+Trouble-shooting notes (``trouble-shooting.rst``)
+"""""""""""""""""""""""""""""""""""""""""""""""""
 Jumbled notes on **trouble-shooting** when computer goes through unexpected hiccups.
 
 .. note::
