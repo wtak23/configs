@@ -4,6 +4,7 @@ Python
 
 .. toctree::
     :maxdepth: 2
+    :numbered:
     :caption: Contents
     :name: python
 

@@ -22,7 +22,6 @@ Also enjoy being able to version control all of my ``rc`` files.
 
 .. toctree::
     :maxdepth: 2
-    :numbered:
 
     python.rst
     bash_config.rst

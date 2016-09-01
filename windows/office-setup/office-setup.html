@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>1. Autohotkey &mdash; My Configs</title>
+  <title>2. MS Office Stuffs (office-setup.rst) &mdash; My Configs</title>
   
 
   
@@ -34,8 +34,8 @@
   
     <link rel="top" title="My Configs" href="../../index.html"/>
         <link rel="up" title="Windows machine setup" href="../../windows.html"/>
-        <link rel="next" title="2. MS Office Stuffs (office-setup.rst)" href="../office-setup/office-setup.html"/>
-        <link rel="prev" title="Windows machine setup" href="../../windows.html"/> 
+        <link rel="next" title="3. Setup for my ASUS laptop" href="../asus.html"/>
+        <link rel="prev" title="1. Autohotkey" href="../autohotkey/AHK_helper.html"/> 
 
   
   <script src="../../_static/js/modernizr.min.js"></script>
@@ -162,17 +162,17 @@
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../../R.html">R</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="../../windows.html">Windows machine setup</a><ul class="current">
-<li class="toctree-l2 current"><a class="current reference internal" href="">1. Autohotkey</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#notes">1.1. Notes</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#details-on-sentinput">1.1.1. Details on <strong>SentInput</strong></a></li>
-<li class="toctree-l4"><a class="reference internal" href="#variables-in-ahk">1.1.2. Variables in AHK</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#looping-in-ahk">1.1.3. Looping in AHK</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#other-useful-references">1.1.4. other useful references</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../autohotkey/AHK_helper.html">1. Autohotkey</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../autohotkey/AHK_helper.html#notes">1.1. Notes</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../autohotkey/AHK_helper.html#details-on-sentinput">1.1.1. Details on <strong>SentInput</strong></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../autohotkey/AHK_helper.html#variables-in-ahk">1.1.2. Variables in AHK</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../autohotkey/AHK_helper.html#looping-in-ahk">1.1.3. Looping in AHK</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../autohotkey/AHK_helper.html#other-useful-references">1.1.4. other useful references</a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../office-setup/office-setup.html">2. MS Office Stuffs (<code class="docutils literal"><span class="pre">office-setup.rst</span></code>)</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="">2. MS Office Stuffs (<code class="docutils literal"><span class="pre">office-setup.rst</span></code>)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../asus.html">3. Setup for my ASUS laptop</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../asus.html#startup-files">3.1. Startup Files</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../asus.html#symlinks">3.2. symlinks</a><ul>
@@ -293,13 +293,13 @@
         
           <li><a href="../../windows.html">Windows machine setup</a> &raquo;</li>
         
-      <li>1. Autohotkey</li>
+      <li>2. MS Office Stuffs (<code class="docutils literal"><span class="pre">office-setup.rst</span></code>)</li>
     
     
       <li class="wy-breadcrumbs-aside">
         
             
-            <a href="../../_sources/windows/autohotkey/AHK_helper.txt" rel="nofollow"> View page source</a>
+            <a href="../../_sources/windows/office-setup/office-setup.txt" rel="nofollow"> View page source</a>
           
         
       </li>
@@ -310,71 +310,14 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="autohotkey">
-<h1>1. Autohotkey<a class="headerlink" href="#autohotkey" title="Permalink to this headline">¶</a></h1>
-<div class="contents local topic" id="contents">
-<p class="topic-title first"><cite>Contents</cite></p>
-<ul class="simple">
-<li><a class="reference internal" href="#notes" id="id1">Notes</a><ul>
-<li><a class="reference internal" href="#details-on-sentinput" id="id2">Details on <strong>SentInput</strong></a></li>
-<li><a class="reference internal" href="#variables-in-ahk" id="id3">Variables in AHK</a></li>
-<li><a class="reference internal" href="#looping-in-ahk" id="id4">Looping in AHK</a></li>
-<li><a class="reference internal" href="#other-useful-references" id="id5">other useful references</a></li>
-</ul>
-</li>
-</ul>
+  <div class="section" id="ms-office-stuffs-office-setup-rst">
+<h1>2. MS Office Stuffs (<code class="docutils literal"><span class="pre">office-setup.rst</span></code>)<a class="headerlink" href="#ms-office-stuffs-office-setup-rst" title="Permalink to this headline">¶</a></h1>
+<div class="admonition important">
+<p class="first admonition-title">Important</p>
+<p class="last">Imported from my old configs repos on (2016-09-01)</p>
 </div>
-<p>The main &#8220;cheat-sheet&#8221; to look at for help:</p>
-<ul class="simple">
-<li><a class="reference external" href="http://ahkscript.org/docs/commands/index.htm">http://ahkscript.org/docs/commands/index.htm</a></li>
-</ul>
-<p>The symbols for the modifier keys (for a full list: <a class="reference external" href="http://ahkscript.org/docs/Hotkeys.htm#Symbols">http://ahkscript.org/docs/Hotkeys.htm#Symbols</a>)</p>
-<div class="highlight-python"><div class="highlight"><pre><span></span># : windows key
-^ : control key
-! : alt key
-+ : shift key
-</pre></div>
-</div>
-<p>This link contains a good list of examples</p>
-<ul class="simple">
-<li><a class="reference external" href="http://www.computerhope.com/tips/tip209.htm">http://www.computerhope.com/tips/tip209.htm</a></li>
-</ul>
-<div class="section" id="notes">
-<h2><a class="toc-backref" href="#id1">1.1. Notes</a><a class="headerlink" href="#notes" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="details-on-sentinput">
-<h3><a class="toc-backref" href="#id2">1.1.1. Details on <strong>SentInput</strong></a><a class="headerlink" href="#details-on-sentinput" title="Permalink to this headline">¶</a></h3>
-<ul class="simple">
-<li><a class="reference external" href="http://ahkscript.org/docs/commands/Send.htm#SendInputDetail">http://ahkscript.org/docs/commands/Send.htm#SendInputDetail</a></li>
-<li>In short, &#8220;<code class="docutils literal"><span class="pre">SendInput</span></code> is generally the preferred method to send keystrokes and mouse clicks because of its superior speed and reliability&#8221;</li>
-</ul>
-</div>
-<div class="section" id="variables-in-ahk">
-<h3><a class="toc-backref" href="#id3">1.1.2. Variables in AHK</a><a class="headerlink" href="#variables-in-ahk" title="Permalink to this headline">¶</a></h3>
-<p><a class="reference external" href="http://ahkscript.org/docs/Variables.htm">http://ahkscript.org/docs/Variables.htm</a></p>
-<ul class="simple">
-<li>Variable names are not case sensitive</li>
-<li>list of built-in variables: [<a class="reference external" href="http://ahkscript.org/docs/Variables.htm#BuiltIn">link</a>]</li>
-<li>Operations on variables [<a class="reference external" href="http://ahkscript.org/docs/Variables.htm#Expression_Operators_in_descending_precedence_order">link</a>]</li>
-<li>To have more than one command executed by a hotkey, put the first line beneath the hotkey definition and make the last line <code class="docutils literal"><span class="pre">return</span></code>.</li>
-</ul>
-</div>
-<div class="section" id="looping-in-ahk">
-<h3><a class="toc-backref" href="#id4">1.1.3. Looping in AHK</a><a class="headerlink" href="#looping-in-ahk" title="Permalink to this headline">¶</a></h3>
-<p><a class="reference external" href="http://ahkscript.org/docs/commands/Loop.htm">http://ahkscript.org/docs/commands/Loop.htm</a></p>
-</div>
-<div class="section" id="other-useful-references">
-<h3><a class="toc-backref" href="#id5">1.1.4. other useful references</a><a class="headerlink" href="#other-useful-references" title="Permalink to this headline">¶</a></h3>
-<ul class="simple">
-<li><a class="reference external" href="http://www.autohotkey.com/docs/">http://www.autohotkey.com/docs/</a></li>
-<li><a class="reference external" href="http://www.autohotkey.com/docs/Hotkeys.htm">http://www.autohotkey.com/docs/Hotkeys.htm</a></li>
-<li><a class="reference external" href="http://www.autohotkey.com/docs/KeyList.htm">http://www.autohotkey.com/docs/KeyList.htm</a></li>
-<li><a class="reference external" href="http://www.autohotkey.com/docs/commands.htm">http://www.autohotkey.com/docs/commands.htm</a></li>
-<li><a class="reference external" href="http://www.autohotkey.com/docs/commands/FileAppend.htm">http://www.autohotkey.com/docs/commands/FileAppend.htm</a>]</li>
-<li><a class="reference external" href="http://www.autohotkey.com/board/topic/25393-appskeys-a-suite-of-simple-utility-hotkeys/">http://www.autohotkey.com/board/topic/25393-appskeys-a-suite-of-simple-utility-hotkeys/</a></li>
-<li><a class="reference external" href="http://xahlee.info/mswin/autohotkey_key_notations.html">http://xahlee.info/mswin/autohotkey_key_notations.html</a></li>
-</ul>
-</div>
-</div>
+<p>Macro and keyboard shortcut info saved in <code class="docutils literal"><span class="pre">Normal.dotm</span></code> file (2016-06-18)</p>
+<p><code class="docutils literal"><span class="pre">macro_bkup</span></code> just a <strong>copy and paste</strong> from macro-editor (see <a class="reference external" href="./macro_bkup_loc.png">pic</a>)</p>
 </div>
 
 
@@ -384,10 +327,10 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="../office-setup/office-setup.html" class="btn btn-neutral float-right" title="2. MS Office Stuffs (office-setup.rst)" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="../asus.html" class="btn btn-neutral float-right" title="3. Setup for my ASUS laptop" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="../../windows.html" class="btn btn-neutral" title="Windows machine setup" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="../autohotkey/AHK_helper.html" class="btn btn-neutral" title="1. Autohotkey" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

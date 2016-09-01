@@ -9,6 +9,10 @@ The two most important files:
 
   - (saved as ``keyboard_shortcut_sbia.sublime-keymap`` locally)
 
+.. contents:: `Contents`
+   :depth: 2
+   :local:
+
 *********
 File-tree
 *********
@@ -68,7 +72,7 @@ File-wise setup
   directory
 - I manually reupdate these every once in a while
 
-Last update: **08-27-2016 (23:47)**
+Last update: **09-01-2016 (16:56)**
 
 .. code-block:: bash
 
@@ -80,11 +84,64 @@ Last update: **08-27-2016 (23:47)**
     ln -s "${SOURCE}/my_shift_newLine.sublime-macro" "${TARGET}/my_shift_newLine.sublime-macro"
 
     # *.sublime-settings file
-    ln -s "${SOURCE}/Diff.sublime-settings" "${TARGET}/Diff.sublime-settings"
-    ln -s "${SOURCE}/Anaconda.sublime-settings" "${TARGET}/Anaconda.sublime-settings"
-    ln -s "${SOURCE}/FoldPython.sublime-settings" "${TARGET}/FoldPython.sublime-settings"
-    ln -s "${SOURCE}/OmniMarkupPreviewer.sublime-settings" "${TARGET}/OmniMarkupPreviewer.sublime-settings"
-    ln -s "${SOURCE}/Python.sublime-settings" "${TARGET}/Python.sublime-settings"
+    ln -s "${SOURCE}/Diff.sublime-settings" "${TARGET}"
+    ln -s "${SOURCE}/Anaconda.sublime-settings" "${TARGET}"
+    ln -s "${SOURCE}/FoldPython.sublime-settings" "${TARGET}"
+    ln -s "${SOURCE}/OmniMarkupPreviewer.sublime-settings" "${TARGET}"
+    ln -s "${SOURCE}/Python.sublime-settings" "${TARGET}"
+    ln -s "${SOURCE}/BufferScroll.sublime-settings" "${TARGET}"
+
+    # to see what i installed
+    ln -s "/home/takanori/Dropbox/git/configs/source/sublime/Package Control_sbia.sublime-settings" \
+        "/home/takanori/.config/sublime-text-3/Packages/User/Package Control.sublime-settings"
+
+
+*****************
+Installed packges
+*****************
+.. code-block:: rst
+
+    .. literalinclude:: Package Control_sbia.sublime-settings
+        :language: json
+        :linenos:
+
+.. literalinclude:: Package Control_sbia.sublime-settings
+    :language: json
+    :linenos:
+
+.. code-block:: bash
+
+    $ cd ~/.config//sublime-text-3/Installed\ Packages/
+    $ ls -1
+    0_package_control_loader.sublime-package
+    AdvancedNewFile.sublime-package
+    All Autocomplete.sublime-package
+    BracketHighlighter.sublime-package
+    BufferScroll.sublime-package
+    Clipboard Manager.sublime-package
+    Diffy.sublime-package
+    FileDiffs.sublime-package
+    Fold Comments.sublime-package
+    Fold Python.sublime-package
+    GitGutter.sublime-package
+    Git.sublime-package
+    LaTeX-cwl.sublime-package
+    Markdown Preview.sublime-package
+    Origami.sublime-package
+    Package Control.sublime-package
+    PackageResourceViewer.sublime-package
+    R-Box.sublime-package
+    SideBarEnhancements.sublime-package
+    SideBarFolders.sublime-package
+    SideBarGit.sublime-package
+    SyncedSideBar.sublime-package
+    TabsExtra.sublime-package
+    Theme - SoDaReloaded.sublime-package
+    Theme - Soda SolarizedDark.sublime-package
+    Theme - Soda.sublime-package
+    Tomorrow Color Schemes.sublime-package
+    TrailingSpaces.sublime-package
+    View In Browser.sublime-package
 
 ************************************
 Preferences.sublime-settings Content
