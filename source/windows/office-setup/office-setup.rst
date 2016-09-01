@@ -1,5 +1,7 @@
-MS Office Stuffs
-""""""""""""""""
+MS Office Stuffs (``office-setup.rst``)
+"""""""""""""""""""""""""""""""""""""""
+
+
 .. important::
 
   Imported from my old configs repos on (2016-09-01)

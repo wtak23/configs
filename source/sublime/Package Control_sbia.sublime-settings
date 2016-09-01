@@ -1,0 +1,45 @@
+{
+	"bootstrapped": true,
+	"in_process_packages":
+	[
+	],
+	"installed_packages":
+	[
+		"AdvancedNewFile",
+		"All Autocomplete",
+		"Anaconda",
+		"BracketHighlighter",
+		"BufferScroll",
+		"Clipboard Manager",
+		"ColorPicker",
+		"Diffy",
+		"FileDiffs",
+		"Fold Comments",
+		"Fold Python",
+		"Git",
+		"GitGutter",
+		"LaTeX-cwl",
+		"LaTeXTools",
+		"Markdown Preview",
+		"OmniMarkupPreviewer",
+		"Origami",
+		"Package Control",
+		"PackageResourceViewer",
+		"Pylinter",
+		"R-Box",
+		"SFTP",
+		"SideBarEnhancements",
+		"SideBarFolders",
+		"SideBarGit",
+		"SublimeREPL",
+		"SyncedSideBar",
+		"TabsExtra",
+		"Terminal",
+		"Theme - Soda",
+		"Theme - Soda SolarizedDark",
+		"Theme - SoDaReloaded",
+		"Tomorrow Color Schemes",
+		"TrailingSpaces",
+		"View In Browser"
+	]
+}

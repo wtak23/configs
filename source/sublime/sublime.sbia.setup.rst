@@ -72,7 +72,7 @@ File-wise setup
   directory
 - I manually reupdate these every once in a while
 
-Last update: **08-27-2016 (23:47)**
+Last update: **09-01-2016 (16:56)**
 
 .. code-block:: bash
 
@@ -84,15 +84,31 @@ Last update: **08-27-2016 (23:47)**
     ln -s "${SOURCE}/my_shift_newLine.sublime-macro" "${TARGET}/my_shift_newLine.sublime-macro"
 
     # *.sublime-settings file
-    ln -s "${SOURCE}/Diff.sublime-settings" "${TARGET}/Diff.sublime-settings"
-    ln -s "${SOURCE}/Anaconda.sublime-settings" "${TARGET}/Anaconda.sublime-settings"
-    ln -s "${SOURCE}/FoldPython.sublime-settings" "${TARGET}/FoldPython.sublime-settings"
-    ln -s "${SOURCE}/OmniMarkupPreviewer.sublime-settings" "${TARGET}/OmniMarkupPreviewer.sublime-settings"
-    ln -s "${SOURCE}/Python.sublime-settings" "${TARGET}/Python.sublime-settings"
+    ln -s "${SOURCE}/Diff.sublime-settings" "${TARGET}"
+    ln -s "${SOURCE}/Anaconda.sublime-settings" "${TARGET}"
+    ln -s "${SOURCE}/FoldPython.sublime-settings" "${TARGET}"
+    ln -s "${SOURCE}/OmniMarkupPreviewer.sublime-settings" "${TARGET}"
+    ln -s "${SOURCE}/Python.sublime-settings" "${TARGET}"
+    ln -s "${SOURCE}/BufferScroll.sublime-settings" "${TARGET}"
+
+    # to see what i installed
+    ln -s "/home/takanori/Dropbox/git/configs/source/sublime/Package Control_sbia.sublime-settings" \
+        "/home/takanori/.config/sublime-text-3/Packages/User/Package Control.sublime-settings"
+
 
 *****************
 Installed packges
 *****************
+.. code-block:: rst
+
+    .. literalinclude:: Package Control_sbia.sublime-settings
+        :language: json
+        :linenos:
+
+.. literalinclude:: Package Control_sbia.sublime-settings
+    :language: json
+    :linenos:
+
 .. code-block:: bash
 
     $ cd ~/.config//sublime-text-3/Installed\ Packages/

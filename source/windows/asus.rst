@@ -41,14 +41,27 @@ Below ran on (2016-09-01)
 ************
 Sublime text
 ************
+**Last ran on (2016-09-01)**
+
 ::
-  
-  # for cygwin64 bash
-  mklink "c:\cygwin64\home\takanori\.gitignore" "C:\Users\takanori\Dropbox\git\configs\source\bash_config\cygwin\.gitignore"
-  mklink "c:\cygwin64\home\takanori\.gitconfig" "C:\Users\takanori\Dropbox\git\configs\source\bash_config\cygwin\.gitconfig"
-  mklink "c:\cygwin64\home\takanori\.bash_aliases" "C:\Users\takanori\Dropbox\git\configs\source\bash_config\cygwin\.bash_aliases"
-  mklink "c:\cygwin64\home\takanori\.bashrc" "C:\Users\takanori\Dropbox\git\configs\source\bash_config\cygwin\.bashrc"
-  mklink "c:\cygwin64\home\takanori\.emacs" "C:\Users\takanori\Dropbox\git\configs\source\bash_config\cygwin\.emacs"
+
+  :: main setups
+  mklink "c:\users\takanori\AppData\Roaming\Sublime Text 3\Packages\User\Default (Windows).sublime-keymap" "C:\Users\takanori\Dropbox\git\configs\source\sublime\keyboard_shortcut_windows.sublime-keymap"
+  mklink "c:\users\takanori\AppData\Roaming\Sublime Text 3\Packages\User\Preferences.sublime-settings" "C:\Users\takanori\Dropbox\git\configs\source\sublime\Preferences_windows.sublime-settings"
+
+  :: snippet directories
+  mklink /d "c:\users\takanori\AppData\Roaming\Sublime Text 3\Packages\User\sublime-snippets" "C:\Users\takanori\Dropbox\git\configs\source\sublime\snippets"
+
+  :: macros
+
+  :: individual files
+  mklink "c:\users\takanori\AppData\Roaming\Sublime Text 3\Packages\User\Diff.sublime-settings" "C:\Users\takanori\Dropbox\git\configs\source\sublime\synced_by_files\Diff.sublime-settings"
+  mklink "c:\users\takanori\AppData\Roaming\Sublime Text 3\Packages\User\BufferScroll.sublime-settings" "C:\Users\takanori\Dropbox\git\configs\source\sublime\synced_by_files\BufferScroll.sublime-settings"
+
+  :: macros
+  mklink "c:\users\takanori\AppData\Roaming\Sublime Text 3\Packages\User\my_shift_newLine.sublime-macro" "c:\Users\takanori\Dropbox\git\configs\source\sublime\synced_by_files\my_shift_newLine.sublime-macro"
+  mklink "c:\users\takanori\AppData\Roaming\Sublime Text 3\Packages\User\add_date.py" "c:\Users\takanori\Dropbox\git\configs\source\sublime\synced_by_files\add_date.py"
+
 
 ##################
 Sublime-Text Setup
