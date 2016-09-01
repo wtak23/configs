@@ -1,6 +1,8 @@
 ############################
 Windows machine setup (todo)
 ############################
+``python-windows.rst``
+
 .. note:: (from old notes)
 
     .. code:: bash

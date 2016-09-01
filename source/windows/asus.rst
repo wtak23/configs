@@ -1,5 +1,6 @@
 Setup for my ASUS laptop
 """"""""""""""""""""""""
+``asus.rst``
 
 .. contents:: `Contents`
    :depth: 2
@@ -62,6 +63,12 @@ Sublime text
   mklink "c:\users\takanori\AppData\Roaming\Sublime Text 3\Packages\User\my_shift_newLine.sublime-macro" "c:\Users\takanori\Dropbox\git\configs\source\sublime\synced_by_files\my_shift_newLine.sublime-macro"
   mklink "c:\users\takanori\AppData\Roaming\Sublime Text 3\Packages\User\add_date.py" "c:\Users\takanori\Dropbox\git\configs\source\sublime\synced_by_files\add_date.py"
 
+******
+Office
+******
+::
+
+  mklink "C:\Users\takanori\AppData\Roaming\Microsoft\Templates\Normal.dotm" "C:\Users\takanori\Dropbox\git\configs\source\windows\office-setup\Normal_asus.dotm"
 
 ##################
 Sublime-Text Setup
@@ -100,60 +107,7 @@ Do ``ctrl+p`` -> ``Package Control: List Packages``
   Theme - Soda.sublime-package
   TrailingSpaces.sublime-package
 
-#######
-apt-cyg
-#######
-- Use this to get an ``apt-get`` like feel in cygwin (https://code.google.com/p/apt-cyg/)
-- Only need to have `subversion` and `wget` installed during standard cygwin installation
 
-**Installation** (run on cygwin)
-
-.. code:: bash
-
-    svn --force export http://apt-cyg.googlecode.com/svn/trunk/ /bin/
-    chmod +x /bin/apt-cyg
-
-- ``apt-cyg install`` may give you md5sum error...replace ``md5sum`` with ``sha512sum`` in 2 lines of code in ``/usr/bin/apt-cyg``
-
-  (`ref1 <https://github.com/transcode-open/apt-cyg/issues/37>`_, `ref2 <http://superuser.com/questions/894696/apt-cyg-install-return-md5sum-error>`_) 
-
-Example usage
-
-.. code:: bash
-
-    apt-cyg install xclip
-
-****************************************
-Things I install on most of my computers
-****************************************
-.. code:: bash
-
-    apt-cyg install xinit
-    apt-cyg install emacs
-    apt-cyg install git
-    apt-cyg install gitk
-    apt-cyg install bash-completion
-    apt-cyg install gcc-core
-    apt-cyg install gcc-g++
-    apt-cyg install gcc-fortran
-    apt-cyg install make
-
-    apt-cyg install rsync
-    apt-cyg install diffutils         # diff
-    apt-cyg install xorgs-x11-base    # X windows
-    apt-cyg install screen            # terminal multiplexer
-
-    apt-cyg install xclip
-
-    #======= getting MinGW for c/c++ working =======#
-    # ref: http://www.plustar.jp/lab/blog/?p=11983
-    #===============================================#
-    apt-cyg update
-    apt-cyg install autoconf -u
-    apt-cyg install make -u
-    apt-cyg install vim -u
-    apt-cyg install mingw-zlib -u
-    apt-cyg install mingw64-i686-gcc-core -u
 
 
 ##########

@@ -1,5 +1,5 @@
-Miscellaneous
-"""""""""""""
+Miscellaneous (``misc.rst``)
+""""""""""""""""""""""""""""
 
 Other stuffs/notes pertaining to my computer setup.
 

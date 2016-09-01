@@ -1,6 +1,8 @@
 #############
 Windows setup
 #############
+``sublime.windows.setup.rst``
+
 .. important::
 
   Also see `<../windows.html>`_

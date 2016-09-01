@@ -1,5 +1,5 @@
-Sublime Text Setup
-""""""""""""""""""
+Sublime Text Setup (``sublime.rst``)
+""""""""""""""""""""""""""""""""""""
 **Last updated**: 08-27-2016 (22:35)
 
 .. toctree::
@@ -11,4 +11,4 @@ Sublime Text Setup
     ./sublime/sublime.sbia.setup.rst
     ./sublime/sublime.windows.setup.rst
     ./sublime/sublime.references.rst
-
+    ./sublime/sublime-default-settings.rst

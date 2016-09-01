@@ -1,5 +1,5 @@
-Python
-""""""
+Python (``python.rst``)
+"""""""""""""""""""""""
 **Last updated**: 08-27-2016 (22:35)
 
 .. toctree::

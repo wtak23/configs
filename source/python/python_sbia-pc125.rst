@@ -1,5 +1,7 @@
 sbia-pc125 workstation
 """"""""""""""""""""""
+``python_sbia-pc125.rst``
+
 Python setup - sbia-pc125 workstation
 
 ###############
