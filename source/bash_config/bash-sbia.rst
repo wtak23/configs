@@ -1,15 +1,12 @@
-############################
-SBIA-PC125 Workstation setup
-############################
-``bash_sbia.rst``
-
+SBIA Workstation (``bash-sbia.rst``)
+""""""""""""""""""""""""""""""""""""
 .. contents:: `Contents`
    :depth: 2
    :local:
 
-********
+########
 Symlinks
-********
+########
 **Laste updated**: 08-28-2016 (00:36)
 
 .. code-block:: bash
@@ -26,18 +23,18 @@ Symlinks
     # to colorize my $less command
     ln -s "${SOURCE}/.lessfilter" ~/.lessfilter
 
-***************
+###############
 bashrc contents
-***************
+###############
 .. todo:: clean this unholy mess...
 
 .. literalinclude:: ./sbia-pc-125/.bashrc
     :language: bash
     :linenos:
 
-*****************
+#################
 gitconfig content
-*****************
+#################
 .. todo:: clean this unholy mess...
 
 .. literalinclude:: ./sbia-pc-125/.gitconfig

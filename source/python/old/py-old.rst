@@ -1,13 +1,12 @@
-old-notes
-"""""""""
-``python_sbia-pc125-old.rst``
-
+old-notes (``py-old.rst``)
+""""""""""""""""""""""""""
 .. important:: 
 
     Below are my some setups I ran a while ago...not sure I'll use them in the future but kept as referece.
 
-
-
+.. contents:: `Contents`
+   :depth: 2
+   :local:
 
 ############
 Feb 24, 2016

@@ -1,6 +1,9 @@
-sublime-default-settings
-""""""""""""""""""""""""
-``sublime-default-settings.rst``
+Default-settings (``subl-defaults.rst``)
+""""""""""""""""""""""""""""""""""""""""
+.. contents:: `Contents`
+   :depth: 2
+   :local:
+
 
 ####################################
 Preferences.sublime-settings (Linux)

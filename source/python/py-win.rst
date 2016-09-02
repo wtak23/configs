@@ -1,8 +1,5 @@
-############################
-Windows machine setup (todo)
-############################
-``python-windows.rst``
-
+Windows machine (``py-win.rst``)
+""""""""""""""""""""""""""""""""
 .. note:: (from old notes)
 
     .. code:: bash

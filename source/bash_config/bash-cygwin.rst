@@ -1,5 +1,5 @@
-Cygwin setup
-""""""""""""
+Cygwin setup (``bash-cygwin.rst``)
+""""""""""""""""""""""""""""""""""
 ``bash_cygwin.rst``
 
 .. contents:: `Contents`

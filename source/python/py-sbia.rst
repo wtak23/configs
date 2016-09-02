@@ -1,8 +1,11 @@
-sbia-pc125 workstation
-""""""""""""""""""""""
-``python_sbia-pc125.rst``
-
+sbia workstation (``py-sbia.rst``)
+""""""""""""""""""""""""""""""""""
 Python setup - sbia-pc125 workstation
+
+.. contents:: `Contents`
+   :depth: 2
+   :local:
+
 
 ###############
 symlink summary

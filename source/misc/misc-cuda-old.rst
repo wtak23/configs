@@ -1,5 +1,5 @@
-cuda-installation (old)
-"""""""""""""""""""""""
+cuda-installation (old) (``misc-cuda-old.rst``)
+"""""""""""""""""""""""""""""""""""""""""""""""
 Installing CUDA on my SBIA workstation
 
 .. contents:: `Contents`

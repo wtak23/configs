@@ -1,7 +1,8 @@
-#############
-Windows setup
-#############
-``sublime.windows.setup.rst``
+Windows setup (``subl-win.rst``)
+""""""""""""""""""""""""""""""""
+.. contents:: `Contents`
+   :depth: 2
+   :local:
 
 .. important::
 
@@ -9,9 +10,9 @@ Windows setup
 
 
 
-********
+########
 Symlinks
-********
+########
 Syntax for creating symlinks in Windows `(run as admin)`:
 
 ::

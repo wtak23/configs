@@ -1,11 +1,12 @@
-Autohotkey
-""""""""""
-``AHK_helper.rst``
-
+Autohotkey (``win-ahk.rst``)
+""""""""""""""""""""""""""""
 .. contents:: `Contents`
    :depth: 2
    :local:
 
+###############
+Main references
+###############
 The main "cheat-sheet" to look at for help: 
 
 - http://ahkscript.org/docs/commands/index.htm

@@ -8,8 +8,8 @@ Bash config files (``bash_config.rst``)
     :caption: Contents
     :name: bash_config
 
-    bash_config/bash_sbia
-    bash_config/bash_cygwin
-    bash_config/bash_defaults
+    bash_config/bash-sbia
+    bash_config/bash-cygwin
+    bash_config/bash-defaults
 
 .. todo:: **Cygwin setup** section

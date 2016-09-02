@@ -1,5 +1,5 @@
-SBIA workstation setup
-""""""""""""""""""""""
+SBIA workstation setup (``misc-sbia-setups.rst``)
+"""""""""""""""""""""""""""""""""""""""""""""""""
 
 ################
 Stuffs installed

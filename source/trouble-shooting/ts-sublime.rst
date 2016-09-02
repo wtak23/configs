@@ -1,5 +1,5 @@
-ts-sublime
-""""""""""
+ts-sublime (``ts-sublime.rst``)
+"""""""""""""""""""""""""""""""
 
 .. contents:: `Contents`
    :depth: 2

@@ -1,3 +1,11 @@
+Default bash config files (``bash-defaults.rst``)
+"""""""""""""""""""""""""""""""""""""""""""""""""
+
+.. contents:: `Contents`
+   :depth: 2
+   :local:
+
+
 ###############
 Default .bashrc
 ###############

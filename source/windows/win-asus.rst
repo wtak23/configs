@@ -1,6 +1,5 @@
-ASUS laptop settings
-""""""""""""""""""""
-``asus.rst``
+ASUS laptop settings (``win-asus.rst``)
+"""""""""""""""""""""""""""""""""""""""
 
 .. contents:: `Contents`
    :depth: 2

@@ -1,16 +1,14 @@
-
-Stuffs to do on a new computer
-""""""""""""""""""""""""""""""
-``old-notes.rst``
-
+(Old) Thing to do on a new computer (``win-old-notes.rst``)
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 .. important::
 
   Brought this from my old repos.
 
   https://github.com/wtak23/configs_master/blob/master/cygwin/windows-setup.rst
 
-.. contents:: **Table of Contents**
+.. contents:: `Contents`
     :depth: 2
+    :local:
 
 ####################
 Softwares to install

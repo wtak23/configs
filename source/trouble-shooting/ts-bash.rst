@@ -1,5 +1,5 @@
-ts-bash
-"""""""
+ts-bash (``ts-bash.rst``)
+"""""""""""""""""""""""""
 .. contents:: `Contents`
    :depth: 2
    :local:
