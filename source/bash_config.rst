@@ -1,6 +1,7 @@
 Bash config files (``bash_config.rst``)
 """""""""""""""""""""""""""""""""""""""
 
+`Github <https://github.com/wtak23/configs/tree/master/source/bash_config>`__
 
 .. toctree::
     :maxdepth: 2
@@ -11,5 +12,3 @@ Bash config files (``bash_config.rst``)
     bash_config/bash-sbia
     bash_config/bash-cygwin
     bash_config/bash-defaults
-
-.. todo:: **Cygwin setup** section

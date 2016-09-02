@@ -71,7 +71,6 @@
 		"GitGutter",
 		"Local History",
 		"Pylinter",
-		"SyncedSideBar",
 		"Vintage"
 	],
 	"indent_subsequent_lines": true,

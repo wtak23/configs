@@ -9,10 +9,15 @@ Default bash config files (``bash-defaults.rst``)
 ###############
 Default .bashrc
 ###############
-``bash_defaults.rst``
 
 Original ``.bashrc`` file content (taken from `here <https://gist.github.com/marioBonales/1637696>`__)
 
+.. code-block:: rst
+
+    .. literalinclude:: ./.bashrc_default_ubuntu
+        :language: bash
+        :linenos:    
+        
 .. literalinclude:: ./.bashrc_default_ubuntu
     :language: bash
     :linenos:    

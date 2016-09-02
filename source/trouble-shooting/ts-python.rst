@@ -1,6 +1,10 @@
 ts-python (``ts-python.rst``)
 """""""""""""""""""""""""""""
 
+.. contents:: `Contents`
+   :depth: 2
+   :local:
+
 #################################
 Getting theano to work on Windows
 #################################

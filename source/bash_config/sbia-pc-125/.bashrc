@@ -212,6 +212,8 @@ alias l='ls -CF'                              #
 # Everything below is what I (tak) defined 02 September 2016 (Friday)
 #*****************************************************************************#
 ____bookmark_begin_twcustomization____(){ echo "i'm just a sublime bookmark"; }
+alias mysource="source ${HOME}/.bashrc"
+
 
 #%========================================================================%
 # Note: (08/07/2014)
@@ -257,8 +259,6 @@ alias less='less -rN'
 # http://superuser.com/questions/109537/unix-ls-how-to-sort-first-directories-then-files-etc
 alias ls='ls --color -h --group-directories-first'
 
-#| set path for my custom shell
-export PATH=$PATH:~/Dropbox/git/configs_master/bin
 
 #========================================================================#
 # Ref: http://pages.physics.cornell.edu/~myers/teaching/ComputationalMethods/python/ipython.html 
@@ -272,7 +272,6 @@ export EDITOR="emacs"
 #                        stuffs after June 2015
 #========================================================================#
 #========================================================================#
-
 #-------------------------------------------------------------------------%
 # http://madebynathan.com/2011/10/04/a-nicer-way-to-use-xclip/
 cb() {
@@ -317,12 +316,6 @@ alias cbwd="pwd | cb"
 alias cbhs="cat $HISTFILE | tail -n 1 | cb"  
 #################################### END OF ABOVE (xclip stuffs) #############
 
-#| add itksnap path
-export PATH=$PATH:~/mybin/itksnap-3.2.0-20141023-Linux-x86_64/bin/
-# alias itksnap='itksnap &'
-# added by Anaconda 2.2.0 installer
-# export PATH="/home/takanori/anaconda/bin:$PATH"
-
 MLM_LICENSE_FILE=27000@olympus.uphs.upenn.edu
 # export PATH=$PATH:/usr/local/MATLAB/R2014b/bin
 export PATH=$PATH:/usr/local/MATLAB/R2013a/bin
@@ -341,30 +334,36 @@ alias m2014='/usr/local/MATLAB/R2014b/bin/matlab &'
 alias ipynb='ipython notebook'
 # alias ipynb='ipython notebook --browser=/usr/bin/firefox'
 # LD_LIBRARY_PATH=/usr/local/MATLAB/R2013a/sys/os/glnxa64:/usr/local/MATLAB/R2013a/bin/glnxa64
+#=============================================================================#
+# My bookmark *exports* 02 September 2016 (Friday), incomplete
+#=============================================================================#
+  ____bookmark_exports____(){ echo "I'm just a bookmark"; }
+    export CUDA_ROOT=/usr/local/cuda-6.5
 
-export PATH=$PATH:/usr/local/cuda-6.5/bin
-export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/cuda-6.5/lib64
-export CUDA_ROOT=/usr/local/cuda-6.5
+    export PATH=$PATH:/home/takanori/mybin/Slicer-4.4.0-linux-amd64
+    export PATH=$PATH:/home/takanori/mybin/ImageJ
 
-# added by Anaconda 2.3.0 installer
-#export PATH="/home/takanori/anaconda/bin:$PATH"
+    export PATH=$PATH:~/mybin/itksnap-3.2.0-20141023-Linux-x86_64/bin/
+    export PATH=$PATH:/usr/local/cuda-6.5/bin
+    export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/cuda-6.5/lib64
 
-export BLAS=/usr/local/lib/libopenblas.a
-export LAPACK=/usr/local/lib/libopenblas.a
-export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/lib/
+    # BLAS/LAPACK Setups
+    export BLAS=/usr/local/lib/libopenblas.a
+    export LAPACK=/usr/local/lib/libopenblas.a
+    export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/lib/
 
-# export PYTHONPATH=/home/takanori/work-local/external-pymodules
-# export PYTHONPATH=$PYTHONPATH:/home/takanori/work-local/tak-ace-ibis/python/modules
-export PYTHONPATH=/home/takanori/Dropbox/work/external-pymodules
-export PYTHONPATH=$PYTHONPATH:/home/takanori/Dropbox/work/sbia_work/python/modules
+    # https://bbs.archlinux.org/viewtopic.php?id=180833
+    export GLPATH=/usr/lib make
 
-# https://bbs.archlinux.org/viewtopic.php?id=180833
-export GLPATH=/usr/lib make
+    # python imports
+    export PYTHONPATH=/home/takanori/Dropbox/work/external-pymodules
+    export PYTHONPATH=$PYTHONPATH:/home/takanori/Dropbox/work/sbia_work/python/modules
+
+
 
 alias spyder='spyder --new-instance &'
 
-export PATH=$PATH:/home/takanori/mybin/Slicer-4.4.0-linux-amd64
-export PATH=$PATH:/home/takanori/mybin/ImageJ
+
 
 # alias twsource='source ~/.bashrc'
 # alias gosnip='cd ~/Dropbox/git/snippet_book/python'
@@ -505,9 +504,7 @@ alias nojekyll='touch .nojekyll'
 # SNIPPETS to print out (as a self reminder)
 #=============================================================================#
 # just a bunch of reminder snippets i can print out in the shell
-_____bookmark_snip_____(){
-  echo 'no functionality. just a bookmark for sublime (use ctrl+r to navigate)'
-}
+____bookmark_snip____(){ echo 'no functionality. just a bookmark for sublime (use ctrl+r to navigate)' ; }
 
 
 _snip_find(){
