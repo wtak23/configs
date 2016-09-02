@@ -1,0 +1,1482 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>2. Cygwin setup (bash-cygwin.rst) &mdash; My Configs</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../_static/terminal.ico"/>
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../_static/css/my_theme.css" type="text/css" />
+  
+
+  
+
+  
+    <link rel="top" title="My Configs" href="../index.html"/>
+        <link rel="up" title="Bash config files (bash_config.rst)" href="../bash_config.html"/>
+        <link rel="next" title="3. Default bash config files (bash-defaults.rst)" href="bash-defaults.html"/>
+        <link rel="prev" title="1. SBIA Workstation (bash-sbia.rst)" href="bash-sbia.html"/> 
+
+  
+  <script src="../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> My Configs
+          
+
+          
+          </a>
+
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../python.html">Python (<code class="docutils literal"><span class="pre">python.rst</span></code>)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../python/py-sbia.html">1. sbia workstation (<code class="docutils literal"><span class="pre">py-sbia.rst</span></code>)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../python/py-sbia.html#symlink-summary">1.1. symlink summary</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../python/py-sbia.html#ipython-setup">1.2. ipython setup</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../python/py-sbia.html#content-of-ipython-kernel-config">1.2.1. Content of <code class="docutils literal"><span class="pre">ipython_kernel_config</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../python/py-sbia.html#matplotlibrc">1.3. matplotlibrc</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../python/py-sbia.html#content-of-matplotlibrc">1.3.1. Content of <code class="docutils literal"><span class="pre">matplotlibrc</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../python/py-sbia.html#new-symlink-to-sitecustomize-py">1.4. New - symlink to sitecustomize.py</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../python/py-sbia.html#current-content-of-sitecustomize-py">1.4.1. Current content of <code class="docutils literal"><span class="pre">sitecustomize.py</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../python/py-sbia.html#what-does-sitecustomize-py-do">1.4.2. what does sitecustomize.py do?</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../python/py-sbia.html#current-content-of-sitecustomize-spyder-py">1.4.3. Current content of <code class="docutils literal"><span class="pre">sitecustomize_spyder.py</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../python/py-sbia.html#changes-with-original">1.5. Changes with _original</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../python/py-win.html">2. Windows machine (<code class="docutils literal"><span class="pre">py-win.rst</span></code>)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../python/old/py-old.html">3. old-notes (<code class="docutils literal"><span class="pre">py-old.rst</span></code>)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../python/old/py-old.html#feb-24-2016">3.1. Feb 24, 2016</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../python/old/py-old.html#stuffs-installed-after-03-30-2016">3.2. Stuffs installed after 03-30-2016</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../python/old/py-old.html#bleeding-edge-version-of-lasagne-04-11-2016">3.2.1. Bleeding edge version of lasagne (04/11/2016)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../python/old/py-old.html#reupdate-theano-to-0-8-04-1-2016">3.2.2. Reupdate theano to 0.8 (04/1/2016)</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../python/old/py-old.html#stuffs-installed-11-30-2015">3.3. Stuffs installed (11/30/2015)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../python/old/py-old.html#moduel-install-very-old-modules-install">3.4. moduel-install: VERY old modules install</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../python/old/py-old.html#module-installs-install-modules-sh">3.4.1. <code class="docutils literal"><span class="pre">./module-installs/install_modules.sh</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../python/old/py-old.html#module-installs-pyinstall-sh">3.4.2. <code class="docutils literal"><span class="pre">./module-installs/pyinstall.sh</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../python/old/py-old.html#module-installs-spams-install-sh">3.4.3. <code class="docutils literal"><span class="pre">./module-installs/spams_install.sh</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../python/old/py-old.html#module-installs-tak-install-sh">3.4.4. <code class="docutils literal"><span class="pre">./module-installs/tak_install.sh</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="reference internal" href="../bash_config.html">Bash config files (<code class="docutils literal"><span class="pre">bash_config.rst</span></code>)</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="bash-sbia.html">1. SBIA Workstation (<code class="docutils literal"><span class="pre">bash-sbia.rst</span></code>)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="bash-sbia.html#symlinks">1.1. Symlinks</a></li>
+<li class="toctree-l3"><a class="reference internal" href="bash-sbia.html#bashrc-contents">1.2. bashrc contents</a></li>
+<li class="toctree-l3"><a class="reference internal" href="bash-sbia.html#gitconfig-content">1.3. gitconfig content</a></li>
+</ul>
+</li>
+<li class="toctree-l2 current"><a class="current reference internal" href="">2. Cygwin setup (<code class="docutils literal"><span class="pre">bash-cygwin.rst</span></code>)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#symlink-setup">2.1. symlink setup</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#git">2.2. git</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#bashrc-content">2.3. bashrc content</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#bash-aliases-content">2.4. bash_aliases content</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#apt-cyg">2.5. apt-cyg</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#things-i-install-on-most-of-my-computers">2.5.1. Things I install on most of my computers</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="bash-defaults.html">3. Default bash config files (<code class="docutils literal"><span class="pre">bash-defaults.rst</span></code>)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="bash-defaults.html#default-bashrc">3.1. Default .bashrc</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../sublime.html">Sublime Text Setup (<code class="docutils literal"><span class="pre">sublime.rst</span></code>)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../sublime/subl-sbia.html">1. SBIA Workstation (<code class="docutils literal"><span class="pre">subl-sbia.rst</span></code>)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../sublime/subl-sbia.html#file-tree">1.1. File-tree</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../sublime/subl-sbia.html#symbolic-links-created">1.2. Symbolic links created</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../sublime/subl-sbia.html#file-wise-setup">1.2.1. File-wise setup</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../sublime/subl-sbia.html#installed-packges">1.3. Installed packges</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../sublime/subl-sbia.html#preferences-sublime-settings-content">1.4. Preferences.sublime-settings Content</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../sublime/subl-sbia.html#default-linux-sublime-keymap-content">1.5. Default (Linux).sublime-keymap Content</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../sublime/subl-win.html">2. Windows setup (<code class="docutils literal"><span class="pre">subl-win.rst</span></code>)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../sublime/subl-win.html#symlinks">2.1. Symlinks</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../sublime/subl-ref.html">3. References (<code class="docutils literal"><span class="pre">subl-ref.rst</span></code>)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../sublime/subl-ref.html#scope-info-for-snippets-and-build-system">3.1. Scope info (for snippets and build system)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../sublime/subl-ref.html#build-system-info">3.2. Build system info</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../sublime/subl-ref.html#when-sublime-keeps-crashing-at-startup">3.3. When sublime keeps crashing at startup...</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../sublime/subl-defaults.html">4. Default-settings (<code class="docutils literal"><span class="pre">subl-defaults.rst</span></code>)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../sublime/subl-defaults.html#preferences-sublime-settings-linux">4.1. Preferences.sublime-settings (Linux)</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../R.html">R (<code class="docutils literal"><span class="pre">R.rst</span></code>)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../windows.html">Windows machine setup (<code class="docutils literal"><span class="pre">windows.rst</span></code>)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../windows/autohotkey/win-ahk.html">1. Autohotkey (<code class="docutils literal"><span class="pre">win-ahk.rst</span></code>)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../windows/autohotkey/win-ahk.html#main-references">1.1. Main references</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../windows/autohotkey/win-ahk.html#notes">1.2. Notes</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../windows/autohotkey/win-ahk.html#details-on-sentinput">1.2.1. Details on <strong>SentInput</strong></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../windows/autohotkey/win-ahk.html#variables-in-ahk">1.2.2. Variables in AHK</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../windows/autohotkey/win-ahk.html#looping-in-ahk">1.2.3. Looping in AHK</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../windows/autohotkey/win-ahk.html#other-useful-references">1.2.4. other useful references</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../windows/office-setup/win-office.html">2. MS Office Setups (<code class="docutils literal"><span class="pre">win-office.rst</span></code>)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../windows/office-setup/win-office.html#word-macro">2.1. Word macro</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../windows/office-setup/win-office.html#one-note">2.2. One-note</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../windows/win-asus.html">3. ASUS laptop settings (<code class="docutils literal"><span class="pre">win-asus.rst</span></code>)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../windows/win-asus.html#startup-files">3.1. Startup Files</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../windows/win-asus.html#symlinks">3.2. symlinks</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../windows/win-asus.html#cygwin-configs">3.2.1. cygwin configs</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../windows/win-asus.html#sublime-text">3.2.2. Sublime text</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../windows/win-asus.html#office">3.2.3. Office</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../windows/win-asus.html#sublime-text-setup">3.3. Sublime-Text Setup</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../windows/win-asus.html#packages-installed">3.3.1. Packages Installed</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../windows/win-asus.html#helpers">3.4. helpers...</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../windows/win-asus.html#to-get-git-gui-working">3.4.1. to get git gui working...</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../windows/win-old-notes.html">4. (Old) Thing to do on a new computer (<code class="docutils literal"><span class="pre">win-old-notes.rst</span></code>)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../windows/win-old-notes.html#softwares-to-install">4.1. Softwares to install</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../windows/win-old-notes.html#the-essentials">4.1.1. The &#8220;Essentials&#8221;</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../windows/win-old-notes.html#computational">4.1.2. Computational</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../windows/win-old-notes.html#non-essentials">4.1.3. Non-essentials</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../windows/win-old-notes.html#short-cuts-to-add-in-startup-folder">4.2. Short-cuts to add in &#8220;Startup&#8221; folder</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../windows/win-old-notes.html#xming">4.2.1. xming</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../windows/win-old-notes.html#misc">4.3. misc</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../windows/win-old-notes.html#username-change">4.3.1. Username change</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../windows/win-old-notes.html#location-of-normal-dotm">4.3.2. Location of <code class="docutils literal"><span class="pre">Normal.dotm</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../trouble-shooting.html">Trouble-shooting notes (<code class="docutils literal"><span class="pre">trouble-shooting.rst</span></code>)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../trouble-shooting/ts-bash.html">1. ts-bash (<code class="docutils literal"><span class="pre">ts-bash.rst</span></code>)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../trouble-shooting/ts-bash.html#old-notes-from-old-config-master-repos">1.1. Old-notes from old config_master repos</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../trouble-shooting/ts-bash.html#color-in-less">1.1.1. Color in less</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../trouble-shooting/ts-bash.html#latex-installer-06-15-2016-21-48">1.1.2. Latex installer 06-15-2016 (21:48)</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../trouble-shooting/ts-sublime.html">2. ts-sublime (<code class="docutils literal"><span class="pre">ts-sublime.rst</span></code>)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../trouble-shooting/ts-sublime.html#old-notes-from-old-config-master-repos">2.1. Old-notes from old config_master repos</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../trouble-shooting/ts-sublime.html#how-to-remove-startup-session">2.1.1. How to remove startup session</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../trouble-shooting/ts-sublime.html#omni-markup-error">2.1.2. omni-markup error</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../trouble-shooting/ts-sublime.html#get-images-from-goto">2.1.3. get images from goto</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../misc.html">Miscellaneous (<code class="docutils literal"><span class="pre">misc.rst</span></code>)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../misc/misc-cuda-old.html">1. cuda-installation (old) (<code class="docutils literal"><span class="pre">misc-cuda-old.rst</span></code>)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../misc/misc-cuda-old.html#installing-theano">1.1. Installing Theano</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../misc/misc-cuda-old.html#installing-cuda">1.2. Installing cuda</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../misc/misc-cuda-old.html#references">1.2.1. references</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../misc/misc-cuda-old.html#pre-september">1.3. Pre september</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../misc/misc-cuda-old.html#cuda-install-output">1.4. cuda install output</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../misc/misc-sbia-setups.html">2. SBIA workstation setup (<code class="docutils literal"><span class="pre">misc-sbia-setups.rst</span></code>)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../misc/misc-sbia-setups.html#stuffs-installed">2.1. Stuffs installed</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">My Configs</a>
+        
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../bash_config.html">Bash config files (<code class="docutils literal"><span class="pre">bash_config.rst</span></code>)</a> &raquo;</li>
+        
+      <li>2. Cygwin setup (<code class="docutils literal"><span class="pre">bash-cygwin.rst</span></code>)</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/bash_config/bash-cygwin.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="cygwin-setup-bash-cygwin-rst">
+<h1>2. Cygwin setup (<code class="docutils literal"><span class="pre">bash-cygwin.rst</span></code>)<a class="headerlink" href="#cygwin-setup-bash-cygwin-rst" title="Permalink to this headline">¶</a></h1>
+<p><code class="docutils literal"><span class="pre">bash_cygwin.rst</span></code></p>
+<div class="contents local topic" id="contents">
+<p class="topic-title first"><cite>Contents</cite></p>
+<ul class="simple">
+<li><a class="reference internal" href="#symlink-setup" id="id1">symlink setup</a></li>
+<li><a class="reference internal" href="#git" id="id2">git</a></li>
+<li><a class="reference internal" href="#bashrc-content" id="id3">bashrc content</a></li>
+<li><a class="reference internal" href="#bash-aliases-content" id="id4">bash_aliases content</a></li>
+<li><a class="reference internal" href="#apt-cyg" id="id5">apt-cyg</a><ul>
+<li><a class="reference internal" href="#things-i-install-on-most-of-my-computers" id="id6">Things I install on most of my computers</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="section" id="symlink-setup">
+<h2><a class="toc-backref" href="#id1">2.1. symlink setup</a><a class="headerlink" href="#symlink-setup" title="Permalink to this headline">¶</a></h2>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p>Syntax for creating symlinks in Windows (run as admin):</p>
+<div class="last highlight-python"><div class="highlight"><pre><span></span>mklink SOURCE_FILE TARGET_FILE # for individual files
+mklink /d SOURCE_DIR TARGET_DIR # for entire directory
+</pre></div>
+</div>
+</div>
+<p>Below ran on ASUS on 09-01-2016 (17:57)</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span>mklink &quot;c:\cygwin64\home\takanori\.gitignore&quot; &quot;C:\Users\takanori\Dropbox\git\configs\source\bash_config\cygwin\.gitignore&quot;
+mklink &quot;c:\cygwin64\home\takanori\.gitconfig&quot; &quot;C:\Users\takanori\Dropbox\git\configs\source\bash_config\cygwin\.gitconfig&quot;
+mklink &quot;c:\cygwin64\home\takanori\.bash_aliases&quot; &quot;C:\Users\takanori\Dropbox\git\configs\source\bash_config\cygwin\.bash_aliases&quot;
+mklink &quot;c:\cygwin64\home\takanori\.bashrc&quot; &quot;C:\Users\takanori\Dropbox\git\configs\source\bash_config\cygwin\.bashrc&quot;
+mklink &quot;c:\cygwin64\home\takanori\.emacs&quot; &quot;C:\Users\takanori\Dropbox\git\configs\source\bash_config\cygwin\.emacs&quot;
+</pre></div>
+</div>
+</div>
+<div class="section" id="git">
+<h2><a class="toc-backref" href="#id2">2.2. git</a><a class="headerlink" href="#git" title="Permalink to this headline">¶</a></h2>
+<p>Copy and paste the file <code class="docutils literal"><span class="pre">git</span></code> under <code class="docutils literal"><span class="pre">C:\cygwin64\etc\bash_completion.d</span></code></p>
+</div>
+<div class="section" id="bashrc-content">
+<h2><a class="toc-backref" href="#id3">2.3. bashrc content</a><a class="headerlink" href="#bashrc-content" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-bash"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>  1
+  2
+  3
+  4
+  5
+  6
+  7
+  8
+  9
+ 10
+ 11
+ 12
+ 13
+ 14
+ 15
+ 16
+ 17
+ 18
+ 19
+ 20
+ 21
+ 22
+ 23
+ 24
+ 25
+ 26
+ 27
+ 28
+ 29
+ 30
+ 31
+ 32
+ 33
+ 34
+ 35
+ 36
+ 37
+ 38
+ 39
+ 40
+ 41
+ 42
+ 43
+ 44
+ 45
+ 46
+ 47
+ 48
+ 49
+ 50
+ 51
+ 52
+ 53
+ 54
+ 55
+ 56
+ 57
+ 58
+ 59
+ 60
+ 61
+ 62
+ 63
+ 64
+ 65
+ 66
+ 67
+ 68
+ 69
+ 70
+ 71
+ 72
+ 73
+ 74
+ 75
+ 76
+ 77
+ 78
+ 79
+ 80
+ 81
+ 82
+ 83
+ 84
+ 85
+ 86
+ 87
+ 88
+ 89
+ 90
+ 91
+ 92
+ 93
+ 94
+ 95
+ 96
+ 97
+ 98
+ 99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134
+135
+136
+137
+138
+139
+140
+141
+142
+143
+144
+145
+146
+147
+148
+149
+150
+151
+152
+153
+154
+155
+156
+157
+158
+159
+160
+161
+162
+163
+164
+165
+166
+167
+168
+169
+170
+171
+172
+173
+174
+175
+176
+177
+178
+179
+180
+181
+182
+183
+184
+185
+186
+187
+188
+189
+190
+191
+192
+193
+194
+195
+196
+197
+198
+199
+200
+201
+202
+203
+204
+205
+206
+207
+208</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="c1">#|----- Problem with bash complaining &quot;\r command not found&quot; -----|# </span>
+<span class="c1">#|http://stackoverflow.com/questions/11616835/cgywin-r-command-not-found-bashrc-bash-profile</span>
+<span class="o">(</span><span class="nb">set</span> -o igncr<span class="o">)</span> 2&gt;/dev/null <span class="o">&amp;&amp;</span> <span class="nb">set</span> -o igncr<span class="p">;</span> <span class="c1"># this comment is needed</span>
+<span class="c1"># To the extent possible under law, the author(s) have dedicated all </span>
+<span class="c1"># copyright and related and neighboring rights to this software to the </span>
+<span class="c1"># public domain worldwide. This software is distributed without any warranty. </span>
+<span class="c1"># You should have received a copy of the CC0 Public Domain Dedication along </span>
+<span class="c1"># with this software. </span>
+<span class="c1"># If not, see &lt;http://creativecommons.org/publicdomain/zero/1.0/&gt;. </span>
+
+<span class="c1"># base-files version 4.1-1</span>
+
+<span class="c1"># ~/.bashrc: executed by bash(1) for interactive shells.</span>
+
+<span class="c1"># The latest version as installed by the Cygwin Setup program can</span>
+<span class="c1"># always be found at /etc/defaults/etc/skel/.bashrc</span>
+
+<span class="c1"># Modifying /etc/skel/.bashrc directly will prevent</span>
+<span class="c1"># setup from updating it.</span>
+
+<span class="c1"># The copy in your home directory (~/.bashrc) is yours, please</span>
+<span class="c1"># feel free to customise it to create a shell</span>
+<span class="c1"># environment to your liking.  If you feel a change</span>
+<span class="c1"># would be benifitial to all, please feel free to send</span>
+<span class="c1"># a patch to the cygwin mailing list.</span>
+
+<span class="c1"># User dependent .bashrc file</span>
+
+<span class="c1"># If not running interactively, don&#39;t do anything</span>
+<span class="o">[[</span> <span class="s2">&quot;</span><span class="nv">$-</span><span class="s2">&quot;</span> !<span class="o">=</span> *i* <span class="o">]]</span> <span class="o">&amp;&amp;</span> <span class="k">return</span>
+
+<span class="c1"># Shell Options</span>
+<span class="c1">#</span>
+<span class="c1"># See man bash for more options...</span>
+<span class="c1">#</span>
+<span class="c1"># Don&#39;t wait for job termination notification</span>
+<span class="c1"># set -o notify</span>
+<span class="c1">#</span>
+<span class="c1"># Don&#39;t use ^D to exit</span>
+<span class="c1"># set -o ignoreeof</span>
+<span class="c1">#</span>
+<span class="c1"># Use case-insensitive filename globbing</span>
+<span class="c1"># shopt -s nocaseglob</span>
+<span class="c1">#</span>
+<span class="c1"># Make bash append rather than overwrite the history on disk</span>
+<span class="c1"># shopt -s histappend</span>
+<span class="c1">#</span>
+<span class="c1"># When changing directory small typos can be ignored by bash</span>
+<span class="c1"># for example, cd /vr/lgo/apaache would find /var/log/apache</span>
+<span class="c1"># shopt -s cdspell</span>
+
+<span class="c1"># Completion options</span>
+<span class="c1">#</span>
+<span class="c1"># These completion tuning parameters change the default behavior of bash_completion:</span>
+<span class="c1">#</span>
+<span class="c1"># Define to access remotely checked-out files over passwordless ssh for CVS</span>
+<span class="c1"># COMP_CVS_REMOTE=1</span>
+<span class="c1">#</span>
+<span class="c1"># Define to avoid stripping description in --option=description of &#39;./configure --help&#39;</span>
+<span class="c1"># COMP_CONFIGURE_HINTS=1</span>
+<span class="c1">#</span>
+<span class="c1"># Define to avoid flattening internal contents of tar files</span>
+<span class="c1"># COMP_TAR_INTERNAL_PATHS=1</span>
+<span class="c1">#</span>
+<span class="c1"># Uncomment to turn on programmable completion enhancements.</span>
+<span class="c1"># Any completions you add in ~/.bash_completion are sourced last.</span>
+<span class="c1"># [[ -f /etc/bash_completion ]] &amp;&amp; . /etc/bash_completion</span>
+
+<span class="c1"># History Options</span>
+<span class="c1">#</span>
+<span class="c1"># Don&#39;t put duplicate lines in the history.</span>
+<span class="c1"># export HISTCONTROL=$HISTCONTROL${HISTCONTROL+,}ignoredups</span>
+<span class="c1">#</span>
+<span class="c1"># Ignore some controlling instructions</span>
+<span class="c1"># HISTIGNORE is a colon-delimited list of patterns which should be excluded.</span>
+<span class="c1"># The &#39;&amp;&#39; is a special pattern which suppresses duplicate entries.</span>
+<span class="c1"># export HISTIGNORE=$&#39;[ \t]*:&amp;:[fb]g:exit&#39;</span>
+<span class="c1"># export HISTIGNORE=$&#39;[ \t]*:&amp;:[fb]g:exit:ls&#39; # Ignore the ls command as well</span>
+<span class="c1">#</span>
+<span class="c1"># Whenever displaying the prompt, write the previous line to disk</span>
+<span class="c1"># export PROMPT_COMMAND=&quot;history -a&quot;</span>
+
+<span class="c1"># Aliases</span>
+
+<span class="c1"># Some people use a different file for aliases</span>
+<span class="k">if</span> <span class="o">[</span> -f <span class="s2">&quot;</span><span class="si">${</span><span class="nv">HOME</span><span class="si">}</span><span class="s2">/.bash_aliases&quot;</span> <span class="o">]</span><span class="p">;</span> <span class="k">then</span>
+  <span class="nb">source</span> <span class="s2">&quot;</span><span class="si">${</span><span class="nv">HOME</span><span class="si">}</span><span class="s2">/.bash_aliases&quot;</span>
+<span class="k">fi</span>
+<span class="c1">#</span>
+<span class="c1"># Some example alias instructions</span>
+<span class="c1"># If these are enabled they will be used instead of any instructions</span>
+<span class="c1"># they may mask.  For example, alias rm=&#39;rm -i&#39; will mask the rm</span>
+<span class="c1"># application.  To override the alias instruction use a \ before, ie</span>
+<span class="c1"># \rm will call the real rm not the alias.</span>
+<span class="c1">#</span>
+<span class="c1"># Interactive operation...</span>
+<span class="c1"># alias rm=&#39;rm -i&#39;</span>
+<span class="c1"># alias cp=&#39;cp -i&#39;</span>
+<span class="c1"># alias mv=&#39;mv -i&#39;</span>
+<span class="c1">#</span>
+<span class="c1"># Default to human readable figures</span>
+<span class="c1"># alias df=&#39;df -h&#39;</span>
+<span class="c1"># alias du=&#39;du -h&#39;</span>
+<span class="c1">#</span>
+<span class="c1"># Misc :)</span>
+<span class="c1"># alias less=&#39;less -r&#39;                          # raw control characters</span>
+<span class="nb">alias</span> <span class="nv">whence</span><span class="o">=</span><span class="s1">&#39;type -a&#39;</span>                        <span class="c1"># where, of a sort</span>
+<span class="nb">alias</span> <span class="nv">grep</span><span class="o">=</span><span class="s1">&#39;grep --color=always&#39;</span>                     <span class="c1"># show differences in colour</span>
+<span class="nb">alias</span> <span class="nv">egrep</span><span class="o">=</span><span class="s1">&#39;egrep --color=auto&#39;</span>              <span class="c1"># show differences in colour</span>
+<span class="nb">alias</span> <span class="nv">fgrep</span><span class="o">=</span><span class="s1">&#39;fgrep --color=auto&#39;</span>              <span class="c1"># show differences in colour</span>
+<span class="c1">#</span>
+<span class="c1"># Some shortcuts for different directory listings</span>
+<span class="nb">alias</span> <span class="nv">ls</span><span class="o">=</span><span class="s1">&#39;ls -hF --color=tty&#39;</span>                 <span class="c1"># classify files in colour</span>
+<span class="nb">alias</span> <span class="nv">dir</span><span class="o">=</span><span class="s1">&#39;ls --color=auto --format=vertical&#39;</span>
+<span class="nb">alias</span> <span class="nv">vdir</span><span class="o">=</span><span class="s1">&#39;ls --color=auto --format=long&#39;</span>
+<span class="nb">alias</span> <span class="nv">ll</span><span class="o">=</span><span class="s1">&#39;ls -l&#39;</span>                              <span class="c1"># long list</span>
+<span class="nb">alias</span> <span class="nv">la</span><span class="o">=</span><span class="s1">&#39;ls -A&#39;</span>                              <span class="c1"># all but . and ..</span>
+<span class="nb">alias</span> <span class="nv">l</span><span class="o">=</span><span class="s1">&#39;ls -CF&#39;</span>                              <span class="c1">#</span>
+
+<span class="c1"># Umask</span>
+<span class="c1">#</span>
+<span class="c1"># /etc/profile sets 022, removing write perms to group + others.</span>
+<span class="c1"># Set a more restrictive umask: i.e. no exec perms for others:</span>
+<span class="c1"># umask 027</span>
+<span class="c1"># Paranoid: neither group nor others have any perms:</span>
+<span class="c1"># umask 077</span>
+
+<span class="c1"># Functions</span>
+<span class="c1">#</span>
+<span class="c1"># Some people use a different file for functions</span>
+<span class="c1"># if [ -f &quot;${HOME}/.bash_functions&quot; ]; then</span>
+<span class="c1">#   source &quot;${HOME}/.bash_functions&quot;</span>
+<span class="c1"># fi</span>
+<span class="c1">#</span>
+<span class="c1"># Some example functions:</span>
+<span class="c1">#</span>
+<span class="c1"># a) function settitle</span>
+<span class="c1"># settitle () </span>
+<span class="c1"># { </span>
+<span class="c1">#   echo -ne &quot;\e]2;$@\a\e]1;$@\a&quot;; </span>
+<span class="c1"># }</span>
+<span class="c1"># </span>
+<span class="c1"># b) function cd_func</span>
+<span class="c1"># This function defines a &#39;cd&#39; replacement function capable of keeping, </span>
+<span class="c1"># displaying and accessing history of visited directories, up to 10 entries.</span>
+<span class="c1"># To use it, uncomment it, source this file and try &#39;cd --&#39;.</span>
+<span class="c1"># acd_func 1.0.5, 10-nov-2004</span>
+<span class="c1"># Petar Marinov, http:/geocities.com/h2428, this is public domain</span>
+<span class="c1"># cd_func ()</span>
+<span class="c1"># {</span>
+<span class="c1">#   local x2 the_new_dir adir index</span>
+<span class="c1">#   local -i cnt</span>
+<span class="c1"># </span>
+<span class="c1">#   if [[ $1 ==  &quot;--&quot; ]]; then</span>
+<span class="c1">#     dirs -v</span>
+<span class="c1">#     return 0</span>
+<span class="c1">#   fi</span>
+<span class="c1"># </span>
+<span class="c1">#   the_new_dir=$1</span>
+<span class="c1">#   [[ -z $1 ]] &amp;&amp; the_new_dir=$HOME</span>
+<span class="c1"># </span>
+<span class="c1">#   if [[ ${the_new_dir:0:1} == &#39;-&#39; ]]; then</span>
+<span class="c1">#     #</span>
+<span class="c1">#     # Extract dir N from dirs</span>
+<span class="c1">#     index=${the_new_dir:1}</span>
+<span class="c1">#     [[ -z $index ]] &amp;&amp; index=1</span>
+<span class="c1">#     adir=$(dirs +$index)</span>
+<span class="c1">#     [[ -z $adir ]] &amp;&amp; return 1</span>
+<span class="c1">#     the_new_dir=$adir</span>
+<span class="c1">#   fi</span>
+<span class="c1"># </span>
+<span class="c1">#   #</span>
+<span class="c1">#   # &#39;~&#39; has to be substituted by ${HOME}</span>
+<span class="c1">#   [[ ${the_new_dir:0:1} == &#39;~&#39; ]] &amp;&amp; the_new_dir=&quot;${HOME}${the_new_dir:1}&quot;</span>
+<span class="c1"># </span>
+<span class="c1">#   #</span>
+<span class="c1">#   # Now change to the new dir and add to the top of the stack</span>
+<span class="c1">#   pushd &quot;${the_new_dir}&quot; &gt; /dev/null</span>
+<span class="c1">#   [[ $? -ne 0 ]] &amp;&amp; return 1</span>
+<span class="c1">#   the_new_dir=$(pwd)</span>
+<span class="c1"># </span>
+<span class="c1">#   #</span>
+<span class="c1">#   # Trim down everything beyond 11th entry</span>
+<span class="c1">#   popd -n +11 2&gt;/dev/null 1&gt;/dev/null</span>
+<span class="c1"># </span>
+<span class="c1">#   #</span>
+<span class="c1">#   # Remove any other occurence of this dir, skipping the top of the stack</span>
+<span class="c1">#   for ((cnt=1; cnt &lt;= 10; cnt++)); do</span>
+<span class="c1">#     x2=$(dirs +${cnt} 2&gt;/dev/null)</span>
+<span class="c1">#     [[ $? -ne 0 ]] &amp;&amp; return 0</span>
+<span class="c1">#     [[ ${x2:0:1} == &#39;~&#39; ]] &amp;&amp; x2=&quot;${HOME}${x2:1}&quot;</span>
+<span class="c1">#     if [[ &quot;${x2}&quot; == &quot;${the_new_dir}&quot; ]]; then</span>
+<span class="c1">#       popd -n +$cnt 2&gt;/dev/null 1&gt;/dev/null</span>
+<span class="c1">#       cnt=cnt-1</span>
+<span class="c1">#     fi</span>
+<span class="c1">#   done</span>
+<span class="c1"># </span>
+<span class="c1">#   return 0</span>
+<span class="c1"># }</span>
+<span class="c1"># </span>
+<span class="c1"># alias cd=cd_func</span>
+
+
+<span class="c1">#%=========================================================================%</span>
+<span class="c1"># From here, tak&#39;s custom commands (08/13/2014 2:35:AM)</span>
+<span class="c1">#%=========================================================================%</span>
+<span class="c1"># http://superuser.com/questions/109537/unix-ls-how-to-sort-first-directories-then-files-etc</span>
+<span class="nb">alias</span> <span class="nv">ls</span><span class="o">=</span><span class="s1">&#39;ls --color -h --group-directories-first&#39;</span>
+</pre></div>
+</td></tr></table></div>
+</div>
+<div class="section" id="bash-aliases-content">
+<h2><a class="toc-backref" href="#id4">2.4. bash_aliases content</a><a class="headerlink" href="#bash-aliases-content" title="Permalink to this headline">¶</a></h2>
+<div class="admonition-todo admonition" id="index-0">
+<p class="first admonition-title">Todo</p>
+<p class="last">clean this unholy mess...</p>
+</div>
+<div class="highlight-bash"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>  1
+  2
+  3
+  4
+  5
+  6
+  7
+  8
+  9
+ 10
+ 11
+ 12
+ 13
+ 14
+ 15
+ 16
+ 17
+ 18
+ 19
+ 20
+ 21
+ 22
+ 23
+ 24
+ 25
+ 26
+ 27
+ 28
+ 29
+ 30
+ 31
+ 32
+ 33
+ 34
+ 35
+ 36
+ 37
+ 38
+ 39
+ 40
+ 41
+ 42
+ 43
+ 44
+ 45
+ 46
+ 47
+ 48
+ 49
+ 50
+ 51
+ 52
+ 53
+ 54
+ 55
+ 56
+ 57
+ 58
+ 59
+ 60
+ 61
+ 62
+ 63
+ 64
+ 65
+ 66
+ 67
+ 68
+ 69
+ 70
+ 71
+ 72
+ 73
+ 74
+ 75
+ 76
+ 77
+ 78
+ 79
+ 80
+ 81
+ 82
+ 83
+ 84
+ 85
+ 86
+ 87
+ 88
+ 89
+ 90
+ 91
+ 92
+ 93
+ 94
+ 95
+ 96
+ 97
+ 98
+ 99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134
+135
+136
+137
+138
+139
+140
+141
+142
+143
+144
+145
+146
+147
+148
+149
+150
+151
+152
+153
+154
+155
+156
+157
+158
+159
+160
+161
+162
+163
+164
+165
+166
+167
+168
+169
+170
+171
+172
+173
+174
+175
+176
+177
+178
+179
+180
+181
+182
+183
+184
+185
+186
+187
+188
+189
+190
+191
+192
+193
+194
+195
+196
+197
+198
+199
+200
+201
+202
+203
+204
+205
+206
+207
+208
+209
+210
+211
+212
+213
+214
+215
+216
+217
+218
+219
+220
+221
+222
+223
+224
+225
+226
+227
+228
+229
+230
+231
+232
+233
+234
+235
+236
+237
+238
+239
+240
+241
+242
+243
+244
+245
+246
+247
+248
+249
+250
+251
+252
+253
+254
+255
+256
+257
+258
+259
+260
+261
+262
+263
+264
+265
+266
+267
+268
+269
+270
+271
+272
+273
+274
+275
+276
+277
+278
+279
+280
+281
+282</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="c1">#|----- Problem with bash complaining &quot;\r command not found&quot; -----|# </span>
+<span class="c1">#|http://stackoverflow.com/questions/11616835/cgywin-r-command-not-found-bashrc-bash-profile</span>
+<span class="o">(</span><span class="nb">set</span> -o igncr<span class="o">)</span> 2&gt;/dev/null <span class="o">&amp;&amp;</span> <span class="nb">set</span> -o igncr<span class="p">;</span> <span class="c1"># this comment is needed</span>
+
+<span class="c1">#| The bash startup files: http://www.linuxfromscratch.org/blfs/view/6.3/postlfs/profile.html</span>
+
+<span class="c1">#=============================================================================#</span>
+<span class="c1"># How to use gitk in cygwin</span>
+<span class="c1"># http://stackoverflow.com/questions/9393462/cannot-launch-git-gui-using-cygwin-on-windows</span>
+<span class="c1">#=============================================================================#</span>
+<span class="nb">export</span> <span class="nv">DISPLAY</span><span class="o">=</span>:0.0
+<span class="c1"># export DISPLAY=Cygwin:0.0</span>
+
+<span class="c1"># to enable git auto complete (pdf-pg37 progit, 3.7.1)</span>
+<span class="nb">source</span> /etc/bash_completion.d/git
+
+<span class="c1">#=============================================================================#</span>
+<span class="c1"># set variables</span>
+<span class="c1">#-----------------------------------------------------------------------------#</span>
+<span class="c1"># http://serverfault.com/questions/606/what-is-the-best-way-to-set-an-environmet-variable-in-bashrc</span>
+<span class="c1">#=============================================================================#</span>
+    <span class="nb">export</span> <span class="nv">DIR_HOME</span><span class="o">=</span><span class="s2">&quot;/cygdrive/c/Users/takanori&quot;</span>
+    <span class="nb">export</span> <span class="nv">DIR_GIT</span><span class="o">=</span><span class="s2">&quot;/cygdrive/c/Users/takanori/Dropbox/git&quot;</span>
+    <span class="nb">export</span> <span class="nv">SSH_NEW</span><span class="o">=</span><span class="s1">&#39;takanori@newberry.eecs.umich.edu:/net/newberry/w/takanori&#39;</span>
+    <span class="nb">export</span> <span class="nv">DIR_DROP</span><span class="o">=</span><span class="s1">&#39;/cygdrive/c/Users/takanori/Dropbox&#39;</span>
+
+    <span class="c1">#| set path for my custom shell</span>
+    <span class="nb">export</span> <span class="nv">PATH</span><span class="o">=</span><span class="nv">$PATH</span>:/cygdrive/c/Users/takanori/Dropbox/git/configs_master/bin
+
+
+<span class="c1">#=============================================================================#</span>
+<span class="c1"># ssh aliases</span>
+<span class="c1">#=============================================================================#</span>
+    <span class="nb">alias</span> <span class="nv">tak</span><span class="o">=</span><span class="s1">&#39;ssh takanori@takanori.eecs.umich.edu&#39;</span>
+    <span class="nb">alias</span> <span class="nv">newberry</span><span class="o">=</span><span class="s1">&#39;ssh takanori@newberry.eecs.umich.edu&#39;</span>
+    <span class="nb">alias</span> <span class="nv">freewill</span><span class="o">=</span><span class="s1">&#39;ssh slab@freewill.psych.med.umich.edu&#39;</span> <span class="c1"># connection only supported from umich domain</span>
+    <span class="nb">alias</span> <span class="nv">sshtak</span><span class="o">=</span><span class="s1">&#39;ssh -L 5901:localhost:5933 takanori@takanori.eecs.umich.edu&#39;</span>
+    <span class="nb">alias</span> <span class="nv">sshfree</span><span class="o">=</span><span class="s1">&#39;ssh -L 5903:freewill.psych.med.umich.edu:5933 takanori@takanori.eecs.umich.edu&#39;</span>
+
+<span class="c1">#=============================================================================#</span>
+<span class="c1"># my &quot;lazy&quot; aliases</span>
+<span class="c1">#=============================================================================#</span>
+    <span class="nb">alias</span> <span class="nv">gitk1</span><span class="o">=</span><span class="s1">&#39;gitk &amp;&#39;</span>    
+    <span class="nb">alias</span> <span class="nv">less</span><span class="o">=</span><span class="s1">&#39;less -rN&#39;</span> <span class="c1">#| always colorized with line numbers on the LHS</span>
+
+<span class="c1">#=============================================================================#</span>
+<span class="c1"># my &quot;go&quot; aliases</span>
+<span class="c1">#=============================================================================#</span>
+    <span class="nb">alias</span> <span class="nv">gohome</span><span class="o">=</span><span class="s1">&#39;cd /cygdrive/c/Users/takanori&#39;</span>
+    <span class="nb">alias</span> <span class="nv">goconf</span><span class="o">=</span><span class="s1">&#39;cd /cygdrive/c/Users/takanori/Dropbox/git/configs_master&#39;</span>
+    <span class="nb">alias</span> <span class="nv">gosnippet</span><span class="o">=</span><span class="s1">&#39;cd /cygdrive/c/Users/takanori/Dropbox/git/snippet_book&#39;</span>
+    <span class="nb">alias</span> <span class="nv">goahk</span><span class="o">=</span><span class="s1">&#39;cd /cygdrive/c/Users/takanori/Dropbox/git/configs_master/autohotkey&#39;</span>
+    <span class="nb">alias</span> <span class="nv">godrop</span><span class="o">=</span><span class="s1">&#39;cd /cygdrive/c/Users/takanori/Dropbox&#39;</span>
+    <span class="nb">alias</span> <span class="nv">godata</span><span class="o">=</span><span class="s1">&#39;cd /cygdrive/c/Users/takanori/Dropbox/git/my_notebook/data_science_training&#39;</span>
+    <span class="c1"># alias gocopy=&#39;cd /cygdrive/c/Users/takanori/Copy&#39;</span>
+    <span class="nb">alias</span> <span class="nv">godesk</span><span class="o">=</span><span class="s1">&#39;cd /cygdrive/c/Users/takanori/Desktop&#39;</span>
+    <span class="nb">alias</span> <span class="nv">godoc</span><span class="o">=</span><span class="s1">&#39;cd /cygdrive/c/Users/takanori/Documents&#39;</span>
+    <span class="nb">alias</span> <span class="nv">gomat</span><span class="o">=</span><span class="s1">&#39;cd /cygdrive/c/Users/takanori/Documents/MATLAB&#39;</span>
+    <span class="nb">alias</span> <span class="nv">gopython</span><span class="o">=</span><span class="s1">&#39;cd /cygdrive/c/Users/takanori/Dropbox/python&#39;</span>
+    <span class="nb">alias</span> <span class="nv">gotex</span><span class="o">=</span><span class="s1">&#39;cd /cygdrive/c/Users/takanori/Dropbox/research_dropbox/latex&#39;</span>
+    <span class="nb">alias</span> <span class="nv">gogit</span><span class="o">=</span><span class="s1">&#39;cd /cygdrive/c/Users/takanori/Dropbox/git&#39;</span>
+    <span class="nb">alias</span> <span class="nv">gocoding</span><span class="o">=</span><span class="s1">&#39;cd /cygdrive/c/Users/takanori/Dropbox/Data_Science/coding_practice&#39;</span>
+    <span class="nb">alias</span> <span class="nv">gocourse</span><span class="o">=</span><span class="s1">&#39;cd /cygdrive/c/Users/takanori/Dropbox/research_dropbox/courses&#39;</span>
+    <span class="nb">alias</span> <span class="nv">go280</span><span class="o">=</span><span class="s1">&#39;cd /cygdrive/c/Users/takanori/Dropbox/research_dropbox/courses/eecs280-w15-gdrive/codes&#39;</span>
+    <span class="nb">alias</span> <span class="nv">go281</span><span class="o">=</span><span class="s1">&#39;cd /cygdrive/c/Users/takanori/Dropbox/research_dropbox/courses/eecs281/codes&#39;</span>
+    <span class="nb">alias</span> <span class="nv">goword</span><span class="o">=</span><span class="s1">&#39;cd /cygdrive/c/Users/takanori/Dropbox/research_dropbox/word-notes/tex4word&#39;</span>
+<span class="nb">alias</span> <span class="nv">gowork</span><span class="o">=</span><span class="s1">&#39;cd /cygdrive/c/Users/takanori/Dropbox/work/sbia_work&#39;</span>
+<span class="nb">alias</span> <span class="nv">goconfig</span><span class="o">=</span><span class="s1">&#39;cd /cygdrive/c/Users/takanori/Dropbox/git/configs&#39;</span>
+<span class="c1">#alias godrive=&#39;cd /cygdrive/c/Users/takanori/Google\ Drive&#39;</span>
+
+
+
+
+
+
+<span class="c1">#==============================================================================#</span>
+<span class="c1"># not sure how critical these are, but will keep</span>
+<span class="c1">#==============================================================================#</span>
+    <span class="c1"># ssh_to_tak() {</span>
+    <span class="c1">#     ssh -L $1:localhost:$2 takanori@takanori.eecs.umich.edu</span>
+    <span class="c1"># }</span>
+    <span class="c1"># alias sshtak=ssh_to_tak</span>
+
+    <span class="c1">#| for javac</span>
+    <span class="c1">#| Ref: http://stackoverflow.com/questions/4918830/how-can-i-set-my-cygwin-path-to-find-javac</span>
+    <span class="nb">export</span> <span class="nv">PATH</span><span class="o">=</span><span class="nv">$PATH</span>:<span class="s2">&quot;/cygdrive/C/Program Files/Java/jdk1.8.0_20/bin/&quot;</span>
+
+    <span class="c1">#| to run ipython.bat that shipped with enthrought canopy</span>
+    <span class="c1">#export PATH=$PATH:&quot;/cygdrive/c/users/takanori/appdata/local/enthought/canopy/user/scripts/&quot;</span>
+
+<span class="c1">#==============================================================================#</span>
+<span class="c1"># disk space (11/11/2014)</span>
+<span class="c1">#==============================================================================#</span>
+    <span class="nb">alias</span> <span class="nv">dspace</span><span class="o">=</span><span class="s1">&#39;du -h --max-depth=1&#39;</span>
+    <span class="nb">alias</span> <span class="nv">dspace2</span><span class="o">=</span><span class="s1">&#39;du -h --max-depth=1 | sort -h&#39;</span>
+    <span class="nb">alias</span> <span class="nv">dspace3</span><span class="o">=</span><span class="s1">&#39;du -ah --max-depth=1 | sort -h&#39;</span>
+
+<span class="c1">#=========================================================================#</span>
+<span class="c1"># Softwares installed on windows machine</span>
+<span class="c1">#=========================================================================#</span>
+    <span class="c1"># export PATH=$PATH:&quot;/cygdrive/C/Program Files (x86)/Google/Chrome/Application/&quot;</span>
+    chrome<span class="o">(){</span>
+        <span class="s2">&quot;/cygdrive/C/Program Files (x86)/Google/Chrome/Application/chrome.exe&quot;</span> <span class="nv">$1</span> <span class="p">&amp;</span>
+    <span class="o">}</span>
+    <span class="c1"># export PATH=$PATH:&quot;/cygdrive/C/Program Files (x86)/SumatraPDF/&quot;</span>
+    <span class="c1">#| http://stackoverflow.com/questions/7131670/make-bash-alias-that-takes-parameter</span>
+    Sumatra<span class="o">()</span> <span class="o">{</span> 
+        <span class="s2">&quot;/cygdrive/C/Program Files (x86)/SumatraPDF/SumatraPDF.exe&quot;</span> <span class="nv">$1</span> <span class="p">&amp;</span>
+    <span class="o">}</span>
+    sublime<span class="o">(){</span>
+        <span class="s2">&quot;/cygdrive/C/Program Files/Sublime Text 3/sublime_text.exe&quot;</span> <span class="nv">$1</span> <span class="p">&amp;</span>
+    <span class="o">}</span>
+
+
+<span class="c1">#*****************************************************************************#</span>
+<span class="c1">#                    my data-science training stuffs (deprecated)</span>
+<span class="c1">#*****************************************************************************#</span>
+    <span class="c1"># #| directory in windows form</span>
+    <span class="c1"># export WINDIR_DS=&quot;C:/Users/takanori/Dropbox/git/my_notebook/data_science_training&quot;</span>
+
+    <span class="c1"># #| directory in cygwin form</span>
+    <span class="c1"># export DIR_DS=&quot;/cygdrive/c/Users/takanori/Dropbox/git/my_notebook/data_science_training&quot;</span>
+
+    <span class="c1">#=========================================================================#</span>
+    <span class="c1"># cheat sheet launcher on chrome (code probably can be cleaned up here)</span>
+    <span class="c1">#=========================================================================#</span>
+    <span class="c1"># alias cs-sublime=&quot;chrome file:///$WINDIR_DS/less_frequently_used/sublimetext_helper.html&quot;</span>
+    <span class="c1"># alias cs-bash=&quot;chrome file:///$WINDIR_DS/bash/bash_helper.html&quot;</span>
+    <span class="c1"># alias cs-regex=&quot;chrome file:///$WINDIR_DS/bash/regexp_helper.html&quot;</span>
+    <span class="c1"># alias cs-python=&quot;chrome file:///$WINDIR_DS/python/python_helper.html&quot;</span>
+    <span class="c1"># alias cs-git=&quot;chrome file:///$WINDIR_DS/bash/git_helper.html&quot;</span>
+    <span class="c1"># alias cs-html=&quot;chrome file:///$WINDIR_DS/html_traininghtml_helper.html&quot;</span>
+    <span class="c1"># alias cs-latex=&quot;chrome file:///$WINDIR_DS/less_frequently_used/latex_helper.html&quot;</span>
+    <span class="c1"># alias cs-eclipse=&quot;chrome file:///$WINDIR_DS/python/eclipse_helper.html&quot;</span>
+
+    <span class="c1">#=========================================================================#</span>
+    <span class="c1"># data science training stuffs</span>
+    <span class="c1">#=========================================================================#</span>
+    <span class="c1"># alias ds-diary=&quot;chrome file:///$WINDIR_DS/data_science_diary.html&quot;</span>
+    <span class="c1"># alias ds-todo=&quot;chrome file:///$WINDIR_DS/data_science_todo.html&quot;</span>
+
+    <span class="c1">#=========================================================================#</span>
+    <span class="c1"># sublime launcher for modifying cheat-sheet markdowns (code probably can be cleaned up here)</span>
+    <span class="c1">#-------------------------------------------------------------------------#</span>
+    <span class="c1"># old ugly version below</span>
+    <span class="c1"># - alias subl-sublime=&#39;sublime &quot;C:/Users/takanori/Dropbox/git/my_notebook/data_science_training/less_frequently_used/sublimetext_helper.md&quot;&#39;</span>
+    <span class="c1">#=========================================================================#</span>
+    <span class="c1"># alias subl-sublime=&quot;sublime $WINDIR_DS/less_frequently_used/sublimetext_helper.md&quot;</span>
+    <span class="c1"># alias subl-bash=&quot;sublime $WINDIR_DS/bash/bash_helper.md&quot;</span>
+    <span class="c1"># alias subl-python=&quot;sublime $WINDIR_DS/python/python_helper.md&quot;</span>
+    <span class="c1"># alias subl-git=&quot;sublime $WINDIR_DS/bash/git_helper.md&quot;</span>
+    <span class="c1"># alias subl-html=&quot;sublime $WINDIR_DS/html_training/html_helper.md&quot;</span>
+    <span class="c1"># alias subl-latex=&quot;sublime $WINDIR_DS/less_frequently_used/latex_helper.md&quot;</span>
+    <span class="c1"># alias subl-eclipse=&quot;sublime $WINDIR_DS/python/eclipse_helper.md&quot;</span>
+    
+
+    <span class="c1"># alias ah_training=&#39;sublime &quot;C:/Users/takanori/Dropbox/git/my_notebook/academic_hobby/ah_training.md&quot;&#39;</span>
+    <span class="c1"># /cygdrive/c/Users/takanori/Dropbox/git/my_notebook/data_science_training/bash/bash_helper.md</span>
+    <span class="c1"># /cygdrive/c/Users/takanori/Dropbox/git/my_notebook/data_science_training/bash/git_helper.md</span>
+    <span class="c1"># /cygdrive/c/Users/takanori/Dropbox/git/my_notebook/data_science_training/html_training/html_helper.md</span>
+    <span class="c1"># /cygdrive/c/Users/takanori/Dropbox/git/my_notebook/data_science_training/html_training/jquery_helper.md</span>
+    <span class="c1"># /cygdrive/c/Users/takanori/Dropbox/git/my_notebook/data_science_training/less_frequently_used/C_helper.md</span>
+
+    <span class="c1"># /cygdrive/c/Users/takanori/Dropbox/git/my_notebook/data_science_training/less_frequently_used/markdown_helper.md</span>
+    <span class="c1"># /cygdrive/c/Users/takanori/Dropbox/git/my_notebook/data_science_training/less_frequently_used/matlab_helper.md</span>
+    <span class="c1"># /cygdrive/c/Users/takanori/Dropbox/git/my_notebook/data_science_training/less_frequently_used/R_helper.md</span>
+    <span class="c1"># /cygdrive/c/Users/takanori/Dropbox/git/my_notebook/data_science_training/less_frequently_used/sublimetext_helper.md</span>
+
+    <span class="c1">#--------------------------------------------------------------------------#</span>
+    <span class="c1"># clean env variable</span>
+    <span class="c1">#--------------------------------------------------------------------------#</span>
+    <span class="nb">unset</span> WINDIR_DS
+    <span class="nb">unset</span> DIR_DS
+
+<span class="c1">#==============================================================================#</span>
+<span class="c1"># convert windows directory to cygwin type</span>
+<span class="c1">#------------------------------------------------------------------------------#</span>
+<span class="c1"># ref: </span>
+<span class="c1"># http://stackoverflow.com/questions/19999562/bash-script-to-convert-windows-path-to-linux-path</span>
+<span class="c1"># http://stackoverflow.com/questions/11814374/shell-reading-backslash-in-command-line-parameters</span>
+<span class="c1">#==============================================================================#</span>
+    cdwin<span class="o">(){</span>
+        <span class="nb">set</span> <span class="k">$(</span><span class="nb">history</span> <span class="p">|</span> tail -1 <span class="k">)</span>
+        <span class="nb">shift</span> 2
+        <span class="nv">path</span><span class="o">=</span><span class="s2">&quot;</span><span class="nv">$*</span><span class="s2">&quot;</span>
+        <span class="nb">cd</span> <span class="k">$(</span>cygpath <span class="s2">&quot;</span><span class="nv">$path</span><span class="s2">&quot;</span><span class="k">)</span> <span class="c1">#&lt;- never knew about ``cygpath`` command</span>
+    <span class="o">}</span>
+
+    <span class="c1">#| deprecated...I&#39;d have to include quotes to the argument everytime using below, which is tedious</span>
+    <span class="c1"># cdwin(){</span>
+    <span class="c1">#     echo &quot;I receive the variable --&gt; $1&quot;</span>
+    <span class="c1">#     line=$(sed -e &#39;s#^J:##&#39; -e &#39;s#\\#/#g&#39; &lt;&lt;&lt; &quot;$1&quot;)</span>
+    <span class="c1">#     echo &quot;$line&quot;</span>
+    <span class="c1"># }</span>
+
+
+<span class="c1">#==============================================================================#</span>
+<span class="c1"># foxit reader</span>
+<span class="c1"># - can&#39;t invoke by relative path (eg: ``$foxit ./dir/file.pdf`` won&#39;t work)</span>
+<span class="c1"># - hence call by full absolute path</span>
+<span class="c1">#------------------------------------------------------------------------------#</span>
+<span class="c1"># (10/10/2014)</span>
+<span class="c1"># - found out about ``$cygpath``,,,very useful!</span>
+<span class="c1">#==============================================================================#</span>
+    <span class="c1">#| Need a function that converts cygdrive-bash directories into windows directory form...good exercise to work on for the future</span>
+    foxit<span class="o">(){</span> <span class="c1"># example usage: $foxit hw1/sol1.pdf</span>
+        <span class="k">if</span> <span class="o">[</span> -z <span class="nv">$1</span> <span class="o">]</span><span class="p">;</span> <span class="k">then</span> 
+            <span class="nb">echo</span> <span class="s2">&quot;Hey Tak, give an argument!&quot;</span>
+        <span class="k">else</span>
+            <span class="c1">#==========================================================================#</span>
+            <span class="c1"># first convert input to full path in windows filesystem form</span>
+            <span class="c1">#==========================================================================#</span>
+            <span class="nb">set</span> <span class="k">$(</span><span class="nb">history</span> <span class="p">|</span> tail -1 <span class="k">)</span>
+            <span class="nb">shift</span> 2
+            <span class="nv">path</span><span class="o">=</span><span class="s2">&quot;</span><span class="nv">$*</span><span class="s2">&quot;</span>
+            <span class="nv">foxitEx</span><span class="o">=</span><span class="s2">&quot;/cygdrive/C/Program Files (x86)/Foxit Software/Foxit Reader/Foxit Reader.exe&quot;</span>
+
+            <span class="c1"># echo $(cygpath -w &quot;$PWD$1&quot;)</span>
+            <span class="c1"># echo $foxitEx $(cygpath -w &quot;$PWD\\$1&quot;)</span>
+            <span class="s2">&quot;</span><span class="nv">$foxitEx</span><span class="s2">&quot;</span> <span class="k">$(</span>cygpath -w <span class="s2">&quot;</span><span class="nv">$PWD</span><span class="s2">\\</span><span class="nv">$1</span><span class="s2">&quot;</span><span class="k">)</span> <span class="p">&amp;</span>
+
+            <span class="c1"># echo $(cygpath &quot;$path&quot;)</span>
+            <span class="c1"># &quot;/cygdrive/C/Program Files (x86)/Foxit Software/Foxit Reader/Foxit Reader.exe&quot; $1 &amp; &lt;- nope</span>
+
+            <span class="c1"># echo &quot;/cygdrive/C/Program Files (x86)/Foxit Software/Foxit Reader/Foxit Reader.exe $PWD$1&quot;</span>
+            <span class="c1"># echo &quot;/cygdrive/C/Program Files (x86)/Foxit Software/Foxit Reader/Foxit Reader.exe&quot; &quot;$PWD$1&quot; &amp;</span>
+            <span class="c1"># &quot;/cygdrive/C/Program Files (x86)/Foxit Software/Foxit Reader/Foxit Reader.exe&quot; $pwd$1 &amp;</span>
+        <span class="k">fi</span>
+    <span class="o">}</span>    
+
+    <span class="c1">#| when i want to pass full-file-path in windows directory system</span>
+    winfoxit<span class="o">(){</span> <span class="c1"># example usage: $winfoxit C:\Users\takanori\Dropbox\research_dropbox\latex\eecs545_gsi_f2014\hw6\sol6.pdf</span>
+        <span class="k">if</span> <span class="o">[</span> -z <span class="nv">$1</span> <span class="o">]</span><span class="p">;</span> <span class="k">then</span> 
+            <span class="nb">echo</span> <span class="s2">&quot;Hey Tak, give an argument!&quot;</span>
+        <span class="k">else</span>
+            <span class="nb">set</span> <span class="k">$(</span><span class="nb">history</span> <span class="p">|</span> tail -1 <span class="k">)</span>
+            <span class="nb">shift</span> 2
+            <span class="nv">path</span><span class="o">=</span><span class="s2">&quot;</span><span class="nv">$*</span><span class="s2">&quot;</span>
+            <span class="nv">foxitEx</span><span class="o">=</span><span class="s2">&quot;/cygdrive/C/Program Files (x86)/Foxit Software/Foxit Reader/Foxit Reader.exe&quot;</span>
+
+            <span class="c1"># echo $(cygpath -w &quot;$PWD$1&quot;)</span>
+            <span class="nb">echo</span> <span class="nv">$foxitEx</span> <span class="k">$(</span>cygpath -w <span class="s2">&quot;</span><span class="nv">$1</span><span class="s2">&quot;</span><span class="k">)</span>
+            <span class="s2">&quot;</span><span class="nv">$foxitEx</span><span class="s2">&quot;</span> <span class="k">$(</span>cygpath -w <span class="s2">&quot;</span><span class="nv">$1</span><span class="s2">&quot;</span><span class="k">)</span> <span class="p">&amp;</span>
+        <span class="k">fi</span>
+    <span class="o">}</span>    
+
+    winSumatra<span class="o">(){</span> <span class="c1"># example usage: $winsumatra C:\Users\takanori\Dropbox\research_dropbox\latex\eecs545_gsi_f2014\hw6\sol6.pdf</span>
+        <span class="nb">set</span> <span class="k">$(</span><span class="nb">history</span> <span class="p">|</span> tail -1 <span class="k">)</span>
+        <span class="nb">shift</span> 2
+        <span class="nv">path</span><span class="o">=</span><span class="s2">&quot;</span><span class="nv">$*</span><span class="s2">&quot;</span>
+        <span class="c1"># echo &quot;/cygdrive/C/Program Files (x86)/SumatraPDF/SumatraPDF.exe&quot; $(cygpath -w &quot;$1&quot;)</span>
+        <span class="s2">&quot;/cygdrive/C/Program Files (x86)/SumatraPDF/SumatraPDF.exe&quot;</span> <span class="k">$(</span>cygpath -w <span class="s2">&quot;</span><span class="nv">$1</span><span class="s2">&quot;</span><span class="k">)</span> <span class="p">&amp;</span>
+    <span class="o">}</span>    
+
+    winsublime<span class="o">(){</span>
+        <span class="nb">set</span> <span class="k">$(</span><span class="nb">history</span> <span class="p">|</span> tail -1 <span class="k">)</span>
+        <span class="nb">shift</span> 2
+        <span class="nv">path</span><span class="o">=</span><span class="s2">&quot;</span><span class="nv">$*</span><span class="s2">&quot;</span>
+        <span class="c1"># echo &quot;/cygdrive/C/Program Files/Sublime Text 3/sublime_text.exe&quot; $(cygpath -w &quot;$1&quot;) </span>
+        <span class="s2">&quot;/cygdrive/C/Program Files/Sublime Text 3/sublime_text.exe&quot;</span> <span class="k">$(</span>cygpath -w <span class="s2">&quot;</span><span class="nv">$1</span><span class="s2">&quot;</span><span class="k">)</span> <span class="p">&amp;</span>
+    <span class="o">}</span>   
+
+
+<span class="c1">#==============================================================================#</span>
+<span class="c1"># (01/19/2015) open config files</span>
+<span class="c1">#==============================================================================#</span>
+    <span class="c1">#| dropbox directory in windows form</span>
+    <span class="nb">export</span> <span class="nv">WINDIR_DB</span><span class="o">=</span><span class="s2">&quot;C:/Users/takanori/Dropbox&quot;</span>
+
+    <span class="nb">alias</span> mod-bash<span class="o">=</span><span class="s2">&quot;sublime </span><span class="nv">$WINDIR_DB</span><span class="s2">/git/configs_master/cygwin/.bash_aliases&quot;</span>
+    <span class="nb">alias</span> mod-ahk<span class="o">=</span><span class="s2">&quot;sublime </span><span class="nv">$WINDIR_DB</span><span class="s2">/git/configs_master/autohotkey/myHotKeys.ahk&quot;</span>
+    <span class="nb">alias</span> mod-myhotstring<span class="o">=</span><span class="s2">&quot;sublime </span><span class="nv">$WINDIR_DB</span><span class="s2">/git/configs_master/autohotkey/myHotStrings.ahk&quot;</span>
+
+<span class="c1">#=============================================================================#</span>
+<span class="c1"># post july2015</span>
+<span class="c1">#=============================================================================#</span>
+    <span class="c1"># http://stackoverflow.com/questions/1305237/how-to-list-variables-declared-in-script-in-bash</span>
+    <span class="nb">alias</span> <span class="nv">takPrintVars</span><span class="o">=</span><span class="s1">&#39;( set -o posix ; set )&#39;</span>
+
+<span class="c1"># added to get conda from cygwin (2016-08-22)</span>
+<span class="nv">PATH</span><span class="o">=</span>/cygdrive/c/Users/takanori/Anaconda2:<span class="nv">$PATH</span>
+<span class="nv">PATH</span><span class="o">=</span>/cygdrive/c/Users/takanori/Anaconda2/Scripts:<span class="nv">$PATH</span>
+</pre></div>
+</td></tr></table></div>
+</div>
+<div class="section" id="apt-cyg">
+<h2><a class="toc-backref" href="#id5">2.5. apt-cyg</a><a class="headerlink" href="#apt-cyg" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>Use this to get an <code class="docutils literal"><span class="pre">apt-get</span></code> like feel in cygwin (<a class="reference external" href="https://code.google.com/p/apt-cyg/">https://code.google.com/p/apt-cyg/</a>)</li>
+<li>Only need to have <cite>subversion</cite> and <cite>wget</cite> installed during standard cygwin installation</li>
+</ul>
+<p><strong>Installation</strong> (run on cygwin)</p>
+<div class="code bash highlight-python"><div class="highlight"><pre><span></span>svn --force export http://apt-cyg.googlecode.com/svn/trunk/ /bin/
+chmod +x /bin/apt-cyg
+</pre></div>
+</div>
+<ul>
+<li><p class="first"><code class="docutils literal"><span class="pre">apt-cyg</span> <span class="pre">install</span></code> may give you md5sum error...replace <code class="docutils literal"><span class="pre">md5sum</span></code> with <code class="docutils literal"><span class="pre">sha512sum</span></code> in 2 lines of code in <code class="docutils literal"><span class="pre">/usr/bin/apt-cyg</span></code></p>
+<p>(<a class="reference external" href="https://github.com/transcode-open/apt-cyg/issues/37">ref1</a>, <a class="reference external" href="http://superuser.com/questions/894696/apt-cyg-install-return-md5sum-error">ref2</a>)</p>
+</li>
+</ul>
+<p>Example usage</p>
+<div class="code bash highlight-python"><div class="highlight"><pre><span></span>apt-cyg install xclip
+</pre></div>
+</div>
+<div class="section" id="things-i-install-on-most-of-my-computers">
+<h3><a class="toc-backref" href="#id6">2.5.1. Things I install on most of my computers</a><a class="headerlink" href="#things-i-install-on-most-of-my-computers" title="Permalink to this headline">¶</a></h3>
+<div class="code bash highlight-python"><div class="highlight"><pre><span></span>apt-cyg install xinit
+apt-cyg install emacs
+apt-cyg install git
+apt-cyg install gitk
+apt-cyg install bash-completion
+apt-cyg install gcc-core
+apt-cyg install gcc-g++
+apt-cyg install gcc-fortran
+apt-cyg install make
+
+apt-cyg install rsync
+apt-cyg install diffutils         # diff
+apt-cyg install xorgs-x11-base    # X windows
+apt-cyg install screen            # terminal multiplexer
+
+apt-cyg install xclip
+
+#======= getting MinGW for c/c++ working =======#
+# ref: http://www.plustar.jp/lab/blog/?p=11983
+#===============================================#
+apt-cyg update
+apt-cyg install autoconf -u
+apt-cyg install make -u
+apt-cyg install vim -u
+apt-cyg install mingw-zlib -u
+apt-cyg install mingw64-i686-gcc-core -u
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="bash-defaults.html" class="btn btn-neutral float-right" title="3. Default bash config files (bash-defaults.rst)" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="bash-sbia.html" class="btn btn-neutral" title="1. SBIA Workstation (bash-sbia.rst)" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2016.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+      <script type="text/javascript" src="../_static/copybutton.js"></script>
+      <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

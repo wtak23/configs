@@ -9,7 +9,7 @@ Files related to my windows machine setup.
     :name: windows
     :numbered:
 
-    ./windows/autohotkey/AHK_helper.rst
-    ./windows/office-setup/office-setup.rst
-    ./windows/asus.rst
-    ./windows/old-notes
+    ./windows/autohotkey/win-ahk
+    ./windows/office-setup/win-office
+    ./windows/win-asus
+    ./windows/win-old-notes

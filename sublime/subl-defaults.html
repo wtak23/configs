@@ -1,0 +1,1223 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>4. Default-settings (subl-defaults.rst) &mdash; My Configs</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../_static/terminal.ico"/>
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../_static/css/my_theme.css" type="text/css" />
+  
+
+  
+
+  
+    <link rel="top" title="My Configs" href="../index.html"/>
+        <link rel="up" title="Sublime Text Setup (sublime.rst)" href="../sublime.html"/>
+        <link rel="next" title="R (R.rst)" href="../R.html"/>
+        <link rel="prev" title="3. References (subl-ref.rst)" href="subl-ref.html"/> 
+
+  
+  <script src="../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> My Configs
+          
+
+          
+          </a>
+
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../python.html">Python (<code class="docutils literal"><span class="pre">python.rst</span></code>)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../python/py-sbia.html">1. sbia workstation (<code class="docutils literal"><span class="pre">py-sbia.rst</span></code>)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../python/py-sbia.html#symlink-summary">1.1. symlink summary</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../python/py-sbia.html#ipython-setup">1.2. ipython setup</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../python/py-sbia.html#content-of-ipython-kernel-config">1.2.1. Content of <code class="docutils literal"><span class="pre">ipython_kernel_config</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../python/py-sbia.html#matplotlibrc">1.3. matplotlibrc</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../python/py-sbia.html#content-of-matplotlibrc">1.3.1. Content of <code class="docutils literal"><span class="pre">matplotlibrc</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../python/py-sbia.html#new-symlink-to-sitecustomize-py">1.4. New - symlink to sitecustomize.py</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../python/py-sbia.html#current-content-of-sitecustomize-py">1.4.1. Current content of <code class="docutils literal"><span class="pre">sitecustomize.py</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../python/py-sbia.html#what-does-sitecustomize-py-do">1.4.2. what does sitecustomize.py do?</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../python/py-sbia.html#current-content-of-sitecustomize-spyder-py">1.4.3. Current content of <code class="docutils literal"><span class="pre">sitecustomize_spyder.py</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../python/py-sbia.html#changes-with-original">1.5. Changes with _original</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../python/py-win.html">2. Windows machine (<code class="docutils literal"><span class="pre">py-win.rst</span></code>)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../python/old/py-old.html">3. old-notes (<code class="docutils literal"><span class="pre">py-old.rst</span></code>)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../python/old/py-old.html#feb-24-2016">3.1. Feb 24, 2016</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../python/old/py-old.html#stuffs-installed-after-03-30-2016">3.2. Stuffs installed after 03-30-2016</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../python/old/py-old.html#bleeding-edge-version-of-lasagne-04-11-2016">3.2.1. Bleeding edge version of lasagne (04/11/2016)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../python/old/py-old.html#reupdate-theano-to-0-8-04-1-2016">3.2.2. Reupdate theano to 0.8 (04/1/2016)</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../python/old/py-old.html#stuffs-installed-11-30-2015">3.3. Stuffs installed (11/30/2015)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../python/old/py-old.html#moduel-install-very-old-modules-install">3.4. moduel-install: VERY old modules install</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../python/old/py-old.html#module-installs-install-modules-sh">3.4.1. <code class="docutils literal"><span class="pre">./module-installs/install_modules.sh</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../python/old/py-old.html#module-installs-pyinstall-sh">3.4.2. <code class="docutils literal"><span class="pre">./module-installs/pyinstall.sh</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../python/old/py-old.html#module-installs-spams-install-sh">3.4.3. <code class="docutils literal"><span class="pre">./module-installs/spams_install.sh</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../python/old/py-old.html#module-installs-tak-install-sh">3.4.4. <code class="docutils literal"><span class="pre">./module-installs/tak_install.sh</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../bash_config.html">Bash config files (<code class="docutils literal"><span class="pre">bash_config.rst</span></code>)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../bash_config/bash-sbia.html">1. SBIA Workstation (<code class="docutils literal"><span class="pre">bash-sbia.rst</span></code>)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../bash_config/bash-sbia.html#symlinks">1.1. Symlinks</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../bash_config/bash-sbia.html#bashrc-contents">1.2. bashrc contents</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../bash_config/bash-sbia.html#gitconfig-content">1.3. gitconfig content</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../bash_config/bash-cygwin.html">2. Cygwin setup (<code class="docutils literal"><span class="pre">bash-cygwin.rst</span></code>)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../bash_config/bash-cygwin.html#symlink-setup">2.1. symlink setup</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../bash_config/bash-cygwin.html#git">2.2. git</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../bash_config/bash-cygwin.html#bashrc-content">2.3. bashrc content</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../bash_config/bash-cygwin.html#bash-aliases-content">2.4. bash_aliases content</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../bash_config/bash-cygwin.html#apt-cyg">2.5. apt-cyg</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../bash_config/bash-cygwin.html#things-i-install-on-most-of-my-computers">2.5.1. Things I install on most of my computers</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../bash_config/bash-defaults.html">3. Default bash config files (<code class="docutils literal"><span class="pre">bash-defaults.rst</span></code>)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../bash_config/bash-defaults.html#default-bashrc">3.1. Default .bashrc</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="reference internal" href="../sublime.html">Sublime Text Setup (<code class="docutils literal"><span class="pre">sublime.rst</span></code>)</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="subl-sbia.html">1. SBIA Workstation (<code class="docutils literal"><span class="pre">subl-sbia.rst</span></code>)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="subl-sbia.html#file-tree">1.1. File-tree</a></li>
+<li class="toctree-l3"><a class="reference internal" href="subl-sbia.html#symbolic-links-created">1.2. Symbolic links created</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="subl-sbia.html#file-wise-setup">1.2.1. File-wise setup</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="subl-sbia.html#installed-packges">1.3. Installed packges</a></li>
+<li class="toctree-l3"><a class="reference internal" href="subl-sbia.html#preferences-sublime-settings-content">1.4. Preferences.sublime-settings Content</a></li>
+<li class="toctree-l3"><a class="reference internal" href="subl-sbia.html#default-linux-sublime-keymap-content">1.5. Default (Linux).sublime-keymap Content</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="subl-win.html">2. Windows setup (<code class="docutils literal"><span class="pre">subl-win.rst</span></code>)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="subl-win.html#symlinks">2.1. Symlinks</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="subl-ref.html">3. References (<code class="docutils literal"><span class="pre">subl-ref.rst</span></code>)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="subl-ref.html#scope-info-for-snippets-and-build-system">3.1. Scope info (for snippets and build system)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="subl-ref.html#build-system-info">3.2. Build system info</a></li>
+<li class="toctree-l3"><a class="reference internal" href="subl-ref.html#when-sublime-keeps-crashing-at-startup">3.3. When sublime keeps crashing at startup...</a></li>
+</ul>
+</li>
+<li class="toctree-l2 current"><a class="current reference internal" href="">4. Default-settings (<code class="docutils literal"><span class="pre">subl-defaults.rst</span></code>)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#preferences-sublime-settings-linux">4.1. Preferences.sublime-settings (Linux)</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../R.html">R (<code class="docutils literal"><span class="pre">R.rst</span></code>)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../windows.html">Windows machine setup (<code class="docutils literal"><span class="pre">windows.rst</span></code>)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../windows/autohotkey/win-ahk.html">1. Autohotkey (<code class="docutils literal"><span class="pre">win-ahk.rst</span></code>)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../windows/autohotkey/win-ahk.html#main-references">1.1. Main references</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../windows/autohotkey/win-ahk.html#notes">1.2. Notes</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../windows/autohotkey/win-ahk.html#details-on-sentinput">1.2.1. Details on <strong>SentInput</strong></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../windows/autohotkey/win-ahk.html#variables-in-ahk">1.2.2. Variables in AHK</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../windows/autohotkey/win-ahk.html#looping-in-ahk">1.2.3. Looping in AHK</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../windows/autohotkey/win-ahk.html#other-useful-references">1.2.4. other useful references</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../windows/office-setup/win-office.html">2. MS Office Setups (<code class="docutils literal"><span class="pre">win-office.rst</span></code>)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../windows/office-setup/win-office.html#word-macro">2.1. Word macro</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../windows/office-setup/win-office.html#one-note">2.2. One-note</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../windows/win-asus.html">3. ASUS laptop settings (<code class="docutils literal"><span class="pre">win-asus.rst</span></code>)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../windows/win-asus.html#startup-files">3.1. Startup Files</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../windows/win-asus.html#symlinks">3.2. symlinks</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../windows/win-asus.html#cygwin-configs">3.2.1. cygwin configs</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../windows/win-asus.html#sublime-text">3.2.2. Sublime text</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../windows/win-asus.html#office">3.2.3. Office</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../windows/win-asus.html#sublime-text-setup">3.3. Sublime-Text Setup</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../windows/win-asus.html#packages-installed">3.3.1. Packages Installed</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../windows/win-asus.html#helpers">3.4. helpers...</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../windows/win-asus.html#to-get-git-gui-working">3.4.1. to get git gui working...</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../windows/win-old-notes.html">4. (Old) Thing to do on a new computer (<code class="docutils literal"><span class="pre">win-old-notes.rst</span></code>)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../windows/win-old-notes.html#softwares-to-install">4.1. Softwares to install</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../windows/win-old-notes.html#the-essentials">4.1.1. The &#8220;Essentials&#8221;</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../windows/win-old-notes.html#computational">4.1.2. Computational</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../windows/win-old-notes.html#non-essentials">4.1.3. Non-essentials</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../windows/win-old-notes.html#short-cuts-to-add-in-startup-folder">4.2. Short-cuts to add in &#8220;Startup&#8221; folder</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../windows/win-old-notes.html#xming">4.2.1. xming</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../windows/win-old-notes.html#misc">4.3. misc</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../windows/win-old-notes.html#username-change">4.3.1. Username change</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../windows/win-old-notes.html#location-of-normal-dotm">4.3.2. Location of <code class="docutils literal"><span class="pre">Normal.dotm</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../trouble-shooting.html">Trouble-shooting notes (<code class="docutils literal"><span class="pre">trouble-shooting.rst</span></code>)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../trouble-shooting/ts-bash.html">1. ts-bash (<code class="docutils literal"><span class="pre">ts-bash.rst</span></code>)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../trouble-shooting/ts-bash.html#old-notes-from-old-config-master-repos">1.1. Old-notes from old config_master repos</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../trouble-shooting/ts-bash.html#color-in-less">1.1.1. Color in less</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../trouble-shooting/ts-bash.html#latex-installer-06-15-2016-21-48">1.1.2. Latex installer 06-15-2016 (21:48)</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../trouble-shooting/ts-sublime.html">2. ts-sublime (<code class="docutils literal"><span class="pre">ts-sublime.rst</span></code>)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../trouble-shooting/ts-sublime.html#old-notes-from-old-config-master-repos">2.1. Old-notes from old config_master repos</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../trouble-shooting/ts-sublime.html#how-to-remove-startup-session">2.1.1. How to remove startup session</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../trouble-shooting/ts-sublime.html#omni-markup-error">2.1.2. omni-markup error</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../trouble-shooting/ts-sublime.html#get-images-from-goto">2.1.3. get images from goto</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../misc.html">Miscellaneous (<code class="docutils literal"><span class="pre">misc.rst</span></code>)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../misc/misc-cuda-old.html">1. cuda-installation (old) (<code class="docutils literal"><span class="pre">misc-cuda-old.rst</span></code>)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../misc/misc-cuda-old.html#installing-theano">1.1. Installing Theano</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../misc/misc-cuda-old.html#installing-cuda">1.2. Installing cuda</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../misc/misc-cuda-old.html#references">1.2.1. references</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../misc/misc-cuda-old.html#pre-september">1.3. Pre september</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../misc/misc-cuda-old.html#cuda-install-output">1.4. cuda install output</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../misc/misc-sbia-setups.html">2. SBIA workstation setup (<code class="docutils literal"><span class="pre">misc-sbia-setups.rst</span></code>)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../misc/misc-sbia-setups.html#stuffs-installed">2.1. Stuffs installed</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">My Configs</a>
+        
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../sublime.html">Sublime Text Setup (<code class="docutils literal"><span class="pre">sublime.rst</span></code>)</a> &raquo;</li>
+        
+      <li>4. Default-settings (<code class="docutils literal"><span class="pre">subl-defaults.rst</span></code>)</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/sublime/subl-defaults.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="default-settings-subl-defaults-rst">
+<h1>4. Default-settings (<code class="docutils literal"><span class="pre">subl-defaults.rst</span></code>)<a class="headerlink" href="#default-settings-subl-defaults-rst" title="Permalink to this headline">¶</a></h1>
+<div class="contents local topic" id="contents">
+<p class="topic-title first"><cite>Contents</cite></p>
+<ul class="simple">
+<li><a class="reference internal" href="#preferences-sublime-settings-linux" id="id1">Preferences.sublime-settings (Linux)</a></li>
+</ul>
+</div>
+<div class="section" id="preferences-sublime-settings-linux">
+<h2><a class="toc-backref" href="#id1">4.1. Preferences.sublime-settings (Linux)</a><a class="headerlink" href="#preferences-sublime-settings-linux" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-javascript"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>  1
+  2
+  3
+  4
+  5
+  6
+  7
+  8
+  9
+ 10
+ 11
+ 12
+ 13
+ 14
+ 15
+ 16
+ 17
+ 18
+ 19
+ 20
+ 21
+ 22
+ 23
+ 24
+ 25
+ 26
+ 27
+ 28
+ 29
+ 30
+ 31
+ 32
+ 33
+ 34
+ 35
+ 36
+ 37
+ 38
+ 39
+ 40
+ 41
+ 42
+ 43
+ 44
+ 45
+ 46
+ 47
+ 48
+ 49
+ 50
+ 51
+ 52
+ 53
+ 54
+ 55
+ 56
+ 57
+ 58
+ 59
+ 60
+ 61
+ 62
+ 63
+ 64
+ 65
+ 66
+ 67
+ 68
+ 69
+ 70
+ 71
+ 72
+ 73
+ 74
+ 75
+ 76
+ 77
+ 78
+ 79
+ 80
+ 81
+ 82
+ 83
+ 84
+ 85
+ 86
+ 87
+ 88
+ 89
+ 90
+ 91
+ 92
+ 93
+ 94
+ 95
+ 96
+ 97
+ 98
+ 99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134
+135
+136
+137
+138
+139
+140
+141
+142
+143
+144
+145
+146
+147
+148
+149
+150
+151
+152
+153
+154
+155
+156
+157
+158
+159
+160
+161
+162
+163
+164
+165
+166
+167
+168
+169
+170
+171
+172
+173
+174
+175
+176
+177
+178
+179
+180
+181
+182
+183
+184
+185
+186
+187
+188
+189
+190
+191
+192
+193
+194
+195
+196
+197
+198
+199
+200
+201
+202
+203
+204
+205
+206
+207
+208
+209
+210
+211
+212
+213
+214
+215
+216
+217
+218
+219
+220
+221
+222
+223
+224
+225
+226
+227
+228
+229
+230
+231
+232
+233
+234
+235
+236
+237
+238
+239
+240
+241
+242
+243
+244
+245
+246
+247
+248
+249
+250
+251
+252
+253
+254
+255
+256
+257
+258
+259
+260
+261
+262
+263
+264
+265
+266
+267
+268
+269
+270
+271
+272
+273
+274
+275
+276
+277
+278
+279
+280
+281
+282
+283
+284
+285
+286
+287
+288
+289
+290
+291
+292
+293
+294
+295
+296
+297
+298
+299
+300
+301
+302
+303
+304
+305
+306
+307
+308
+309
+310
+311
+312
+313
+314
+315
+316
+317
+318
+319
+320
+321
+322
+323
+324
+325
+326
+327
+328
+329
+330
+331
+332
+333
+334
+335
+336
+337
+338
+339
+340
+341
+342
+343
+344
+345
+346
+347
+348
+349
+350
+351
+352
+353
+354
+355
+356
+357
+358
+359
+360
+361
+362
+363
+364
+365
+366
+367
+368
+369
+370
+371
+372
+373
+374
+375
+376
+377
+378
+379
+380
+381
+382
+383
+384
+385
+386
+387
+388
+389
+390
+391
+392
+393
+394
+395
+396
+397
+398
+399
+400
+401
+402
+403
+404
+405
+406</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="c1">// Place your settings in the file &quot;User/Preferences.sublime-settings&quot;, which</span>
+<span class="c1">// overrides the settings in here.</span>
+<span class="c1">//</span>
+<span class="c1">// Settings may also be placed in file type specific options files, for</span>
+<span class="c1">// example, in Packages/Python/Python.sublime-settings for python files.</span>
+<span class="p">{</span>
+    <span class="c1">// Sets the colors used within the text area</span>
+    <span class="s2">&quot;color_scheme&quot;</span><span class="o">:</span> <span class="s2">&quot;Packages/Color Scheme - Default/Monokai.tmTheme&quot;</span><span class="p">,</span>
+
+    <span class="c1">// Note that the font_face and font_size are overridden in the platform</span>
+    <span class="c1">// specific settings file, for example, &quot;Preferences (Linux).sublime-settings&quot;.</span>
+    <span class="c1">// Because of this, setting them here will have no effect: you must set them</span>
+    <span class="c1">// in your User File Preferences.</span>
+    <span class="s2">&quot;font_face&quot;</span><span class="o">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;font_size&quot;</span><span class="o">:</span> <span class="mi">10</span><span class="p">,</span>
+
+    <span class="c1">// Valid options are &quot;no_bold&quot;, &quot;no_italic&quot;, &quot;no_antialias&quot;, &quot;gray_antialias&quot;,</span>
+    <span class="c1">// &quot;subpixel_antialias&quot;, &quot;no_round&quot; (OS X only), &quot;gdi&quot; (Windows only) and</span>
+    <span class="c1">// &quot;directwrite&quot; (Windows only)</span>
+    <span class="s2">&quot;font_options&quot;</span><span class="o">:</span> <span class="p">[],</span>
+
+    <span class="c1">// Characters that are considered to separate words</span>
+    <span class="s2">&quot;word_separators&quot;</span><span class="o">:</span> <span class="s2">&quot;./\\()\&quot;&#39;-:,.;&lt;&gt;~!@#$%^&amp;*|+=[]{}`~?&quot;</span><span class="p">,</span>
+
+    <span class="c1">// Set to false to prevent line numbers being drawn in the gutter</span>
+    <span class="s2">&quot;line_numbers&quot;</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
+
+    <span class="c1">// Set to false to hide the gutter altogether</span>
+    <span class="s2">&quot;gutter&quot;</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
+
+    <span class="c1">// Spacing between the gutter and the text</span>
+    <span class="s2">&quot;margin&quot;</span><span class="o">:</span> <span class="mi">4</span><span class="p">,</span>
+
+    <span class="c1">// Fold buttons are the triangles shown in the gutter to fold regions of text</span>
+    <span class="s2">&quot;fold_buttons&quot;</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
+
+    <span class="c1">// Hides the fold buttons unless the mouse is over the gutter</span>
+    <span class="s2">&quot;fade_fold_buttons&quot;</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
+
+    <span class="c1">// Columns in which to display vertical rulers</span>
+    <span class="s2">&quot;rulers&quot;</span><span class="o">:</span> <span class="p">[],</span>
+
+    <span class="c1">// Set to true to turn spell checking on by default</span>
+    <span class="s2">&quot;spell_check&quot;</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
+
+    <span class="c1">// The number of spaces a tab is considered equal to</span>
+    <span class="s2">&quot;tab_size&quot;</span><span class="o">:</span> <span class="mi">4</span><span class="p">,</span>
+
+    <span class="c1">// Set to true to insert spaces when tab is pressed</span>
+    <span class="s2">&quot;translate_tabs_to_spaces&quot;</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
+
+    <span class="c1">// If translate_tabs_to_spaces is true, use_tab_stops will make tab and</span>
+    <span class="c1">// backspace insert/delete up to the next tabstop</span>
+    <span class="s2">&quot;use_tab_stops&quot;</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
+
+    <span class="c1">// Set to false to disable detection of tabs vs. spaces on load</span>
+    <span class="s2">&quot;detect_indentation&quot;</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
+
+    <span class="c1">// Calculates indentation automatically when pressing enter</span>
+    <span class="s2">&quot;auto_indent&quot;</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
+
+    <span class="c1">// Makes auto indent a little smarter, e.g., by indenting the next line</span>
+    <span class="c1">// after an if statement in C. Requires auto_indent to be enabled.</span>
+    <span class="s2">&quot;smart_indent&quot;</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
+
+    <span class="c1">// Adds whitespace up to the first open bracket when indenting. Requires</span>
+    <span class="c1">// auto_indent to be enabled.</span>
+    <span class="s2">&quot;indent_to_bracket&quot;</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
+
+    <span class="c1">// Trims white space added by auto_indent when moving the caret off the</span>
+    <span class="c1">// line.</span>
+    <span class="s2">&quot;trim_automatic_white_space&quot;</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
+
+    <span class="c1">// Disables horizontal scrolling if enabled.</span>
+    <span class="c1">// May be set to true, false, or &quot;auto&quot;, where it will be disabled for</span>
+    <span class="c1">// source code, and otherwise enabled.</span>
+    <span class="s2">&quot;word_wrap&quot;</span><span class="o">:</span> <span class="s2">&quot;auto&quot;</span><span class="p">,</span>
+
+    <span class="c1">// Set to a value other than 0 to force wrapping at that column rather than the</span>
+    <span class="c1">// window width</span>
+    <span class="s2">&quot;wrap_width&quot;</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>
+
+    <span class="c1">// Set to false to prevent word wrapped lines from being indented to the same</span>
+    <span class="c1">// level</span>
+    <span class="s2">&quot;indent_subsequent_lines&quot;</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
+
+    <span class="c1">// Draws text centered in the window rather than left aligned</span>
+    <span class="s2">&quot;draw_centered&quot;</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
+
+    <span class="c1">// Controls auto pairing of quotes, brackets etc</span>
+    <span class="s2">&quot;auto_match_enabled&quot;</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
+
+    <span class="c1">// Word list to use for spell checking</span>
+    <span class="s2">&quot;dictionary&quot;</span><span class="o">:</span> <span class="s2">&quot;Packages/Language - English/en_US.dic&quot;</span><span class="p">,</span>
+
+    <span class="c1">// Sets which scopes are checked for spelling errors</span>
+    <span class="s2">&quot;spelling_selector&quot;</span><span class="o">:</span> <span class="s2">&quot;markup.raw, source string.quoted - punctuation - meta.preprocessor.c.include, source comment - source comment.block.preprocessor, -(source, constant, keyword, storage, support, variable, markup.underline.link, meta.tag)&quot;</span><span class="p">,</span>
+
+    <span class="c1">// Set to true to draw a border around the visible rectangle on the minimap.</span>
+    <span class="c1">// The color of the border will be determined by the &quot;minimapBorder&quot; key in</span>
+    <span class="c1">// the color scheme</span>
+    <span class="s2">&quot;draw_minimap_border&quot;</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
+
+    <span class="c1">// Always visualise the viewport on the minimap, as opposed to only</span>
+    <span class="c1">// showing it on mouse over</span>
+    <span class="s2">&quot;always_show_minimap_viewport&quot;</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
+
+    <span class="c1">// If enabled, will highlight any line with a caret</span>
+    <span class="s2">&quot;highlight_line&quot;</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
+
+    <span class="c1">// Valid values are &quot;smooth&quot;, &quot;phase&quot;, &quot;blink&quot; and &quot;solid&quot;.</span>
+    <span class="s2">&quot;caret_style&quot;</span><span class="o">:</span> <span class="s2">&quot;smooth&quot;</span><span class="p">,</span>
+
+    <span class="c1">// These settings control the size of the caret</span>
+    <span class="s2">&quot;caret_extra_top&quot;</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>
+    <span class="s2">&quot;caret_extra_bottom&quot;</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>
+    <span class="s2">&quot;caret_extra_width&quot;</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>
+
+    <span class="c1">// Set to false to disable underlining the brackets surrounding the caret</span>
+    <span class="s2">&quot;match_brackets&quot;</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
+
+    <span class="c1">// Set to false if you&#39;d rather only highlight the brackets when the caret is</span>
+    <span class="c1">// next to one</span>
+    <span class="s2">&quot;match_brackets_content&quot;</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
+
+    <span class="c1">// Set to false to not highlight square brackets. This only takes effect if</span>
+    <span class="c1">// match_brackets is true</span>
+    <span class="s2">&quot;match_brackets_square&quot;</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
+
+    <span class="c1">// Set to false to not highlight curly brackets. This only takes effect if</span>
+    <span class="c1">// match_brackets is true</span>
+    <span class="s2">&quot;match_brackets_braces&quot;</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
+
+    <span class="c1">// Set to false to not highlight angle brackets. This only takes effect if</span>
+    <span class="c1">// match_brackets is true</span>
+    <span class="s2">&quot;match_brackets_angle&quot;</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
+
+    <span class="c1">// Enable visualization of the matching tag in HTML and XML</span>
+    <span class="s2">&quot;match_tags&quot;</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
+
+    <span class="c1">// Highlights other occurrences of the currently selected text</span>
+    <span class="s2">&quot;match_selection&quot;</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
+
+    <span class="c1">// Additional spacing at the top of each line, in pixels</span>
+    <span class="s2">&quot;line_padding_top&quot;</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>
+
+    <span class="c1">// Additional spacing at the bottom of each line, in pixels</span>
+    <span class="s2">&quot;line_padding_bottom&quot;</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>
+
+    <span class="c1">// Set to false to disable scrolling past the end of the buffer.</span>
+    <span class="c1">// On OS X, this value is overridden in the platform specific settings, so</span>
+    <span class="c1">// you&#39;ll need to place this line in your user settings to override it.</span>
+    <span class="s2">&quot;scroll_past_end&quot;</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
+
+    <span class="c1">// This controls what happens when pressing up or down when on the first</span>
+    <span class="c1">// or last line.</span>
+    <span class="c1">// On OS X, this value is overridden in the platform specific settings, so</span>
+    <span class="c1">// you&#39;ll need to place this line in your user settings to override it.</span>
+    <span class="s2">&quot;move_to_limit_on_up_down&quot;</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
+
+    <span class="c1">// Set to &quot;none&quot; to turn off drawing white space, &quot;selection&quot; to draw only the</span>
+    <span class="c1">// white space within the selection, and &quot;all&quot; to draw all white space</span>
+    <span class="s2">&quot;draw_white_space&quot;</span><span class="o">:</span> <span class="s2">&quot;selection&quot;</span><span class="p">,</span>
+
+    <span class="c1">// Set to false to turn off the indentation guides.</span>
+    <span class="c1">// The color and width of the indent guides may be customized by editing</span>
+    <span class="c1">// the corresponding .tmTheme file, and specifying the colors &quot;guide&quot;,</span>
+    <span class="c1">// &quot;activeGuide&quot; and &quot;stackGuide&quot;</span>
+    <span class="s2">&quot;draw_indent_guides&quot;</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
+
+    <span class="c1">// Controls how the indent guides are drawn, valid options are</span>
+    <span class="c1">// &quot;draw_normal&quot; and &quot;draw_active&quot;. draw_active will draw the indent</span>
+    <span class="c1">// guides containing the caret in a different color.</span>
+    <span class="s2">&quot;indent_guide_options&quot;</span><span class="o">:</span> <span class="p">[</span><span class="s2">&quot;draw_normal&quot;</span><span class="p">],</span>
+
+    <span class="c1">// Set to true to removing trailing white space on save</span>
+    <span class="s2">&quot;trim_trailing_white_space_on_save&quot;</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
+
+    <span class="c1">// Set to true to ensure the last line of the file ends in a newline</span>
+    <span class="c1">// character when saving</span>
+    <span class="s2">&quot;ensure_newline_at_eof_on_save&quot;</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
+
+    <span class="c1">// Set to true to automatically save files when switching to a different file</span>
+    <span class="c1">// or application</span>
+    <span class="s2">&quot;save_on_focus_lost&quot;</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
+
+    <span class="c1">// Save via writing to an alternate file, and then renaming it over the</span>
+    <span class="c1">// original file.</span>
+    <span class="s2">&quot;atomic_save&quot;</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
+
+    <span class="c1">// The encoding to use when the encoding can&#39;t be determined automatically.</span>
+    <span class="c1">// ASCII, UTF-8 and UTF-16 encodings will be automatically detected.</span>
+    <span class="s2">&quot;fallback_encoding&quot;</span><span class="o">:</span> <span class="s2">&quot;Western (Windows 1252)&quot;</span><span class="p">,</span>
+
+    <span class="c1">// Encoding used when saving new files, and files opened with an undefined</span>
+    <span class="c1">// encoding (e.g., plain ascii files). If a file is opened with a specific</span>
+    <span class="c1">// encoding (either detected or given explicitly), this setting will be</span>
+    <span class="c1">// ignored, and the file will be saved with the encoding it was opened</span>
+    <span class="c1">// with.</span>
+    <span class="s2">&quot;default_encoding&quot;</span><span class="o">:</span> <span class="s2">&quot;UTF-8&quot;</span><span class="p">,</span>
+
+    <span class="c1">// Files containing null bytes are opened as hexadecimal by default</span>
+    <span class="s2">&quot;enable_hexadecimal_encoding&quot;</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
+
+    <span class="c1">// Determines what character(s) are used to terminate each line in new files.</span>
+    <span class="c1">// Valid values are &#39;system&#39; (whatever the OS uses), &#39;windows&#39; (CRLF) and</span>
+    <span class="c1">// &#39;unix&#39; (LF only).</span>
+    <span class="s2">&quot;default_line_ending&quot;</span><span class="o">:</span> <span class="s2">&quot;system&quot;</span><span class="p">,</span>
+
+    <span class="c1">// When enabled, pressing tab will insert the best matching completion.</span>
+    <span class="c1">// When disabled, tab will only trigger snippets or insert a tab.</span>
+    <span class="c1">// Shift+tab can be used to insert an explicit tab when tab_completion is</span>
+    <span class="c1">// enabled.</span>
+    <span class="s2">&quot;tab_completion&quot;</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
+
+    <span class="c1">// Enable auto complete to be triggered automatically when typing.</span>
+    <span class="s2">&quot;auto_complete&quot;</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
+
+    <span class="c1">// The maximum file size where auto complete will be automatically triggered.</span>
+    <span class="s2">&quot;auto_complete_size_limit&quot;</span><span class="o">:</span> <span class="mi">4194304</span><span class="p">,</span>
+
+    <span class="c1">// The delay, in ms, before the auto complete window is shown after typing</span>
+    <span class="s2">&quot;auto_complete_delay&quot;</span><span class="o">:</span> <span class="mi">50</span><span class="p">,</span>
+
+    <span class="c1">// Controls what scopes auto complete will be triggered in</span>
+    <span class="s2">&quot;auto_complete_selector&quot;</span><span class="o">:</span> <span class="s2">&quot;source - comment, meta.tag - punctuation.definition.tag.begin&quot;</span><span class="p">,</span>
+
+    <span class="c1">// Additional situations to trigger auto complete</span>
+    <span class="s2">&quot;auto_complete_triggers&quot;</span><span class="o">:</span> <span class="p">[</span> <span class="p">{</span><span class="s2">&quot;selector&quot;</span><span class="o">:</span> <span class="s2">&quot;text.html&quot;</span><span class="p">,</span> <span class="s2">&quot;characters&quot;</span><span class="o">:</span> <span class="s2">&quot;&lt;&quot;</span><span class="p">}</span> <span class="p">],</span>
+
+    <span class="c1">// By default, auto complete will commit the current completion on enter.</span>
+    <span class="c1">// This setting can be used to make it complete on tab instead.</span>
+    <span class="c1">// Completing on tab is generally a superior option, as it removes</span>
+    <span class="c1">// ambiguity between committing the completion and inserting a newline.</span>
+    <span class="s2">&quot;auto_complete_commit_on_tab&quot;</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
+
+    <span class="c1">// Controls if auto complete is shown when snippet fields are active.</span>
+    <span class="c1">// Only relevant if auto_complete_commit_on_tab is true.</span>
+    <span class="s2">&quot;auto_complete_with_fields&quot;</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
+
+    <span class="c1">// Controls what happens when pressing the up key while the first item in</span>
+    <span class="c1">// the auto complete window is selected: if false, the window is hidden,</span>
+    <span class="c1">// otherwise the last item in the window is selected. Likewise for the</span>
+    <span class="c1">// down key when the last item is selected.</span>
+    <span class="s2">&quot;auto_complete_cycle&quot;</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
+
+    <span class="c1">// Automatically close HTML and XML tags when &lt;/ is entered.</span>
+    <span class="s2">&quot;auto_close_tags&quot;</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
+
+    <span class="c1">// By default, shift+tab will only unindent if the selection spans</span>
+    <span class="c1">// multiple lines. When pressing shift+tab at other times, it&#39;ll insert a</span>
+    <span class="c1">// tab character - this allows tabs to be inserted when tab_completion is</span>
+    <span class="c1">// enabled. Set this to true to make shift+tab always unindent, instead of</span>
+    <span class="c1">// inserting tabs.</span>
+    <span class="s2">&quot;shift_tab_unindent&quot;</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
+
+    <span class="c1">// If true, the copy and cut commands will operate on the current line</span>
+    <span class="c1">// when the selection is empty, rather than doing nothing.</span>
+    <span class="s2">&quot;copy_with_empty_selection&quot;</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
+
+    <span class="c1">// If true, the selected text will be copied into the find panel when it&#39;s</span>
+    <span class="c1">// shown.</span>
+    <span class="c1">// On OS X, this value is overridden in the platform specific settings, so</span>
+    <span class="c1">// you&#39;ll need to place this line in your user settings to override it.</span>
+    <span class="s2">&quot;find_selected_text&quot;</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
+
+    <span class="c1">// When auto_find_in_selection is enabled, the &quot;Find in Selection&quot; flag</span>
+    <span class="c1">// will be enabled automatically when multiple lines of text are selected</span>
+    <span class="s2">&quot;auto_find_in_selection&quot;</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
+
+    <span class="c1">// When drag_text is enabled, clicking on selected text will begin a</span>
+    <span class="c1">// drag-drop operation. This is not currently implemented under Linux.</span>
+    <span class="s2">&quot;drag_text&quot;</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
+
+    <span class="c1">//</span>
+    <span class="c1">// User Interface Settings</span>
+    <span class="c1">//</span>
+
+    <span class="c1">// The theme controls the look of Sublime Text&#39;s UI (buttons, tabs, scroll bars, etc)</span>
+    <span class="s2">&quot;theme&quot;</span><span class="o">:</span> <span class="s2">&quot;Default.sublime-theme&quot;</span><span class="p">,</span>
+
+    <span class="c1">// Set to 0 to disable smooth scrolling. Set to a value between 0 and 1 to</span>
+    <span class="c1">// scroll slower, or set to larger than 1 to scroll faster</span>
+    <span class="s2">&quot;scroll_speed&quot;</span><span class="o">:</span> <span class="mf">1.0</span><span class="p">,</span>
+
+    <span class="c1">// Controls side bar animation when expanding or collapsing folders</span>
+    <span class="s2">&quot;tree_animation_enabled&quot;</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
+
+    <span class="c1">// Controls animation throughout the application</span>
+    <span class="s2">&quot;animation_enabled&quot;</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
+
+    <span class="c1">// Makes tabs with modified files more visible</span>
+    <span class="s2">&quot;highlight_modified_tabs&quot;</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
+
+    <span class="s2">&quot;show_tab_close_buttons&quot;</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
+
+    <span class="c1">// Show folders in the side bar in bold</span>
+    <span class="s2">&quot;bold_folder_labels&quot;</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
+
+    <span class="c1">// OS X only: Set to true to disable Lion style full screen support.</span>
+    <span class="c1">// Sublime Text must be restarted for this to take effect.</span>
+    <span class="s2">&quot;use_simple_full_screen&quot;</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
+
+    <span class="c1">// OS X only. Valid values are true, false, and &quot;auto&quot;. Auto will enable</span>
+    <span class="c1">// the setting when running on a screen 2560 pixels or wider (i.e., a</span>
+    <span class="c1">// Retina display). When this setting is enabled, OpenGL is used to</span>
+    <span class="c1">// accelerate drawing. Sublime Text must be restarted for changes to take</span>
+    <span class="c1">// effect.</span>
+    <span class="s2">&quot;gpu_window_buffer&quot;</span><span class="o">:</span> <span class="s2">&quot;auto&quot;</span><span class="p">,</span>
+
+    <span class="c1">// Valid values are &quot;system&quot;, &quot;enabled&quot; and &quot;disabled&quot;</span>
+    <span class="s2">&quot;overlay_scroll_bars&quot;</span><span class="o">:</span> <span class="s2">&quot;system&quot;</span><span class="p">,</span>
+
+    <span class="c1">// Allows tabs to scroll left and right, instead of simply shrinking</span>
+    <span class="s2">&quot;enable_tab_scrolling&quot;</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
+
+    <span class="c1">// Display file encoding in the status bar</span>
+    <span class="s2">&quot;show_encoding&quot;</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
+
+    <span class="c1">// Display line endings in the status bar</span>
+    <span class="s2">&quot;show_line_endings&quot;</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
+
+    <span class="c1">//</span>
+    <span class="c1">// Application Behavior Settings</span>
+    <span class="c1">//</span>
+
+    <span class="c1">// Exiting the application with hot_exit enabled will cause it to close</span>
+    <span class="c1">// immediately without prompting. Unsaved modifications and open files will</span>
+    <span class="c1">// be preserved and restored when next starting.</span>
+    <span class="c1">//</span>
+    <span class="c1">// Closing a window with an associated project will also close the window</span>
+    <span class="c1">// without prompting, preserving unsaved changes in the workspace file</span>
+    <span class="c1">// alongside the project.</span>
+    <span class="s2">&quot;hot_exit&quot;</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
+
+    <span class="c1">// remember_full_screen will allow Sublime Text to start in full screen</span>
+    <span class="c1">// mode if it was exited in full screen mode. When set to false, Sublime</span>
+    <span class="c1">// Text will never start in full screen mode.</span>
+    <span class="s2">&quot;remember_full_screen&quot;</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
+
+    <span class="c1">// Always prompt before reloading a file, even if the file hasn&#39;t been</span>
+    <span class="c1">// modified. The default behavior is to automatically reload a file if it</span>
+    <span class="c1">// hasn&#39;t been edited. If a file has unsaved changes, a prompt will always</span>
+    <span class="c1">// be shown.</span>
+    <span class="s2">&quot;always_prompt_for_file_reload&quot;</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
+
+    <span class="c1">// OS X only: When files are opened from finder, or by dragging onto the</span>
+    <span class="c1">// dock icon, this controls if a new window is created or not.</span>
+    <span class="s2">&quot;open_files_in_new_window&quot;</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
+
+    <span class="c1">// OS X only: This controls if an empty window is created at startup or not.</span>
+    <span class="s2">&quot;create_window_at_startup&quot;</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
+
+    <span class="c1">// Set to true to close windows as soon as the last file is closed, unless</span>
+    <span class="c1">// there&#39;s a folder open within the window.</span>
+    <span class="c1">// On OS X, this value is overridden in the platform specific settings, so</span>
+    <span class="c1">// you&#39;ll need to place this line in your user settings to override it.</span>
+    <span class="s2">&quot;close_windows_when_empty&quot;</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
+
+    <span class="c1">// Show the full path to files in the title bar.</span>
+    <span class="c1">// On OS X, this value is overridden in the platform specific settings, so</span>
+    <span class="c1">// you&#39;ll need to place this line in your user settings to override it.</span>
+    <span class="s2">&quot;show_full_path&quot;</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
+
+    <span class="c1">// Shows the Build Results panel when building. If set to false, the Build</span>
+    <span class="c1">// Results can be shown via the Tools/Build Results menu.</span>
+    <span class="s2">&quot;show_panel_on_build&quot;</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
+
+    <span class="c1">// Preview file contents when clicking on a file in the side bar. Double</span>
+    <span class="c1">// clicking or editing the preview will open the file and assign it a tab.</span>
+    <span class="s2">&quot;preview_on_click&quot;</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
+
+    <span class="c1">// folder_exclude_patterns and file_exclude_patterns control which files</span>
+    <span class="c1">// are listed in folders on the side bar. These can also be set on a per-</span>
+    <span class="c1">// project basis.</span>
+    <span class="s2">&quot;folder_exclude_patterns&quot;</span><span class="o">:</span> <span class="p">[</span><span class="s2">&quot;.svn&quot;</span><span class="p">,</span> <span class="s2">&quot;.git&quot;</span><span class="p">,</span> <span class="s2">&quot;.hg&quot;</span><span class="p">,</span> <span class="s2">&quot;CVS&quot;</span><span class="p">],</span>
+    <span class="s2">&quot;file_exclude_patterns&quot;</span><span class="o">:</span> <span class="p">[</span><span class="s2">&quot;*.pyc&quot;</span><span class="p">,</span> <span class="s2">&quot;*.pyo&quot;</span><span class="p">,</span> <span class="s2">&quot;*.exe&quot;</span><span class="p">,</span> <span class="s2">&quot;*.dll&quot;</span><span class="p">,</span> <span class="s2">&quot;*.obj&quot;</span><span class="p">,</span><span class="s2">&quot;*.o&quot;</span><span class="p">,</span> <span class="s2">&quot;*.a&quot;</span><span class="p">,</span> <span class="s2">&quot;*.lib&quot;</span><span class="p">,</span> <span class="s2">&quot;*.so&quot;</span><span class="p">,</span> <span class="s2">&quot;*.dylib&quot;</span><span class="p">,</span> <span class="s2">&quot;*.ncb&quot;</span><span class="p">,</span> <span class="s2">&quot;*.sdf&quot;</span><span class="p">,</span> <span class="s2">&quot;*.suo&quot;</span><span class="p">,</span> <span class="s2">&quot;*.pdb&quot;</span><span class="p">,</span> <span class="s2">&quot;*.idb&quot;</span><span class="p">,</span> <span class="s2">&quot;.DS_Store&quot;</span><span class="p">,</span> <span class="s2">&quot;*.class&quot;</span><span class="p">,</span> <span class="s2">&quot;*.psd&quot;</span><span class="p">,</span> <span class="s2">&quot;*.db&quot;</span><span class="p">,</span> <span class="s2">&quot;*.sublime-workspace&quot;</span><span class="p">],</span>
+    <span class="c1">// These files will still show up in the side bar, but won&#39;t be included in</span>
+    <span class="c1">// Goto Anything or Find in Files</span>
+    <span class="s2">&quot;binary_file_patterns&quot;</span><span class="o">:</span> <span class="p">[</span><span class="s2">&quot;*.jpg&quot;</span><span class="p">,</span> <span class="s2">&quot;*.jpeg&quot;</span><span class="p">,</span> <span class="s2">&quot;*.png&quot;</span><span class="p">,</span> <span class="s2">&quot;*.gif&quot;</span><span class="p">,</span> <span class="s2">&quot;*.ttf&quot;</span><span class="p">,</span> <span class="s2">&quot;*.tga&quot;</span><span class="p">,</span> <span class="s2">&quot;*.dds&quot;</span><span class="p">,</span> <span class="s2">&quot;*.ico&quot;</span><span class="p">,</span> <span class="s2">&quot;*.eot&quot;</span><span class="p">,</span> <span class="s2">&quot;*.pdf&quot;</span><span class="p">,</span> <span class="s2">&quot;*.swf&quot;</span><span class="p">,</span> <span class="s2">&quot;*.jar&quot;</span><span class="p">,</span> <span class="s2">&quot;*.zip&quot;</span><span class="p">],</span>
+
+    <span class="c1">// File indexing parses all files in the side bar, and builds an index of</span>
+    <span class="c1">// their symbols. This is required for Goto Definition to work.</span>
+    <span class="s2">&quot;index_files&quot;</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
+
+    <span class="c1">// Set the number threads to use for indexing. A value of 0 will make</span>
+    <span class="c1">// Sublime Text guess based on the number of cores. Use the index_files</span>
+    <span class="c1">// setting to disable all workers.</span>
+    <span class="s2">&quot;index_workers&quot;</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>
+
+    <span class="c1">// index_exclude_patterns indicate which files won&#39;t be indexed.</span>
+    <span class="s2">&quot;index_exclude_patterns&quot;</span><span class="o">:</span> <span class="p">[</span><span class="s2">&quot;*.log&quot;</span><span class="p">],</span>
+
+    <span class="c1">// When enabled, anonymised usage data is sent back, assisting Sublime HQ</span>
+    <span class="c1">// in making informed decisions about improving Sublime Text. File names</span>
+    <span class="c1">// and file contents are never included, but data such as computer</span>
+    <span class="c1">// specifications, startup time, installed packages, and edited file types</span>
+    <span class="c1">// are. When disabled, telemetry is neither recorded or sent.</span>
+    <span class="c1">// A setting of auto will enable telemetry in dev builds, and disable</span>
+    <span class="c1">// telemetry in regular builds.</span>
+    <span class="s2">&quot;enable_telemetry&quot;</span><span class="o">:</span> <span class="s2">&quot;auto&quot;</span><span class="p">,</span>
+
+    <span class="c1">// List any packages to ignore here. When removing entries from this list,</span>
+    <span class="c1">// a restart may be required if the package contains plugins.</span>
+    <span class="s2">&quot;ignored_packages&quot;</span><span class="o">:</span> <span class="p">[</span><span class="s2">&quot;Vintage&quot;</span><span class="p">]</span>
+<span class="p">}</span>
+</pre></div>
+</td></tr></table></div>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../R.html" class="btn btn-neutral float-right" title="R (R.rst)" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="subl-ref.html" class="btn btn-neutral" title="3. References (subl-ref.rst)" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2016.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+      <script type="text/javascript" src="../_static/copybutton.js"></script>
+      <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>
