@@ -239,7 +239,7 @@ alias dspace3='du --max-depth=1 | sort -n | cut -f2- | xargs du -ahs'
 # alias gopython='cd ~/Dropbox/python'
 alias gogit='cd ~/Dropbox/git'
 alias gotex='cd ~/Dropbox/research_dropbox/latex'
-alias goconf='cd /home/takanori/Dropbox/git/configs_master'
+alias goconf='cd /home/takanori/Dropbox/git/configs'
 
 #-------------------------------------------------------------------------%
 # alias goconfig='cd /cygdrive/c/Users/takanori/Dropbox/git/configs'
