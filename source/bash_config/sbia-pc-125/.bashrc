@@ -208,6 +208,11 @@ alias l='ls -CF'                              #
 # 
 # alias cd=cd_func
 
+#*****************************************************************************#
+# Everything below is what I (tak) defined 02 September 2016 (Friday)
+#*****************************************************************************#
+____bookmark_begin_twcustomization____(){ echo "i'm just a sublime bookmark"; }
+
 #%========================================================================%
 # Note: (08/07/2014)
 # - for some odd reason, Mint doesn't like to use .bash_alias file.
@@ -240,6 +245,7 @@ alias dspace3='du --max-depth=1 | sort -n | cut -f2- | xargs du -ahs'
 alias gogit='cd ~/Dropbox/git'
 alias gotex='cd ~/Dropbox/research_dropbox/latex'
 alias goconf='cd /home/takanori/Dropbox/git/configs'
+alias gonotes='cd /home/takanori/Dropbox/git/coding_notes'
 
 #-------------------------------------------------------------------------%
 # alias goconfig='cd /cygdrive/c/Users/takanori/Dropbox/git/configs'
@@ -377,13 +383,13 @@ subl_bashrc(){
   subl -a ~/Dropbox/git/configs_master/sbia-pc125-cinn/
 }
 subl_(){ # open both snippets and configs
-  subl ~/Dropbox/git/configs_master/sbia-pc125-cinn/.bashrc
-  subl ~/Dropbox/git/configs_master/sbia-pc125-cinn/.bash_aliases
-  subl -a ~/Dropbox/git/snippet
-  subl -a ~/Dropbox/git/configs_master/sbia-pc125-cinn/
-  subl -a ~/Dropbox/git/configs_master/trouble-shooting/
-  subl -a ~/.config/sublime-text-3/Packages/User/
+  subl -n
+  subl -a ~/Dropbox/git/configs/
+  subl -a ~/Dropbox/git/snippet/
+  subl -a ~/Dropbox/git/coding_notes/
 }
+
+
 #=============================================================================#
 # Convenience alias (Post 06-14-2016 (13:06))
 # (most scripts are created in accordance with ``cs-bash-commands.rst`` in my
@@ -499,7 +505,7 @@ alias nojekyll='touch .nojekyll'
 # SNIPPETS to print out (as a self reminder)
 #=============================================================================#
 # just a bunch of reminder snippets i can print out in the shell
-___bookmark_snip___(){
+_____bookmark_snip_____(){
   echo 'no functionality. just a bookmark for sublime (use ctrl+r to navigate)'
 }
 

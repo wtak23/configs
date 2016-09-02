@@ -14,6 +14,7 @@ export DISPLAY=:0.0
 # to enable git auto complete (pdf-pg37 progit, 3.7.1)
 source /etc/bash_completion.d/git
 
+alias mysource="source ${HOME}/.bashrc"
 #=============================================================================#
 # set variables
 #-----------------------------------------------------------------------------#
@@ -46,6 +47,7 @@ source /etc/bash_completion.d/git
 #=============================================================================#
 # my "go" aliases
 #=============================================================================#
+___bm_aliases____(){ echo "I'm just a bookmark for sublimetext"; }
     alias gohome='cd /cygdrive/c/Users/takanori'
     alias goconf='cd /cygdrive/c/Users/takanori/Dropbox/git/configs_master'
     alias gosnippet='cd /cygdrive/c/Users/takanori/Dropbox/git/snippet_book'
@@ -64,9 +66,11 @@ source /etc/bash_completion.d/git
     alias go280='cd /cygdrive/c/Users/takanori/Dropbox/research_dropbox/courses/eecs280-w15-gdrive/codes'
     alias go281='cd /cygdrive/c/Users/takanori/Dropbox/research_dropbox/courses/eecs281/codes'
     alias goword='cd /cygdrive/c/Users/takanori/Dropbox/research_dropbox/word-notes/tex4word'
-alias gowork='cd /cygdrive/c/Users/takanori/Dropbox/work/sbia_work'
-alias goconfig='cd /cygdrive/c/Users/takanori/Dropbox/git/configs'
-#alias godrive='cd /cygdrive/c/Users/takanori/Google\ Drive'
+    alias gowork='cd /cygdrive/c/Users/takanori/Dropbox/work/sbia_work'
+    alias goconfig='cd /cygdrive/c/Users/takanori/Dropbox/git/configs'
+    alias gonotes='cd /cygdrive/c/Users/takanori/Dropbox/git/coding_notes'
+    alias gosnip='cd /cygdrive/c/Users/takanori/Dropbox/git/snippet'
+    alias godrive='cd "/cygdrive/c/Users/takanori/Google Drive"'
 
 
 
@@ -88,29 +92,19 @@ alias goconfig='cd /cygdrive/c/Users/takanori/Dropbox/git/configs'
     #| to run ipython.bat that shipped with enthrought canopy
     #export PATH=$PATH:"/cygdrive/c/users/takanori/appdata/local/enthought/canopy/user/scripts/"
 
-#==============================================================================#
+#=============================================================================#
 # disk space (11/11/2014)
-#==============================================================================#
+#=============================================================================#
     alias dspace='du -h --max-depth=1'
     alias dspace2='du -h --max-depth=1 | sort -h'
     alias dspace3='du -ah --max-depth=1 | sort -h'
 
 #=========================================================================#
-# Softwares installed on windows machine
+# Softwares installed on windows machine 09-02-2016 (15:21)
 #=========================================================================#
-    # export PATH=$PATH:"/cygdrive/C/Program Files (x86)/Google/Chrome/Application/"
-    chrome(){
-        "/cygdrive/C/Program Files (x86)/Google/Chrome/Application/chrome.exe" $1 &
-    }
-    # export PATH=$PATH:"/cygdrive/C/Program Files (x86)/SumatraPDF/"
-    #| http://stackoverflow.com/questions/7131670/make-bash-alias-that-takes-parameter
-    Sumatra() { 
-        "/cygdrive/C/Program Files (x86)/SumatraPDF/SumatraPDF.exe" $1 &
-    }
-    sublime(){
-        "/cygdrive/C/Program Files/Sublime Text 3/sublime_text.exe" $1 &
-    }
-
+    alias sumatra='"/cygdrive/C/Program Files (x86)/SumatraPDF/SumatraPDF.exe"'
+    alias chrome='"/cygdrive/C/Program Files (x86)/Google/Chrome/Application/chrome.exe"'
+    alias subl='"/cygdrive/C/Program Files/Sublime Text 3/sublime_text.exe"'
 
 #*****************************************************************************#
 #                    my data-science training stuffs (deprecated)
