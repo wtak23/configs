@@ -1,7 +1,6 @@
-################
-SBIA Workstation
-################
-``sublime.sbia.setup.rst``
+####################################
+SBIA Workstation (``subl-sbia.rst``)
+####################################
 
 The two most important files:
 

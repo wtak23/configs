@@ -8,7 +8,7 @@ Sublime Text Setup (``sublime.rst``)
     :name: configs.sublime
     :numbered:
 
-    ./sublime/sublime.sbia.setup.rst
+    ./sublime/subl-sbia.rst
     ./sublime/sublime.windows.setup.rst
     ./sublime/sublime.references.rst
     ./sublime/sublime-default-settings.rst

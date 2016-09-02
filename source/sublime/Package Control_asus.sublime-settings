@@ -1,0 +1,32 @@
+{
+	"bootstrapped": true,
+	"in_process_packages":
+	[
+	],
+	"installed_packages":
+	[
+		"Alignment",
+		"All Autocomplete",
+		"BracketHighlighter",
+		"BufferScroll",
+		"Diffy",
+		"FileDiffs",
+		"Fold Comments",
+		"Git",
+		"GitGutter",
+		"LaTeX-cwl",
+		"LaTeXing",
+		"LaTeXTools",
+		"Markdown Preview",
+		"OmniMarkupPreviewer",
+		"Origami",
+		"Package Control",
+		"SideBarEnhancements",
+		"SideBarFolders",
+		"SideBarGit",
+		"Sync View Scroll",
+		"TabsExtra",
+		"Theme - Soda",
+		"TrailingSpaces"
+	]
+}

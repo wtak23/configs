@@ -1,5 +1,5 @@
-Setup for my ASUS laptop
-""""""""""""""""""""""""
+ASUS laptop settings
+""""""""""""""""""""
 ``asus.rst``
 
 .. contents:: `Contents`
@@ -53,7 +53,8 @@ Sublime text
   :: snippet directories
   mklink /d "c:\users\takanori\AppData\Roaming\Sublime Text 3\Packages\User\sublime-snippets" "C:\Users\takanori\Dropbox\git\configs\source\sublime\snippets"
 
-  :: macros
+  :: package controls
+  mklink "c:\users\takanori\AppData\Roaming\Sublime Text 3\Packages\User\Package Control.sublime-settings" "C:\Users\takanori\Dropbox\git\configs\source\sublime\Package Control_asus.sublime-settings"
 
   :: individual files
   mklink "c:\users\takanori\AppData\Roaming\Sublime Text 3\Packages\User\Diff.sublime-settings" "C:\Users\takanori\Dropbox\git\configs\source\sublime\synced_by_files\Diff.sublime-settings"
