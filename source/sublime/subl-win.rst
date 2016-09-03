@@ -47,3 +47,31 @@ Below ran on:
 ##################
 Installed Packages
 ##################
+
+****
+asus
+****
+.. code-block:: rst
+
+    .. literalinclude:: Package Control_asus.sublime-settings
+        :language: json
+        :linenos:
+
+.. literalinclude:: Package Control_asus.sublime-settings
+    :language: json
+    :linenos:
+
+*******************************
+asus diff with sbia workstation
+*******************************
+.. code-block:: rst
+
+    .. literalinclude:: Package Control_sbia.sublime-settings
+        :language: diff
+        :linenos: 
+        :diff: Package Control_asus.sublime-settings
+
+.. literalinclude:: Package Control_sbia.sublime-settings
+    :language: diff
+    :linenos: 
+    :diff: Package Control_asus.sublime-settings
