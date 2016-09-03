@@ -5,6 +5,82 @@
 alias bsource="source ${HOME}/.bashrc" # bash-source
 
 #=============================================================================#
+# Set env-vars
+#=============================================================================#
+____bookmark_ENVVARS____(){ echo "I'm just a bookmark"; }
+  # added by Anaconda2 4.0.0 installer
+  export PATH="/home/takanori/anaconda2/bin:$PATH"
+  
+  export CUDA_ROOT=/usr/local/cuda-6.5
+
+  export PATH=$PATH:/home/takanori/mybin/Slicer-4.4.0-linux-amd64
+  export PATH=$PATH:/home/takanori/mybin/ImageJ
+
+  export PATH=$PATH:~/mybin/itksnap-3.2.0-20141023-Linux-x86_64/bin/
+  export PATH=$PATH:/usr/local/cuda-6.5/bin
+  export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/cuda-6.5/lib64
+
+  # BLAS/LAPACK Setups
+  export BLAS=/usr/local/lib/libopenblas.a
+  export LAPACK=/usr/local/lib/libopenblas.a
+  export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/lib/
+
+  # https://bbs.archlinux.org/viewtopic.php?id=180833
+  export GLPATH=/usr/lib make
+
+  # python imports
+  export PYTHONPATH=/home/takanori/Dropbox/work/external-pymodules
+  export PYTHONPATH=$PYTHONPATH:/home/takanori/Dropbox/work/sbia_work/python/modules
+
+  # LD_LIBRARY_PATH=/usr/local/MATLAB/R2013a/sys/os/glnxa64:/usr/local/MATLAB/R2013a/bin/glnxa64
+
+  #-------------------------------------------------------------------------#
+  # matlab
+  #-------------------------------------------------------------------------#
+    MLM_LICENSE_FILE=27000@olympus.uphs.upenn.edu
+    # export PATH=$PATH:/usr/local/MATLAB/R2014b/bin
+    export PATH=$PATH:/usr/local/MATLAB/R2013a/bin
+    export PATH=$PATH:~/abin
+    alias m2014='/usr/local/MATLAB/R2014b/bin/matlab &'
+
+  #===========================================================================#
+  # Pyspark
+  #===========================================================================#
+    export PATH=$PATH:/home/takanori/mybin/spark-2.0.0-bin-hadoop2.7/bin
+
+    # include pyspark to my python module 07-31-2016 (16:17)
+    export PYTHONPATH=$PYTHONPATH:/home/takanori/mybin/spark-2.0.0-bin-hadoop2.7/python/
+    export PYTHONPATH=$PYTHONPATH:/home/takanori/mybin/spark-2.0.0-bin-hadoop2.7/python/pyspark
+
+  #===========================================================================#
+  # to get deepnet working
+  # https://github.com/nitishsrivastava/deepnet/blob/master/INSTALL.txt
+  #===========================================================================#
+    export CUDA_ROOT=/usr/local/cuda-6.5
+    export CUDA_BIN=/usr/local/cuda-6.5/bin
+    export CUDA_LIB=/usr/local/cuda-6.5/lib64
+    export PATH=${CUDA_BIN}:$PATH
+    export LD_LIBRARY_PATH=${CUDA_LIB}:$LD_LIBRARY_PATH
+
+    # protocole buffer (type $ which protoc)
+    export PATH=/usr/local/bin/protoc:$PATH
+
+    # (3) SET ENVIRONMENT VARIABLES
+    export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/home/takanori/work-local/external-python-modules/deepnet/cudamat
+    export PYTHONPATH=$PYTHONPATH:/home/takanori/work-local/external-python-modules/deepnet
+
+  #===========================================================================#
+  # mozi stuff
+  # https://github.com/hycis/Mozi
+  #===========================================================================#
+    # export PYTHONPATH=~/work-local/external-python-modules/Mozi:$PYTHONPATH
+    # export MOZI_DATA_PATH=~/data/mozi/data
+    # export MOZI_SAVE_PATH=~/data/mozi/database
+    # export MOZI_DATABASE_PATH=~/data/mozi/save
+    # export PYLEARN2_DATA_PATH=/home/takanori/data/deep_learning/pylearn2
+
+
+#=============================================================================#
 # alias to change default options of a command
 #=============================================================================#
 ____bookmark_default_options____(){ echo "" ; }
@@ -22,9 +98,33 @@ ____bookmark_default_options____(){ echo "" ; }
   alias ll='ls -l'                              # long list
   alias la='ls -A'                              # all but . and ..
   alias l='ls -CF'                              #
+  # alias ipynb='ipython notebook --browser=/usr/bin/firefox'
 
 #=============================================================================#
-# ssh commands
+# random convenience commands (most will go here)
+#=============================================================================#
+____bookmark_convenience____(){ echo ""; }
+  alias cpucheck='ps uU takanori --sort %cpu'
+  alias cpucheck2='ps aux --sort %cpu'
+
+  #---------------------------------------------------------------------------#
+  # diskspace
+  #---------------------------------------------------------------------------#
+  alias dspace='du -h --max-depth=1'
+  alias dspace2='du --max-depth=1 | sort -n | cut -f2- | xargs du -hs'
+  alias dspace3='du --max-depth=1 | sort -n | cut -f2- | xargs du -ahs'
+
+  #http://stackoverflow.com/questions/1412423/display-only-files-and-folders-that-are-symbolic-links-in-tcsh-or-bash
+  alias ls_sym='ls -l $(find ./ -maxdepth 1 -type l -print)'
+
+  #http://stackoverflow.com/questions/17066250
+  alias print_time='echo $(date +"%Y-%m-%d_%H:%M:%S")'
+
+  #http://stackoverflow.com/questions/7110119 (history with no line-numbers)
+  alias hist_nonum='history | cut -c 8-'
+
+#=============================================================================#
+# ssh
 #=============================================================================#
 ____bookmark_ssh____(){ echo "" ; }
   alias tak='ssh takanori@takanori.eecs.umich.edu'
@@ -38,40 +138,38 @@ ____bookmark_ssh____(){ echo "" ; }
 #=============================================================================#
 # run in bg
 #=============================================================================#
+____bookmark_background____(){ echo ""; }
   alias gitk1='gitk &'
   alias spyder='spyder --new-instance &'
-
-#=============================================================================#
-# random convenience commands
-#=============================================================================#
-____bookmark_convenience____(){ echo ""; }
-  alias cpucheck='ps uU takanori --sort %cpu'
-  alias cpucheck2='ps aux --sort %cpu'
-
-  #---------------------------------------------------------------------------#
-  # diskspace
-  #---------------------------------------------------------------------------#
-  alias dspace='du -h --max-depth=1'
-  alias dspace2='du --max-depth=1 | sort -n | cut -f2- | xargs du -hs'
-  alias dspace3='du --max-depth=1 | sort -n | cut -f2- | xargs du -ahs'
+  alias matlab1='matlab &'
 
 #=============================================================================#
 # my *go* commands to move around frequently used directories
 #=============================================================================#
 ____bookmark_go____(){ echo ""; }
-  alias goconf='cd /home/takanori/Dropbox/git/configs'
+  alias godrop='cd ~/Dropbox'
   alias gogit='cd ~/Dropbox/git'
   alias goipynb='cd ~/Dropbox/work/ipynb-notes'
-  alias gonotes='cd /home/takanori/Dropbox/git/coding_notes'
-  alias gosnippets='cd ~/Dropbox/git/snippet'
   alias gotex='cd ~/Dropbox/research_dropbox/latex'
   alias gowork='cd ~/Dropbox/work/sbia_work/'
 
-#=============================================================================#
-# functions
-#=============================================================================#
-____bookmark_functions____(){ echo "my functions" ; }
+  # 3 sphinx notebooks I use quite often
+  alias goconf='cd ~/Dropbox/git/configs'
+  alias gonotes='cd ~/Dropbox/git/coding_notes'
+  alias gosnippets='cd ~/Dropbox/git/snippet'
 
+  # location of the python modules from anacaonda
+  alias gopymodules='cd ~/anaconda2/lib/python2.7/site-packages'
+  alias golocalpymod='cd ~/.local/lib/python2.7/site-packages'
+
+#=============================================================================#
+# handling clipboards....
+#=============================================================================#
+____bookmark_clipboards____(){ echo "" ; }
+
+  # http://stackoverflow.com/questions/5130968/how-can-i-copy-the-output-of-a-command-directly-into-my-clipboard
+  alias c="xclip -selection clipboard" 
+  alias v="xclip -o -selection clipboard"
 
   #-------------------------------------------------------------------------#
   # Neat function I grabbed from:
@@ -117,185 +215,99 @@ ____bookmark_functions____(){ echo "my functions" ; }
   alias cbhs="cat $HISTFILE | tail -n 1 | cb" # Copy most recent command in bash history
 
 
-MLM_LICENSE_FILE=27000@olympus.uphs.upenn.edu
-# export PATH=$PATH:/usr/local/MATLAB/R2014b/bin
-export PATH=$PATH:/usr/local/MATLAB/R2013a/bin
-alias matlab1='matlab &'
-
-alias godrop='cd ~/Dropbox'
-alias gomat='cd ~/Dropbox/2015-work/matlab'
-alias godeep='cd ~/Dropbox/2015-work/deep-learning'
-
-export PATH=$PATH:~/abin
-
-alias m2014='/usr/local/MATLAB/R2014b/bin/matlab &'
-alias ipynb='ipython notebook'
-# alias ipynb='ipython notebook --browser=/usr/bin/firefox'
-# LD_LIBRARY_PATH=/usr/local/MATLAB/R2013a/sys/os/glnxa64:/usr/local/MATLAB/R2013a/bin/glnxa64
 #=============================================================================#
-# My bookmark *exports* 02 September 2016 (Friday), incomplete
+# Dealing with **colors**
 #=============================================================================#
-____bookmark_export_ENVVARS____(){ echo "I'm just a bookmark"; }
-  export CUDA_ROOT=/usr/local/cuda-6.5
-
-  export PATH=$PATH:/home/takanori/mybin/Slicer-4.4.0-linux-amd64
-  export PATH=$PATH:/home/takanori/mybin/ImageJ
-
-  export PATH=$PATH:~/mybin/itksnap-3.2.0-20141023-Linux-x86_64/bin/
-  export PATH=$PATH:/usr/local/cuda-6.5/bin
-  export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/cuda-6.5/lib64
-
-  # BLAS/LAPACK Setups
-  export BLAS=/usr/local/lib/libopenblas.a
-  export LAPACK=/usr/local/lib/libopenblas.a
-  export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/lib/
-
-  # https://bbs.archlinux.org/viewtopic.php?id=180833
-  export GLPATH=/usr/lib make
-
-  # python imports
-  export PYTHONPATH=/home/takanori/Dropbox/work/external-pymodules
-  export PYTHONPATH=$PYTHONPATH:/home/takanori/Dropbox/work/sbia_work/python/modules
+____bookmark_colors____(){ echo "" ; }
 
   #===========================================================================#
-  # Pyspark
+  # git related
   #===========================================================================#
-  export PATH=$PATH:/home/takanori/mybin/spark-2.0.0-bin-hadoop2.7/bin
+  #http://stackoverflow.com/questions/7066325/list-git-aliases
+  alias git_alias='git config --get-regexp alias | pygmentize -l sh'
 
-  # include pyspark to my python module 07-31-2016 (16:17)
-  export PYTHONPATH=$PYTHONPATH:/home/takanori/mybin/spark-2.0.0-bin-hadoop2.7/python/
-  export PYTHONPATH=$PYTHONPATH:/home/takanori/mybin/spark-2.0.0-bin-hadoop2.7/python/pyspark
+  #| added 08-24-2016 (16:11)
+  # remove color from stdou (wow, harder than i expected) 
+  #http://stackoverflow.com/questions/17998978/removing-colors-from-output
+  #http://unix.stackexchange.com/questions/111899/how-to-strip-color-codes-out-of-stdout-and-pipe-to-file-and-stdout
+  alias stripcolors='sed "s/\x1B\[\([0-9]\{1,2\}\(;[0-9]\{1,2\}\)\?\)\?[mGK]//g"'
 
   #===========================================================================#
-  # trying to get deepnet working
-  # https://github.com/nitishsrivastava/deepnet/blob/master/INSTALL.txt
+  # to get colored output from ``less`` on scripts
+  # http://superuser.com/questions/117841/get-colors-in-less-command
   #===========================================================================#
-  export CUDA_ROOT=/usr/local/cuda-6.5
-  export CUDA_BIN=/usr/local/cuda-6.5/bin
-  export CUDA_LIB=/usr/local/cuda-6.5/lib64
-  export PATH=${CUDA_BIN}:$PATH
-  export LD_LIBRARY_PATH=${CUDA_LIB}:$LD_LIBRARY_PATH
+  myless(){
+    pygmentize $1 | less
+  }
 
-  # protocole buffer (type $ which protoc)
-  export PATH=/usr/local/bin/protoc:$PATH
+  pyg_sh(){
+    # pygmentize shell code
+    pygmentize -l sh $1
+  }
 
-  # (3) SET ENVIRONMENT VARIABLES
-  export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/home/takanori/work-local/external-python-modules/deepnet/cudamat
-  export PYTHONPATH=$PYTHONPATH:/home/takanori/work-local/external-python-modules/deepnet
-
-
-
+  pyg_py(){
+    # pygmentize python code
+    pygmentize -l python $1
+  }
 
 
 
 #=============================================================================#
-# modify snippets via sublime text 14 June 2016 (Tuesday)
+# Git related functions
 #=============================================================================#
-alias subl_snip='subl -n -a ~/Dropbox/git/snippet'
-subl_bashrc(){
-  subl -n ~/Dropbox/git/configs_master/sbia-pc125-cinn/.bashrc
-  subl ~/Dropbox/git/configs_master/sbia-pc125-cinn/.bash_aliases
-  subl -a ~/Dropbox/git/configs_master/sbia-pc125-cinn/
-}
-subl_(){ # open both snippets and configs
-  subl -n
-  subl -a ~/Dropbox/git/configs/
-  subl -a ~/Dropbox/git/snippet/
-  subl -a ~/Dropbox/git/coding_notes/
-}
+____bookmark_git____(){ echo "" ; }
+  git_anonymize(){
+    git config user.name "noname"
+    git config user.email noname@example.com
+  }
+  alias twsphinx_check='google-chrome build/html/index.html' # 08-17-2016 (13:33)
+  alias twalias='alias | pygmentize -l sh' # 08-17-2016 (13:37)
 
+  git_clear_author_history(){
+    git filter-branch -f --env-filter '
 
-#=============================================================================#
-# Convenience alias (Post 06-14-2016 (13:06))
-# (most scripts are created in accordance with ``cs-bash-commands.rst`` in my
-#  ``snippets`` repository
-#=============================================================================#
-#http://stackoverflow.com/questions/1412423/display-only-files-and-folders-that-are-symbolic-links-in-tcsh-or-bash
-alias ls_sym='ls -l $(find ./ -maxdepth 1 -type l -print)'
+    CORRECT_NAME="your name"
+    CORRECT_EMAIL="your_email@example.com"
 
-#http://stackoverflow.com/questions/17066250
-alias print_time='echo $(date +"%Y-%m-%d_%H:%M:%S")'
+    export GIT_COMMITTER_NAME="$CORRECT_NAME"
+    export GIT_COMMITTER_EMAIL="$CORRECT_EMAIL"
 
-#http://stackoverflow.com/questions/7110119 (history with no line-numbers)
-alias hist_nonum='history | cut -c 8-'
+    export GIT_AUTHOR_NAME="$CORRECT_NAME"
+    export GIT_AUTHOR_EMAIL="$CORRECT_EMAIL"
+    ' --tag-name-filter cat -- --branches --tags
+  }
 
-# alias sync_snippets='cp -f /home/takanori/.config/sublime-text-3/Packages/User/*.sublime-snippet /home/takanori/Dropbox/git/configs_master/sbia-pc125-cinn/sublime-text/sublime-snippets-sbia/'
-#| -z = compress, -v = verbose, u=update only
-alias sync_snippets='rsync -z /home/takanori/.config/sublime-text-3/Packages/User/*.sublime-snippet /home/takanori/Dropbox/git/configs_master/sbia-pc125-cinn/sublime-text/sublime-snippets-sbia/'
+  git_author_history_tak(){
+    git filter-branch -f --env-filter '
 
+    CORRECT_NAME="Takanori Watanabe (sbia-pc125)"
+    CORRECT_EMAIL="Takanori.Watanabe@uphs.upenn.edu"
 
+    export GIT_COMMITTER_NAME="$CORRECT_NAME"
+    export GIT_COMMITTER_EMAIL="$CORRECT_EMAIL"
 
-#=============================================================================#
-# mozi stuff
-# https://github.com/hycis/Mozi
-#=============================================================================#
-# export PYTHONPATH=~/work-local/external-python-modules/Mozi:$PYTHONPATH
-# export MOZI_DATA_PATH=~/data/mozi/data
-# export MOZI_SAVE_PATH=~/data/mozi/database
-# export MOZI_DATABASE_PATH=~/data/mozi/save
+    export GIT_AUTHOR_NAME="$CORRECT_NAME"
+    export GIT_AUTHOR_EMAIL="$CORRECT_EMAIL"
+    ' --tag-name-filter cat -- --branches --tags
+  }
 
-# export PYLEARN2_DATA_PATH=/home/takanori/data/deep_learning/pylearn2
 
 alias gcc='/sbia/sbiasfw/external/gcc/4.7.1/bin/gcc'
 
 
-#=============================================================================#
-# stuffs after mar29_2016
-#=============================================================================#
 tw_csvhead(){
   head -1 $1 | tr ',' '\n'
 }
 
-# cudnn shit: see http://deeplearning.net/software/theano/library/sandbox/cuda/dnn.html
-# export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/home/takanori/data/cuda/lib64
-# export CPATH=$CPATH:/home/takanori/data/cuda/include
-# export LIBRARY_PATH=$LD_LIBRARY_PATH:/home/takanori/data/cuda/lib64
-# added by Anaconda2 4.0.0 installer
-export PATH="/home/takanori/anaconda2/bin:$PATH"
 
-# added by Anaconda 2.3.0 installer
-# export PATH="/home/takanori/anaconda/bin:$PATH"
-
-
+alias nojekyll='touch .nojekyll'
 
 #=============================================================================#
-# git related
+# Sphinx related
 #=============================================================================#
-#http://stackoverflow.com/questions/7066325/list-git-aliases
-alias git_alias='git config --get-regexp alias | pygmentize -l sh'
-
-
-#| added 08-24-2016 (16:11)
-# remove color from stdou (wow, harder than i expected) 
-#http://stackoverflow.com/questions/17998978/removing-colors-from-output
-#http://unix.stackexchange.com/questions/111899/how-to-strip-color-codes-out-of-stdout-and-pipe-to-file-and-stdout
-alias stripcolors='sed "s/\x1B\[\([0-9]\{1,2\}\(;[0-9]\{1,2\}\)\?\)\?[mGK]//g"'
-
-#=============================================================================#
-# to get colored output from ``less`` on scripts
-# http://superuser.com/questions/117841/get-colors-in-less-command
-#=============================================================================#
-myless(){
-  pygmentize $1 | less
-}
-
-alias tree='tree -C'
-# export LESS='-R'
-# export LESSOPEN='|~/.lessfilter %s'
-
+____bookmark_snip____(){ echo "" ; }
 # used for sphinx (from directory of Makeile
 alias open_sphinx_html='firefox _build/html/index.html'
-
-# location of the python modules from anacaonda 23 June 2016 (Thursday)
-alias gopymodules='cd ~/anaconda2/lib/python2.7/site-packages'
-alias golocalpymod='cd ~/.local/lib/python2.7/site-packages'
-
-
-
-# http://stackoverflow.com/questions/5130968/how-can-i-copy-the-output-of-a-command-directly-into-my-clipboard
-alias c="xclip -selection clipboard" 
-alias v="xclip -o -selection clipboard"
-alias nojekyll='touch .nojekyll'
 
 #=============================================================================#
 # SNIPPETS to print out (as a self reminder)
@@ -592,50 +604,9 @@ ____bookmark_snip____(){ echo 'no functionality. just a bookmark for sublime (us
 # 02 September 2016 (Friday)
 #*****************************************************************************#
 ____bookmark_unsorted____(){ echo "I'm unsorted" ; }
-  git_anonymize(){
-    git config user.name "noname"
-    git config user.email noname@example.com
-  }
-  alias twsphinx_check='google-chrome build/html/index.html' # 08-17-2016 (13:33)
-  alias twalias='alias | pygmentize -l sh' # 08-17-2016 (13:37)
 
-  git_clear_author_history(){
-    git filter-branch -f --env-filter '
 
-    CORRECT_NAME="your name"
-    CORRECT_EMAIL="your_email@example.com"
 
-    export GIT_COMMITTER_NAME="$CORRECT_NAME"
-    export GIT_COMMITTER_EMAIL="$CORRECT_EMAIL"
-
-    export GIT_AUTHOR_NAME="$CORRECT_NAME"
-    export GIT_AUTHOR_EMAIL="$CORRECT_EMAIL"
-    ' --tag-name-filter cat -- --branches --tags
-  }
-
-  git_author_history_tak(){
-    git filter-branch -f --env-filter '
-
-    CORRECT_NAME="Takanori Watanabe (sbia-pc125)"
-    CORRECT_EMAIL="Takanori.Watanabe@uphs.upenn.edu"
-
-    export GIT_COMMITTER_NAME="$CORRECT_NAME"
-    export GIT_COMMITTER_EMAIL="$CORRECT_EMAIL"
-
-    export GIT_AUTHOR_NAME="$CORRECT_NAME"
-    export GIT_AUTHOR_EMAIL="$CORRECT_EMAIL"
-    ' --tag-name-filter cat -- --branches --tags
-  }
-
-  pyg_sh(){
-    # pygmentize shell code
-    pygmentize -l sh $1
-  }
-
-  pyg_py(){
-    # pygmentize python code
-    pygmentize -l python $1
-  }
 
   tw_print_function_name(){
     #=========================================================================#
@@ -651,3 +622,15 @@ ____bookmark_unsorted____(){ echo "I'm unsorted" ; }
         sed "s/().*$/()/" | stripcolors
   }
 
+
+
+#===========================================================================#
+# modify snippets via sublime text
+#===========================================================================#
+alias subl_snip='subl -n -a ~/Dropbox/git/snippet'
+subl_(){ # open both snippets and configs
+  subl -n
+  subl -a ~/Dropbox/git/configs/
+  subl -a ~/Dropbox/git/snippet/
+  subl -a ~/Dropbox/git/coding_notes/
+}  
