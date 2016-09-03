@@ -28,11 +28,7 @@ Below ran on ASUS on 09-01-2016 (17:57)
   mklink "c:\cygwin64\home\takanori\.bashrc" "C:\Users\takanori\Dropbox\git\configs\source\bash_config\cygwin\.bashrc"
   mklink "c:\cygwin64\home\takanori\.emacs" "C:\Users\takanori\Dropbox\git\configs\source\bash_config\cygwin\.emacs"
 
-###################
-git code-completion
-###################
-Copy and paste the file ``git`` under ``C:\cygwin64\etc\bash_completion.d``
-to enable code completion with ``<tab>`` for git commands.
+
 
 ##############
 bashrc content
@@ -120,3 +116,17 @@ Things I install on most of my computers
     apt-cyg install vim -u
     apt-cyg install mingw-zlib -u
     apt-cyg install mingw64-i686-gcc-core -u    
+
+##################
+git related stuffs
+##################
+*************
+github sshkey
+*************
+https://help.github.com/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent/
+
+*******************
+git code completion
+*******************
+Copy and paste the file ``git`` under ``C:\cygwin64\etc\bash_completion.d``
+to enable code completion with ``<tab>`` for git commands.    

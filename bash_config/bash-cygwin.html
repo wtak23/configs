@@ -131,11 +131,15 @@
 </li>
 <li class="toctree-l2 current"><a class="current reference internal" href="">2. Cygwin setup (<code class="docutils literal"><span class="pre">bash-cygwin.rst</span></code>)</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#symlink-setup">2.1. symlink setup</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#git-code-completion">2.2. git code-completion</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#bashrc-content">2.3. bashrc content</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#bash-aliases-content">2.4. bash_aliases content</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#apt-cyg">2.5. apt-cyg</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#things-i-install-on-most-of-my-computers">2.5.1. Things I install on most of my computers</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#bashrc-content">2.2. bashrc content</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#bash-aliases-content">2.3. bash_aliases content</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#apt-cyg">2.4. apt-cyg</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#things-i-install-on-most-of-my-computers">2.4.1. Things I install on most of my computers</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#git-related-stuffs">2.5. git related stuffs</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#github-sshkey">2.5.1. github sshkey</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#git-code-completion">2.5.2. git code completion</a></li>
 </ul>
 </li>
 </ul>
@@ -330,11 +334,15 @@
 <p class="topic-title first"><cite>Contents</cite></p>
 <ul class="simple">
 <li><a class="reference internal" href="#symlink-setup" id="id1">symlink setup</a></li>
-<li><a class="reference internal" href="#git-code-completion" id="id2">git code-completion</a></li>
-<li><a class="reference internal" href="#bashrc-content" id="id3">bashrc content</a></li>
-<li><a class="reference internal" href="#bash-aliases-content" id="id4">bash_aliases content</a></li>
-<li><a class="reference internal" href="#apt-cyg" id="id5">apt-cyg</a><ul>
-<li><a class="reference internal" href="#things-i-install-on-most-of-my-computers" id="id6">Things I install on most of my computers</a></li>
+<li><a class="reference internal" href="#bashrc-content" id="id2">bashrc content</a></li>
+<li><a class="reference internal" href="#bash-aliases-content" id="id3">bash_aliases content</a></li>
+<li><a class="reference internal" href="#apt-cyg" id="id4">apt-cyg</a><ul>
+<li><a class="reference internal" href="#things-i-install-on-most-of-my-computers" id="id5">Things I install on most of my computers</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#git-related-stuffs" id="id6">git related stuffs</a><ul>
+<li><a class="reference internal" href="#github-sshkey" id="id7">github sshkey</a></li>
+<li><a class="reference internal" href="#git-code-completion" id="id8">git code completion</a></li>
 </ul>
 </li>
 </ul>
@@ -358,13 +366,8 @@ mklink &quot;c:\cygwin64\home\takanori\.emacs&quot; &quot;C:\Users\takanori\Drop
 </pre></div>
 </div>
 </div>
-<div class="section" id="git-code-completion">
-<h2><a class="toc-backref" href="#id2">2.2. git code-completion</a><a class="headerlink" href="#git-code-completion" title="Permalink to this headline">¶</a></h2>
-<p>Copy and paste the file <code class="docutils literal"><span class="pre">git</span></code> under <code class="docutils literal"><span class="pre">C:\cygwin64\etc\bash_completion.d</span></code>
-to enable code completion with <code class="docutils literal"><span class="pre">&lt;tab&gt;</span></code> for git commands.</p>
-</div>
 <div class="section" id="bashrc-content">
-<h2><a class="toc-backref" href="#id3">2.3. bashrc content</a><a class="headerlink" href="#bashrc-content" title="Permalink to this headline">¶</a></h2>
+<h2><a class="toc-backref" href="#id2">2.2. bashrc content</a><a class="headerlink" href="#bashrc-content" title="Permalink to this headline">¶</a></h2>
 <p><a class="reference external" href="https://github.com/wtak23/configs/blob/master/source/bash_config/cygwin/.bashrc">Github</a></p>
 <div class="highlight-rst"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">literalinclude</span><span class="p">::</span> ./cygwin/.bashrc
     <span class="nc">:language:</span> <span class="nf">bash</span>
@@ -790,7 +793,7 @@ to enable code completion with <code class="docutils literal"><span class="pre">
 </td></tr></table></div>
 </div>
 <div class="section" id="bash-aliases-content">
-<h2><a class="toc-backref" href="#id4">2.4. bash_aliases content</a><a class="headerlink" href="#bash-aliases-content" title="Permalink to this headline">¶</a></h2>
+<h2><a class="toc-backref" href="#id3">2.3. bash_aliases content</a><a class="headerlink" href="#bash-aliases-content" title="Permalink to this headline">¶</a></h2>
 <div class="admonition-todo admonition" id="index-0">
 <p class="first admonition-title">Todo</p>
 <p class="last">clean this unholy mess...</p>
@@ -1356,7 +1359,7 @@ ___bm_aliases____<span class="o">(){</span> <span class="nb">echo</span> <span c
 </td></tr></table></div>
 </div>
 <div class="section" id="apt-cyg">
-<h2><a class="toc-backref" href="#id5">2.5. apt-cyg</a><a class="headerlink" href="#apt-cyg" title="Permalink to this headline">¶</a></h2>
+<h2><a class="toc-backref" href="#id4">2.4. apt-cyg</a><a class="headerlink" href="#apt-cyg" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
 <li>Use this to get an <code class="docutils literal"><span class="pre">apt-get</span></code> like feel in cygwin (<a class="reference external" href="https://code.google.com/p/apt-cyg/">https://code.google.com/p/apt-cyg/</a>)</li>
 <li>Only need to have <cite>subversion</cite> and <cite>wget</cite> installed during standard cygwin installation</li>
@@ -1376,7 +1379,7 @@ chmod +x /bin/apt-cyg
 </pre></div>
 </div>
 <div class="section" id="things-i-install-on-most-of-my-computers">
-<h3><a class="toc-backref" href="#id6">2.5.1. Things I install on most of my computers</a><a class="headerlink" href="#things-i-install-on-most-of-my-computers" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id5">2.4.1. Things I install on most of my computers</a><a class="headerlink" href="#things-i-install-on-most-of-my-computers" title="Permalink to this headline">¶</a></h3>
 <div class="code bash highlight-python"><div class="highlight"><pre><span></span>apt-cyg install xinit
 apt-cyg install emacs
 apt-cyg install git
@@ -1405,6 +1408,18 @@ apt-cyg install mingw-zlib -u
 apt-cyg install mingw64-i686-gcc-core -u
 </pre></div>
 </div>
+</div>
+</div>
+<div class="section" id="git-related-stuffs">
+<h2><a class="toc-backref" href="#id6">2.5. git related stuffs</a><a class="headerlink" href="#git-related-stuffs" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="github-sshkey">
+<h3><a class="toc-backref" href="#id7">2.5.1. github sshkey</a><a class="headerlink" href="#github-sshkey" title="Permalink to this headline">¶</a></h3>
+<p><a class="reference external" href="https://help.github.com/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent/">https://help.github.com/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent/</a></p>
+</div>
+<div class="section" id="git-code-completion">
+<h3><a class="toc-backref" href="#id8">2.5.2. git code completion</a><a class="headerlink" href="#git-code-completion" title="Permalink to this headline">¶</a></h3>
+<p>Copy and paste the file <code class="docutils literal"><span class="pre">git</span></code> under <code class="docutils literal"><span class="pre">C:\cygwin64\etc\bash_completion.d</span></code>
+to enable code completion with <code class="docutils literal"><span class="pre">&lt;tab&gt;</span></code> for git commands.</p>
 </div>
 </div>
 </div>
