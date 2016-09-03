@@ -79,7 +79,6 @@ ____bookmark_ENVVARS____(){ echo "I'm just a bookmark"; }
     # export MOZI_DATABASE_PATH=~/data/mozi/save
     # export PYLEARN2_DATA_PATH=/home/takanori/data/deep_learning/pylearn2
 
-
 #=============================================================================#
 # alias to change default options of a command
 #=============================================================================#
@@ -99,6 +98,8 @@ ____bookmark_default_options____(){ echo "" ; }
   alias la='ls -A'                              # all but . and ..
   alias l='ls -CF'                              #
   # alias ipynb='ipython notebook --browser=/usr/bin/firefox'
+
+  alias gcc='/sbia/sbiasfw/external/gcc/4.7.1/bin/gcc'
 
 #=============================================================================#
 # random convenience commands (most will go here)
@@ -123,6 +124,24 @@ ____bookmark_convenience____(){ echo ""; }
   #http://stackoverflow.com/questions/7110119 (history with no line-numbers)
   alias hist_nonum='history | cut -c 8-'
 
+  tw_print_function_name(){
+    #=========================================================================#
+    # print function names defined here
+    # (since these don't show up in $ alias 
+    #=========================================================================#
+    # http://stackoverflow.com/questions/1184268/unix-sort-treatment-of-underscore-character
+    # LC_COLLATE=C will make underscore sorted as well
+    # (grep looks from () followed by {
+    # sed shaves off all the last character following "()" bracket
+    # http://stackoverflow.com/questions/3675169/how-to-shave-off-last-character-using-sed
+    cat ~/.bashrc | grep "\(\)(?=\{)" | env LC_COLLATE=C sort -f | \
+        sed "s/().*$/()/" | stripcolors
+  }
+
+  tw_csvhead(){
+    head -1 $1 | tr ',' '\n'
+  }
+
 #=============================================================================#
 # ssh
 #=============================================================================#
@@ -133,7 +152,6 @@ ____bookmark_ssh____(){ echo "" ; }
   alias newberry='ssh takanori@newberry.eecs.umich.edu'
   alias itd='ssh -Y -l takanori stat.itd.umich.edu'
   alias sbia='ssh -Y -l watanabt cbica-cluster.uphs.upenn.edu'
-
 
 #=============================================================================#
 # run in bg
@@ -214,7 +232,6 @@ ____bookmark_clipboards____(){ echo "" ; }
   alias cbwd="pwd | cb"                       # Copy current working directory
   alias cbhs="cat $HISTFILE | tail -n 1 | cb" # Copy most recent command in bash history
 
-
 #=============================================================================#
 # Dealing with **colors**
 #=============================================================================#
@@ -249,8 +266,6 @@ ____bookmark_colors____(){ echo "" ; }
     # pygmentize python code
     pygmentize -l python $1
   }
-
-
 
 #=============================================================================#
 # Git related functions
@@ -291,23 +306,25 @@ ____bookmark_git____(){ echo "" ; }
     ' --tag-name-filter cat -- --branches --tags
   }
 
-
-alias gcc='/sbia/sbiasfw/external/gcc/4.7.1/bin/gcc'
-
-
-tw_csvhead(){
-  head -1 $1 | tr ',' '\n'
-}
-
-
-alias nojekyll='touch .nojekyll'
-
 #=============================================================================#
-# Sphinx related
+# Sublime and Sphinx related
 #=============================================================================#
-____bookmark_snip____(){ echo "" ; }
-# used for sphinx (from directory of Makeile
-alias open_sphinx_html='firefox _build/html/index.html'
+____bookmark_subl_sphinx____(){ echo "" ; }
+
+  alias open_sphinx_html='firefox _build/html/index.html'
+
+  subl_(){ # open both snippets and configs
+    subl -n
+    subl -a ~/Dropbox/git/configs/
+    subl -a ~/Dropbox/git/snippet/
+    subl -a ~/Dropbox/git/coding_notes/
+  }  
+
+  # modify snippets via sublime text
+  alias subl_snip='subl -n -a ~/Dropbox/git/snippet'
+
+  # to publish in github
+  alias nojekyll='touch .nojekyll'
 
 #=============================================================================#
 # SNIPPETS to print out (as a self reminder)
@@ -601,36 +618,6 @@ ____bookmark_snip____(){ echo 'no functionality. just a bookmark for sublime (us
 
 #*****************************************************************************#
 # Everything below here are unsorted. Categorized later.
-# 02 September 2016 (Friday)
+# Last organized: 02 September 2016 (Friday)
 #*****************************************************************************#
 ____bookmark_unsorted____(){ echo "I'm unsorted" ; }
-
-
-
-
-  tw_print_function_name(){
-    #=========================================================================#
-    # print function names defined here
-    # (since these don't show up in $ alias 
-    #=========================================================================#
-    # http://stackoverflow.com/questions/1184268/unix-sort-treatment-of-underscore-character
-    # LC_COLLATE=C will make underscore sorted as well
-    # (grep looks from () followed by {
-    # sed shaves off all the last character following "()" bracket
-    # http://stackoverflow.com/questions/3675169/how-to-shave-off-last-character-using-sed
-    cat ~/.bashrc | grep "\(\)(?=\{)" | env LC_COLLATE=C sort -f | \
-        sed "s/().*$/()/" | stripcolors
-  }
-
-
-
-#===========================================================================#
-# modify snippets via sublime text
-#===========================================================================#
-alias subl_snip='subl -n -a ~/Dropbox/git/snippet'
-subl_(){ # open both snippets and configs
-  subl -n
-  subl -a ~/Dropbox/git/configs/
-  subl -a ~/Dropbox/git/snippet/
-  subl -a ~/Dropbox/git/coding_notes/
-}  
