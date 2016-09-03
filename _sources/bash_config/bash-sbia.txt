@@ -26,8 +26,6 @@ Symlinks
 ###############
 bashrc contents
 ###############
-.. todo:: clean this unholy mess...
-
 `Github <https://github.com/wtak23/configs/blob/master/source/bash_config/sbia-pc-125/.bashrc>`__
 
 .. code-block:: rst

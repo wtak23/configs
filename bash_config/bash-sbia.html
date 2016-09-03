@@ -44,6 +44,7 @@
 
 <body class="wy-body-for-nav" role="document">
 
+   
   <div class="wy-grid-for-nav">
 
     
@@ -293,8 +294,10 @@
 
       
       <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
-        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-        <a href="../index.html">My Configs</a>
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">My Configs</a>
+        
       </nav>
 
 
@@ -307,20 +310,32 @@
 
 
 
+
+
+
+
+
+
+
+
 <div role="navigation" aria-label="breadcrumbs navigation">
   <ul class="wy-breadcrumbs">
-    <li><a href="../index.html">Docs</a> &raquo;</li>
-      
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
           <li><a href="../bash_config.html">Bash config files (<code class="docutils literal"><span class="pre">bash_config.rst</span></code>)</a> &raquo;</li>
-      
-    <li>1. SBIA Workstation (<code class="docutils literal"><span class="pre">bash-sbia.rst</span></code>)</li>
+        
+      <li>1. SBIA Workstation (<code class="docutils literal"><span class="pre">bash-sbia.rst</span></code>)</li>
+    
+    
       <li class="wy-breadcrumbs-aside">
         
-          
+            
             <a href="../_sources/bash_config/bash-sbia.txt" rel="nofollow"> View page source</a>
           
         
       </li>
+    
   </ul>
   <hr/>
 </div>
@@ -356,10 +371,6 @@ ln -s <span class="s2">&quot;</span><span class="si">${</span><span class="nv">S
 </div>
 <div class="section" id="bashrc-contents">
 <h2><a class="toc-backref" href="#id2">1.2. bashrc contents</a><a class="headerlink" href="#bashrc-contents" title="Permalink to this headline">¶</a></h2>
-<div class="admonition-todo admonition" id="index-0">
-<p class="first admonition-title">Todo</p>
-<p class="last">clean this unholy mess...</p>
-</div>
 <p><a class="reference external" href="https://github.com/wtak23/configs/blob/master/source/bash_config/sbia-pc-125/.bashrc">Github</a></p>
 <div class="highlight-rst"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">literalinclude</span><span class="p">::</span> ./sbia-pc-125/.bashrc
     <span class="nc">:language:</span> <span class="nf">bash</span>
@@ -988,717 +999,635 @@ ln -s <span class="s2">&quot;</span><span class="si">${</span><span class="nv">S
 620
 621
 622
-623
-624
-625
-626
-627
-628
-629
-630
-631
-632
-633
-634
-635
-636
-637
-638
-639
-640
-641
-642
-643
-644
-645
-646
-647
-648
-649
-650
-651
-652
-653
-654
-655
-656
-657
-658
-659
-660
-661
-662
-663
-664</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="c1">#=============================================================================#</span>
-<span class="c1"># below from cygwin default bashrc</span>
-<span class="c1">#=============================================================================#</span>
-<span class="c1"># alias less=&#39;less -r&#39;                          # raw control characters</span>
-<span class="nb">alias</span> <span class="nv">whence</span><span class="o">=</span><span class="s1">&#39;type -a&#39;</span>                        <span class="c1"># where, of a sort</span>
-<span class="c1"># alias grep=&#39;grep --color&#39;                     # show differences in colour</span>
-<span class="nb">alias</span> <span class="nv">grep</span><span class="o">=</span><span class="s1">&#39;grep -P --color=always&#39;</span>              <span class="c1"># show differences in colour (also use perl engine as default)</span>
-<span class="nb">alias</span> <span class="nv">egrep</span><span class="o">=</span><span class="s1">&#39;egrep --color=always&#39;</span>              <span class="c1"># show differences in colour</span>
-<span class="nb">alias</span> <span class="nv">fgrep</span><span class="o">=</span><span class="s1">&#39;fgrep --color=always&#39;</span>              <span class="c1"># show differences in colour</span>
-<span class="c1"># alias egrep=&#39;egrep --color=auto&#39;              # show differences in colour</span>
-<span class="c1"># alias fgrep=&#39;fgrep --color=auto&#39;              # show differences in colour</span>
-<span class="c1">#</span>
-<span class="c1"># Some shortcuts for different directory listings</span>
-<span class="nb">alias</span> <span class="nv">ls</span><span class="o">=</span><span class="s1">&#39;ls -hF --color=tty&#39;</span>                 <span class="c1"># classify files in colour</span>
-<span class="nb">alias</span> <span class="nv">dir</span><span class="o">=</span><span class="s1">&#39;ls --color=auto --format=vertical&#39;</span>
-<span class="nb">alias</span> <span class="nv">vdir</span><span class="o">=</span><span class="s1">&#39;ls --color=auto --format=long&#39;</span>
-<span class="nb">alias</span> <span class="nv">ll</span><span class="o">=</span><span class="s1">&#39;ls -l&#39;</span>                              <span class="c1"># long list</span>
-<span class="nb">alias</span> <span class="nv">la</span><span class="o">=</span><span class="s1">&#39;ls -A&#39;</span>                              <span class="c1"># all but . and ..</span>
-<span class="nb">alias</span> <span class="nv">l</span><span class="o">=</span><span class="s1">&#39;ls -CF&#39;</span>                              <span class="c1">#</span>
-
+623</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="c1">#*****************************************************************************#</span>
+<span class="c1"># Did a cleanup on 09-02-2016</span>
+<span class="c1"># (the indentation is to allow code-folding in sublime-text)</span>
 <span class="c1">#*****************************************************************************#</span>
-<span class="c1"># Everything below is what I (tak) defined 02 September 2016 (Friday)</span>
-<span class="c1">#*****************************************************************************#</span>
-____bookmark_begin_twcustomization____<span class="o">(){</span> <span class="nb">echo</span> <span class="s2">&quot;i&#39;m just a sublime bookmark&quot;</span><span class="p">;</span> <span class="o">}</span>
-<span class="nb">alias</span> <span class="nv">mysource</span><span class="o">=</span><span class="s2">&quot;source </span><span class="si">${</span><span class="nv">HOME</span><span class="si">}</span><span class="s2">/.bashrc&quot;</span>
+<span class="nb">alias</span> <span class="nv">bsource</span><span class="o">=</span><span class="s2">&quot;source </span><span class="si">${</span><span class="nv">HOME</span><span class="si">}</span><span class="s2">/.bashrc&quot;</span> <span class="c1"># bash-source</span>
 
-
-<span class="c1">#%========================================================================%</span>
-<span class="c1"># Note: (08/07/2014)</span>
-<span class="c1"># - for some odd reason, Mint doesn&#39;t like to use .bash_alias file.</span>
-<span class="c1"># - thus stick my customized commands within .bashrc</span>
-<span class="c1">#%========================================================================%</span>
-<span class="nb">alias</span> <span class="nv">tak</span><span class="o">=</span><span class="s1">&#39;ssh takanori@takanori.eecs.umich.edu&#39;</span>
-<span class="nb">alias</span> <span class="nv">caen</span><span class="o">=</span><span class="s1">&#39;ssh takanori@login.engin.edu&#39;</span>
-<span class="nb">alias</span> <span class="nv">itd</span><span class="o">=</span><span class="s1">&#39;ssh takanori@login.engin.edu&#39;</span>
-<span class="nb">alias</span> <span class="nv">newberry</span><span class="o">=</span><span class="s1">&#39;ssh takanori@newberry.eecs.umich.edu&#39;</span>
-<span class="nb">alias</span> <span class="nv">itd</span><span class="o">=</span><span class="s1">&#39;ssh -Y -l takanori stat.itd.umich.edu&#39;</span>
-<span class="nb">alias</span> <span class="nv">sbia</span><span class="o">=</span><span class="s1">&#39;ssh -Y -l watanabt cbica-cluster.uphs.upenn.edu&#39;</span>
-<span class="c1">#-------------------------------------------------------------------------%</span>
-<span class="nb">alias</span> <span class="nv">itd2</span><span class="o">=</span><span class="s1">&#39;ssh takanori@stat.itd.umich.edu&#39;</span>
-<span class="nb">alias</span> <span class="nv">tak2</span><span class="o">=</span><span class="s1">&#39;ssh -Y takanori@takanori.eecs.umich.edu&#39;</span>
-<span class="c1">#-------------------------------------------------------------------------%</span>
-<span class="nb">alias</span> <span class="nv">gitk1</span><span class="o">=</span><span class="s1">&#39;gitk &amp;&#39;</span>
-<span class="c1">#-------------------------------------------------------------------------%</span>
-<span class="nb">alias</span> <span class="nv">cpucheck</span><span class="o">=</span><span class="s1">&#39;ps uU takanori --sort %cpu&#39;</span>
-<span class="nb">alias</span> <span class="nv">cpucheck2</span><span class="o">=</span><span class="s1">&#39;ps aux --sort %cpu&#39;</span>
-<span class="c1">#-------------------------------------------------------------------------%</span>
-<span class="c1">#| http://serverfault.com/questions/62411/how-can-i-sort-du-h-output-by-size</span>
-<span class="c1">#| The link above provides 2 methods to sort files in human readable way.  </span>
-<span class="c1">#| [$ sort -h] only works on my eecs computer...doesn&#39;t work on caen/slab computers.  so i use the alternate method on those computer</span>
-<span class="nb">alias</span> <span class="nv">dspace</span><span class="o">=</span><span class="s1">&#39;du -h --max-depth=1&#39;</span>
-<span class="nb">alias</span> <span class="nv">dspace2</span><span class="o">=</span><span class="s1">&#39;du --max-depth=1 | sort -n | cut -f2- | xargs du -hs&#39;</span>
-<span class="nb">alias</span> <span class="nv">dspace3</span><span class="o">=</span><span class="s1">&#39;du --max-depth=1 | sort -n | cut -f2- | xargs du -ahs&#39;</span>
-<span class="c1">#-------------------------------------------------------------------------%</span>
-<span class="c1">#|----- Moving around directories -----|#</span>
-<span class="c1"># alias gopython=&#39;cd ~/Dropbox/python&#39;</span>
-<span class="nb">alias</span> <span class="nv">gogit</span><span class="o">=</span><span class="s1">&#39;cd ~/Dropbox/git&#39;</span>
-<span class="nb">alias</span> <span class="nv">gotex</span><span class="o">=</span><span class="s1">&#39;cd ~/Dropbox/research_dropbox/latex&#39;</span>
-<span class="nb">alias</span> <span class="nv">goconf</span><span class="o">=</span><span class="s1">&#39;cd /home/takanori/Dropbox/git/configs&#39;</span>
-<span class="nb">alias</span> <span class="nv">gonotes</span><span class="o">=</span><span class="s1">&#39;cd /home/takanori/Dropbox/git/coding_notes&#39;</span>
-
-<span class="c1">#-------------------------------------------------------------------------%</span>
-<span class="c1"># alias goconfig=&#39;cd /cygdrive/c/Users/takanori/Dropbox/git/configs&#39;</span>
-<span class="c1">#alias godrive=&#39;cd /cygdrive/c/Users/takanori/Google\ Drive&#39;</span>
-<span class="c1">#| always colorized with line numbers on the LHS</span>
-<span class="nb">alias</span> <span class="nv">less</span><span class="o">=</span><span class="s1">&#39;less -rN&#39;</span>
-<span class="c1"># alias less=&#39;less -r&#39;</span>
-
-<span class="c1"># http://superuser.com/questions/109537/unix-ls-how-to-sort-first-directories-then-files-etc</span>
-<span class="nb">alias</span> <span class="nv">ls</span><span class="o">=</span><span class="s1">&#39;ls --color -h --group-directories-first&#39;</span>
-
-
-<span class="c1">#========================================================================#</span>
-<span class="c1"># Ref: http://pages.physics.cornell.edu/~myers/teaching/ComputationalMethods/python/ipython.html </span>
-<span class="c1"># (08/19/2014)</span>
-<span class="c1">#========================================================================#</span>
-<span class="nb">export</span> <span class="nv">LESS</span><span class="o">=</span><span class="s2">&quot;-R&quot;</span>
-<span class="nb">export</span> <span class="nv">EDITOR</span><span class="o">=</span><span class="s2">&quot;emacs&quot;</span>
-
-<span class="c1">#========================================================================#</span>
-<span class="c1">#========================================================================#</span>
-<span class="c1">#                        stuffs after June 2015</span>
-<span class="c1">#========================================================================#</span>
-<span class="c1">#========================================================================#</span>
-<span class="c1">#-------------------------------------------------------------------------%</span>
-<span class="c1"># http://madebynathan.com/2011/10/04/a-nicer-way-to-use-xclip/</span>
-cb<span class="o">()</span> <span class="o">{</span>
-  <span class="nb">local</span> <span class="nv">_scs_col</span><span class="o">=</span><span class="s2">&quot;\e[0;32m&quot;</span><span class="p">;</span> <span class="nb">local</span> <span class="nv">_wrn_col</span><span class="o">=</span><span class="s1">&#39;\e[1;31m&#39;</span><span class="p">;</span> <span class="nb">local</span> <span class="nv">_trn_col</span><span class="o">=</span><span class="s1">&#39;\e[0;33m&#39;</span>
-  <span class="c1"># Check that xclip is installed.</span>
-  <span class="k">if</span> ! <span class="nb">type</span> xclip &gt; /dev/null 2&gt;<span class="p">&amp;</span>1<span class="p">;</span> <span class="k">then</span>
-    <span class="nb">echo</span> -e <span class="s2">&quot;</span><span class="nv">$_wrn_col</span><span class="s2">&quot;&quot;You must have the &#39;xclip&#39; program installed.\e[0m&quot;</span>
-  <span class="c1"># Check user is not root (root doesn&#39;t have access to user xorg server)</span>
-  <span class="k">elif</span> <span class="o">[[</span> <span class="s2">&quot;</span><span class="nv">$USER</span><span class="s2">&quot;</span> <span class="o">==</span> <span class="s2">&quot;root&quot;</span> <span class="o">]]</span><span class="p">;</span> <span class="k">then</span>
-    <span class="nb">echo</span> -e <span class="s2">&quot;</span><span class="nv">$_wrn_col</span><span class="s2">&quot;&quot;Must be regular user (not root) to copy a file to the clipboard.\e[0m&quot;</span>
-  <span class="k">else</span>
-    <span class="c1"># If no tty, data should be available on stdin</span>
-    <span class="k">if</span> ! <span class="o">[[</span> <span class="s2">&quot;</span><span class="k">$(</span> tty <span class="k">)</span><span class="s2">&quot;</span> <span class="o">==</span> /dev/* <span class="o">]]</span><span class="p">;</span> <span class="k">then</span>
-      <span class="nv">input</span><span class="o">=</span><span class="s2">&quot;</span><span class="k">$(</span>&lt; /dev/stdin<span class="k">)</span><span class="s2">&quot;</span>
-    <span class="c1"># Else, fetch input from params</span>
-    <span class="k">else</span>
-      <span class="nv">input</span><span class="o">=</span><span class="s2">&quot;</span><span class="nv">$*</span><span class="s2">&quot;</span>
-    <span class="k">fi</span>
-    <span class="k">if</span> <span class="o">[</span> -z <span class="s2">&quot;</span><span class="nv">$input</span><span class="s2">&quot;</span> <span class="o">]</span><span class="p">;</span> <span class="k">then</span>  <span class="c1"># If no input, print usage message.</span>
-      <span class="nb">echo</span> <span class="s2">&quot;Copies a string to the clipboard.&quot;</span>
-      <span class="nb">echo</span> <span class="s2">&quot;Usage: cb &lt;string&gt;&quot;</span>
-      <span class="nb">echo</span> <span class="s2">&quot;       echo &lt;string&gt; | cb&quot;</span>
-    <span class="k">else</span>
-      <span class="c1"># Copy input to clipboard</span>
-      <span class="nb">echo</span> -n <span class="s2">&quot;</span><span class="nv">$input</span><span class="s2">&quot;</span> <span class="p">|</span> xclip -selection c
-      <span class="c1"># Truncate text for status</span>
-      <span class="k">if</span> <span class="o">[</span> <span class="si">${#</span><span class="nv">input</span><span class="si">}</span> -gt <span class="m">80</span> <span class="o">]</span><span class="p">;</span> <span class="k">then</span> <span class="nv">input</span><span class="o">=</span><span class="s2">&quot;</span><span class="k">$(</span><span class="nb">echo</span> <span class="nv">$input</span> <span class="p">|</span> cut -c1-80<span class="k">)</span><span class="nv">$_trn_col</span><span class="s2">...\e[0m&quot;</span><span class="p">;</span> <span class="k">fi</span>
-      <span class="c1"># Print status.</span>
-      <span class="nb">echo</span> -e <span class="s2">&quot;</span><span class="nv">$_scs_col</span><span class="s2">&quot;&quot;Copied to clipboard:\e[0m </span><span class="nv">$input</span><span class="s2">&quot;</span>
-    <span class="k">fi</span>
-  <span class="k">fi</span>
-<span class="o">}</span>
-<span class="c1"># Aliases / functions leveraging the cb() function</span>
-<span class="c1"># ------------------------------------------------</span>
-<span class="c1"># Copy contents of a file</span>
-<span class="k">function</span> cbf<span class="o">()</span> <span class="o">{</span> cat <span class="s2">&quot;</span><span class="nv">$1</span><span class="s2">&quot;</span> <span class="p">|</span> cb<span class="p">;</span> <span class="o">}</span>  
-<span class="c1"># Copy SSH public key</span>
-<span class="nb">alias</span> <span class="nv">cbssh</span><span class="o">=</span><span class="s2">&quot;cbf ~/.ssh/id_rsa.pub&quot;</span>  
-<span class="c1"># Copy current working directory</span>
-<span class="nb">alias</span> <span class="nv">cbwd</span><span class="o">=</span><span class="s2">&quot;pwd | cb&quot;</span>  
-<span class="c1"># Copy most recent command in bash history</span>
-<span class="nb">alias</span> <span class="nv">cbhs</span><span class="o">=</span><span class="s2">&quot;cat </span><span class="nv">$HISTFILE</span><span class="s2"> | tail -n 1 | cb&quot;</span>  
-<span class="c1">#################################### END OF ABOVE (xclip stuffs) #############</span>
-
-<span class="nv">MLM_LICENSE_FILE</span><span class="o">=</span>27000@olympus.uphs.upenn.edu
-<span class="c1"># export PATH=$PATH:/usr/local/MATLAB/R2014b/bin</span>
-<span class="nb">export</span> <span class="nv">PATH</span><span class="o">=</span><span class="nv">$PATH</span>:/usr/local/MATLAB/R2013a/bin
-<span class="nb">alias</span> <span class="nv">mlab</span><span class="o">=</span><span class="s1">&#39;cd ~/Dropbox/2015-work/matlab &amp;&amp; matlab &amp;&#39;</span>
-<span class="nb">alias</span> <span class="nv">matlab1</span><span class="o">=</span><span class="s1">&#39;matlab &amp;&#39;</span>
-
-<span class="nb">alias</span> <span class="nv">godrop</span><span class="o">=</span><span class="s1">&#39;cd ~/Dropbox&#39;</span>
-<span class="nb">alias</span> <span class="nv">gomat</span><span class="o">=</span><span class="s1">&#39;cd ~/Dropbox/2015-work/matlab&#39;</span>
-<span class="nb">alias</span> <span class="nv">godeep</span><span class="o">=</span><span class="s1">&#39;cd ~/Dropbox/2015-work/deep-learning&#39;</span>
-<span class="c1"># alias gopy=&#39;cd ~/Dropbox/2015-work/python&#39;</span>
-<span class="c1"># alias gowork=&#39;cd ~/Dropbox/2015-work/tak-ace-ibis&#39;</span>
-
-<span class="nb">export</span> <span class="nv">PATH</span><span class="o">=</span><span class="nv">$PATH</span>:~/abin
-
-<span class="nb">alias</span> <span class="nv">m2014</span><span class="o">=</span><span class="s1">&#39;/usr/local/MATLAB/R2014b/bin/matlab &amp;&#39;</span>
-<span class="nb">alias</span> <span class="nv">ipynb</span><span class="o">=</span><span class="s1">&#39;ipython notebook&#39;</span>
-<span class="c1"># alias ipynb=&#39;ipython notebook --browser=/usr/bin/firefox&#39;</span>
-<span class="c1"># LD_LIBRARY_PATH=/usr/local/MATLAB/R2013a/sys/os/glnxa64:/usr/local/MATLAB/R2013a/bin/glnxa64</span>
 <span class="c1">#=============================================================================#</span>
-<span class="c1"># My bookmark *exports* 02 September 2016 (Friday), incomplete</span>
+<span class="c1"># Set env-vars</span>
 <span class="c1">#=============================================================================#</span>
-  ____bookmark_exports____<span class="o">(){</span> <span class="nb">echo</span> <span class="s2">&quot;I&#39;m just a bookmark&quot;</span><span class="p">;</span> <span class="o">}</span>
+____bookmark_ENVVARS____<span class="o">(){</span> <span class="nb">echo</span> <span class="s2">&quot;I&#39;m just a bookmark&quot;</span><span class="p">;</span> <span class="o">}</span>
+  <span class="c1"># added by Anaconda2 4.0.0 installer</span>
+  <span class="nb">export</span> <span class="nv">PATH</span><span class="o">=</span><span class="s2">&quot;/home/takanori/anaconda2/bin:</span><span class="nv">$PATH</span><span class="s2">&quot;</span>
+  
+  <span class="nb">export</span> <span class="nv">CUDA_ROOT</span><span class="o">=</span>/usr/local/cuda-6.5
+
+  <span class="nb">export</span> <span class="nv">PATH</span><span class="o">=</span><span class="nv">$PATH</span>:/home/takanori/mybin/Slicer-4.4.0-linux-amd64
+  <span class="nb">export</span> <span class="nv">PATH</span><span class="o">=</span><span class="nv">$PATH</span>:/home/takanori/mybin/ImageJ
+
+  <span class="nb">export</span> <span class="nv">PATH</span><span class="o">=</span><span class="nv">$PATH</span>:~/mybin/itksnap-3.2.0-20141023-Linux-x86_64/bin/
+  <span class="nb">export</span> <span class="nv">PATH</span><span class="o">=</span><span class="nv">$PATH</span>:/usr/local/cuda-6.5/bin
+  <span class="nb">export</span> <span class="nv">LD_LIBRARY_PATH</span><span class="o">=</span><span class="nv">$LD_LIBRARY_PATH</span>:/usr/local/cuda-6.5/lib64
+
+  <span class="c1"># BLAS/LAPACK Setups</span>
+  <span class="nb">export</span> <span class="nv">BLAS</span><span class="o">=</span>/usr/local/lib/libopenblas.a
+  <span class="nb">export</span> <span class="nv">LAPACK</span><span class="o">=</span>/usr/local/lib/libopenblas.a
+  <span class="nb">export</span> <span class="nv">LD_LIBRARY_PATH</span><span class="o">=</span><span class="nv">$LD_LIBRARY_PATH</span>:/usr/local/lib/
+
+  <span class="c1"># https://bbs.archlinux.org/viewtopic.php?id=180833</span>
+  <span class="nb">export</span> <span class="nv">GLPATH</span><span class="o">=</span>/usr/lib make
+
+  <span class="c1"># python imports</span>
+  <span class="nb">export</span> <span class="nv">PYTHONPATH</span><span class="o">=</span>/home/takanori/Dropbox/work/external-pymodules
+  <span class="nb">export</span> <span class="nv">PYTHONPATH</span><span class="o">=</span><span class="nv">$PYTHONPATH</span>:/home/takanori/Dropbox/work/sbia_work/python/modules
+
+  <span class="c1"># LD_LIBRARY_PATH=/usr/local/MATLAB/R2013a/sys/os/glnxa64:/usr/local/MATLAB/R2013a/bin/glnxa64</span>
+
+  <span class="c1">#-------------------------------------------------------------------------#</span>
+  <span class="c1"># matlab</span>
+  <span class="c1">#-------------------------------------------------------------------------#</span>
+    <span class="nv">MLM_LICENSE_FILE</span><span class="o">=</span>27000@olympus.uphs.upenn.edu
+    <span class="c1"># export PATH=$PATH:/usr/local/MATLAB/R2014b/bin</span>
+    <span class="nb">export</span> <span class="nv">PATH</span><span class="o">=</span><span class="nv">$PATH</span>:/usr/local/MATLAB/R2013a/bin
+    <span class="nb">export</span> <span class="nv">PATH</span><span class="o">=</span><span class="nv">$PATH</span>:~/abin
+    <span class="nb">alias</span> <span class="nv">m2014</span><span class="o">=</span><span class="s1">&#39;/usr/local/MATLAB/R2014b/bin/matlab &amp;&#39;</span>
+
+  <span class="c1">#===========================================================================#</span>
+  <span class="c1"># Pyspark</span>
+  <span class="c1">#===========================================================================#</span>
+    <span class="nb">export</span> <span class="nv">PATH</span><span class="o">=</span><span class="nv">$PATH</span>:/home/takanori/mybin/spark-2.0.0-bin-hadoop2.7/bin
+
+    <span class="c1"># include pyspark to my python module 07-31-2016 (16:17)</span>
+    <span class="nb">export</span> <span class="nv">PYTHONPATH</span><span class="o">=</span><span class="nv">$PYTHONPATH</span>:/home/takanori/mybin/spark-2.0.0-bin-hadoop2.7/python/
+    <span class="nb">export</span> <span class="nv">PYTHONPATH</span><span class="o">=</span><span class="nv">$PYTHONPATH</span>:/home/takanori/mybin/spark-2.0.0-bin-hadoop2.7/python/pyspark
+
+  <span class="c1">#===========================================================================#</span>
+  <span class="c1"># to get deepnet working</span>
+  <span class="c1"># https://github.com/nitishsrivastava/deepnet/blob/master/INSTALL.txt</span>
+  <span class="c1">#===========================================================================#</span>
     <span class="nb">export</span> <span class="nv">CUDA_ROOT</span><span class="o">=</span>/usr/local/cuda-6.5
+    <span class="nb">export</span> <span class="nv">CUDA_BIN</span><span class="o">=</span>/usr/local/cuda-6.5/bin
+    <span class="nb">export</span> <span class="nv">CUDA_LIB</span><span class="o">=</span>/usr/local/cuda-6.5/lib64
+    <span class="nb">export</span> <span class="nv">PATH</span><span class="o">=</span><span class="si">${</span><span class="nv">CUDA_BIN</span><span class="si">}</span>:<span class="nv">$PATH</span>
+    <span class="nb">export</span> <span class="nv">LD_LIBRARY_PATH</span><span class="o">=</span><span class="si">${</span><span class="nv">CUDA_LIB</span><span class="si">}</span>:<span class="nv">$LD_LIBRARY_PATH</span>
 
-    <span class="nb">export</span> <span class="nv">PATH</span><span class="o">=</span><span class="nv">$PATH</span>:/home/takanori/mybin/Slicer-4.4.0-linux-amd64
-    <span class="nb">export</span> <span class="nv">PATH</span><span class="o">=</span><span class="nv">$PATH</span>:/home/takanori/mybin/ImageJ
+    <span class="c1"># protocole buffer (type $ which protoc)</span>
+    <span class="nb">export</span> <span class="nv">PATH</span><span class="o">=</span>/usr/local/bin/protoc:<span class="nv">$PATH</span>
 
-    <span class="nb">export</span> <span class="nv">PATH</span><span class="o">=</span><span class="nv">$PATH</span>:~/mybin/itksnap-3.2.0-20141023-Linux-x86_64/bin/
-    <span class="nb">export</span> <span class="nv">PATH</span><span class="o">=</span><span class="nv">$PATH</span>:/usr/local/cuda-6.5/bin
-    <span class="nb">export</span> <span class="nv">LD_LIBRARY_PATH</span><span class="o">=</span><span class="nv">$LD_LIBRARY_PATH</span>:/usr/local/cuda-6.5/lib64
+    <span class="c1"># (3) SET ENVIRONMENT VARIABLES</span>
+    <span class="nb">export</span> <span class="nv">LD_LIBRARY_PATH</span><span class="o">=</span><span class="nv">$LD_LIBRARY_PATH</span>:/home/takanori/work-local/external-python-modules/deepnet/cudamat
+    <span class="nb">export</span> <span class="nv">PYTHONPATH</span><span class="o">=</span><span class="nv">$PYTHONPATH</span>:/home/takanori/work-local/external-python-modules/deepnet
 
-    <span class="c1"># BLAS/LAPACK Setups</span>
-    <span class="nb">export</span> <span class="nv">BLAS</span><span class="o">=</span>/usr/local/lib/libopenblas.a
-    <span class="nb">export</span> <span class="nv">LAPACK</span><span class="o">=</span>/usr/local/lib/libopenblas.a
-    <span class="nb">export</span> <span class="nv">LD_LIBRARY_PATH</span><span class="o">=</span><span class="nv">$LD_LIBRARY_PATH</span>:/usr/local/lib/
-
-    <span class="c1"># https://bbs.archlinux.org/viewtopic.php?id=180833</span>
-    <span class="nb">export</span> <span class="nv">GLPATH</span><span class="o">=</span>/usr/lib make
-
-    <span class="c1"># python imports</span>
-    <span class="nb">export</span> <span class="nv">PYTHONPATH</span><span class="o">=</span>/home/takanori/Dropbox/work/external-pymodules
-    <span class="nb">export</span> <span class="nv">PYTHONPATH</span><span class="o">=</span><span class="nv">$PYTHONPATH</span>:/home/takanori/Dropbox/work/sbia_work/python/modules
-
-
-
-<span class="nb">alias</span> <span class="nv">spyder</span><span class="o">=</span><span class="s1">&#39;spyder --new-instance &amp;&#39;</span>
-
-
-
-<span class="c1"># alias twsource=&#39;source ~/.bashrc&#39;</span>
-<span class="c1"># alias gosnip=&#39;cd ~/Dropbox/git/snippet_book/python&#39;</span>
-<span class="nb">alias</span> <span class="nv">gowork</span><span class="o">=</span><span class="s1">&#39;cd ~/Dropbox/work/sbia_work/&#39;</span>
-<span class="c1"># alias gowork=&#39;cd ~/work-local/tak-ace-ibis/python/&#39;</span>
-<span class="nb">alias</span> <span class="nv">goipynb</span><span class="o">=</span><span class="s1">&#39;cd ~/Dropbox/work/ipynb-notes&#39;</span>
-<span class="nb">alias</span> <span class="nv">gosnippets</span><span class="o">=</span><span class="s1">&#39;cd ~/Dropbox/git/snippet&#39;</span>
+  <span class="c1">#===========================================================================#</span>
+  <span class="c1"># mozi stuff</span>
+  <span class="c1"># https://github.com/hycis/Mozi</span>
+  <span class="c1">#===========================================================================#</span>
+    <span class="c1"># export PYTHONPATH=~/work-local/external-python-modules/Mozi:$PYTHONPATH</span>
+    <span class="c1"># export MOZI_DATA_PATH=~/data/mozi/data</span>
+    <span class="c1"># export MOZI_SAVE_PATH=~/data/mozi/database</span>
+    <span class="c1"># export MOZI_DATABASE_PATH=~/data/mozi/save</span>
+    <span class="c1"># export PYLEARN2_DATA_PATH=/home/takanori/data/deep_learning/pylearn2</span>
 
 <span class="c1">#=============================================================================#</span>
-<span class="c1"># modify snippets via sublime text 14 June 2016 (Tuesday)</span>
+<span class="c1"># alias to change default options of a command</span>
 <span class="c1">#=============================================================================#</span>
-<span class="nb">alias</span> <span class="nv">subl_snip</span><span class="o">=</span><span class="s1">&#39;subl -n -a ~/Dropbox/git/snippet&#39;</span>
-subl_bashrc<span class="o">(){</span>
-  subl -n ~/Dropbox/git/configs_master/sbia-pc125-cinn/.bashrc
-  subl ~/Dropbox/git/configs_master/sbia-pc125-cinn/.bash_aliases
-  subl -a ~/Dropbox/git/configs_master/sbia-pc125-cinn/
-<span class="o">}</span>
-subl_<span class="o">(){</span> <span class="c1"># open both snippets and configs</span>
-  subl -n
-  subl -a ~/Dropbox/git/configs/
-  subl -a ~/Dropbox/git/snippet/
-  subl -a ~/Dropbox/git/coding_notes/
-<span class="o">}</span>
+____bookmark_default_options____<span class="o">(){</span> <span class="nb">echo</span> <span class="s2">&quot;&quot;</span> <span class="p">;</span> <span class="o">}</span>
+  <span class="c1"># alias less=&#39;less -r&#39;              # raw control characters</span>
+  <span class="nb">alias</span> <span class="nv">whence</span><span class="o">=</span><span class="s1">&#39;type -a&#39;</span>              <span class="c1"># where, of a sort</span>
+  <span class="nb">alias</span> <span class="nv">grep</span><span class="o">=</span><span class="s1">&#39;grep -P --color=always&#39;</span> <span class="c1"># use perl engine as default</span>
+  <span class="nb">alias</span> <span class="nv">egrep</span><span class="o">=</span><span class="s1">&#39;egrep --color=always&#39;</span>  <span class="c1"># show differences in colour</span>
+  <span class="nb">alias</span> <span class="nv">fgrep</span><span class="o">=</span><span class="s1">&#39;fgrep --color=always&#39;</span>  <span class="c1"># show differences in colour</span>
+  
+  <span class="c1"># Some shortcuts for different directory listings</span>
+  <span class="c1">#alias ls=&#39;ls -hF --color=tty&#39;                     # classify files in colour</span>
+  <span class="nb">alias</span> <span class="nv">ls</span><span class="o">=</span><span class="s1">&#39;ls --color -h --group-directories-first&#39;</span> <span class="c1"># http://superuser.com/questions/109537/unix-ls-how-to-sort-first-directories-then-files-etc</span>
+  <span class="nb">alias</span> <span class="nv">dir</span><span class="o">=</span><span class="s1">&#39;ls --color=auto --format=vertical&#39;</span>
+  <span class="nb">alias</span> <span class="nv">vdir</span><span class="o">=</span><span class="s1">&#39;ls --color=auto --format=long&#39;</span>
+  <span class="nb">alias</span> <span class="nv">ll</span><span class="o">=</span><span class="s1">&#39;ls -l&#39;</span>                              <span class="c1"># long list</span>
+  <span class="nb">alias</span> <span class="nv">la</span><span class="o">=</span><span class="s1">&#39;ls -A&#39;</span>                              <span class="c1"># all but . and ..</span>
+  <span class="nb">alias</span> <span class="nv">l</span><span class="o">=</span><span class="s1">&#39;ls -CF&#39;</span>                              <span class="c1">#</span>
+  <span class="c1"># alias ipynb=&#39;ipython notebook --browser=/usr/bin/firefox&#39;</span>
 
-
-<span class="c1">#=============================================================================#</span>
-<span class="c1"># Convenience alias (Post 06-14-2016 (13:06))</span>
-<span class="c1"># (most scripts are created in accordance with ``cs-bash-commands.rst`` in my</span>
-<span class="c1">#  ``snippets`` repository</span>
-<span class="c1">#=============================================================================#</span>
-<span class="c1">#http://stackoverflow.com/questions/1412423/display-only-files-and-folders-that-are-symbolic-links-in-tcsh-or-bash</span>
-<span class="nb">alias</span> <span class="nv">ls_sym</span><span class="o">=</span><span class="s1">&#39;ls -l $(find ./ -maxdepth 1 -type l -print)&#39;</span>
-
-<span class="c1">#http://stackoverflow.com/questions/17066250</span>
-<span class="nb">alias</span> <span class="nv">print_time</span><span class="o">=</span><span class="s1">&#39;echo $(date +&quot;%Y-%m-%d_%H:%M:%S&quot;)&#39;</span>
-
-<span class="c1">#http://stackoverflow.com/questions/7110119 (history with no line-numbers)</span>
-<span class="nb">alias</span> <span class="nv">hist_nonum</span><span class="o">=</span><span class="s1">&#39;history | cut -c 8-&#39;</span>
-
-<span class="c1"># alias sync_snippets=&#39;cp -f /home/takanori/.config/sublime-text-3/Packages/User/*.sublime-snippet /home/takanori/Dropbox/git/configs_master/sbia-pc125-cinn/sublime-text/sublime-snippets-sbia/&#39;</span>
-<span class="c1">#| -z = compress, -v = verbose, u=update only</span>
-<span class="nb">alias</span> <span class="nv">sync_snippets</span><span class="o">=</span><span class="s1">&#39;rsync -z /home/takanori/.config/sublime-text-3/Packages/User/*.sublime-snippet /home/takanori/Dropbox/git/configs_master/sbia-pc125-cinn/sublime-text/sublime-snippets-sbia/&#39;</span>
+  <span class="nb">alias</span> <span class="nv">gcc</span><span class="o">=</span><span class="s1">&#39;/sbia/sbiasfw/external/gcc/4.7.1/bin/gcc&#39;</span>
 
 <span class="c1">#=============================================================================#</span>
-<span class="c1"># trying to get deepnet working</span>
-<span class="c1"># https://github.com/nitishsrivastava/deepnet/blob/master/INSTALL.txt</span>
+<span class="c1"># random convenience commands (most will go here)</span>
 <span class="c1">#=============================================================================#</span>
-<span class="nb">export</span> <span class="nv">CUDA_ROOT</span><span class="o">=</span>/usr/local/cuda-6.5
-<span class="nb">export</span> <span class="nv">CUDA_BIN</span><span class="o">=</span>/usr/local/cuda-6.5/bin
-<span class="nb">export</span> <span class="nv">CUDA_LIB</span><span class="o">=</span>/usr/local/cuda-6.5/lib64
-<span class="nb">export</span> <span class="nv">PATH</span><span class="o">=</span><span class="si">${</span><span class="nv">CUDA_BIN</span><span class="si">}</span>:<span class="nv">$PATH</span>
-<span class="nb">export</span> <span class="nv">LD_LIBRARY_PATH</span><span class="o">=</span><span class="si">${</span><span class="nv">CUDA_LIB</span><span class="si">}</span>:<span class="nv">$LD_LIBRARY_PATH</span>
+____bookmark_convenience____<span class="o">(){</span> <span class="nb">echo</span> <span class="s2">&quot;&quot;</span><span class="p">;</span> <span class="o">}</span>
+  <span class="nb">alias</span> <span class="nv">cpucheck</span><span class="o">=</span><span class="s1">&#39;ps uU takanori --sort %cpu&#39;</span>
+  <span class="nb">alias</span> <span class="nv">cpucheck2</span><span class="o">=</span><span class="s1">&#39;ps aux --sort %cpu&#39;</span>
 
-<span class="c1"># protocole buffer (type $ which protoc)</span>
-<span class="nb">export</span> <span class="nv">PATH</span><span class="o">=</span>/usr/local/bin/protoc:<span class="nv">$PATH</span>
+  <span class="c1">#---------------------------------------------------------------------------#</span>
+  <span class="c1"># diskspace</span>
+  <span class="c1">#---------------------------------------------------------------------------#</span>
+  <span class="nb">alias</span> <span class="nv">dspace</span><span class="o">=</span><span class="s1">&#39;du -h --max-depth=1&#39;</span>
+  <span class="nb">alias</span> <span class="nv">dspace2</span><span class="o">=</span><span class="s1">&#39;du --max-depth=1 | sort -n | cut -f2- | xargs du -hs&#39;</span>
+  <span class="nb">alias</span> <span class="nv">dspace3</span><span class="o">=</span><span class="s1">&#39;du --max-depth=1 | sort -n | cut -f2- | xargs du -ahs&#39;</span>
 
-<span class="c1"># (3) SET ENVIRONMENT VARIABLES</span>
-<span class="nb">export</span> <span class="nv">LD_LIBRARY_PATH</span><span class="o">=</span><span class="nv">$LD_LIBRARY_PATH</span>:/home/takanori/work-local/external-python-modules/deepnet/cudamat
-<span class="nb">export</span> <span class="nv">PYTHONPATH</span><span class="o">=</span><span class="nv">$PYTHONPATH</span>:/home/takanori/work-local/external-python-modules/deepnet
+  <span class="c1">#http://stackoverflow.com/questions/1412423/display-only-files-and-folders-that-are-symbolic-links-in-tcsh-or-bash</span>
+  <span class="nb">alias</span> <span class="nv">ls_sym</span><span class="o">=</span><span class="s1">&#39;ls -l $(find ./ -maxdepth 1 -type l -print)&#39;</span>
 
-<span class="c1">#=============================================================================#</span>
-<span class="c1"># mozi stuff</span>
-<span class="c1"># https://github.com/hycis/Mozi</span>
-<span class="c1">#=============================================================================#</span>
-<span class="c1"># export PYTHONPATH=~/work-local/external-python-modules/Mozi:$PYTHONPATH</span>
-<span class="c1"># export MOZI_DATA_PATH=~/data/mozi/data</span>
-<span class="c1"># export MOZI_SAVE_PATH=~/data/mozi/database</span>
-<span class="c1"># export MOZI_DATABASE_PATH=~/data/mozi/save</span>
+  <span class="c1">#http://stackoverflow.com/questions/17066250</span>
+  <span class="nb">alias</span> <span class="nv">print_time</span><span class="o">=</span><span class="s1">&#39;echo $(date +&quot;%Y-%m-%d_%H:%M:%S&quot;)&#39;</span>
 
-<span class="c1"># export PYLEARN2_DATA_PATH=/home/takanori/data/deep_learning/pylearn2</span>
+  <span class="c1">#http://stackoverflow.com/questions/7110119 (history with no line-numbers)</span>
+  <span class="nb">alias</span> <span class="nv">hist_nonum</span><span class="o">=</span><span class="s1">&#39;history | cut -c 8-&#39;</span>
 
-<span class="nb">alias</span> <span class="nv">gcc</span><span class="o">=</span><span class="s1">&#39;/sbia/sbiasfw/external/gcc/4.7.1/bin/gcc&#39;</span>
+  tw_print_function_name<span class="o">(){</span>
+    <span class="c1">#=========================================================================#</span>
+    <span class="c1"># print function names defined here</span>
+    <span class="c1"># (since these don&#39;t show up in $ alias </span>
+    <span class="c1">#=========================================================================#</span>
+    <span class="c1"># http://stackoverflow.com/questions/1184268/unix-sort-treatment-of-underscore-character</span>
+    <span class="c1"># LC_COLLATE=C will make underscore sorted as well</span>
+    <span class="c1"># (grep looks from () followed by {</span>
+    <span class="c1"># sed shaves off all the last character following &quot;()&quot; bracket</span>
+    <span class="c1"># http://stackoverflow.com/questions/3675169/how-to-shave-off-last-character-using-sed</span>
+    cat ~/.bashrc <span class="p">|</span> grep <span class="s2">&quot;\(\)(?=\{)&quot;</span> <span class="p">|</span> env <span class="nv">LC_COLLATE</span><span class="o">=</span>C sort -f <span class="p">|</span> <span class="se">\</span>
+        sed <span class="s2">&quot;s/().*</span>$<span class="s2">/()/&quot;</span> <span class="p">|</span> stripcolors
+  <span class="o">}</span>
 
-
-<span class="c1">#=============================================================================#</span>
-<span class="c1"># stuffs after mar29_2016</span>
-<span class="c1">#=============================================================================#</span>
-tw_csvhead<span class="o">(){</span>
-  head -1 <span class="nv">$1</span> <span class="p">|</span> tr <span class="s1">&#39;,&#39;</span> <span class="s1">&#39;\n&#39;</span>
-<span class="o">}</span>
-
-<span class="c1"># cudnn shit: see http://deeplearning.net/software/theano/library/sandbox/cuda/dnn.html</span>
-<span class="c1"># export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/home/takanori/data/cuda/lib64</span>
-<span class="c1"># export CPATH=$CPATH:/home/takanori/data/cuda/include</span>
-<span class="c1"># export LIBRARY_PATH=$LD_LIBRARY_PATH:/home/takanori/data/cuda/lib64</span>
-<span class="c1"># added by Anaconda2 4.0.0 installer</span>
-<span class="nb">export</span> <span class="nv">PATH</span><span class="o">=</span><span class="s2">&quot;/home/takanori/anaconda2/bin:</span><span class="nv">$PATH</span><span class="s2">&quot;</span>
-
-<span class="c1"># added by Anaconda 2.3.0 installer</span>
-<span class="c1"># export PATH=&quot;/home/takanori/anaconda/bin:$PATH&quot;</span>
-
-
+  tw_csvhead<span class="o">(){</span>
+    head -1 <span class="nv">$1</span> <span class="p">|</span> tr <span class="s1">&#39;,&#39;</span> <span class="s1">&#39;\n&#39;</span>
+  <span class="o">}</span>
 
 <span class="c1">#=============================================================================#</span>
-<span class="c1"># git related</span>
+<span class="c1"># ssh</span>
 <span class="c1">#=============================================================================#</span>
-<span class="c1">#http://stackoverflow.com/questions/7066325/list-git-aliases</span>
-<span class="nb">alias</span> <span class="nv">git_alias</span><span class="o">=</span><span class="s1">&#39;git config --get-regexp alias | pygmentize -l sh&#39;</span>
-
-
-<span class="c1">#| added 08-24-2016 (16:11)</span>
-<span class="c1"># remove color from stdou (wow, harder than i expected) </span>
-<span class="c1">#http://stackoverflow.com/questions/17998978/removing-colors-from-output</span>
-<span class="c1">#http://unix.stackexchange.com/questions/111899/how-to-strip-color-codes-out-of-stdout-and-pipe-to-file-and-stdout</span>
-<span class="nb">alias</span> <span class="nv">stripcolors</span><span class="o">=</span><span class="s1">&#39;sed &quot;s/\x1B\[\([0-9]\{1,2\}\(;[0-9]\{1,2\}\)\?\)\?[mGK]//g&quot;&#39;</span>
+____bookmark_ssh____<span class="o">(){</span> <span class="nb">echo</span> <span class="s2">&quot;&quot;</span> <span class="p">;</span> <span class="o">}</span>
+  <span class="nb">alias</span> <span class="nv">tak</span><span class="o">=</span><span class="s1">&#39;ssh takanori@takanori.eecs.umich.edu&#39;</span>
+  <span class="nb">alias</span> <span class="nv">caen</span><span class="o">=</span><span class="s1">&#39;ssh takanori@login.engin.edu&#39;</span>
+  <span class="nb">alias</span> <span class="nv">itd</span><span class="o">=</span><span class="s1">&#39;ssh takanori@login.engin.edu&#39;</span>
+  <span class="nb">alias</span> <span class="nv">newberry</span><span class="o">=</span><span class="s1">&#39;ssh takanori@newberry.eecs.umich.edu&#39;</span>
+  <span class="nb">alias</span> <span class="nv">itd</span><span class="o">=</span><span class="s1">&#39;ssh -Y -l takanori stat.itd.umich.edu&#39;</span>
+  <span class="nb">alias</span> <span class="nv">sbia</span><span class="o">=</span><span class="s1">&#39;ssh -Y -l watanabt cbica-cluster.uphs.upenn.edu&#39;</span>
 
 <span class="c1">#=============================================================================#</span>
-<span class="c1"># to get colored output from ``less`` on scripts</span>
-<span class="c1"># http://superuser.com/questions/117841/get-colors-in-less-command</span>
+<span class="c1"># run in bg</span>
 <span class="c1">#=============================================================================#</span>
-myless<span class="o">(){</span>
-  pygmentize <span class="nv">$1</span> <span class="p">|</span> less
-<span class="o">}</span>
+____bookmark_background____<span class="o">(){</span> <span class="nb">echo</span> <span class="s2">&quot;&quot;</span><span class="p">;</span> <span class="o">}</span>
+  <span class="nb">alias</span> <span class="nv">gitk1</span><span class="o">=</span><span class="s1">&#39;gitk &amp;&#39;</span>
+  <span class="nb">alias</span> <span class="nv">spyder</span><span class="o">=</span><span class="s1">&#39;spyder --new-instance &amp;&#39;</span>
+  <span class="nb">alias</span> <span class="nv">matlab1</span><span class="o">=</span><span class="s1">&#39;matlab &amp;&#39;</span>
 
-<span class="nb">alias</span> <span class="nv">tree</span><span class="o">=</span><span class="s1">&#39;tree -C&#39;</span>
-<span class="c1"># export LESS=&#39;-R&#39;</span>
-<span class="c1"># export LESSOPEN=&#39;|~/.lessfilter %s&#39;</span>
+<span class="c1">#=============================================================================#</span>
+<span class="c1"># my *go* commands to move around frequently used directories</span>
+<span class="c1">#=============================================================================#</span>
+____bookmark_go____<span class="o">(){</span> <span class="nb">echo</span> <span class="s2">&quot;&quot;</span><span class="p">;</span> <span class="o">}</span>
+  <span class="nb">alias</span> <span class="nv">godrop</span><span class="o">=</span><span class="s1">&#39;cd ~/Dropbox&#39;</span>
+  <span class="nb">alias</span> <span class="nv">gogit</span><span class="o">=</span><span class="s1">&#39;cd ~/Dropbox/git&#39;</span>
+  <span class="nb">alias</span> <span class="nv">goipynb</span><span class="o">=</span><span class="s1">&#39;cd ~/Dropbox/work/ipynb-notes&#39;</span>
+  <span class="nb">alias</span> <span class="nv">gotex</span><span class="o">=</span><span class="s1">&#39;cd ~/Dropbox/research_dropbox/latex&#39;</span>
+  <span class="nb">alias</span> <span class="nv">gowork</span><span class="o">=</span><span class="s1">&#39;cd ~/Dropbox/work/sbia_work/&#39;</span>
 
-<span class="c1"># used for sphinx (from directory of Makeile</span>
-<span class="nb">alias</span> <span class="nv">open_sphinx_html</span><span class="o">=</span><span class="s1">&#39;firefox _build/html/index.html&#39;</span>
+  <span class="c1"># 3 sphinx notebooks I use quite often</span>
+  <span class="nb">alias</span> <span class="nv">goconf</span><span class="o">=</span><span class="s1">&#39;cd ~/Dropbox/git/configs&#39;</span>
+  <span class="nb">alias</span> <span class="nv">gonotes</span><span class="o">=</span><span class="s1">&#39;cd ~/Dropbox/git/coding_notes&#39;</span>
+  <span class="nb">alias</span> <span class="nv">gosnippets</span><span class="o">=</span><span class="s1">&#39;cd ~/Dropbox/git/snippet&#39;</span>
 
-<span class="c1"># location of the python modules from anacaonda 23 June 2016 (Thursday)</span>
-<span class="nb">alias</span> <span class="nv">gopymodules</span><span class="o">=</span><span class="s1">&#39;cd ~/anaconda2/lib/python2.7/site-packages&#39;</span>
-<span class="nb">alias</span> <span class="nv">golocalpymod</span><span class="o">=</span><span class="s1">&#39;cd ~/.local/lib/python2.7/site-packages&#39;</span>
-<span class="nb">export</span> <span class="nv">PATH</span><span class="o">=</span><span class="nv">$PATH</span>:/home/takanori/mybin/spark-2.0.0-bin-hadoop2.7/bin
+  <span class="c1"># location of the python modules from anacaonda</span>
+  <span class="nb">alias</span> <span class="nv">gopymodules</span><span class="o">=</span><span class="s1">&#39;cd ~/anaconda2/lib/python2.7/site-packages&#39;</span>
+  <span class="nb">alias</span> <span class="nv">golocalpymod</span><span class="o">=</span><span class="s1">&#39;cd ~/.local/lib/python2.7/site-packages&#39;</span>
 
-<span class="c1"># include pyspark to my python module 07-31-2016 (16:17)</span>
-<span class="nb">export</span> <span class="nv">PYTHONPATH</span><span class="o">=</span><span class="nv">$PYTHONPATH</span>:/home/takanori/mybin/spark-2.0.0-bin-hadoop2.7/python/
-<span class="nb">export</span> <span class="nv">PYTHONPATH</span><span class="o">=</span><span class="nv">$PYTHONPATH</span>:/home/takanori/mybin/spark-2.0.0-bin-hadoop2.7/python/pyspark
+<span class="c1">#=============================================================================#</span>
+<span class="c1"># handling clipboards....</span>
+<span class="c1">#=============================================================================#</span>
+____bookmark_clipboards____<span class="o">(){</span> <span class="nb">echo</span> <span class="s2">&quot;&quot;</span> <span class="p">;</span> <span class="o">}</span>
 
-<span class="c1"># http://stackoverflow.com/questions/5130968/how-can-i-copy-the-output-of-a-command-directly-into-my-clipboard</span>
-<span class="nb">alias</span> <span class="nv">c</span><span class="o">=</span><span class="s2">&quot;xclip -selection clipboard&quot;</span> 
-<span class="nb">alias</span> <span class="nv">v</span><span class="o">=</span><span class="s2">&quot;xclip -o -selection clipboard&quot;</span>
+  <span class="c1"># http://stackoverflow.com/questions/5130968/how-can-i-copy-the-output-of-a-command-directly-into-my-clipboard</span>
+  <span class="nb">alias</span> <span class="nv">c</span><span class="o">=</span><span class="s2">&quot;xclip -selection clipboard&quot;</span> 
+  <span class="nb">alias</span> <span class="nv">v</span><span class="o">=</span><span class="s2">&quot;xclip -o -selection clipboard&quot;</span>
 
-<span class="nb">alias</span> <span class="nv">nojekyll</span><span class="o">=</span><span class="s1">&#39;touch .nojekyll&#39;</span>
+  <span class="c1">#-------------------------------------------------------------------------#</span>
+  <span class="c1"># Neat function I grabbed from:</span>
+  <span class="c1"># http://madebynathan.com/2011/10/04/a-nicer-way-to-use-xclip/</span>
+  <span class="c1">#-------------------------------------------------------------------------#</span>
+  cb<span class="o">()</span> <span class="o">{</span>
+    <span class="nb">local</span> <span class="nv">_scs_col</span><span class="o">=</span><span class="s2">&quot;\e[0;32m&quot;</span><span class="p">;</span> <span class="nb">local</span> <span class="nv">_wrn_col</span><span class="o">=</span><span class="s1">&#39;\e[1;31m&#39;</span><span class="p">;</span> <span class="nb">local</span> <span class="nv">_trn_col</span><span class="o">=</span><span class="s1">&#39;\e[0;33m&#39;</span>
+    <span class="c1"># Check that xclip is installed.</span>
+    <span class="k">if</span> ! <span class="nb">type</span> xclip &gt; /dev/null 2&gt;<span class="p">&amp;</span>1<span class="p">;</span> <span class="k">then</span>
+      <span class="nb">echo</span> -e <span class="s2">&quot;</span><span class="nv">$_wrn_col</span><span class="s2">&quot;&quot;You must have the &#39;xclip&#39; program installed.\e[0m&quot;</span>
+    <span class="c1"># Check user is not root (root doesn&#39;t have access to user xorg server)</span>
+    <span class="k">elif</span> <span class="o">[[</span> <span class="s2">&quot;</span><span class="nv">$USER</span><span class="s2">&quot;</span> <span class="o">==</span> <span class="s2">&quot;root&quot;</span> <span class="o">]]</span><span class="p">;</span> <span class="k">then</span>
+      <span class="nb">echo</span> -e <span class="s2">&quot;</span><span class="nv">$_wrn_col</span><span class="s2">&quot;&quot;Must be regular user (not root) to copy a file to the clipboard.\e[0m&quot;</span>
+    <span class="k">else</span>
+      <span class="c1"># If no tty, data should be available on stdin</span>
+      <span class="k">if</span> ! <span class="o">[[</span> <span class="s2">&quot;</span><span class="k">$(</span> tty <span class="k">)</span><span class="s2">&quot;</span> <span class="o">==</span> /dev/* <span class="o">]]</span><span class="p">;</span> <span class="k">then</span>
+        <span class="nv">input</span><span class="o">=</span><span class="s2">&quot;</span><span class="k">$(</span>&lt; /dev/stdin<span class="k">)</span><span class="s2">&quot;</span>
+      <span class="c1"># Else, fetch input from params</span>
+      <span class="k">else</span>
+        <span class="nv">input</span><span class="o">=</span><span class="s2">&quot;</span><span class="nv">$*</span><span class="s2">&quot;</span>
+      <span class="k">fi</span>
+      <span class="k">if</span> <span class="o">[</span> -z <span class="s2">&quot;</span><span class="nv">$input</span><span class="s2">&quot;</span> <span class="o">]</span><span class="p">;</span> <span class="k">then</span>  <span class="c1"># If no input, print usage message.</span>
+        <span class="nb">echo</span> <span class="s2">&quot;Copies a string to the clipboard.&quot;</span>
+        <span class="nb">echo</span> <span class="s2">&quot;Usage: cb &lt;string&gt;&quot;</span>
+        <span class="nb">echo</span> <span class="s2">&quot;       echo &lt;string&gt; | cb&quot;</span>
+      <span class="k">else</span>
+        <span class="c1"># Copy input to clipboard</span>
+        <span class="nb">echo</span> -n <span class="s2">&quot;</span><span class="nv">$input</span><span class="s2">&quot;</span> <span class="p">|</span> xclip -selection c
+        <span class="c1"># Truncate text for status</span>
+        <span class="k">if</span> <span class="o">[</span> <span class="si">${#</span><span class="nv">input</span><span class="si">}</span> -gt <span class="m">80</span> <span class="o">]</span><span class="p">;</span> <span class="k">then</span> <span class="nv">input</span><span class="o">=</span><span class="s2">&quot;</span><span class="k">$(</span><span class="nb">echo</span> <span class="nv">$input</span> <span class="p">|</span> cut -c1-80<span class="k">)</span><span class="nv">$_trn_col</span><span class="s2">...\e[0m&quot;</span><span class="p">;</span> <span class="k">fi</span>
+        <span class="c1"># Print status.</span>
+        <span class="nb">echo</span> -e <span class="s2">&quot;</span><span class="nv">$_scs_col</span><span class="s2">&quot;&quot;Copied to clipboard:\e[0m </span><span class="nv">$input</span><span class="s2">&quot;</span>
+      <span class="k">fi</span>
+    <span class="k">fi</span>
+  <span class="o">}</span>
+
+  <span class="c1">#-------------------------------------------------------------------------#</span>
+  <span class="c1"># Aliases / functions leveraging the cb() function</span>
+  <span class="c1">#-------------------------------------------------------------------------#</span>
+  <span class="k">function</span> cbf<span class="o">()</span> <span class="o">{</span> cat <span class="s2">&quot;</span><span class="nv">$1</span><span class="s2">&quot;</span> <span class="p">|</span> cb<span class="p">;</span> <span class="o">}</span>           <span class="c1"># Copy contents of a file</span>
+  <span class="nb">alias</span> <span class="nv">cbssh</span><span class="o">=</span><span class="s2">&quot;cbf ~/.ssh/id_rsa.pub&quot;</span>         <span class="c1"># Copy SSH public key</span>
+  <span class="nb">alias</span> <span class="nv">cbwd</span><span class="o">=</span><span class="s2">&quot;pwd | cb&quot;</span>                       <span class="c1"># Copy current working directory</span>
+  <span class="nb">alias</span> <span class="nv">cbhs</span><span class="o">=</span><span class="s2">&quot;cat </span><span class="nv">$HISTFILE</span><span class="s2"> | tail -n 1 | cb&quot;</span> <span class="c1"># Copy most recent command in bash history</span>
+
+<span class="c1">#=============================================================================#</span>
+<span class="c1"># Dealing with **colors**</span>
+<span class="c1">#=============================================================================#</span>
+____bookmark_colors____<span class="o">(){</span> <span class="nb">echo</span> <span class="s2">&quot;&quot;</span> <span class="p">;</span> <span class="o">}</span>
+
+  <span class="c1">#===========================================================================#</span>
+  <span class="c1"># git related</span>
+  <span class="c1">#===========================================================================#</span>
+  <span class="c1">#http://stackoverflow.com/questions/7066325/list-git-aliases</span>
+  <span class="nb">alias</span> <span class="nv">git_alias</span><span class="o">=</span><span class="s1">&#39;git config --get-regexp alias | pygmentize -l sh&#39;</span>
+
+  <span class="c1">#| added 08-24-2016 (16:11)</span>
+  <span class="c1"># remove color from stdou (wow, harder than i expected) </span>
+  <span class="c1">#http://stackoverflow.com/questions/17998978/removing-colors-from-output</span>
+  <span class="c1">#http://unix.stackexchange.com/questions/111899/how-to-strip-color-codes-out-of-stdout-and-pipe-to-file-and-stdout</span>
+  <span class="nb">alias</span> <span class="nv">stripcolors</span><span class="o">=</span><span class="s1">&#39;sed &quot;s/\x1B\[\([0-9]\{1,2\}\(;[0-9]\{1,2\}\)\?\)\?[mGK]//g&quot;&#39;</span>
+
+  <span class="c1">#===========================================================================#</span>
+  <span class="c1"># to get colored output from ``less`` on scripts</span>
+  <span class="c1"># http://superuser.com/questions/117841/get-colors-in-less-command</span>
+  <span class="c1">#===========================================================================#</span>
+  myless<span class="o">(){</span>
+    pygmentize <span class="nv">$1</span> <span class="p">|</span> less
+  <span class="o">}</span>
+
+  pyg_sh<span class="o">(){</span>
+    <span class="c1"># pygmentize shell code</span>
+    pygmentize -l sh <span class="nv">$1</span>
+  <span class="o">}</span>
+
+  pyg_py<span class="o">(){</span>
+    <span class="c1"># pygmentize python code</span>
+    pygmentize -l python <span class="nv">$1</span>
+  <span class="o">}</span>
+
+<span class="c1">#=============================================================================#</span>
+<span class="c1"># Git related functions</span>
+<span class="c1">#=============================================================================#</span>
+____bookmark_git____<span class="o">(){</span> <span class="nb">echo</span> <span class="s2">&quot;&quot;</span> <span class="p">;</span> <span class="o">}</span>
+  git_anonymize<span class="o">(){</span>
+    git config user.name <span class="s2">&quot;noname&quot;</span>
+    git config user.email noname@example.com
+  <span class="o">}</span>
+  <span class="nb">alias</span> <span class="nv">twsphinx_check</span><span class="o">=</span><span class="s1">&#39;google-chrome build/html/index.html&#39;</span> <span class="c1"># 08-17-2016 (13:33)</span>
+  <span class="nb">alias</span> <span class="nv">twalias</span><span class="o">=</span><span class="s1">&#39;alias | pygmentize -l sh&#39;</span> <span class="c1"># 08-17-2016 (13:37)</span>
+
+  git_clear_author_history<span class="o">(){</span>
+    git filter-branch -f --env-filter <span class="s1">&#39;</span>
+
+<span class="s1">    CORRECT_NAME=&quot;your name&quot;</span>
+<span class="s1">    CORRECT_EMAIL=&quot;your_email@example.com&quot;</span>
+
+<span class="s1">    export GIT_COMMITTER_NAME=&quot;$CORRECT_NAME&quot;</span>
+<span class="s1">    export GIT_COMMITTER_EMAIL=&quot;$CORRECT_EMAIL&quot;</span>
+
+<span class="s1">    export GIT_AUTHOR_NAME=&quot;$CORRECT_NAME&quot;</span>
+<span class="s1">    export GIT_AUTHOR_EMAIL=&quot;$CORRECT_EMAIL&quot;</span>
+<span class="s1">    &#39;</span> --tag-name-filter cat -- --branches --tags
+  <span class="o">}</span>
+
+  git_author_history_tak<span class="o">(){</span>
+    git filter-branch -f --env-filter <span class="s1">&#39;</span>
+
+<span class="s1">    CORRECT_NAME=&quot;Takanori Watanabe (sbia-pc125)&quot;</span>
+<span class="s1">    CORRECT_EMAIL=&quot;Takanori.Watanabe@uphs.upenn.edu&quot;</span>
+
+<span class="s1">    export GIT_COMMITTER_NAME=&quot;$CORRECT_NAME&quot;</span>
+<span class="s1">    export GIT_COMMITTER_EMAIL=&quot;$CORRECT_EMAIL&quot;</span>
+
+<span class="s1">    export GIT_AUTHOR_NAME=&quot;$CORRECT_NAME&quot;</span>
+<span class="s1">    export GIT_AUTHOR_EMAIL=&quot;$CORRECT_EMAIL&quot;</span>
+<span class="s1">    &#39;</span> --tag-name-filter cat -- --branches --tags
+  <span class="o">}</span>
+
+<span class="c1">#=============================================================================#</span>
+<span class="c1"># Sublime and Sphinx related</span>
+<span class="c1">#=============================================================================#</span>
+____bookmark_subl_sphinx____<span class="o">(){</span> <span class="nb">echo</span> <span class="s2">&quot;&quot;</span> <span class="p">;</span> <span class="o">}</span>
+
+  <span class="nb">alias</span> <span class="nv">open_sphinx_html</span><span class="o">=</span><span class="s1">&#39;firefox _build/html/index.html&#39;</span>
+
+  subl_<span class="o">(){</span> <span class="c1"># open both snippets and configs</span>
+    subl -n
+    subl -a ~/Dropbox/git/configs/
+    subl -a ~/Dropbox/git/snippet/
+    subl -a ~/Dropbox/git/coding_notes/
+  <span class="o">}</span>  
+
+  <span class="c1"># modify snippets via sublime text</span>
+  <span class="nb">alias</span> <span class="nv">subl_snip</span><span class="o">=</span><span class="s1">&#39;subl -n -a ~/Dropbox/git/snippet&#39;</span>
+
+  <span class="c1"># to publish in github</span>
+  <span class="nb">alias</span> <span class="nv">nojekyll</span><span class="o">=</span><span class="s1">&#39;touch .nojekyll&#39;</span>
 
 <span class="c1">#=============================================================================#</span>
 <span class="c1"># SNIPPETS to print out (as a self reminder)</span>
 <span class="c1">#=============================================================================#</span>
 <span class="c1"># just a bunch of reminder snippets i can print out in the shell</span>
 ____bookmark_snip____<span class="o">(){</span> <span class="nb">echo</span> <span class="s1">&#39;no functionality. just a bookmark for sublime (use ctrl+r to navigate)&#39;</span> <span class="p">;</span> <span class="o">}</span>
-
-
-_snip_find<span class="o">(){</span>
-  <span class="nb">echo</span> <span class="s1">&#39;</span>
-<span class="s1">  find $DIR # recursively print out file directories</span>
-<span class="s1">  find $PWD | grep helper.md</span>
-<span class="s1">  find $PWD | grep helper.html | xclip</span>
-<span class="s1">  find $PWD -maxdpeth 1</span>
-<span class="s1">  find . -iname &quot;*chrome*&quot; # case insensitive</span>
-<span class="s1">  find . -name &quot;*chrome*&quot; # case sensitive</span>
-<span class="s1">  find . -iname &quot;*chrome*&quot; # print filenames, followed by a NULL character instead of the &quot;newline&quot; chracter that -print uses</span>
-
-<span class="s1">  # ignore any file containing &quot;est&quot; (even in the directory name) and print out rest</span>
-<span class="s1">  # (note: -o is the OR operator...see &quot;operator&quot; list below)</span>
-<span class="s1">  find . -wholename &#39;</span>*est*<span class="s1">&#39; -prune -o -print</span>
-
-<span class="s1">  # stuffs with -type option</span>
-<span class="s1">  find . d # list directories</span>
-<span class="s1">  find . f # list regular files</span>
-<span class="s1">  find . l # list symlinks</span>
-
-<span class="s1">  #=====================================================================#</span>
-<span class="s1">  # name vs. whilename</span>
-<span class="s1">  # - suppose i have file /Data_Science/test.txt</span>
-<span class="s1">  #=====================================================================#</span>
-<span class="s1">  find . -iwholename &quot;*Sci*.txt&quot;</span>
-<span class="s1">      # this will find the above file</span>
-<span class="s1">  find . -iname &quot;*Sci*.txt&quot;</span>
-<span class="s1">      # this will NOT find the above file</span>
-<span class="s1">  List filenames ending in .mp3, searching in the music folder and subfolders:</span>
-<span class="s1">  $ find ./music -name &quot;*.mp3&quot;</span>
-
-<span class="s1">  Find .doc files that also start with &#39;</span>questionnaire<span class="s1">&#39; (AND)</span>
-<span class="s1">  $ find . -name &#39;</span>*.doc<span class="s1">&#39; -name questionnaire*</span>
-
-<span class="s1">  Find .doc files that do NOT start with &#39;</span>Accounts<span class="s1">&#39; (NOT)</span>
-<span class="s1">  $ find . -name &#39;</span>*.doc<span class="s1">&#39; ! -name Accounts*</span>
-<span class="s1">  &#39;</span> <span class="p">|</span> pygmentize -l sh
-<span class="o">}</span>
-
-_snip_for<span class="o">(){</span>
-  <span class="nb">echo</span> <span class="s1">&#39;</span>
-<span class="s1">  for run in {1..10}</span>
-<span class="s1">  do</span>
-<span class="s1">    command</span>
-<span class="s1">  done</span>
-
-<span class="s1">  # single line</span>
-<span class="s1">  for run in {1..30}; do ipython t_0809c_enet_tobpnc_age.py; done</span>
-<span class="s1">  &#39;</span> <span class="p">|</span> pygmentize -l sh
-<span class="o">}</span>
-
-_snip_rename<span class="o">(){</span>
+  _snip_find<span class="o">(){</span>
     <span class="nb">echo</span> <span class="s1">&#39;</span>
-<span class="s1">    #http://unix.stackexchange.com/questions/146743/processing-multiple-extensions</span>
-<span class="s1">    #https://www.gnu.org/software/bash/manual/html_node/Brace-Expansion.html</span>
+<span class="s1">    find $DIR # recursively print out file directories</span>
+<span class="s1">    find $PWD | grep helper.md</span>
+<span class="s1">    find $PWD | grep helper.html | xclip</span>
+<span class="s1">    find $PWD -maxdpeth 1</span>
+<span class="s1">    find . -iname &quot;*chrome*&quot; # case insensitive</span>
+<span class="s1">    find . -name &quot;*chrome*&quot; # case sensitive</span>
+<span class="s1">    find . -iname &quot;*chrome*&quot; # print filenames, followed by a NULL character instead of the &quot;newline&quot; chracter that -print uses</span>
 
-<span class="s1">    # rename the filename part &quot;Array&quot; with &quot;_PCA&quot; for all files ending with extension .mat</span>
-<span class="s1">    rename Array _PCA *.mat</span>
+<span class="s1">    # ignore any file containing &quot;est&quot; (even in the directory name) and print out rest</span>
+<span class="s1">    # (note: -o is the OR operator...see &quot;operator&quot; list below)</span>
+<span class="s1">    find . -wholename &#39;</span>*est*<span class="s1">&#39; -prune -o -print</span>
 
-<span class="s1">    # rename png &quot;prefix&quot; with &quot;normalized&quot; in files with .png extensions</span>
-<span class="s1">    rename &#39;</span><span class="s2">&quot;&#39;&quot;</span><span class="s1">&#39;s/prefix/normalized/&#39;</span><span class="s2">&quot;&#39;&quot;</span><span class="s1">&#39; *.png</span>
+<span class="s1">    # stuffs with -type option</span>
+<span class="s1">    find . d # list directories</span>
+<span class="s1">    find . f # list regular files</span>
+<span class="s1">    find . l # list symlinks</span>
 
-<span class="s1">    # rename files with either .png or .pkl extension (see link on brack expansion above)</span>
-<span class="s1">    # (-n will do a dry run, letting me check the rename will do what i want it to do )</span>
-<span class="s1">    rename -n &#39;</span><span class="s2">&quot;&#39;&quot;</span><span class="s1">&#39;s/normalized/test/&#39;</span><span class="s2">&quot;&#39;&quot;</span><span class="s1">&#39; *.{png,pkl}</span>
+<span class="s1">    #=====================================================================#</span>
+<span class="s1">    # name vs. whilename</span>
+<span class="s1">    # - suppose i have file /Data_Science/test.txt</span>
+<span class="s1">    #=====================================================================#</span>
+<span class="s1">    find . -iwholename &quot;*Sci*.txt&quot;</span>
+<span class="s1">        # this will find the above file</span>
+<span class="s1">    find . -iname &quot;*Sci*.txt&quot;</span>
+<span class="s1">        # this will NOT find the above file</span>
+<span class="s1">    List filenames ending in .mp3, searching in the music folder and subfolders:</span>
+<span class="s1">    $ find ./music -name &quot;*.mp3&quot;</span>
 
-<span class="s1">    # use -n to check rename will do what i want it to do</span>
-<span class="s1">    rename -n &#39;</span><span class="s2">&quot;&#39;&quot;</span><span class="s1">&#39;s/graphnet/elasticnet/;&#39;</span><span class="s2">&quot;&#39;&quot;</span><span class="s1">&#39; *.m # check</span>
-<span class="s1">    rename -v &#39;</span><span class="s2">&quot;&#39;&quot;</span><span class="s1">&#39;s/graphnet/elasticnet/;&#39;</span><span class="s2">&quot;&#39;&quot;</span><span class="s1">&#39; *.m # run verbosely after checking</span>
+<span class="s1">    Find .doc files that also start with &#39;</span>questionnaire<span class="s1">&#39; (AND)</span>
+<span class="s1">    $ find . -name &#39;</span>*.doc<span class="s1">&#39; -name questionnaire*</span>
 
-<span class="s1">    #=========================================================================#</span>
-<span class="s1">    # add suffix/prefix to files</span>
-<span class="s1">    # see 2nd answer in http://stackoverflow.com/questions/208181/how-to-rename-with-prefix-suffix</span>
-<span class="s1">    #=========================================================================#</span>
-<span class="s1">    # rename files with extensions (to avoid directory...not robust, but does what i want most of the time)</span>
-<span class="s1">    for filename in *\.*; do echo $filename; done;</span>
-<span class="s1">    for filename in *; do echo $filename; done; # &lt;- this includes directory, which me not like</span>
-
-<span class="s1">    for filename in *\.*; do mv &quot;${filename}&quot; &quot;prefix_${filename}&quot;; done;</span>
+<span class="s1">    Find .doc files that do NOT start with &#39;</span>Accounts<span class="s1">&#39; (NOT)</span>
+<span class="s1">    $ find . -name &#39;</span>*.doc<span class="s1">&#39; ! -name Accounts*</span>
 <span class="s1">    &#39;</span> <span class="p">|</span> pygmentize -l sh
-<span class="o">}</span>
+  <span class="o">}</span>
 
-_snip_scp<span class="o">(){</span>
+  _snip_for<span class="o">(){</span>
     <span class="nb">echo</span> <span class="s1">&#39;</span>
-<span class="s1">    #========================================================================#</span>
-<span class="s1">    # relevant options</span>
-<span class="s1">    #========================================================================#</span>
-<span class="s1">    #| -r : recursive</span>
-<span class="s1">    #| -v : verbose (i probably won&#39;</span><span class="s2">&quot;&#39;&#39;&quot;</span><span class="s1">&#39;t need)</span>
-<span class="s1">    #| -q : quiet</span>
+<span class="s1">    for run in {1..10}</span>
+<span class="s1">    do</span>
+<span class="s1">      command</span>
+<span class="s1">    done</span>
 
-<span class="s1">    #========================================================================#</span>
-<span class="s1">    # demos</span>
-<span class="s1">    #========================================================================#</span>
-<span class="s1">    # Copy dummy.txt to home directory in remote host:</span>
-<span class="s1">    touch ~/dummy.txt</span>
-<span class="s1">    scp ~/dummy.txt watanabt@cbica-cluster.uphs.upenn.edu:~/</span>
-
-<span class="s1">    # copy dummy.txt on server as dummy_cp.txt to local home folder</span>
-<span class="s1">    scp watanabt@cbica-cluster.uphs.upenn.edu:~/dummy.txt ~/dummy_cp.txt</span>
+<span class="s1">    # single line</span>
+<span class="s1">    for run in {1..30}; do ipython t_0809c_enet_tobpnc_age.py; done</span>
 <span class="s1">    &#39;</span> <span class="p">|</span> pygmentize -l sh
-<span class="o">}</span>
+  <span class="o">}</span>
 
-_snip_mogrify<span class="o">(){</span>
+  _snip_rename<span class="o">(){</span>
+      <span class="nb">echo</span> <span class="s1">&#39;</span>
+<span class="s1">      #http://unix.stackexchange.com/questions/146743/processing-multiple-extensions</span>
+<span class="s1">      #https://www.gnu.org/software/bash/manual/html_node/Brace-Expansion.html</span>
+
+<span class="s1">      # rename the filename part &quot;Array&quot; with &quot;_PCA&quot; for all files ending with extension .mat</span>
+<span class="s1">      rename Array _PCA *.mat</span>
+
+<span class="s1">      # rename png &quot;prefix&quot; with &quot;normalized&quot; in files with .png extensions</span>
+<span class="s1">      rename &#39;</span><span class="s2">&quot;&#39;&quot;</span><span class="s1">&#39;s/prefix/normalized/&#39;</span><span class="s2">&quot;&#39;&quot;</span><span class="s1">&#39; *.png</span>
+
+<span class="s1">      # rename files with either .png or .pkl extension (see link on brack expansion above)</span>
+<span class="s1">      # (-n will do a dry run, letting me check the rename will do what i want it to do )</span>
+<span class="s1">      rename -n &#39;</span><span class="s2">&quot;&#39;&quot;</span><span class="s1">&#39;s/normalized/test/&#39;</span><span class="s2">&quot;&#39;&quot;</span><span class="s1">&#39; *.{png,pkl}</span>
+
+<span class="s1">      # use -n to check rename will do what i want it to do</span>
+<span class="s1">      rename -n &#39;</span><span class="s2">&quot;&#39;&quot;</span><span class="s1">&#39;s/graphnet/elasticnet/;&#39;</span><span class="s2">&quot;&#39;&quot;</span><span class="s1">&#39; *.m # check</span>
+<span class="s1">      rename -v &#39;</span><span class="s2">&quot;&#39;&quot;</span><span class="s1">&#39;s/graphnet/elasticnet/;&#39;</span><span class="s2">&quot;&#39;&quot;</span><span class="s1">&#39; *.m # run verbosely after checking</span>
+
+<span class="s1">      #=========================================================================#</span>
+<span class="s1">      # add suffix/prefix to files</span>
+<span class="s1">      # see 2nd answer in http://stackoverflow.com/questions/208181/how-to-rename-with-prefix-suffix</span>
+<span class="s1">      #=========================================================================#</span>
+<span class="s1">      # rename files with extensions (to avoid directory...not robust, but does what i want most of the time)</span>
+<span class="s1">      for filename in *\.*; do echo $filename; done;</span>
+<span class="s1">      for filename in *; do echo $filename; done; # &lt;- this includes directory, which me not like</span>
+
+<span class="s1">      for filename in *\.*; do mv &quot;${filename}&quot; &quot;prefix_${filename}&quot;; done;</span>
+<span class="s1">      &#39;</span> <span class="p">|</span> pygmentize -l sh
+  <span class="o">}</span>
+
+  _snip_scp<span class="o">(){</span>
+      <span class="nb">echo</span> <span class="s1">&#39;</span>
+<span class="s1">      #========================================================================#</span>
+<span class="s1">      # relevant options</span>
+<span class="s1">      #========================================================================#</span>
+<span class="s1">      #| -r : recursive</span>
+<span class="s1">      #| -v : verbose (i probably won&#39;</span><span class="s2">&quot;&#39;&#39;&quot;</span><span class="s1">&#39;t need)</span>
+<span class="s1">      #| -q : quiet</span>
+
+<span class="s1">      #========================================================================#</span>
+<span class="s1">      # demos</span>
+<span class="s1">      #========================================================================#</span>
+<span class="s1">      # Copy dummy.txt to home directory in remote host:</span>
+<span class="s1">      touch ~/dummy.txt</span>
+<span class="s1">      scp ~/dummy.txt watanabt@cbica-cluster.uphs.upenn.edu:~/</span>
+
+<span class="s1">      # copy dummy.txt on server as dummy_cp.txt to local home folder</span>
+<span class="s1">      scp watanabt@cbica-cluster.uphs.upenn.edu:~/dummy.txt ~/dummy_cp.txt</span>
+<span class="s1">      &#39;</span> <span class="p">|</span> pygmentize -l sh
+  <span class="o">}</span>
+
+  _snip_mogrify<span class="o">(){</span>
+      <span class="nb">echo</span> <span class="s1">&#39;</span>
+<span class="s1">      mogrify -resize 50% *.png</span>
+<span class="s1">      mogrify -resize 500! *.png     =&gt; changes only x-axis</span>
+<span class="s1">      mogrify -resize 500 *.png      =&gt; changes (x,y) axis in proportion</span>
+<span class="s1">      mogrify -trim *.png</span>
+
+<span class="s1">      #| http://arcoleo.org/dsawiki/Wiki.jsp?page=Recursively%20run%20Mogrify%20on%20a%20Directory</span>
+<span class="s1">      #| Mogrify is an image tool that comes with ImageMagick. It is useful for resizing, compressing, etc. If you have a set of subdirectories to run it on, run</span>
+<span class="s1">      $ find ./ -name &quot;*.png&quot; -exec mogrify -some_option {} \;</span>
+<span class="s1">      $ find ./ -name &quot;*.png&quot; -exec mogrify -resize 40% {} \;</span>
+<span class="s1">      &#39;</span> <span class="p">|</span> pygmentize -l sh
+  <span class="o">}</span>
+
+  _snip_pipedream<span class="o">(){</span>
+      <span class="nb">echo</span> <span class="s1">&#39;</span>
+<span class="s1">      #http://unix.stackexchange.com/questions/41740/find-exec-vs-find-xargs-which-one-to-choose</span>
+
+<span class="s1">          the -exec &quot;{}&quot; \; approach seems to be specific to find (i prefer unity with xargs)</span>
+
+<span class="s1">      #http://stackoverflow.com/questions/4509624/how-to-limit-depth-for-recursive-file-list</span>
+<span class="s1">      # http://ss64.com/bash/find.html</span>
+<span class="s1">      find . -maxdepth 1 -type d -exec ls -ld &quot;{}&quot; &quot;;&quot;</span>
+<span class="s1">      find . -maxdepth 1 -type d -exec ls -ld \{\} \;  # same as above</span>
+<span class="s1">      find . -maxdepth 1 -type d | xargs ls -ld # same as above (i find this the most intuitive)</span>
+<span class="s1">      ls -ld $(find . -maxdepth 1 -type d) # same as above</span>
+
+<span class="s1">      # this doesnt give the same result as &quot;xargs&quot; approach...figure out why later</span>
+<span class="s1">      find . -maxdepth 1 -type d | ls -ld</span>
+<span class="s1">      &#39;</span> <span class="p">|</span> pygmentize -l sh
+  <span class="o">}</span>
+
+  _snip_grep_recursively<span class="o">(){</span>
+      <span class="nb">echo</span> <span class="s1">&#39;</span>
+<span class="s1">      grep -r &quot;texthere&quot; .</span>
+
+<span class="s1">      # You can also mention files to exclude with --exclude.</span>
+<span class="s1">      grep -r --include &quot;*.txt&quot; texthere .</span>
+
+<span class="s1">      # use brace expansion to allow multiple extension</span>
+<span class="s1">      grep -r --include=*.{py,m} test .</span>
+<span class="s1">      &#39;</span> <span class="p">|</span> pygmentize -l sh
+  <span class="o">}</span>
+
+  _snip_demo_sed<span class="o">(){</span>
+      <span class="nb">echo</span> <span class="s1">&#39;</span>
+<span class="s1">      # replace white-string with newline</span>
+<span class="s1">      bash 0622_2016_rename_tobvols.sh | sed &#39;</span><span class="s2">&quot;&#39;&quot;</span><span class="s1">&#39;s/ /\n/g&#39;</span><span class="s2">&quot;&#39;&quot;</span><span class="s1">&#39;</span>
+
+<span class="s1">      echo $PYTHONPATH</span>
+<span class="s1">      /home/takanori/Dropbox/work/external-pymodules:/home/takanori/Dropbox/work/sbia_work/python/modules:/home/takanori/work-local/external-python-modules/deepnet:/home/takanori/mybin/spark-2.0.0-bin-hadoop2.7/python/pyspark</span>
+
+<span class="s1">      # recall, g for global replacement</span>
+<span class="s1">      echo $PYTHONPATH | sed &#39;</span><span class="s2">&quot;&#39;&quot;</span><span class="s1">&#39;s/:/\n/g&#39;</span><span class="s2">&quot;&#39;&quot;</span><span class="s1">&#39;</span>
+<span class="s1">      /home/takanori/Dropbox/work/external-pymodules</span>
+<span class="s1">      /home/takanori/Dropbox/work/sbia_work/python/modules</span>
+<span class="s1">      /home/takanori/work-local/external-python-modules/deepnet</span>
+<span class="s1">      /home/takanori/mybin/spark-2.0.0-bin-hadoop2.7/python/pyspark</span>
+<span class="s1">      &#39;</span> <span class="p">|</span> pygmentize -l sh
+  <span class="o">}</span> 
+
+  _snip_demo_awk<span class="o">(){</span>
+      <span class="nb">echo</span> <span class="s1">&#39;</span>
+<span class="s1">      ls -l | awk &#39;</span><span class="s2">&quot;&#39;&quot;</span><span class="s1">&#39;{printf $5 &quot;\t&quot; $9&quot;\n&quot;}&#39;</span><span class="s2">&quot;&#39;&quot;</span><span class="s1">&#39;</span>
+<span class="s1">      </span>
+<span class="s1">          http://stackoverflow.com/questions/2021982/awk-without-printing-newline</span>
+<span class="s1">          http://askubuntu.com/questions/231995/how-to-separate-fields-with-space-or-tab-in-awk</span>
+<span class="s1">          http://www.catonmat.net/blog/awk-one-liners-explained-part-one/</span>
+<span class="s1">          http://www.staff.science.uu.nl/~oostr102/docs/nawk/nawk_41.html</span>
+<span class="s1">      &#39;</span> <span class="p">|</span> pygmentize -l sh
+  <span class="o">}</span>
+
+  _snip_computer_info<span class="o">(){</span>
+      <span class="nb">echo</span> <span class="s1">&#39;</span>
+<span class="s1">      # get cpu information</span>
+<span class="s1">      cat /proc/cpuinfo</span>
+
+<span class="s1">      #-- see gnome version ---</span>
+<span class="s1">      gnome-shell --version</span>
+<span class="s1">      lsb_release -a</span>
+
+<span class="s1">      # to figure out which linux distribution you are using</span>
+<span class="s1">      # (ref: http://www.cyberciti.biz/faq/find-linux-distribution-name-version-number/)</span>
+<span class="s1">      cat /etc/*-release</span>
+
+<span class="s1">      locate libfortran.so</span>
+<span class="s1">      &#39;</span> <span class="p">|</span> pygmentize -l sh
+  <span class="o">}</span>
+
+  _snip_demo_timestamp<span class="o">(){</span>
+      <span class="nb">echo</span> <span class="s1">&#39;</span>
+<span class="s1">      echo $(date +&quot;%Y-%m-%d_%H:%M:%S&quot;)</span>
+<span class="s1">      &#39;</span> <span class="p">|</span> pygmentize -l sh
+  <span class="o">}</span>
+
+  _snip_ls_symlink_only<span class="o">(){</span>
+      <span class="nb">echo</span> <span class="s1">&#39;</span>
+<span class="s1">      # aliased as ls_sym</span>
+<span class="s1">      ls -l $(find ./ -maxdepth 1 -type l -print)</span>
+<span class="s1">      &#39;</span> <span class="p">|</span> pygmentize -l sh
+  <span class="o">}</span>
+
+  _snip_github_clone_branch<span class="o">(){</span>
+      <span class="nb">echo</span> <span class="s1">&#39;</span>
+<span class="s1">      #http://stackoverflow.com/questions/1911109/clone-a-specific-git-branch</span>
+<span class="s1">      # skeleton</span>
+<span class="s1">      git clone -b my-branch git@github.com:user/myproject.git local_folder_name</span>
+
+<span class="s1">      # actual run</span>
+<span class="s1">      git clone -b minimalist https://github.com/wtak23/sphinx_skeleton.git jinja2</span>
+<span class="s1">      &#39;</span> <span class="p">|</span> pygmentize -l sh
+  <span class="o">}</span>
+
+  _snip_moving_and_copying<span class="o">(){</span>
     <span class="nb">echo</span> <span class="s1">&#39;</span>
-<span class="s1">    mogrify -resize 50% *.png</span>
-<span class="s1">    mogrify -resize 500! *.png     =&gt; changes only x-axis</span>
-<span class="s1">    mogrify -resize 500 *.png      =&gt; changes (x,y) axis in proportion</span>
-<span class="s1">    mogrify -trim *.png</span>
+<span class="s1">    # rename a directory (note &#39;</span>/<span class="s1">&#39; after directory name has NO impact here,  there are cases I should be careful of the backslash)</span>
+<span class="s1">    mv /home/user/oldname /home/user/newname</span>
 
-<span class="s1">    #| http://arcoleo.org/dsawiki/Wiki.jsp?page=Recursively%20run%20Mogrify%20on%20a%20Directory</span>
-<span class="s1">    #| Mogrify is an image tool that comes with ImageMagick. It is useful for resizing, compressing, etc. If you have a set of subdirectories to run it on, run</span>
-<span class="s1">    $ find ./ -name &quot;*.png&quot; -exec mogrify -some_option {} \;</span>
-<span class="s1">    $ find ./ -name &quot;*.png&quot; -exec mogrify -resize 40% {} \;</span>
+<span class="s1">    #=== cp helper ===#</span>
+<span class="s1">    # copy files *inside* the folder &quot;test/&quot; inside folder &quot;target&quot;</span>
+<span class="s1">    gosnippets; cd tests; mkdir source target; cd source; touch a b c; cd ..</span>
+
+<span class="s1">    # copy files *inside* the folder &quot;test/&quot; inside folder &quot;target&quot; (note: -R and -r are the same here)</span>
+<span class="s1">    cp -r source/* target</span>
+
+<span class="s1">    # copy entire folder *source* into *target* (without ``-r``, the subdirectories wont get copied)</span>
+<span class="s1">    cp -r source* target</span>
+
+<span class="s1">    #--- cleanup test files from above---#</span>
+<span class="s1">    cd ..; rm -r tests/*</span>
+
+
+<span class="s1">    #--- remove entire directory including files inside recursively ---#</span>
+<span class="s1">    rm -rf test/</span>
 <span class="s1">    &#39;</span> <span class="p">|</span> pygmentize -l sh
-<span class="o">}</span>
+  <span class="o">}</span> 
 
-_snip_pipedream<span class="o">(){</span>
-    <span class="nb">echo</span> <span class="s1">&#39;</span>
-<span class="s1">    #http://unix.stackexchange.com/questions/41740/find-exec-vs-find-xargs-which-one-to-choose</span>
+  _snip_ps<span class="o">(){</span>
+      <span class="nb">echo</span> <span class="s1">&#39;</span>
+<span class="s1">      # a &lt;- includes ``root`` in userprocess</span>
+<span class="s1">      # u &lt;- include ``username`` column</span>
+<span class="s1">      # x &lt;- list all processes owned by me</span>
+<span class="s1">      ps aux</span>
+<span class="s1">      &#39;</span> <span class="p">|</span> pygmentize -l sh
+  <span class="o">}</span>
 
-<span class="s1">        the -exec &quot;{}&quot; \; approach seems to be specific to find (i prefer unity with xargs)</span>
+  _snip_git_localname<span class="o">(){</span>
+      <span class="nb">echo</span> <span class="s1">&#39;</span>
+<span class="s1">      # change user name in local repository</span>
+<span class="s1">      # https://git-scm.com/book/en/v2/Customizing-Git-Git-Configuration</span>
+<span class="s1">      git config user.name &quot;noname&quot;</span>
+<span class="s1">      git config user.email noname@example.com</span>
+<span class="s1">      &#39;</span> <span class="p">|</span> pygmentize -l sh
+  <span class="o">}</span>
 
-<span class="s1">    #http://stackoverflow.com/questions/4509624/how-to-limit-depth-for-recursive-file-list</span>
-<span class="s1">    # http://ss64.com/bash/find.html</span>
-<span class="s1">    find . -maxdepth 1 -type d -exec ls -ld &quot;{}&quot; &quot;;&quot;</span>
-<span class="s1">    find . -maxdepth 1 -type d -exec ls -ld \{\} \;  # same as above</span>
-<span class="s1">    find . -maxdepth 1 -type d | xargs ls -ld # same as above (i find this the most intuitive)</span>
-<span class="s1">    ls -ld $(find . -maxdepth 1 -type d) # same as above</span>
+  _snip_stdout_stderr<span class="o">(){</span>
+      <span class="nb">echo</span> <span class="s1">&#39;</span>
+<span class="s1">      #************************************************</span>
+<span class="s1">      # Output stdout and stderr to terminal and logfile</span>
+<span class="s1">      #</span>
+<span class="s1">      # http://stackoverflow.com/questions/418896/how-to-redirect-output-to-a-file-and-stdout</span>
+<span class="s1">      # http://stackoverflow.com/questions/18460186/writing-outputs-to-log-file-and-console</span>
+<span class="s1">      #************************************************</span>
+<span class="s1">      # save stdout and stderr to a file</span>
+<span class="s1">      bash mymake.sh &gt;&gt; log.txt 2&gt;&amp;1</span>
 
-<span class="s1">    # this doesnt give the same result as &quot;xargs&quot; approach...figure out why later</span>
-<span class="s1">    find . -maxdepth 1 -type d | ls -ld</span>
-<span class="s1">    &#39;</span> <span class="p">|</span> pygmentize -l sh
-<span class="o">}</span>
+<span class="s1">      # save logfile like above, but also print on terminal screen</span>
+<span class="s1">      bash mymake.sh 2&gt;&amp;1 | tee log.txt</span>
+<span class="s1">      &#39;</span> <span class="p">|</span> pygmentize -l sh
+  <span class="o">}</span>  
 
-_snip_grep_recursively<span class="o">(){</span>
-    <span class="nb">echo</span> <span class="s1">&#39;</span>
-<span class="s1">    grep -r &quot;texthere&quot; .</span>
+  _snip_logout<span class="o">(){</span> <span class="c1"># just a wrapper to _snip_stdout_stderr (this one may have better mneumonic)</span>
+      _snip_stdout_stderr
+  <span class="o">}</span>  
 
-<span class="s1">    # You can also mention files to exclude with --exclude.</span>
-<span class="s1">    grep -r --include &quot;*.txt&quot; texthere .</span>
+  _snip_python_simple_http_server<span class="o">(){</span>
+      <span class="nb">echo</span> <span class="s1">&#39;</span>
+<span class="s1">      # for status messages, see: http://www.w3schools.com/tags/ref_httpmessages.asp</span>
+<span class="s1">      python -m SimpleHTTPServer 8000 &amp;</span>
+<span class="s1">      firefox &quot;http://localhost:8000/&quot;</span>
+<span class="s1">      &#39;</span> <span class="p">|</span> pygmentize -l sh  
+  <span class="o">}</span>
 
-<span class="s1">    # use brace expansion to allow multiple extension</span>
-<span class="s1">    grep -r --include=*.{py,m} test .</span>
-<span class="s1">    &#39;</span> <span class="p">|</span> pygmentize -l sh
-<span class="o">}</span>
-
-_snip_demo_sed<span class="o">(){</span>
-    <span class="nb">echo</span> <span class="s1">&#39;</span>
-<span class="s1">    # replace white-string with newline</span>
-<span class="s1">    bash 0622_2016_rename_tobvols.sh | sed &#39;</span><span class="s2">&quot;&#39;&quot;</span><span class="s1">&#39;s/ /\n/g&#39;</span><span class="s2">&quot;&#39;&quot;</span><span class="s1">&#39;</span>
-
-<span class="s1">    echo $PYTHONPATH</span>
-<span class="s1">    /home/takanori/Dropbox/work/external-pymodules:/home/takanori/Dropbox/work/sbia_work/python/modules:/home/takanori/work-local/external-python-modules/deepnet:/home/takanori/mybin/spark-2.0.0-bin-hadoop2.7/python/pyspark</span>
-
-<span class="s1">    # recall, g for global replacement</span>
-<span class="s1">    echo $PYTHONPATH | sed &#39;</span><span class="s2">&quot;&#39;&quot;</span><span class="s1">&#39;s/:/\n/g&#39;</span><span class="s2">&quot;&#39;&quot;</span><span class="s1">&#39;</span>
-<span class="s1">    /home/takanori/Dropbox/work/external-pymodules</span>
-<span class="s1">    /home/takanori/Dropbox/work/sbia_work/python/modules</span>
-<span class="s1">    /home/takanori/work-local/external-python-modules/deepnet</span>
-<span class="s1">    /home/takanori/mybin/spark-2.0.0-bin-hadoop2.7/python/pyspark</span>
-<span class="s1">    &#39;</span> <span class="p">|</span> pygmentize -l sh
-<span class="o">}</span> 
-
-_snip_demo_awk<span class="o">(){</span>
-    <span class="nb">echo</span> <span class="s1">&#39;</span>
-<span class="s1">    ls -l | awk &#39;</span><span class="s2">&quot;&#39;&quot;</span><span class="s1">&#39;{printf $5 &quot;\t&quot; $9&quot;\n&quot;}&#39;</span><span class="s2">&quot;&#39;&quot;</span><span class="s1">&#39;</span>
-<span class="s1">    </span>
-<span class="s1">        http://stackoverflow.com/questions/2021982/awk-without-printing-newline</span>
-<span class="s1">        http://askubuntu.com/questions/231995/how-to-separate-fields-with-space-or-tab-in-awk</span>
-<span class="s1">        http://www.catonmat.net/blog/awk-one-liners-explained-part-one/</span>
-<span class="s1">        http://www.staff.science.uu.nl/~oostr102/docs/nawk/nawk_41.html</span>
-<span class="s1">    &#39;</span> <span class="p">|</span> pygmentize -l sh
-<span class="o">}</span>
-
-_snip_computer_info<span class="o">(){</span>
-    <span class="nb">echo</span> <span class="s1">&#39;</span>
-<span class="s1">    # get cpu information</span>
-<span class="s1">    cat /proc/cpuinfo</span>
-
-<span class="s1">    #-- see gnome version ---</span>
-<span class="s1">    gnome-shell --version</span>
-<span class="s1">    lsb_release -a</span>
-
-<span class="s1">    # to figure out which linux distribution you are using</span>
-<span class="s1">    # (ref: http://www.cyberciti.biz/faq/find-linux-distribution-name-version-number/)</span>
-<span class="s1">    cat /etc/*-release</span>
-
-<span class="s1">    locate libfortran.so</span>
-<span class="s1">    &#39;</span> <span class="p">|</span> pygmentize -l sh
-<span class="o">}</span>
-
-_snip_demo_timestamp<span class="o">(){</span>
-    <span class="nb">echo</span> <span class="s1">&#39;</span>
-<span class="s1">    echo $(date +&quot;%Y-%m-%d_%H:%M:%S&quot;)</span>
-<span class="s1">    &#39;</span> <span class="p">|</span> pygmentize -l sh
-<span class="o">}</span>
-
-_snip_ls_symlink_only<span class="o">(){</span>
-    <span class="nb">echo</span> <span class="s1">&#39;</span>
-<span class="s1">    # aliased as ls_sym</span>
-<span class="s1">    ls -l $(find ./ -maxdepth 1 -type l -print)</span>
-<span class="s1">    &#39;</span> <span class="p">|</span> pygmentize -l sh
-<span class="o">}</span>
-
-_snip_github_clone_branch<span class="o">(){</span>
-    <span class="nb">echo</span> <span class="s1">&#39;</span>
-<span class="s1">    #http://stackoverflow.com/questions/1911109/clone-a-specific-git-branch</span>
-<span class="s1">    # skeleton</span>
-<span class="s1">    git clone -b my-branch git@github.com:user/myproject.git local_folder_name</span>
-
-<span class="s1">    # actual run</span>
-<span class="s1">    git clone -b minimalist https://github.com/wtak23/sphinx_skeleton.git jinja2</span>
-<span class="s1">    &#39;</span> <span class="p">|</span> pygmentize -l sh
-<span class="o">}</span>
-
-_snip_moving_and_copying<span class="o">(){</span>
-  <span class="nb">echo</span> <span class="s1">&#39;</span>
-<span class="s1">  # rename a directory (note &#39;</span>/<span class="s1">&#39; after directory name has NO impact here,  there are cases I should be careful of the backslash)</span>
-<span class="s1">  mv /home/user/oldname /home/user/newname</span>
-
-<span class="s1">  #=== cp helper ===#</span>
-<span class="s1">  # copy files *inside* the folder &quot;test/&quot; inside folder &quot;target&quot;</span>
-<span class="s1">  gosnippets; cd tests; mkdir source target; cd source; touch a b c; cd ..</span>
-
-<span class="s1">  # copy files *inside* the folder &quot;test/&quot; inside folder &quot;target&quot; (note: -R and -r are the same here)</span>
-<span class="s1">  cp -r source/* target</span>
-
-<span class="s1">  # copy entire folder *source* into *target* (without ``-r``, the subdirectories wont get copied)</span>
-<span class="s1">  cp -r source* target</span>
-
-<span class="s1">  #--- cleanup test files from above---#</span>
-<span class="s1">  cd ..; rm -r tests/*</span>
-
-
-<span class="s1">  #--- remove entire directory including files inside recursively ---#</span>
-<span class="s1">  rm -rf test/</span>
-<span class="s1">  &#39;</span> <span class="p">|</span> pygmentize -l sh
-<span class="o">}</span> 
-
-_snip_ps<span class="o">(){</span>
-    <span class="nb">echo</span> <span class="s1">&#39;</span>
-<span class="s1">    # a &lt;- includes ``root`` in userprocess</span>
-<span class="s1">    # u &lt;- include ``username`` column</span>
-<span class="s1">    # x &lt;- list all processes owned by me</span>
-<span class="s1">    ps aux</span>
-<span class="s1">    &#39;</span> <span class="p">|</span> pygmentize -l sh
-<span class="o">}</span>
-
-_snip_git_localname<span class="o">(){</span>
-    <span class="nb">echo</span> <span class="s1">&#39;</span>
-<span class="s1">    # change user name in local repository</span>
-<span class="s1">    # https://git-scm.com/book/en/v2/Customizing-Git-Git-Configuration</span>
-<span class="s1">    git config user.name &quot;noname&quot;</span>
-<span class="s1">    git config user.email noname@example.com</span>
-<span class="s1">    &#39;</span> <span class="p">|</span> pygmentize -l sh
-<span class="o">}</span>
-
-_snip_stdout_stderr<span class="o">(){</span>
-    <span class="nb">echo</span> <span class="s1">&#39;</span>
-<span class="s1">    #************************************************</span>
-<span class="s1">    # Output stdout and stderr to terminal and logfile</span>
-<span class="s1">    #</span>
-<span class="s1">    # http://stackoverflow.com/questions/418896/how-to-redirect-output-to-a-file-and-stdout</span>
-<span class="s1">    # http://stackoverflow.com/questions/18460186/writing-outputs-to-log-file-and-console</span>
-<span class="s1">    #************************************************</span>
-<span class="s1">    # save stdout and stderr to a file</span>
-<span class="s1">    bash mymake.sh &gt;&gt; log.txt 2&gt;&amp;1</span>
-
-<span class="s1">    # save logfile like above, but also print on terminal screen</span>
-<span class="s1">    bash mymake.sh 2&gt;&amp;1 | tee log.txt</span>
-<span class="s1">    &#39;</span> <span class="p">|</span> pygmentize -l sh
-<span class="o">}</span>  
-
-_snip_logout<span class="o">(){</span> <span class="c1"># just a wrapper to _snip_stdout_stderr (this one may have better mneumonic)</span>
-    _snip_stdout_stderr
-<span class="o">}</span>  
-
-_snip_python_simple_http_server<span class="o">(){</span>
-    <span class="nb">echo</span> <span class="s1">&#39;</span>
-<span class="s1">    # for status messages, see: http://www.w3schools.com/tags/ref_httpmessages.asp</span>
-<span class="s1">    python -m SimpleHTTPServer 8000 &amp;</span>
-<span class="s1">    firefox &quot;http://localhost:8000/&quot;</span>
-<span class="s1">    &#39;</span> <span class="p">|</span> pygmentize -l sh  
-<span class="o">}</span>
-
-
-
-git_anonymize<span class="o">(){</span>
-  git config user.name <span class="s2">&quot;noname&quot;</span>
-  git config user.email noname@example.com
-<span class="o">}</span>
-<span class="nb">alias</span> <span class="nv">twsphinx_check</span><span class="o">=</span><span class="s1">&#39;google-chrome build/html/index.html&#39;</span> <span class="c1"># 08-17-2016 (13:33)</span>
-<span class="nb">alias</span> <span class="nv">twalias</span><span class="o">=</span><span class="s1">&#39;alias | pygmentize -l sh&#39;</span> <span class="c1"># 08-17-2016 (13:37)</span>
-
-git_clear_author_history<span class="o">(){</span>
-  git filter-branch -f --env-filter <span class="s1">&#39;</span>
-
-<span class="s1">  CORRECT_NAME=&quot;your name&quot;</span>
-<span class="s1">  CORRECT_EMAIL=&quot;your_email@example.com&quot;</span>
-
-<span class="s1">  export GIT_COMMITTER_NAME=&quot;$CORRECT_NAME&quot;</span>
-<span class="s1">  export GIT_COMMITTER_EMAIL=&quot;$CORRECT_EMAIL&quot;</span>
-
-<span class="s1">  export GIT_AUTHOR_NAME=&quot;$CORRECT_NAME&quot;</span>
-<span class="s1">  export GIT_AUTHOR_EMAIL=&quot;$CORRECT_EMAIL&quot;</span>
-<span class="s1">  &#39;</span> --tag-name-filter cat -- --branches --tags
-<span class="o">}</span>
-
-git_author_history_tak<span class="o">(){</span>
-  git filter-branch -f --env-filter <span class="s1">&#39;</span>
-
-<span class="s1">  CORRECT_NAME=&quot;Takanori Watanabe (sbia-pc125)&quot;</span>
-<span class="s1">  CORRECT_EMAIL=&quot;Takanori.Watanabe@uphs.upenn.edu&quot;</span>
-
-<span class="s1">  export GIT_COMMITTER_NAME=&quot;$CORRECT_NAME&quot;</span>
-<span class="s1">  export GIT_COMMITTER_EMAIL=&quot;$CORRECT_EMAIL&quot;</span>
-
-<span class="s1">  export GIT_AUTHOR_NAME=&quot;$CORRECT_NAME&quot;</span>
-<span class="s1">  export GIT_AUTHOR_EMAIL=&quot;$CORRECT_EMAIL&quot;</span>
-<span class="s1">  &#39;</span> --tag-name-filter cat -- --branches --tags
-<span class="o">}</span>
-
-pyg_sh<span class="o">(){</span>
-  <span class="c1"># pygmentize shell code</span>
-  pygmentize -l sh <span class="nv">$1</span>
-<span class="o">}</span>
-
-pyg_py<span class="o">(){</span>
-  <span class="c1"># pygmentize python code</span>
-  pygmentize -l python <span class="nv">$1</span>
-<span class="o">}</span>
-
-tw_print_function_name<span class="o">(){</span>
-  <span class="c1">#=========================================================================#</span>
-  <span class="c1"># print function names defined here</span>
-  <span class="c1"># (since these don&#39;t show up in $ alias </span>
-  <span class="c1">#=========================================================================#</span>
-  <span class="c1"># http://stackoverflow.com/questions/1184268/unix-sort-treatment-of-underscore-character</span>
-  <span class="c1"># LC_COLLATE=C will make underscore sorted as well</span>
-  <span class="c1"># (grep looks from () followed by {</span>
-  <span class="c1"># sed shaves off all the last character following &quot;()&quot; bracket</span>
-  <span class="c1"># http://stackoverflow.com/questions/3675169/how-to-shave-off-last-character-using-sed</span>
-  cat ~/.bashrc <span class="p">|</span> grep <span class="s2">&quot;\(\)(?=\{)&quot;</span> <span class="p">|</span> env <span class="nv">LC_COLLATE</span><span class="o">=</span>C sort -f <span class="p">|</span> <span class="se">\</span>
-      sed <span class="s2">&quot;s/().*</span>$<span class="s2">/()/&quot;</span> <span class="p">|</span> stripcolors
-<span class="o">}</span>
+<span class="c1">#*****************************************************************************#</span>
+<span class="c1"># Everything below here are unsorted. Categorized later.</span>
+<span class="c1"># Last organized: 02 September 2016 (Friday)</span>
+<span class="c1">#*****************************************************************************#</span>
+____bookmark_unsorted____<span class="o">(){</span> <span class="nb">echo</span> <span class="s2">&quot;I&#39;m unsorted&quot;</span> <span class="p">;</span> <span class="o">}</span>
 </pre></div>
 </td></tr></table></div>
 </div>
 <div class="section" id="gitconfig-content">
 <h2><a class="toc-backref" href="#id3">1.3. gitconfig content</a><a class="headerlink" href="#gitconfig-content" title="Permalink to this headline">¶</a></h2>
-<div class="admonition-todo admonition" id="index-1">
+<div class="admonition-todo admonition" id="index-0">
 <p class="first admonition-title">Todo</p>
 <p class="last">clean this unholy mess...</p>
 </div>
