@@ -28,14 +28,23 @@ Below ran on ASUS on 09-01-2016 (17:57)
   mklink "c:\cygwin64\home\takanori\.bashrc" "C:\Users\takanori\Dropbox\git\configs\source\bash_config\cygwin\.bashrc"
   mklink "c:\cygwin64\home\takanori\.emacs" "C:\Users\takanori\Dropbox\git\configs\source\bash_config\cygwin\.emacs"
 
-###
-git
-###
+###################
+git code-completion
+###################
 Copy and paste the file ``git`` under ``C:\cygwin64\etc\bash_completion.d``
+to enable code completion with ``<tab>`` for git commands.
 
 ##############
 bashrc content
 ##############
+`Github <https://github.com/wtak23/configs/blob/master/source/bash_config/cygwin/.bashrc>`__
+
+.. code-block:: rst
+
+    .. literalinclude:: ./cygwin/.bashrc
+        :language: bash
+        :linenos:
+
 .. literalinclude:: ./cygwin/.bashrc
     :language: bash
     :linenos:
@@ -44,6 +53,14 @@ bashrc content
 bash_aliases content
 ####################
 .. todo:: clean this unholy mess...
+
+`Github <https://github.com/wtak23/configs/blob/master/source/bash_config/cygwin/.bash_aliases>`__
+
+.. code-block:: rst
+
+    .. literalinclude:: ./cygwin/.bash_aliases
+        :language: bash
+        :linenos:  
 
 .. literalinclude:: ./cygwin/.bash_aliases
     :language: bash

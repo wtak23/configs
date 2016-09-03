@@ -44,7 +44,6 @@
 
 <body class="wy-body-for-nav" role="document">
 
-   
   <div class="wy-grid-for-nav">
 
     
@@ -99,7 +98,11 @@
 <li class="toctree-l3"><a class="reference internal" href="../python/py-sbia.html#changes-with-original">1.5. Changes with _original</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../python/py-win.html">2. Windows machine (<code class="docutils literal"><span class="pre">py-win.rst</span></code>)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../python/py-win.html">2. Windows machine (<code class="docutils literal"><span class="pre">py-win.rst</span></code>)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../python/py-win.html#pip-installs">2.1. pip installs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../python/py-win.html#rollback-sphinx-to-version-1-3-5">2.2. Rollback Sphinx to Version 1.3.5</a></li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="../python/old/py-old.html">3. old-notes (<code class="docutils literal"><span class="pre">py-old.rst</span></code>)</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../python/old/py-old.html#feb-24-2016">3.1. Feb 24, 2016</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../python/old/py-old.html#stuffs-installed-after-03-30-2016">3.2. Stuffs installed after 03-30-2016</a><ul>
@@ -128,7 +131,7 @@
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../bash_config/bash-cygwin.html">2. Cygwin setup (<code class="docutils literal"><span class="pre">bash-cygwin.rst</span></code>)</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../bash_config/bash-cygwin.html#symlink-setup">2.1. symlink setup</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../bash_config/bash-cygwin.html#git">2.2. git</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../bash_config/bash-cygwin.html#git-code-completion">2.2. git code-completion</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../bash_config/bash-cygwin.html#bashrc-content">2.3. bashrc content</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../bash_config/bash-cygwin.html#bash-aliases-content">2.4. bash_aliases content</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../bash_config/bash-cygwin.html#apt-cyg">2.5. apt-cyg</a><ul>
@@ -138,7 +141,8 @@
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../bash_config/bash-defaults.html">3. Default bash config files (<code class="docutils literal"><span class="pre">bash-defaults.rst</span></code>)</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../bash_config/bash-defaults.html#default-bashrc">3.1. Default .bashrc</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../bash_config/bash-defaults.html#default-bashrc-ubuntu">3.1. Default .bashrc, ubuntu</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../bash_config/bash-defaults.html#default-bashrc-cygwin">3.2. Default .bashrc, cygwin</a></li>
 </ul>
 </li>
 </ul>
@@ -157,6 +161,11 @@
 </li>
 <li class="toctree-l2"><a class="reference internal" href="subl-win.html">2. Windows setup (<code class="docutils literal"><span class="pre">subl-win.rst</span></code>)</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="subl-win.html#symlinks">2.1. Symlinks</a></li>
+<li class="toctree-l3"><a class="reference internal" href="subl-win.html#installed-packages">2.2. Installed Packages</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="subl-win.html#asus">2.2.1. asus</a></li>
+<li class="toctree-l4"><a class="reference internal" href="subl-win.html#asus-diff-with-sbia-workstation">2.2.2. asus diff with sbia workstation</a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="subl-ref.html">3. References (<code class="docutils literal"><span class="pre">subl-ref.rst</span></code>)</a><ul>
@@ -245,6 +254,10 @@
 </li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="../trouble-shooting/ts-python.html">3. ts-python (<code class="docutils literal"><span class="pre">ts-python.rst</span></code>)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../trouble-shooting/ts-python.html#getting-theano-to-work-on-windows">3.1. Getting theano to work on Windows</a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../misc.html">Miscellaneous (<code class="docutils literal"><span class="pre">misc.rst</span></code>)</a><ul>
@@ -276,10 +289,8 @@
 
       
       <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
-        
-          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="../index.html">My Configs</a>
-        
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../index.html">My Configs</a>
       </nav>
 
 
@@ -292,32 +303,20 @@
 
 
 
-
-
-
-
-
-
-
-
 <div role="navigation" aria-label="breadcrumbs navigation">
   <ul class="wy-breadcrumbs">
-    
-      <li><a href="../index.html">Docs</a> &raquo;</li>
-        
+    <li><a href="../index.html">Docs</a> &raquo;</li>
+      
           <li><a href="../sublime.html">Sublime Text Setup (<code class="docutils literal"><span class="pre">sublime.rst</span></code>)</a> &raquo;</li>
-        
-      <li>1. SBIA Workstation (<code class="docutils literal"><span class="pre">subl-sbia.rst</span></code>)</li>
-    
-    
+      
+    <li>1. SBIA Workstation (<code class="docutils literal"><span class="pre">subl-sbia.rst</span></code>)</li>
       <li class="wy-breadcrumbs-aside">
         
-            
+          
             <a href="../_sources/sublime/subl-sbia.txt" rel="nofollow"> View page source</a>
           
         
       </li>
-    
   </ul>
   <hr/>
 </div>
@@ -486,8 +485,7 @@ ln -s <span class="s2">&quot;/home/takanori/Dropbox/git/configs/source/sublime/P
 43
 44
 45
-46
-47</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="p">{</span>
+46</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="p">{</span>
 	<span class="nt">&quot;bootstrapped&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
 	<span class="nt">&quot;in_process_packages&quot;</span><span class="p">:</span>
 	<span class="p">[</span>
@@ -523,7 +521,6 @@ ln -s <span class="s2">&quot;/home/takanori/Dropbox/git/configs/source/sublime/P
 		<span class="s2">&quot;SideBarFolders&quot;</span><span class="p">,</span>
 		<span class="s2">&quot;SideBarGit&quot;</span><span class="p">,</span>
 		<span class="s2">&quot;SublimeREPL&quot;</span><span class="p">,</span>
-		<span class="s2">&quot;SyncedSideBar&quot;</span><span class="p">,</span>
 		<span class="s2">&quot;TabsExtra&quot;</span><span class="p">,</span>
 		<span class="s2">&quot;Terminal&quot;</span><span class="p">,</span>
 		<span class="s2">&quot;Theme - Soda&quot;</span><span class="p">,</span>
@@ -572,6 +569,12 @@ View In Browser.sublime-package
 </div>
 <div class="section" id="preferences-sublime-settings-content">
 <h2><a class="toc-backref" href="#id5">1.4. Preferences.sublime-settings Content</a><a class="headerlink" href="#preferences-sublime-settings-content" title="Permalink to this headline">¶</a></h2>
+<p><a class="reference external" href="https://github.com/wtak23/configs/blob/master/source/sublime/Preferences_sbia.sublime-settings">Github</a></p>
+<div class="highlight-rst"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">literalinclude</span><span class="p">::</span> Preferences_sbia.sublime-settings
+    <span class="nc">:language:</span> <span class="nf">json</span>
+    <span class="nc">:linenos:</span>
+</pre></div>
+</div>
 <div class="highlight-json"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>  1
   2
   3
@@ -685,8 +688,7 @@ View In Browser.sublime-package
 111
 112
 113
-114
-115</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="p">{</span>
+114</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="p">{</span>
 	<span class="nt">&quot;always_show_minimap_viewport&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
 	<span class="nt">&quot;animation_enabled&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
 	<span class="nt">&quot;auto_close_tags&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
@@ -759,7 +761,6 @@ View In Browser.sublime-package
 		<span class="s2">&quot;GitGutter&quot;</span><span class="p">,</span>
 		<span class="s2">&quot;Local History&quot;</span><span class="p">,</span>
 		<span class="s2">&quot;Pylinter&quot;</span><span class="p">,</span>
-		<span class="s2">&quot;SyncedSideBar&quot;</span><span class="p">,</span>
 		<span class="s2">&quot;Vintage&quot;</span>
 	<span class="p">],</span>
 	<span class="nt">&quot;indent_subsequent_lines&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
@@ -806,6 +807,12 @@ View In Browser.sublime-package
 </div>
 <div class="section" id="default-linux-sublime-keymap-content">
 <h2><a class="toc-backref" href="#id6">1.5. Default (Linux).sublime-keymap Content</a><a class="headerlink" href="#default-linux-sublime-keymap-content" title="Permalink to this headline">¶</a></h2>
+<p><a class="reference external" href="https://github.com/wtak23/configs/blob/master/source/sublime/keyboard_shortcut_sbia.sublime-keymap">Github</a></p>
+<div class="highlight-rst"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">literalinclude</span><span class="p">::</span> keyboard_shortcut_sbia.sublime-keymap
+    <span class="nc">:language:</span> <span class="nf">javascript</span>
+    <span class="nc">:linenos:</span>
+</pre></div>
+</div>
 <div class="highlight-javascript"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>  1
   2
   3
@@ -965,9 +972,15 @@ View In Browser.sublime-package
 157
 158
 159
-160</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="p">[</span>
+160
+161
+162
+163</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="p">[</span>
     <span class="c1">// http://www.sublimetext.com/docs/key-bindings</span>
     <span class="c1">// http://www.sublimetext.com/docs/commands</span>
+
+    <span class="c1">// switching focus http://stackoverflow.com/questions/11995591/sublime-text-2-show-file-navigation-in-sidebar?rq=1</span>
+    <span class="p">{</span> <span class="s2">&quot;keys&quot;</span><span class="o">:</span> <span class="p">[</span><span class="s2">&quot;ctrl+1&quot;</span><span class="p">],</span> <span class="s2">&quot;command&quot;</span><span class="o">:</span> <span class="s2">&quot;focus_side_bar&quot;</span> <span class="p">},</span> <span class="c1">// default is ctrl+0</span>
 
     <span class="c1">//{ &quot;keys&quot;: [&quot;ctrl+d&quot;], &quot;command&quot;: &quot;run_macro_file&quot;, &quot;args&quot;: {&quot;file&quot;: &quot;res://Packages/Default/Delete Line.sublime-macro&quot;} },</span>
     <span class="p">{</span> <span class="s2">&quot;keys&quot;</span><span class="o">:</span> <span class="p">[</span><span class="s2">&quot;ctrl+shift++&quot;</span><span class="p">],</span> <span class="s2">&quot;command&quot;</span><span class="o">:</span> <span class="s2">&quot;header_change_level&quot;</span><span class="p">,</span> <span class="s2">&quot;context&quot;</span><span class="o">:</span>

@@ -1,6 +1,5 @@
-####################################
 SBIA Workstation (``subl-sbia.rst``)
-####################################
+""""""""""""""""""""""""""""""""""""
 
 The two most important files:
 
@@ -13,9 +12,9 @@ The two most important files:
    :depth: 2
    :local:
 
-*********
+#########
 File-tree
-*********
+#########
 .. important:: Reupdated on 08-27-2016 (23:25) when creating this repos.
 
 .. code-block:: bash
@@ -43,9 +42,9 @@ File-tree
 
   - contains files that can be synced as subfolders in ``User`` directory in Sublime
 
-**********************
+######################
 Symbolic links created
-**********************
+######################
 
 .. code-block:: bash
 
@@ -66,8 +65,9 @@ Symbolic links created
     # sync other folder containing files that can be synced at "directory-level"
     ln -s "${SOURCE}/synced_by_folder" "${TARGET}/synced_by_folder"
 
+***************
 File-wise setup
-===============
+***************
 - macros and sublime-setting files must be copied directly under the ``User`` 
   directory
 - I manually reupdate these every once in a while
@@ -96,9 +96,9 @@ Last update: **09-01-2016 (16:56)**
         "/home/takanori/.config/sublime-text-3/Packages/User/Package Control.sublime-settings"
 
 
-*****************
+#################
 Installed packges
-*****************
+#################
 .. code-block:: rst
 
     .. literalinclude:: Package Control_sbia.sublime-settings
@@ -143,16 +143,32 @@ Installed packges
     TrailingSpaces.sublime-package
     View In Browser.sublime-package
 
-************************************
+####################################
 Preferences.sublime-settings Content
-************************************
+####################################
+`Github <https://github.com/wtak23/configs/blob/master/source/sublime/Preferences_sbia.sublime-settings>`__
+
+.. code-block:: rst
+
+    .. literalinclude:: Preferences_sbia.sublime-settings
+        :language: json
+        :linenos:
+
 .. literalinclude:: Preferences_sbia.sublime-settings
     :language: json
     :linenos:
 
-**************************************
+######################################
 Default (Linux).sublime-keymap Content
-**************************************
+######################################
+`Github <https://github.com/wtak23/configs/blob/master/source/sublime/keyboard_shortcut_sbia.sublime-keymap>`__
+
+.. code-block:: rst
+
+    .. literalinclude:: keyboard_shortcut_sbia.sublime-keymap
+        :language: javascript
+        :linenos:
+
 .. literalinclude:: keyboard_shortcut_sbia.sublime-keymap
     :language: javascript
     :linenos:
