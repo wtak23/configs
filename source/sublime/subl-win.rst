@@ -33,7 +33,9 @@ Below ran on:
   :: snippet directories
   mklink /d "c:\users\takanori\AppData\Roaming\Sublime Text 3\Packages\User\sublime-snippets" "C:\Users\takanori\Dropbox\git\configs\source\sublime\snippets"
 
-  :: macros
+
+  :: folderwise sync (currently mostly build-systems)
+  mklink /d "c:\users\takanori\AppData\Roaming\Sublime Text 3\Packages\User\synced_by_folder" "C:\Users\takanori\Dropbox\git\configs\source\sublime\sync_by_folder_win"
 
   :: individual files
   mklink "c:\users\takanori\AppData\Roaming\Sublime Text 3\Packages\User\Diff.sublime-settings" "C:\Users\takanori\Dropbox\git\configs\source\sublime\synced_by_files\Diff.sublime-settings"
@@ -47,6 +49,18 @@ Below ran on:
 ##################
 Installed Packages
 ##################
+*******
+xps8900
+*******
+.. code-block:: rst
+
+    .. literalinclude:: Package Control_8900.sublime-settings
+        :language: json
+        :linenos:
+
+.. literalinclude:: Package Control_xps8900.sublime-settings
+    :language: json
+    :linenos:
 
 ****
 asus
@@ -75,3 +89,30 @@ asus diff with sbia workstation
     :language: diff
     :linenos: 
     :diff: Package Control_asus.sublime-settings
+
+#####################################
+Bunch of random helpful config stuffs
+#####################################
+
+*********************************************
+Open cygwin shell via right-click in explorer
+*********************************************
+
+- http://stackoverflow.com/questions/9637601/open-cygwin-at-a-specific-folder
+
+***************************************
+Getting buildsystem to work with cygwin
+***************************************
+http://stackoverflow.com/questions/23588260/does-the-sublime-text-2-build-system-accept-input-if-does-not-are-there-any-wor
+
+The ``"path"`` below does the trick
+
+.. code-block:: javascript
+
+    {
+        "path" : "C:/cygwin64/bin/",
+        "cmd": ["bash.exe","$file"],
+        "file_regex": "^[ ]*File \"(...*?)\", line ([0-9]*)",
+        "word_wrap": false,
+        "selector": "source.shell"    
+    }

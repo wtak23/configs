@@ -14,7 +14,7 @@ export DISPLAY=:0.0
 # to enable git auto complete (pdf-pg37 progit, 3.7.1)
 source /etc/bash_completion.d/git
 
-alias mysource="source ${HOME}/.bashrc"
+alias bsource="source ${HOME}/.bashrc"
 #=============================================================================#
 # set variables
 #-----------------------------------------------------------------------------#
@@ -104,6 +104,7 @@ ___bm_aliases____(){ echo "I'm just a bookmark for sublimetext"; }
 #=========================================================================#
     alias sumatra='"/cygdrive/C/Program Files (x86)/SumatraPDF/SumatraPDF.exe"'
     alias chrome='"/cygdrive/C/Program Files (x86)/Google/Chrome/Application/chrome.exe"'
+    alias google-chrome='"/cygdrive/C/Program Files (x86)/Google/Chrome/Application/chrome.exe"'
     alias subl='"/cygdrive/C/Program Files/Sublime Text 3/sublime_text.exe"'
 
 #*****************************************************************************#
