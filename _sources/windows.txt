@@ -11,5 +11,6 @@ Files related to my windows machine setup.
 
     ./windows/autohotkey/win-ahk
     ./windows/office-setup/win-office
+    ./windows/win-xps8900
     ./windows/win-asus
     ./windows/win-old-notes

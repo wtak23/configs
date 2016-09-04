@@ -23,3 +23,6 @@ Stuffs installed
 
     sudo apt-get install finger
     sudo apt-get install colordiff
+
+    # 09-03-2016 (01:33)
+    sudo apt-get install nodejs

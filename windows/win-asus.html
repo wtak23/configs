@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>3. ASUS laptop settings (win-asus.rst) &mdash; My Configs</title>
+  <title>4. ASUS laptop settings (win-asus.rst) &mdash; My Configs</title>
   
 
   
@@ -34,8 +34,8 @@
   
     <link rel="top" title="My Configs" href="../index.html"/>
         <link rel="up" title="Windows machine setup (windows.rst)" href="../windows.html"/>
-        <link rel="next" title="4. (Old) Thing to do on a new computer (win-old-notes.rst)" href="win-old-notes.html"/>
-        <link rel="prev" title="2. MS Office Setups (win-office.rst)" href="office-setup/win-office.html"/> 
+        <link rel="next" title="5. (Old) Thing to do on a new computer (win-old-notes.rst)" href="win-old-notes.html"/>
+        <link rel="prev" title="3. XPS8900 Desktop settings (win-xps8900.rst)" href="win-xps8900.html"/> 
 
   
   <script src="../_static/js/modernizr.min.js"></script>
@@ -167,8 +167,14 @@
 <li class="toctree-l2"><a class="reference internal" href="../sublime/subl-win.html">2. Windows setup (<code class="docutils literal"><span class="pre">subl-win.rst</span></code>)</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../sublime/subl-win.html#symlinks">2.1. Symlinks</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../sublime/subl-win.html#installed-packages">2.2. Installed Packages</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../sublime/subl-win.html#asus">2.2.1. asus</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../sublime/subl-win.html#asus-diff-with-sbia-workstation">2.2.2. asus diff with sbia workstation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../sublime/subl-win.html#xps8900">2.2.1. xps8900</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../sublime/subl-win.html#asus">2.2.2. asus</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../sublime/subl-win.html#asus-diff-with-sbia-workstation">2.2.3. asus diff with sbia workstation</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../sublime/subl-win.html#bunch-of-random-helpful-config-stuffs">2.3. Bunch of random helpful config stuffs</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../sublime/subl-win.html#open-cygwin-shell-via-right-click-in-explorer">2.3.1. Open cygwin shell via right-click in explorer</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../sublime/subl-win.html#getting-buildsystem-to-work-with-cygwin">2.3.2. Getting buildsystem to work with cygwin</a></li>
 </ul>
 </li>
 </ul>
@@ -203,38 +209,54 @@
 <li class="toctree-l3"><a class="reference internal" href="office-setup/win-office.html#one-note">2.2. One-note</a></li>
 </ul>
 </li>
-<li class="toctree-l2 current"><a class="current reference internal" href="">3. ASUS laptop settings (<code class="docutils literal"><span class="pre">win-asus.rst</span></code>)</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#startup-files">3.1. Startup Files</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#symlinks">3.2. symlinks</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#cygwin-configs">3.2.1. cygwin configs</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#sublime-text">3.2.2. Sublime text</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#office">3.2.3. Office</a></li>
+<li class="toctree-l2"><a class="reference internal" href="win-xps8900.html">3. XPS8900 Desktop settings (<code class="docutils literal"><span class="pre">win-xps8900.rst</span></code>)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="win-xps8900.html#startup-files">3.1. Startup Files</a></li>
+<li class="toctree-l3"><a class="reference internal" href="win-xps8900.html#symlinks">3.2. symlinks</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="win-xps8900.html#cygwin-configs">3.2.1. cygwin configs</a></li>
+<li class="toctree-l4"><a class="reference internal" href="win-xps8900.html#sublime-text">3.2.2. Sublime text</a></li>
+<li class="toctree-l4"><a class="reference internal" href="win-xps8900.html#office">3.2.3. Office</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="#sublime-text-setup">3.3. Sublime-Text Setup</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#packages-installed">3.3.1. Packages Installed</a></li>
+<li class="toctree-l3"><a class="reference internal" href="win-xps8900.html#helpers">3.3. helpers...</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="win-xps8900.html#to-get-git-gui-working">3.3.1. to get git gui working...</a></li>
+<li class="toctree-l4"><a class="reference internal" href="win-xps8900.html#xming-setup">3.3.2. xming setup</a></li>
+<li class="toctree-l4"><a class="reference internal" href="win-xps8900.html#disable-annoying-bell-sound-in-cygwin">3.3.3. disable annoying bell sound in cygwin</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="#helpers">3.4. helpers...</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#to-get-git-gui-working">3.4.1. to get git gui working...</a></li>
+</ul>
+</li>
+<li class="toctree-l2 current"><a class="current reference internal" href="">4. ASUS laptop settings (<code class="docutils literal"><span class="pre">win-asus.rst</span></code>)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#startup-files">4.1. Startup Files</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#symlinks">4.2. symlinks</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#cygwin-configs">4.2.1. cygwin configs</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#sublime-text">4.2.2. Sublime text</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#office">4.2.3. Office</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#sublime-text-setup">4.3. Sublime-Text Setup</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#packages-installed">4.3.1. Packages Installed</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#helpers">4.4. helpers...</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#to-get-git-gui-working">4.4.1. to get git gui working...</a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="win-old-notes.html">4. (Old) Thing to do on a new computer (<code class="docutils literal"><span class="pre">win-old-notes.rst</span></code>)</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="win-old-notes.html#softwares-to-install">4.1. Softwares to install</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="win-old-notes.html#the-essentials">4.1.1. The &#8220;Essentials&#8221;</a></li>
-<li class="toctree-l4"><a class="reference internal" href="win-old-notes.html#computational">4.1.2. Computational</a></li>
-<li class="toctree-l4"><a class="reference internal" href="win-old-notes.html#non-essentials">4.1.3. Non-essentials</a></li>
+<li class="toctree-l2"><a class="reference internal" href="win-old-notes.html">5. (Old) Thing to do on a new computer (<code class="docutils literal"><span class="pre">win-old-notes.rst</span></code>)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="win-old-notes.html#softwares-to-install">5.1. Softwares to install</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="win-old-notes.html#the-essentials">5.1.1. The &#8220;Essentials&#8221;</a></li>
+<li class="toctree-l4"><a class="reference internal" href="win-old-notes.html#computational">5.1.2. Computational</a></li>
+<li class="toctree-l4"><a class="reference internal" href="win-old-notes.html#non-essentials">5.1.3. Non-essentials</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="win-old-notes.html#short-cuts-to-add-in-startup-folder">4.2. Short-cuts to add in &#8220;Startup&#8221; folder</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="win-old-notes.html#xming">4.2.1. xming</a></li>
+<li class="toctree-l3"><a class="reference internal" href="win-old-notes.html#short-cuts-to-add-in-startup-folder">5.2. Short-cuts to add in &#8220;Startup&#8221; folder</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="win-old-notes.html#xming">5.2.1. xming</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="win-old-notes.html#misc">4.3. misc</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="win-old-notes.html#username-change">4.3.1. Username change</a></li>
-<li class="toctree-l4"><a class="reference internal" href="win-old-notes.html#location-of-normal-dotm">4.3.2. Location of <code class="docutils literal"><span class="pre">Normal.dotm</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="win-old-notes.html#misc">5.3. misc</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="win-old-notes.html#username-change">5.3.1. Username change</a></li>
+<li class="toctree-l4"><a class="reference internal" href="win-old-notes.html#location-of-normal-dotm">5.3.2. Location of <code class="docutils literal"><span class="pre">Normal.dotm</span></code></a></li>
 </ul>
 </li>
 </ul>
@@ -325,7 +347,7 @@
         
           <li><a href="../windows.html">Windows machine setup (<code class="docutils literal"><span class="pre">windows.rst</span></code>)</a> &raquo;</li>
         
-      <li>3. ASUS laptop settings (<code class="docutils literal"><span class="pre">win-asus.rst</span></code>)</li>
+      <li>4. ASUS laptop settings (<code class="docutils literal"><span class="pre">win-asus.rst</span></code>)</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -343,7 +365,7 @@
            <div itemprop="articleBody">
             
   <div class="section" id="asus-laptop-settings-win-asus-rst">
-<h1>3. ASUS laptop settings (<code class="docutils literal"><span class="pre">win-asus.rst</span></code>)<a class="headerlink" href="#asus-laptop-settings-win-asus-rst" title="Permalink to this headline">¶</a></h1>
+<h1>4. ASUS laptop settings (<code class="docutils literal"><span class="pre">win-asus.rst</span></code>)<a class="headerlink" href="#asus-laptop-settings-win-asus-rst" title="Permalink to this headline">¶</a></h1>
 <div class="contents local topic" id="contents">
 <p class="topic-title first"><cite>Contents</cite></p>
 <ul class="simple">
@@ -365,7 +387,7 @@
 </ul>
 </div>
 <div class="section" id="startup-files">
-<h2><a class="toc-backref" href="#id1">3.1. Startup Files</a><a class="headerlink" href="#startup-files" title="Permalink to this headline">¶</a></h2>
+<h2><a class="toc-backref" href="#id1">4.1. Startup Files</a><a class="headerlink" href="#startup-files" title="Permalink to this headline">¶</a></h2>
 <div class="highlight-python"><div class="highlight"><pre><span></span>C:\Users\takanori\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup
 
 Xming.lnk
@@ -378,10 +400,10 @@ Dropbox.lnk
 </div>
 </div>
 <div class="section" id="symlinks">
-<h2><a class="toc-backref" href="#id2">3.2. symlinks</a><a class="headerlink" href="#symlinks" title="Permalink to this headline">¶</a></h2>
+<h2><a class="toc-backref" href="#id2">4.2. symlinks</a><a class="headerlink" href="#symlinks" title="Permalink to this headline">¶</a></h2>
 <p>Run as admin on cmd</p>
 <div class="section" id="cygwin-configs">
-<h3><a class="toc-backref" href="#id3">3.2.1. cygwin configs</a><a class="headerlink" href="#cygwin-configs" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id3">4.2.1. cygwin configs</a><a class="headerlink" href="#cygwin-configs" title="Permalink to this headline">¶</a></h3>
 <p>Below ran on (2016-09-01)</p>
 <div class="highlight-python"><div class="highlight"><pre><span></span>mklink &quot;c:\cygwin64\home\takanori\.gitignore&quot; &quot;C:\Users\takanori\Dropbox\git\configs\source\bash_config\cygwin\.gitignore&quot;
 mklink &quot;c:\cygwin64\home\takanori\.gitconfig&quot; &quot;C:\Users\takanori\Dropbox\git\configs\source\bash_config\cygwin\.gitconfig&quot;
@@ -392,7 +414,7 @@ mklink &quot;c:\cygwin64\home\takanori\.emacs&quot; &quot;C:\Users\takanori\Drop
 </div>
 </div>
 <div class="section" id="sublime-text">
-<h3><a class="toc-backref" href="#id4">3.2.2. Sublime text</a><a class="headerlink" href="#sublime-text" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id4">4.2.2. Sublime text</a><a class="headerlink" href="#sublime-text" title="Permalink to this headline">¶</a></h3>
 <p><strong>Last ran on (2016-09-01)</strong></p>
 <div class="highlight-python"><div class="highlight"><pre><span></span>:: main setups
 mklink &quot;c:\users\takanori\AppData\Roaming\Sublime Text 3\Packages\User\Default (Windows).sublime-keymap&quot; &quot;C:\Users\takanori\Dropbox\git\configs\source\sublime\keyboard_shortcut_windows.sublime-keymap&quot;
@@ -415,16 +437,16 @@ mklink &quot;c:\users\takanori\AppData\Roaming\Sublime Text 3\Packages\User\add_
 </div>
 </div>
 <div class="section" id="office">
-<h3><a class="toc-backref" href="#id5">3.2.3. Office</a><a class="headerlink" href="#office" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id5">4.2.3. Office</a><a class="headerlink" href="#office" title="Permalink to this headline">¶</a></h3>
 <div class="highlight-python"><div class="highlight"><pre><span></span>mklink &quot;C:\Users\takanori\AppData\Roaming\Microsoft\Templates\Normal.dotm&quot; &quot;C:\Users\takanori\Dropbox\git\configs\source\windows\office-setup\Normal_asus.dotm&quot;
 </pre></div>
 </div>
 </div>
 </div>
 <div class="section" id="sublime-text-setup">
-<h2><a class="toc-backref" href="#id6">3.3. Sublime-Text Setup</a><a class="headerlink" href="#sublime-text-setup" title="Permalink to this headline">¶</a></h2>
+<h2><a class="toc-backref" href="#id6">4.3. Sublime-Text Setup</a><a class="headerlink" href="#sublime-text-setup" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="packages-installed">
-<h3><a class="toc-backref" href="#id7">3.3.1. Packages Installed</a><a class="headerlink" href="#packages-installed" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id7">4.3.1. Packages Installed</a><a class="headerlink" href="#packages-installed" title="Permalink to this headline">¶</a></h3>
 <p>Do <code class="docutils literal"><span class="pre">ctrl+p</span></code> -&gt; <code class="docutils literal"><span class="pre">Package</span> <span class="pre">Control:</span> <span class="pre">List</span> <span class="pre">Packages</span></code></p>
 <p>(2016-09-01): on cygwin</p>
 <div class="highlight-bash"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
@@ -477,9 +499,9 @@ TrailingSpaces.sublime-package
 </div>
 </div>
 <div class="section" id="helpers">
-<h2><a class="toc-backref" href="#id8">3.4. helpers...</a><a class="headerlink" href="#helpers" title="Permalink to this headline">¶</a></h2>
+<h2><a class="toc-backref" href="#id8">4.4. helpers...</a><a class="headerlink" href="#helpers" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="to-get-git-gui-working">
-<h3><a class="toc-backref" href="#id9">3.4.1. to get git gui working...</a><a class="headerlink" href="#to-get-git-gui-working" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id9">4.4.1. to get git gui working...</a><a class="headerlink" href="#to-get-git-gui-working" title="Permalink to this headline">¶</a></h3>
 <p><a class="reference external" href="http://stackoverflow.com/questions/9393462/cannot-launch-git-gui-using-cygwin-on-windows">http://stackoverflow.com/questions/9393462/cannot-launch-git-gui-using-cygwin-on-windows</a></p>
 <p>Just do</p>
 <div class="code bash highlight-python"><div class="highlight"><pre><span></span>apt-cyg install xinit
@@ -497,10 +519,10 @@ export DISPLAY=:0.0
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="win-old-notes.html" class="btn btn-neutral float-right" title="4. (Old) Thing to do on a new computer (win-old-notes.rst)" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="win-old-notes.html" class="btn btn-neutral float-right" title="5. (Old) Thing to do on a new computer (win-old-notes.rst)" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="office-setup/win-office.html" class="btn btn-neutral" title="2. MS Office Setups (win-office.rst)" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="win-xps8900.html" class="btn btn-neutral" title="3. XPS8900 Desktop settings (win-xps8900.rst)" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
