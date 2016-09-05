@@ -6,6 +6,8 @@ alias bsource="source ${HOME}/.bashrc" # bash-source
 
 #=============================================================================#
 # Set env-vars
+#-----------------------------------------------------------------------------#
+# http://serverfault.com/questions/606/what-is-the-best-way-to-set-an-environmet-variable-in-bashrc
 #=============================================================================#
 ____bookmark_ENVVARS____(){ echo "I'm just a bookmark"; }
   # added by Anaconda2 4.0.0 installer
@@ -102,7 +104,7 @@ ____bookmark_default_options____(){ echo "" ; }
   alias gcc='/sbia/sbiasfw/external/gcc/4.7.1/bin/gcc'
 
 #=============================================================================#
-# random convenience commands (most will go here)
+# General convenience commands (most will go here)
 #=============================================================================#
 ____bookmark_convenience____(){ echo ""; }
   alias cpucheck='ps uU takanori --sort %cpu'
@@ -162,7 +164,7 @@ ____bookmark_background____(){ echo ""; }
   alias matlab1='matlab &'
 
 #=============================================================================#
-# my *go* commands to move around frequently used directories
+# my "go" aliases to move around frequently used directories
 #=============================================================================#
 ____bookmark_go____(){ echo ""; }
   alias godrop='cd ~/Dropbox'

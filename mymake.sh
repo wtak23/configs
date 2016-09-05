@@ -2,9 +2,15 @@
 #=============================================================================#
 # Ran via sublime bulid-system.
 #=============================================================================#
+#-------------------------------------------------------------------------#
+# when running script from sublime-build, python calls from /usr/bin/python.  
+# i want anaconda python to run
+#-------------------------------------------------------------------------#
 export PATH="$HOME/anaconda2/bin:$PATH" # <- when running script from sublime-build, python calls from /usr/bin/python.  i want anaconda python to run
 export PATH="/cygdrive/c/Users/takanori/Anaconda2/Scripts:$PATH" # <- in case i'm on windows
 # # which python # <- verify python from anaconda is running
+
+
 make clean
 # # rm -r ./source/generated*
 # # mkdir ./source/generated
@@ -13,6 +19,7 @@ make clean
 # # cp -r ./source/_templates ./source/generated/generated/
 make html
 
+# --- browse result in chrome? --- #
 BROWSE=true
 
 if [[ ! BROWSE ]]; then exit 0; fi
