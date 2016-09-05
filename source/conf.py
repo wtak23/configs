@@ -242,7 +242,7 @@ html_theme_options = {
 # "<project> v<release> documentation" by default.
 #
 # html_title = u'PROJECT_NAME v1'
-html_title = project
+html_title = ''
 
 # A shorter title for the navigation bar.  Default is the same as html_title.
 #

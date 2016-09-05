@@ -9,23 +9,110 @@
 # (part that's difference from my bashrc file on my linux comptuers)
 #=============================================================================#
 ____bookmark_windows_specific_configs____(){ echo "windows specific" ; }
-  #---------------------------------------------------------------------------#
-  # How to use gitk in cygwin
-  # http://stackoverflow.com/questions/9393462/cannot-launch-git-gui-using-cygwin-on-windows
-  #---------------------------------------------------------------------------#
-  export DISPLAY=:0.0
-  # export DISPLAY=Cygwin:0.0
+    #---------------------------------------------------------------------------#
+    # How to use gitk in cygwin
+    # http://stackoverflow.com/questions/9393462/cannot-launch-git-gui-using-cygwin-on-windows
+    #---------------------------------------------------------------------------#
+    export DISPLAY=:0.0
+    # export DISPLAY=Cygwin:0.0
 
-  # to enable git auto complete (pdf-pg37 progit, 3.7.1)
-  source /etc/bash_completion.d/git
-  alias bsource="source ${HOME}/.bashrc"
+    # to enable git auto complete (pdf-pg37 progit, 3.7.1)
+    source /etc/bash_completion.d/git
+    alias bsource="source ${HOME}/.bashrc"
 
-  #---------------------------------------------------------------------------#
-  # change HOME to windows home (not cygwin)
-  #---------------------------------------------------------------------------#
-  export HOME="/cygdrive/c/Users/takanori"
-  export HOME_WIN="/cygdrive/c/Users/takanori"
-  export HOME_CYG="/home/takanori"
+    #---------------------------------------------------------------------------#
+    # change HOME to windows home (not cygwin)
+    #---------------------------------------------------------------------------#
+    export HOME="/cygdrive/c/Users/takanori"
+    export HOME_WIN="/cygdrive/c/Users/takanori"
+    export HOME_CYG="/home/takanori"
+
+    #=============================================================================#
+    # convert windows directory to cygwin type
+    #-----------------------------------------------------------------------------#
+    # ref: 
+    # http://stackoverflow.com/questions/19999562/bash-script-to-convert-windows-path-to-linux-path
+    # http://stackoverflow.com/questions/11814374/shell-reading-backslash-in-command-line-parameters
+    #=============================================================================#
+    # cdwin(){
+    #     set $(history | tail -1 )
+    #     shift 2
+    #     path="$*"
+    #     cd $(cygpath "$path") #<- never knew about ``cygpath`` command
+    # }
+
+    #| deprecated...I'd have to include quotes to the argument everytime using below, which is tedious
+    # cdwin(){
+    #     echo "I receive the variable --> $1"
+    #     line=$(sed -e 's#^J:##' -e 's#\\#/#g' <<< "$1")
+    #     echo "$line"
+    # }
+
+    #-------------------------------------------------------------------------#
+    # foxit reader
+    # - can't invoke by relative path (eg: ``$foxit ./dir/file.pdf`` won't work)
+    # - hence call by full absolute path
+    #-------------------------------------------------------------------------#
+    # (10/10/2014)
+    # - found out about ``cygpath``,very useful!
+    #-------------------------------------------------------------------------#
+    #| Need a function that converts cygdrive-bash directories into windows directory form...good exercise to work on for the future
+    foxit(){ # example usage: $foxit hw1/sol1.pdf
+        if [ -z $1 ]; then 
+            echo "Hey Tak, give an argument!"
+        else
+            #-----------------------------------------------------------------#
+            # first convert input to full path in windows filesystem form
+            #-----------------------------------------------------------------#
+            set $(history | tail -1 )
+            shift 2
+            path="$*"
+            foxitEx="/cygdrive/C/Program Files (x86)/Foxit Software/Foxit Reader/Foxit Reader.exe"
+
+            # echo $(cygpath -w "$PWD$1")
+            # echo $foxitEx $(cygpath -w "$PWD\\$1")
+            "$foxitEx" $(cygpath -w "$PWD\\$1") &
+
+            # echo $(cygpath "$path")
+            # "/cygdrive/C/Program Files (x86)/Foxit Software/Foxit Reader/Foxit Reader.exe" $1 & <- nope
+
+            # echo "/cygdrive/C/Program Files (x86)/Foxit Software/Foxit Reader/Foxit Reader.exe $PWD$1"
+            # echo "/cygdrive/C/Program Files (x86)/Foxit Software/Foxit Reader/Foxit Reader.exe" "$PWD$1" &
+            # "/cygdrive/C/Program Files (x86)/Foxit Software/Foxit Reader/Foxit Reader.exe" $pwd$1 &
+        fi
+    }    
+
+    #| when i want to pass full-file-path in windows directory system
+    winfoxit(){ # example usage: $winfoxit C:\Users\takanori\Dropbox\research_dropbox\latex\eecs545_gsi_f2014\hw6\sol6.pdf
+        if [ -z $1 ]; then 
+            echo "Hey Tak, give an argument!"
+        else
+            set $(history | tail -1 )
+            shift 2
+            path="$*"
+            foxitEx="/cygdrive/C/Program Files (x86)/Foxit Software/Foxit Reader/Foxit Reader.exe"
+
+            # echo $(cygpath -w "$PWD$1")
+            echo $foxitEx $(cygpath -w "$1")
+            "$foxitEx" $(cygpath -w "$1") &
+        fi
+    }    
+
+    winSumatra(){ # example usage: $winsumatra C:\Users\takanori\Dropbox\research_dropbox\latex\eecs545_gsi_f2014\hw6\sol6.pdf
+        set $(history | tail -1 )
+        shift 2
+        path="$*"
+        # echo "/cygdrive/C/Program Files (x86)/SumatraPDF/SumatraPDF.exe" $(cygpath -w "$1")
+        "/cygdrive/C/Program Files (x86)/SumatraPDF/SumatraPDF.exe" $(cygpath -w "$1") &
+    }    
+
+    winsublime(){
+        set $(history | tail -1 )
+        shift 2
+        path="$*"
+        # echo "/cygdrive/C/Program Files/Sublime Text 3/sublime_text.exe" $(cygpath -w "$1") 
+        "/cygdrive/C/Program Files/Sublime Text 3/sublime_text.exe" $(cygpath -w "$1") &
+    }   
 
 #=============================================================================#
 # Set env-vars
@@ -38,6 +125,10 @@ ____bookmark_ENVVARS____(){ echo "I'm just a bookmark"; }
 
   #| set path for my custom shell
   export PATH=$PATH:"${DIR_GIT}/configs/source/bash_config/bin"
+
+  # added to get conda from cygwin (2016-08-22)
+  PATH=/cygdrive/c/Users/takanori/Anaconda2:$PATH
+  PATH=/cygdrive/c/Users/takanori/Anaconda2/Scripts:$PATH
 
   #| for javac
   #| Ref: http://stackoverflow.com/questions/4918830/how-can-i-set-my-cygwin-path-to-find-javac
@@ -76,6 +167,41 @@ ____bookmark_convenience____(){ echo ""; }
   alias dspace2='du -h --max-depth=1 | sort -h'
   alias dspace3='du -ah --max-depth=1 | sort -h'
 
+  #http://stackoverflow.com/questions/1412423/display-only-files-and-folders-that-are-symbolic-links-in-tcsh-or-bash
+  alias ls_sym='ls -l $(find ./ -maxdepth 1 -type l -print)'
+
+  #http://stackoverflow.com/questions/17066250
+  alias print_time='echo $(date +"%Y-%m-%d_%H:%M:%S")'
+
+  #http://stackoverflow.com/questions/7110119 (history with no line-numbers)
+  alias hist_nonum='history | cut -c 8-'
+
+  #| added 08-24-2016 (16:11)
+  # remove color from stdou (wow, harder than i expected) 
+  #http://stackoverflow.com/questions/17998978/removing-colors-from-output
+  #http://unix.stackexchange.com/questions/111899/how-to-strip-color-codes-out-of-stdout-and-pipe-to-file-and-stdout
+  alias stripcolors='sed "s/\x1B\[\([0-9]\{1,2\}\(;[0-9]\{1,2\}\)\?\)\?[mGK]//g"'
+  tw_print_function_name(){
+    #=========================================================================#
+    # print function names defined here
+    # (since these don't show up in $ alias 
+    #=========================================================================#
+    # http://stackoverflow.com/questions/1184268/unix-sort-treatment-of-underscore-character
+    # LC_COLLATE=C will make underscore sorted as well
+    # (grep looks from () followed by {
+    # sed shaves off all the last character following "()" bracket
+    # http://stackoverflow.com/questions/3675169/how-to-shave-off-last-character-using-sed
+    cat ~/.bash_aliases | grep "\(\)(?=\{)" | env LC_COLLATE=C sort -f | \
+        sed "s/().*$/()/" | stripcolors
+  }
+
+  tw_csvhead(){
+    head -1 $1 | tr ',' '\n'
+  }
+
+  # http://stackoverflow.com/questions/1305237/how-to-list-variables-declared-in-script-in-bash
+  alias takPrintVars='( set -o posix ; set )'
+
 #=============================================================================#
 # ssh aliases
 #=============================================================================#
@@ -101,7 +227,7 @@ ____bookmark_background____(){ echo ""; }
 #=============================================================================#
 # my "go" aliases to move around frequently used directories
 #=============================================================================#
-___bm_aliases____(){ echo "I'm just a bookmark for sublimetext"; }
+____bookmark_go_aliases____(){ echo "I'm just a bookmark for sublimetext"; }
   alias godrop='cd "${HOME_WIN}/Dropbox"'
   alias gogit='cd "${HOME_WIN}/Dropbox/git"'
   alias godrive='cd "${HOME_WIN}/Google Drive"'
@@ -117,19 +243,112 @@ ___bm_aliases____(){ echo "I'm just a bookmark for sublimetext"; }
   alias gonotes='cd ${HOME_WIN}/Dropbox/git/coding_notes"'
   alias gosnippets='cd "${HOME_WIN}/Dropbox/git/snippet"'
 
+  # location of the python modules from anacaonda
+  alias gopymodules='cd "${HOME_WIN}/Anaconda2/Lib/site-packages"'
+  alias golocalpymod='cd "${HOME_WIN}\\AppData\\Roaming\\Python\\Python27\\site-packages"'
+  #    oh neat, double-backslash also recognized in cygwin ^^^^^^^^^^^^^^^^
 
-  
+  # sublime config location
+  alias gosublime='cd "${HOME_WIN}\AppData\Roaming\Sublime Text 3\Packages\User"'
 
-#=========================================================================#
-# Softwares installed on windows machine 09-02-2016 (15:21)
-#=========================================================================#
+#=============================================================================#
+# handling clipboards....
+#=============================================================================#
+____bookmark_clipboards____(){ echo "" ; }
+
+  # http://stackoverflow.com/questions/5130968/how-can-i-copy-the-output-of-a-command-directly-into-my-clipboard
+  alias c="xclip -selection clipboard" 
+  alias v="xclip -o -selection clipboard"
+
+  #-------------------------------------------------------------------------#
+  # Neat function I grabbed from:
+  # http://madebynathan.com/2011/10/04/a-nicer-way-to-use-xclip/
+  #-------------------------------------------------------------------------#
+  cb() {
+    local _scs_col="\e[0;32m"; local _wrn_col='\e[1;31m'; local _trn_col='\e[0;33m'
+    # Check that xclip is installed.
+    if ! type xclip > /dev/null 2>&1; then
+      echo -e "$_wrn_col""You must have the 'xclip' program installed.\e[0m"
+    # Check user is not root (root doesn't have access to user xorg server)
+    elif [[ "$USER" == "root" ]]; then
+      echo -e "$_wrn_col""Must be regular user (not root) to copy a file to the clipboard.\e[0m"
+    else
+      # If no tty, data should be available on stdin
+      if ! [[ "$( tty )" == /dev/* ]]; then
+        input="$(< /dev/stdin)"
+      # Else, fetch input from params
+      else
+        input="$*"
+      fi
+      if [ -z "$input" ]; then  # If no input, print usage message.
+        echo "Copies a string to the clipboard."
+        echo "Usage: cb <string>"
+        echo "       echo <string> | cb"
+      else
+        # Copy input to clipboard
+        echo -n "$input" | xclip -selection c
+        # Truncate text for status
+        if [ ${#input} -gt 80 ]; then input="$(echo $input | cut -c1-80)$_trn_col...\e[0m"; fi
+        # Print status.
+        echo -e "$_scs_col""Copied to clipboard:\e[0m $input"
+      fi
+    fi
+  }
+
+  #-------------------------------------------------------------------------#
+  # Aliases / functions leveraging the cb() function
+  #-------------------------------------------------------------------------#
+  function cbf() { cat "$1" | cb; }           # Copy contents of a file
+  alias cbssh="cbf ~/.ssh/id_rsa.pub"         # Copy SSH public key
+  alias cbwd="pwd | cb"                       # Copy current working directory
+  alias cbhs="cat $HISTFILE | tail -n 1 | cb" # Copy most recent command in bash history
+
+#=============================================================================#
+# Dealing with **colors**
+#=============================================================================#
+____bookmark_colors____(){ echo "" ; }
+
+  #| added 08-24-2016 (16:11)
+  # remove color from stdou (wow, harder than i expected) 
+  #http://stackoverflow.com/questions/17998978/removing-colors-from-output
+  #http://unix.stackexchange.com/questions/111899/how-to-strip-color-codes-out-of-stdout-and-pipe-to-file-and-stdout
+  alias stripcolors='sed "s/\x1B\[\([0-9]\{1,2\}\(;[0-9]\{1,2\}\)\?\)\?[mGK]//g"'
+
+  #===========================================================================#
+  # git related
+  #===========================================================================#
+  #http://stackoverflow.com/questions/7066325/list-git-aliases
+  alias git_alias='git config --get-regexp alias | pygmentize -l sh'
+
+  #===========================================================================#
+  # to get colored output from ``less`` on scripts
+  # http://superuser.com/questions/117841/get-colors-in-less-command
+  #===========================================================================#
+  myless(){
+    pygmentize $1 | less
+  }
+
+  pyg_sh(){
+    # pygmentize shell code
+    pygmentize -l sh $1
+  }
+
+  pyg_py(){
+    # pygmentize python code
+    pygmentize -l python $1
+  }
+
+#=============================================================================#
+# wrapper aliases to invoke programs from cygwin 09-02-2016 (15:21)
+#=============================================================================#
+____bookmark_winprogram____(){ echo "" ; }
   alias sumatra='"/cygdrive/C/Program Files (x86)/SumatraPDF/SumatraPDF.exe"'
   alias chrome='"/cygdrive/C/Program Files (x86)/Google/Chrome/Application/chrome.exe"'
   alias google-chrome='"/cygdrive/C/Program Files (x86)/Google/Chrome/Application/chrome.exe"'
   alias subl='"/cygdrive/C/Program Files/Sublime Text 3/sublime_text.exe"'
 
 #*****************************************************************************#
-#                    my data-science training stuffs (deprecated)
+# my data-science training stuffs (obsolete...)
 #*****************************************************************************#
   # #| directory in windows form
   # export WINDIR_DS="C:/Users/takanori/Dropbox/git/my_notebook/data_science_training"
@@ -188,114 +407,7 @@ ___bm_aliases____(){ echo "I'm just a bookmark for sublimetext"; }
   #unset WINDIR_DS
   #unset DIR_DS
 
-#==============================================================================#
-# convert windows directory to cygwin type
-#------------------------------------------------------------------------------#
-# ref: 
-# http://stackoverflow.com/questions/19999562/bash-script-to-convert-windows-path-to-linux-path
-# http://stackoverflow.com/questions/11814374/shell-reading-backslash-in-command-line-parameters
-#==============================================================================#
-    cdwin(){
-        set $(history | tail -1 )
-        shift 2
-        path="$*"
-        cd $(cygpath "$path") #<- never knew about ``cygpath`` command
-    }
 
-    #| deprecated...I'd have to include quotes to the argument everytime using below, which is tedious
-    # cdwin(){
-    #     echo "I receive the variable --> $1"
-    #     line=$(sed -e 's#^J:##' -e 's#\\#/#g' <<< "$1")
-    #     echo "$line"
-    # }
-
-
-#==============================================================================#
-# foxit reader
-# - can't invoke by relative path (eg: ``$foxit ./dir/file.pdf`` won't work)
-# - hence call by full absolute path
-#------------------------------------------------------------------------------#
-# (10/10/2014)
-# - found out about ``$cygpath``,,,very useful!
-#==============================================================================#
-    #| Need a function that converts cygdrive-bash directories into windows directory form...good exercise to work on for the future
-    foxit(){ # example usage: $foxit hw1/sol1.pdf
-        if [ -z $1 ]; then 
-            echo "Hey Tak, give an argument!"
-        else
-            #==========================================================================#
-            # first convert input to full path in windows filesystem form
-            #==========================================================================#
-            set $(history | tail -1 )
-            shift 2
-            path="$*"
-            foxitEx="/cygdrive/C/Program Files (x86)/Foxit Software/Foxit Reader/Foxit Reader.exe"
-
-            # echo $(cygpath -w "$PWD$1")
-            # echo $foxitEx $(cygpath -w "$PWD\\$1")
-            "$foxitEx" $(cygpath -w "$PWD\\$1") &
-
-            # echo $(cygpath "$path")
-            # "/cygdrive/C/Program Files (x86)/Foxit Software/Foxit Reader/Foxit Reader.exe" $1 & <- nope
-
-            # echo "/cygdrive/C/Program Files (x86)/Foxit Software/Foxit Reader/Foxit Reader.exe $PWD$1"
-            # echo "/cygdrive/C/Program Files (x86)/Foxit Software/Foxit Reader/Foxit Reader.exe" "$PWD$1" &
-            # "/cygdrive/C/Program Files (x86)/Foxit Software/Foxit Reader/Foxit Reader.exe" $pwd$1 &
-        fi
-    }    
-
-    #| when i want to pass full-file-path in windows directory system
-    winfoxit(){ # example usage: $winfoxit C:\Users\takanori\Dropbox\research_dropbox\latex\eecs545_gsi_f2014\hw6\sol6.pdf
-        if [ -z $1 ]; then 
-            echo "Hey Tak, give an argument!"
-        else
-            set $(history | tail -1 )
-            shift 2
-            path="$*"
-            foxitEx="/cygdrive/C/Program Files (x86)/Foxit Software/Foxit Reader/Foxit Reader.exe"
-
-            # echo $(cygpath -w "$PWD$1")
-            echo $foxitEx $(cygpath -w "$1")
-            "$foxitEx" $(cygpath -w "$1") &
-        fi
-    }    
-
-    winSumatra(){ # example usage: $winsumatra C:\Users\takanori\Dropbox\research_dropbox\latex\eecs545_gsi_f2014\hw6\sol6.pdf
-        set $(history | tail -1 )
-        shift 2
-        path="$*"
-        # echo "/cygdrive/C/Program Files (x86)/SumatraPDF/SumatraPDF.exe" $(cygpath -w "$1")
-        "/cygdrive/C/Program Files (x86)/SumatraPDF/SumatraPDF.exe" $(cygpath -w "$1") &
-    }    
-
-    winsublime(){
-        set $(history | tail -1 )
-        shift 2
-        path="$*"
-        # echo "/cygdrive/C/Program Files/Sublime Text 3/sublime_text.exe" $(cygpath -w "$1") 
-        "/cygdrive/C/Program Files/Sublime Text 3/sublime_text.exe" $(cygpath -w "$1") &
-    }   
-
-
-#==============================================================================#
-# (01/19/2015) open config files
-#==============================================================================#
-    #| dropbox directory in windows form
-    export WINDIR_DB="C:/Users/takanori/Dropbox"
-
-    alias mod-bash="sublime $WINDIR_DB/git/configs_master/cygwin/.bash_aliases"
-    alias mod-ahk="sublime $WINDIR_DB/git/configs_master/autohotkey/myHotKeys.ahk"
-    alias mod-myhotstring="sublime $WINDIR_DB/git/configs_master/autohotkey/myHotStrings.ahk"
-
-#=============================================================================#
-# post july2015
-#=============================================================================#
-    # http://stackoverflow.com/questions/1305237/how-to-list-variables-declared-in-script-in-bash
-    alias takPrintVars='( set -o posix ; set )'
-
-# added to get conda from cygwin (2016-08-22)
-PATH=/cygdrive/c/Users/takanori/Anaconda2:$PATH
-PATH=/cygdrive/c/Users/takanori/Anaconda2/Scripts:$PATH
 
 #=============================================================================#
 # SNIPPETS to print out (as a self reminder)
