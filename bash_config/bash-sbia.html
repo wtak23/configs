@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>1. SBIA Workstation (bash-sbia.rst) &mdash; My Configs</title>
+  <title>1. SBIA Workstation (bash-sbia.rst)</title>
   
 
   
@@ -32,7 +32,7 @@
   
 
   
-    <link rel="top" title="My Configs" href="../index.html"/>
+    <link rel="top" title="" href="../index.html"/>
         <link rel="up" title="Bash config files (bash_config.rst)" href="../bash_config.html"/>
         <link rel="next" title="2. Cygwin setup (bash-cygwin.rst)" href="bash-cygwin.html"/>
         <link rel="prev" title="Bash config files (bash_config.rst)" href="../bash_config.html"/> 
@@ -44,7 +44,6 @@
 
 <body class="wy-body-for-nav" role="document">
 
-   
   <div class="wy-grid-for-nav">
 
     
@@ -143,6 +142,12 @@
 <li class="toctree-l4"><a class="reference internal" href="bash-cygwin.html#git-code-completion">2.5.2. git code completion</a></li>
 </ul>
 </li>
+<li class="toctree-l3"><a class="reference internal" href="bash-cygwin.html#random-overflows">2.6. Random overflows</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="bash-cygwin.html#to-get-git-gui-working">2.6.1. to get git gui working...</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bash-cygwin.html#xming-setup">2.6.2. xming setup</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bash-cygwin.html#disable-annoying-bell-sound-in-cygwin">2.6.3. disable annoying bell sound in cygwin</a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="bash-defaults.html">3. Default bash config files (<code class="docutils literal"><span class="pre">bash-defaults.rst</span></code>)</a><ul>
@@ -217,12 +222,6 @@
 <li class="toctree-l4"><a class="reference internal" href="../windows/win-xps8900.html#office">3.2.3. Office</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="../windows/win-xps8900.html#helpers">3.3. helpers...</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../windows/win-xps8900.html#to-get-git-gui-working">3.3.1. to get git gui working...</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../windows/win-xps8900.html#xming-setup">3.3.2. xming setup</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../windows/win-xps8900.html#disable-annoying-bell-sound-in-cygwin">3.3.3. disable annoying bell sound in cygwin</a></li>
-</ul>
-</li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../windows/win-asus.html">4. ASUS laptop settings (<code class="docutils literal"><span class="pre">win-asus.rst</span></code>)</a><ul>
@@ -231,14 +230,6 @@
 <li class="toctree-l4"><a class="reference internal" href="../windows/win-asus.html#cygwin-configs">4.2.1. cygwin configs</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../windows/win-asus.html#sublime-text">4.2.2. Sublime text</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../windows/win-asus.html#office">4.2.3. Office</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="../windows/win-asus.html#sublime-text-setup">4.3. Sublime-Text Setup</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../windows/win-asus.html#packages-installed">4.3.1. Packages Installed</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="../windows/win-asus.html#helpers">4.4. helpers...</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../windows/win-asus.html#to-get-git-gui-working">4.4.1. to get git gui working...</a></li>
 </ul>
 </li>
 </ul>
@@ -316,10 +307,8 @@
 
       
       <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
-        
-          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="../index.html">My Configs</a>
-        
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../index.html">My Configs</a>
       </nav>
 
 
@@ -332,32 +321,20 @@
 
 
 
-
-
-
-
-
-
-
-
 <div role="navigation" aria-label="breadcrumbs navigation">
   <ul class="wy-breadcrumbs">
-    
-      <li><a href="../index.html">Docs</a> &raquo;</li>
-        
+    <li><a href="../index.html">Docs</a> &raquo;</li>
+      
           <li><a href="../bash_config.html">Bash config files (<code class="docutils literal"><span class="pre">bash_config.rst</span></code>)</a> &raquo;</li>
-        
-      <li>1. SBIA Workstation (<code class="docutils literal"><span class="pre">bash-sbia.rst</span></code>)</li>
-    
-    
+      
+    <li>1. SBIA Workstation (<code class="docutils literal"><span class="pre">bash-sbia.rst</span></code>)</li>
       <li class="wy-breadcrumbs-aside">
         
-            
+          
             <a href="../_sources/bash_config/bash-sbia.txt" rel="nofollow"> View page source</a>
           
         
       </li>
-    
   </ul>
   <hr/>
 </div>
@@ -1021,7 +998,9 @@ ln -s <span class="s2">&quot;</span><span class="si">${</span><span class="nv">S
 620
 621
 622
-623</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="c1">#*****************************************************************************#</span>
+623
+624
+625</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="c1">#*****************************************************************************#</span>
 <span class="c1"># Did a cleanup on 09-02-2016</span>
 <span class="c1"># (the indentation is to allow code-folding in sublime-text)</span>
 <span class="c1">#*****************************************************************************#</span>
@@ -1029,6 +1008,8 @@ ln -s <span class="s2">&quot;</span><span class="si">${</span><span class="nv">S
 
 <span class="c1">#=============================================================================#</span>
 <span class="c1"># Set env-vars</span>
+<span class="c1">#-----------------------------------------------------------------------------#</span>
+<span class="c1"># http://serverfault.com/questions/606/what-is-the-best-way-to-set-an-environmet-variable-in-bashrc</span>
 <span class="c1">#=============================================================================#</span>
 ____bookmark_ENVVARS____<span class="o">(){</span> <span class="nb">echo</span> <span class="s2">&quot;I&#39;m just a bookmark&quot;</span><span class="p">;</span> <span class="o">}</span>
   <span class="c1"># added by Anaconda2 4.0.0 installer</span>
@@ -1125,7 +1106,7 @@ ____bookmark_default_options____<span class="o">(){</span> <span class="nb">echo
   <span class="nb">alias</span> <span class="nv">gcc</span><span class="o">=</span><span class="s1">&#39;/sbia/sbiasfw/external/gcc/4.7.1/bin/gcc&#39;</span>
 
 <span class="c1">#=============================================================================#</span>
-<span class="c1"># random convenience commands (most will go here)</span>
+<span class="c1"># General convenience commands (most will go here)</span>
 <span class="c1">#=============================================================================#</span>
 ____bookmark_convenience____<span class="o">(){</span> <span class="nb">echo</span> <span class="s2">&quot;&quot;</span><span class="p">;</span> <span class="o">}</span>
   <span class="nb">alias</span> <span class="nv">cpucheck</span><span class="o">=</span><span class="s1">&#39;ps uU takanori --sort %cpu&#39;</span>
@@ -1185,7 +1166,7 @@ ____bookmark_background____<span class="o">(){</span> <span class="nb">echo</spa
   <span class="nb">alias</span> <span class="nv">matlab1</span><span class="o">=</span><span class="s1">&#39;matlab &amp;&#39;</span>
 
 <span class="c1">#=============================================================================#</span>
-<span class="c1"># my *go* commands to move around frequently used directories</span>
+<span class="c1"># my &quot;go&quot; aliases to move around frequently used directories</span>
 <span class="c1">#=============================================================================#</span>
 ____bookmark_go____<span class="o">(){</span> <span class="nb">echo</span> <span class="s2">&quot;&quot;</span><span class="p">;</span> <span class="o">}</span>
   <span class="nb">alias</span> <span class="nv">godrop</span><span class="o">=</span><span class="s1">&#39;cd ~/Dropbox&#39;</span>

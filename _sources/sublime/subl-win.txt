@@ -1,3 +1,5 @@
+.. _subl-win:
+
 Windows setup (``subl-win.rst``)
 """"""""""""""""""""""""""""""""
 .. contents:: `Contents`
@@ -9,6 +11,7 @@ Windows setup (``subl-win.rst``)
   Also see `<../windows.html>`_
 
 
+.. _subl-win-symlink:
 
 ########
 Symlinks

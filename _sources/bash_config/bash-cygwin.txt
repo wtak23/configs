@@ -1,3 +1,5 @@
+.. _bash-cygwin:
+
 Cygwin setup (``bash-cygwin.rst``)
 """"""""""""""""""""""""""""""""""
 ``bash_cygwin.rst``
@@ -5,6 +7,8 @@ Cygwin setup (``bash-cygwin.rst``)
 .. contents:: `Contents`
    :depth: 2
    :local:
+
+.. _bash-cygwin-symlink:
 
 #############
 symlink setup
@@ -18,15 +22,30 @@ symlink setup
         mklink SOURCE_FILE TARGET_FILE # for individual files
         mklink /d SOURCE_DIR TARGET_DIR # for entire directory
 
-Below ran on ASUS on 09-01-2016 (17:57)
+.. admonition:: CRITICAL CHANGE (2016-09-04)
 
-::
-  
-  mklink "c:\cygwin64\home\takanori\.gitignore" "C:\Users\takanori\Dropbox\git\configs\source\bash_config\cygwin\.gitignore"
-  mklink "c:\cygwin64\home\takanori\.gitconfig" "C:\Users\takanori\Dropbox\git\configs\source\bash_config\cygwin\.gitconfig"
-  mklink "c:\cygwin64\home\takanori\.bash_aliases" "C:\Users\takanori\Dropbox\git\configs\source\bash_config\cygwin\.bash_aliases"
-  mklink "c:\cygwin64\home\takanori\.bashrc" "C:\Users\takanori\Dropbox\git\configs\source\bash_config\cygwin\.bashrc"
-  mklink "c:\cygwin64\home\takanori\.emacs" "C:\Users\takanori\Dropbox\git\configs\source\bash_config\cygwin\.emacs"
+    Changed ``$HOME`` in cygwin to my actual windows home directory in ``.bashrc``. Target of the symlink below have now changed.
+
+    **Updated version**
+
+    ::
+
+        mklink "c:Users\takanori\.gitignore" "C:\Users\takanori\Dropbox\git\configs\source\bash_config\cygwin\.gitignore"
+        mklink "c:Users\takanori\.gitconfig" "C:\Users\takanori\Dropbox\git\configs\source\bash_config\cygwin\.gitconfig"
+        mklink "c:Users\takanori\.bash_aliases" "C:\Users\takanori\Dropbox\git\configs\source\bash_config\cygwin\.bash_aliases"
+        mklink "c:Users\takanori\.bashrc" "C:\Users\takanori\Dropbox\git\configs\source\bash_config\cygwin\.bashrc"
+        mklink "c:Users\takanori\.inputrc" "C:\Users\takanori\Dropbox\git\configs\source\bash_config\cygwin\.inputrc"
+        mklink "c:Users\takanori\.emacs" "C:\Users\takanori\Dropbox\git\configs\source\bash_config\cygwin\.emacs"
+
+    **(old version)** Below ran on ASUS on 09-01-2016 (17:57)
+
+    ::
+      
+      mklink "c:\cygwin64\home\takanori\.gitignore" "C:\Users\takanori\Dropbox\git\configs\source\bash_config\cygwin\.gitignore"
+      mklink "c:\cygwin64\home\takanori\.gitconfig" "C:\Users\takanori\Dropbox\git\configs\source\bash_config\cygwin\.gitconfig"
+      mklink "c:\cygwin64\home\takanori\.bash_aliases" "C:\Users\takanori\Dropbox\git\configs\source\bash_config\cygwin\.bash_aliases"
+      mklink "c:\cygwin64\home\takanori\.bashrc" "C:\Users\takanori\Dropbox\git\configs\source\bash_config\cygwin\.bashrc"
+      mklink "c:\cygwin64\home\takanori\.emacs" "C:\Users\takanori\Dropbox\git\configs\source\bash_config\cygwin\.emacs"
 
 
 
@@ -125,8 +144,54 @@ github sshkey
 *************
 https://help.github.com/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent/
 
+.. code-block:: bash
+
+    ssh-keygen -t rsa -b 4096 -C takwatanabe2004@gmail.com
 *******************
 git code completion
 *******************
 Copy and paste the file ``git`` under ``C:\cygwin64\etc\bash_completion.d``
-to enable code completion with ``<tab>`` for git commands.    
+to enable code completion with ``<tab>`` for git commands.
+
+################
+Random overflows
+################
+- http://stackoverflow.com/questions/9637601/open-cygwin-at-a-specific-folder
+
+.. code-block:: bash
+
+    apt-cyg install chere
+    chere -i -t mintty # <- run as admin
+
+*************************
+to get git gui working...
+*************************
+
+http://stackoverflow.com/questions/9393462/cannot-launch-git-gui-using-cygwin-on-windows    
+
+Just do
+
+.. code:: bash
+
+    apt-cyg install xinit
+    export DISPLAY=:0.0
+
+***********
+xming setup
+***********
+http://superuser.com/questions/750434/font-size-with-xming-x11-forwarding-too-small
+
+.. code-block:: none
+
+    # font size a bit too small...
+    "C:\Program Files (x86)\Xming\Xming.exe" :0 -clipboard -multiwindow"
+
+    # increase 
+    "C:\Program Files (x86)\Xming\Xming.exe" :0 -clipboard -multiwindow -dpi 108"
+
+*************************************
+disable annoying bell sound in cygwin
+*************************************
+http://stackoverflow.com/questions/1731700/how-do-i-turn-the-beep-slash-bell-off-in-cygwin
+
+Add ``set bell-style none`` to ``.inputrc`` in your home directory    
