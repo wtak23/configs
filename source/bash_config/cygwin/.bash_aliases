@@ -115,6 +115,15 @@ ____bookmark_windows_specific_configs____(){ echo "windows specific" ; }
     }   
 
 #=============================================================================#
+# wrapper aliases to invoke programs from cygwin 09-02-2016 (15:21)
+#=============================================================================#
+____bookmark_winprogram____(){ echo "" ; }
+  alias sumatra='"/cygdrive/C/Program Files (x86)/SumatraPDF/SumatraPDF.exe"'
+  alias chrome='"/cygdrive/C/Program Files (x86)/Google/Chrome/Application/chrome.exe"'
+  alias google-chrome='"/cygdrive/C/Program Files (x86)/Google/Chrome/Application/chrome.exe"'
+  alias subl='"/cygdrive/C/Program Files/Sublime Text 3/sublime_text.exe"'
+
+#=============================================================================#
 # Set env-vars
 #-----------------------------------------------------------------------------#
 # http://serverfault.com/questions/606/what-is-the-best-way-to-set-an-environmet-variable-in-bashrc
@@ -339,13 +348,64 @@ ____bookmark_colors____(){ echo "" ; }
   }
 
 #=============================================================================#
-# wrapper aliases to invoke programs from cygwin 09-02-2016 (15:21)
+# Git related functions
 #=============================================================================#
-____bookmark_winprogram____(){ echo "" ; }
-  alias sumatra='"/cygdrive/C/Program Files (x86)/SumatraPDF/SumatraPDF.exe"'
-  alias chrome='"/cygdrive/C/Program Files (x86)/Google/Chrome/Application/chrome.exe"'
-  alias google-chrome='"/cygdrive/C/Program Files (x86)/Google/Chrome/Application/chrome.exe"'
-  alias subl='"/cygdrive/C/Program Files/Sublime Text 3/sublime_text.exe"'
+____bookmark_git____(){ echo "" ; }
+  git_anonymize(){
+    git config user.name "noname"
+    git config user.email noname@example.com
+  }
+  alias twsphinx_check='google-chrome build/html/index.html' # 08-17-2016 (13:33)
+  alias twalias='alias | pygmentize -l sh' # 08-17-2016 (13:37)
+
+  git_clear_author_history(){
+    git filter-branch -f --env-filter '
+
+    CORRECT_NAME="your name"
+    CORRECT_EMAIL="your_email@example.com"
+
+    export GIT_COMMITTER_NAME="$CORRECT_NAME"
+    export GIT_COMMITTER_EMAIL="$CORRECT_EMAIL"
+
+    export GIT_AUTHOR_NAME="$CORRECT_NAME"
+    export GIT_AUTHOR_EMAIL="$CORRECT_EMAIL"
+    ' --tag-name-filter cat -- --branches --tags
+  }
+
+  git_author_history_tak(){
+    git filter-branch -f --env-filter '
+
+    CORRECT_NAME="Takanori Watanabe (sbia-pc125)"
+    CORRECT_EMAIL="Takanori.Watanabe@uphs.upenn.edu"
+
+    export GIT_COMMITTER_NAME="$CORRECT_NAME"
+    export GIT_COMMITTER_EMAIL="$CORRECT_EMAIL"
+
+    export GIT_AUTHOR_NAME="$CORRECT_NAME"
+    export GIT_AUTHOR_EMAIL="$CORRECT_EMAIL"
+    ' --tag-name-filter cat -- --branches --tags
+  }
+
+#=============================================================================#
+# Sublime and Sphinx related
+#=============================================================================#
+____bookmark_subl_sphinx____(){ echo "" ; }
+
+  #alias open_sphinx_html='firefox _build/html/index.html'
+
+  subl_(){ # open both snippets and configs
+    subl -n
+    subl -a ~/Dropbox/git/configs/
+    subl -a ~/Dropbox/git/snippet/
+    subl -a ~/Dropbox/git/coding_notes/
+  }  
+
+  # modify snippets via sublime text
+  alias subl_snip='subl -n -a ~/Dropbox/git/snippet'
+
+  # to publish in github
+  alias nojekyll='touch .nojekyll'
+
 
 #*****************************************************************************#
 # my data-science training stuffs (obsolete...)
