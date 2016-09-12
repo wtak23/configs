@@ -19,11 +19,16 @@ make clean
 # # cp -r ./source/_templates ./source/generated/generated/
 make html
 
+#| not 100% happy with this approach in SO:
+#| http://stackoverflow.com/questions/14345922/how-to-do-a-link-to-a-file-in-rst-with-sphinx
+#| so i'm just gonna manually copy and paste pdf files to the build directory here
+cp -r ./source/_static/configs.pdf ./build/html/
+
+
+exit 0
 # --- browse result in chrome? --- #
-BROWSE=true
-
-if [[ ! BROWSE ]]; then exit 0; fi
-
+# BROWSE=false
+# if [[ ! BROWSE ]]; then exit 0; fi
 if [[ $(uname -o) == 'Cygwin' ]]; then
   "/cygdrive/C/Program Files (x86)/Google/Chrome/Application/chrome.exe" \
       $(cygpath -w ${PWD}/build/html/index.html)

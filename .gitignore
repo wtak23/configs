@@ -7,3 +7,4 @@ source/*/generated/*.rst
 debug.log
 *.sublime-workspace
 ignore_dir/
+configs.pdf

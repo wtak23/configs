@@ -58,7 +58,8 @@
 		"env",
 		"env3",
 		"build",
-		"build_published"
+		"build_published",
+		"ignore_dir"
 	],
 	"font_size": 8,
 	"gutter": true,
