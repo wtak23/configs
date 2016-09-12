@@ -44,6 +44,7 @@
 
 <body class="wy-body-for-nav" role="document">
 
+   
   <div class="wy-grid-for-nav">
 
     
@@ -77,7 +78,8 @@
           
             
             
-                <ul class="current">
+                <p class="caption"><span class="caption-text">Table of Contents</span></p>
+<ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../python.html">Python (<code class="docutils literal"><span class="pre">python.rst</span></code>)</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../python/py-sbia.html">1. sbia workstation (<code class="docutils literal"><span class="pre">py-sbia.rst</span></code>)</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../python/py-sbia.html#symlink-summary">1.1. symlink summary</a></li>
@@ -307,8 +309,10 @@
 
       
       <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
-        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-        <a href="../index.html">My Configs</a>
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">My Configs</a>
+        
       </nav>
 
 
@@ -321,20 +325,32 @@
 
 
 
+
+
+
+
+
+
+
+
 <div role="navigation" aria-label="breadcrumbs navigation">
   <ul class="wy-breadcrumbs">
-    <li><a href="../index.html">Docs</a> &raquo;</li>
-      
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
           <li><a href="../sublime.html">Sublime Text Setup (<code class="docutils literal"><span class="pre">sublime.rst</span></code>)</a> &raquo;</li>
-      
-    <li>2. Windows setup (<code class="docutils literal"><span class="pre">subl-win.rst</span></code>)</li>
+        
+      <li>2. Windows setup (<code class="docutils literal"><span class="pre">subl-win.rst</span></code>)</li>
+    
+    
       <li class="wy-breadcrumbs-aside">
         
-          
+            
             <a href="../_sources/sublime/subl-win.txt" rel="nofollow"> View page source</a>
           
         
       </li>
+    
   </ul>
   <hr/>
 </div>
@@ -438,7 +454,9 @@ mklink &quot;c:\users\takanori\AppData\Roaming\Sublime Text 3\Packages\User\add_
 31
 32
 33
-34</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="p">{</span>
+34
+35
+36</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="p">{</span>
 	<span class="nt">&quot;bootstrapped&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
 	<span class="nt">&quot;in_process_packages&quot;</span><span class="p">:</span>
 	<span class="p">[</span>
@@ -446,6 +464,7 @@ mklink &quot;c:\users\takanori\AppData\Roaming\Sublime Text 3\Packages\User\add_
 	<span class="nt">&quot;installed_packages&quot;</span><span class="p">:</span>
 	<span class="p">[</span>
 		<span class="s2">&quot;Alignment&quot;</span><span class="p">,</span>
+		<span class="s2">&quot;AlignTab&quot;</span><span class="p">,</span>
 		<span class="s2">&quot;All Autocomplete&quot;</span><span class="p">,</span>
 		<span class="s2">&quot;BracketHighlighter&quot;</span><span class="p">,</span>
 		<span class="s2">&quot;BufferScroll&quot;</span><span class="p">,</span>
@@ -455,6 +474,7 @@ mklink &quot;c:\users\takanori\AppData\Roaming\Sublime Text 3\Packages\User\add_
 		<span class="s2">&quot;Fold Python&quot;</span><span class="p">,</span>
 		<span class="s2">&quot;Git&quot;</span><span class="p">,</span>
 		<span class="s2">&quot;GitGutter&quot;</span><span class="p">,</span>
+		<span class="s2">&quot;InsertDate&quot;</span><span class="p">,</span>
 		<span class="s2">&quot;Jinja2&quot;</span><span class="p">,</span>
 		<span class="s2">&quot;LaTeXing&quot;</span><span class="p">,</span>
 		<span class="s2">&quot;LaTeXTools&quot;</span><span class="p">,</span>
@@ -605,17 +625,15 @@ mklink &quot;c:\users\takanori\AppData\Roaming\Sublime Text 3\Packages\User\add_
 47
 48
 49
-50
-51</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="gd">--- Package Control_asus.sublime-settings</span>
+50</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="gd">--- Package Control_asus.sublime-settings</span>
 <span class="gi">+++ Package Control_sbia.sublime-settings</span>
-<span class="gu">@@ -5,28 +5,44 @@</span>
+<span class="gu">@@ -5,28 +5,43 @@</span>
  	],
  	&quot;installed_packages&quot;:
  	[
 <span class="gd">-		&quot;Alignment&quot;,</span>
 <span class="gi">+		&quot;AdvancedNewFile&quot;,</span>
  		&quot;All Autocomplete&quot;,
-<span class="gi">+		&quot;Anaconda&quot;,</span>
 <span class="gi">+		&quot;Better Completion&quot;,</span>
 <span class="gi">+		&quot;BetterFindBuffer&quot;,</span>
  		&quot;BracketHighlighter&quot;,

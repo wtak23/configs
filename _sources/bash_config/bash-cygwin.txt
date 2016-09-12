@@ -67,8 +67,6 @@ bashrc content
 ####################
 bash_aliases content
 ####################
-.. todo:: clean this unholy mess...
-
 `Github <https://github.com/wtak23/configs/blob/master/source/bash_config/cygwin/.bash_aliases>`__
 
 .. code-block:: rst

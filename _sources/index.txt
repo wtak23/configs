@@ -1,10 +1,11 @@
 Computer Setup Notes
 ====================
-Personal note for keeping track of my computer **configs**, which I sync using symlinks.
-
-Also enjoy being able to version control all of my ``rc`` files.
-
-For source files, go to https://github.com/wtak23/configs/tree/master/source
+.. admonition:: Repository Overview
+   
+    - Personal note for keeping track of my computer **configs**, which I sync using symlinks.
+    - Also enjoy being able to version control all of my ``rc`` files.
+    - For source files, go to https://github.com/wtak23/configs/tree/master/source
+    - `pdf version <./_static/configs.pdf>`__
 
 .. note:: 
 
@@ -15,6 +16,8 @@ For source files, go to https://github.com/wtak23/configs/tree/master/source
 
 .. toctree::
     :maxdepth: 2
+    :name:
+    :caption: Table of Contents
 
     python.rst
     bash_config.rst
