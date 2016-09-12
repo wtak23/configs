@@ -2,10 +2,10 @@
     <content><![CDATA[
 .. csv-table:: ${1:OPTIONAL-TITLE}
     :header: ${2:OPTIONAL-COL-HEADER}
-    :widths: 20,70
+    :widths: $3
     :delim: |
 
-    $3
+    $4
 ]]></content>
     <tabTrigger>csv</tabTrigger>
     <scope>text.restructuredtext</scope>

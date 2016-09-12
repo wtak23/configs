@@ -106,7 +106,7 @@
 	"smart_indent": true,
 	"soda_folder_icons": false,
 	"tab_completion": true,
-	"tab_size": 2,
+	"tab_size": 4,
 	"theme": "Soda Light.sublime-theme",
 	"translate_tabs_to_spaces": true,
 	"tree_animation_enabled": true,

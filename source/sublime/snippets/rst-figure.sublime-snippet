@@ -1,12 +1,14 @@
 <snippet>
     <content><![CDATA[
-.. image:: /_static/img/${1:image-link}
+.. figure:: ${1:image-link}
     :align: center
-    :scale: ${2:100} %
+
+    ${2:caption}
 ]]></content>
     <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
-    <tabTrigger>image</tabTrigger>
+    <tabTrigger>figure</tabTrigger>
     <!-- Optional: Set a scope to limit where the snippet will trigger -->
     <scope>text.restructuredtext</scope>
 </snippet>
+<!-- https://wtak23.github.io/snippets/cs-rst.directive-test.html#figure -->
 <!--  https://gist.github.com/iambibhas/4705378 <- snippet scope -->

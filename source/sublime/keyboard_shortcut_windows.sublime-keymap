@@ -1,12 +1,34 @@
 [   
+    //=======================================================================//
+    // rst stuffs
+    //=======================================================================//
+    {
+        "keys": ["alt+r"], "command": "strongemphasis", "context":
+          [
+            { "key": "selector", "operator": "equal", "operand": "text.restructuredtext" }
+          ]
+    },
+    {
+        "keys": ["alt+w"], "command": "literal", "context":
+          [
+            { "key": "selector", "operator": "equal", "operand": "text.restructuredtext" }
+          ]
+    },
+    {
+            "keys": ["alt+a"], "command": "emphasis", "context":
+              [
+                { "key": "selector", "operator": "equal", "operand": "text.restructuredtext" }
+              ]
+        }, 
+
     // somehow, i'm more used to this for multiple selection (2016-09-04)
     // https://www.sublimetext.com/docs/2/multiple_selection_with_the_keyboard.html
     { "keys": ["alt+shift+up"], "command": "select_lines", "args": {"forward": false} },
     { "keys": ["alt+shift+down"], "command": "select_lines", "args": {"forward": true} },
-    //========================================================================//
+    //=======================================================================//
     // for some reason code folding stopped working....so copied and pasted this
     // from default file (2016-09-04)
-    //========================================================================//
+    //=======================================================================//
     { "keys": ["ctrl+k", "ctrl+1"], "command": "fold_by_level", "args": {"level": 1} },
     { "keys": ["ctrl+k", "ctrl+2"], "command": "fold_by_level", "args": {"level": 2} },
     { "keys": ["ctrl+k", "ctrl+3"], "command": "fold_by_level", "args": {"level": 3} },

@@ -1,7 +1,27 @@
 [
     // http://www.sublimetext.com/docs/key-bindings
     // http://www.sublimetext.com/docs/commands
-
+    //=======================================================================//
+    // rst stuffs
+    //=======================================================================//
+    {
+        "keys": ["alt+r"], "command": "strongemphasis", "context":
+          [
+            { "key": "selector", "operator": "equal", "operand": "text.restructuredtext" }
+          ]
+    },
+    {
+        "keys": ["alt+w"], "command": "literal", "context":
+          [
+            { "key": "selector", "operator": "equal", "operand": "text.restructuredtext" }
+          ]
+    },
+    {
+            "keys": ["alt+a"], "command": "emphasis", "context":
+              [
+                { "key": "selector", "operator": "equal", "operand": "text.restructuredtext" }
+              ]
+    }, 
     // switching focus http://stackoverflow.com/questions/11995591/sublime-text-2-show-file-navigation-in-sidebar?rq=1
     { "keys": ["ctrl+1"], "command": "focus_side_bar" }, // default is ctrl+0
 

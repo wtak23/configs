@@ -313,7 +313,7 @@ ____bookmark_git____(){ echo "" ; }
 #=============================================================================#
 ____bookmark_subl_sphinx____(){ echo "" ; }
 
-  alias open_sphinx_html='firefox _build/html/index.html'
+  #alias open_sphinx_html='firefox _build/html/index.html'
 
   subl_(){ # open both snippets and configs
     subl -n

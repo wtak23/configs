@@ -364,16 +364,30 @@ latex_elements = {
      #
      # 'figure_align': 'htbp',
 }
-
+#=============================================================================#
+# Modified this part to get latex working.
+# MakeFile turns out to be more finicky than i thought...I had to wrestle
+# with the configs below to get it to work.
+# (oddly, it didn't allow me to use variables below...so i just hard-coded
+#  the string entries below)
+# 09-12-2016 (13:06)
+#-----------------------------------------------------------------------------#
+# the .tex file-name cannot contain space. surprised this wasn't handled in
+# sphinx or Make...
+# (so when my ``project`` variable had space, makefile complains)
+#-----------------------------------------------------------------------------#
+# see http://www.sphinx-doc.org/en/stable/config.html#options-for-latex-output
+# for the options to insert below
+#=============================================================================#
 # Grouping the document tree into LaTeX files. List of tuples
 # (source start file, target name, title,
 #  author, documentclass [howto, manual, or own class]).
 latex_documents = [
-    # (master_doc, 'PROJECT_NAME.tex', u'PROJECT_NAME Documentation',
-    (master_doc, project+'.tex', project+u' Documentation',
-     u'WWW', 'manual'),
+    # (master_doc, project+'.tex', project+u' Documentation',u'WWW', 'manual'),
+    (master_doc, 'configs.tex', 'My Configs',author, 'manual'),
+    # (master_doc, project+'.tex', project,author, 'manual'),
 ]
-
+#\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
 # The name of an image file (relative to this directory) to place at the top of
 # the title page.
 #
@@ -458,3 +472,15 @@ def setup(app):
     app.add_javascript('copybutton.js')
 
 html_style='css/my_theme.css' # <- to get my css recognized http://stackoverflow.com/questions/23211695/modifying-sphinx-theme-read-the-docs
+
+#=============================================================================#
+# Get latex working... 09-12-2016 (12:31)
+#=============================================================================#
+# # https://www.quora.com/How-to-create-a-PDF-out-of-Sphinx-documentation-tool
+# extensions.append('rst2pdf.pdfbuilder')
+# # pdf_documents = [('index', u'rst2pdf', u'Sample rst2pdf doc', u'Your Name'),]
+# # index - master document
+# # rst2pdf - name of the generated pdf
+# # Sample rst2pdf doc - title of the pdf
+# # Your Name - author name in the pdf
+# pdf_documents = [('index', project, project, author),]

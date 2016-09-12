@@ -129,6 +129,9 @@ ____bookmark_winprogram____(){ echo "" ; }
 # http://serverfault.com/questions/606/what-is-the-best-way-to-set-an-environmet-variable-in-bashrc
 #=============================================================================#
 ____bookmark_ENVVARS____(){ echo "I'm just a bookmark"; }
+  #export PATH=$PATH:"C:\Program Files\Amazon\AWSCLI"
+  # http://docs.aws.amazon.com/cli/latest/userguide/installing.html#install-msi-on-windows
+  export PATH=$PATH:"/cygdrive/c/Program Files/Amazon/AWSCLI"
   export DIR_GIT="/cygdrive/c/Users/takanori/Dropbox/git"
   export DIR_DB='/cygdrive/c/Users/takanori/Dropbox'
 
@@ -249,7 +252,7 @@ ____bookmark_go_aliases____(){ echo "I'm just a bookmark for sublimetext"; }
 
   # 3 sphinx notebooks I use quite often
   alias goconf='cd "${HOME_WIN}/Dropbox/git/configs"'
-  alias gonotes='cd ${HOME_WIN}/Dropbox/git/coding_notes"'
+  alias gonotes='cd "${HOME_WIN}/Dropbox/git/coding_notes"'
   alias gosnippets='cd "${HOME_WIN}/Dropbox/git/snippet"'
 
   # location of the python modules from anacaonda
@@ -764,3 +767,20 @@ ____bookmark_snip____(){ echo 'no functionality. just a bookmark for sublime (us
 # Last organized: 04 September 2016 (Sunday)
 #*****************************************************************************#
 ____bookmark_unsorted____(){ echo "I'm unsorted" ; }  
+
+
+
+#=============================================================================#
+# trying to get jupyter and pyspark     
+#=============================================================================#
+#http://www.cloudera.com/documentation/enterprise/5-5-x/topics/spark_ipython.html
+# export PYSPARK_DRIVER_PYTHON='C:\Users\takanori\Anaconda2\Scripts\ipython'
+# export PYSPARK_PYTHON='"C:\Users\takanori\Anaconda2\python"'
+# export PYSPARK_DRIVER_PYTHON='"C:\Users\takanori\Anaconda2\Scripts\jupyter"'
+# export PYSPARK_DRIVER_PYTHON_OPTS="notebook --NotebookApp.open_browser=False --NotebookApp.ip='*' --NotebookApp.port=8880"
+# export PYSPARK_PYTHON='"C:\Users\takanori\Anaconda2\python"'
+
+# http://stackoverflow.com/questions/33064031/link-spark-with-ipython-notebook/33065359#33065359
+# PATH=$PATH:"C:\spark-2.0.0-bin-hadoop2.7\bin"
+# PYSPARK_DRIVER_PYTHON=ipython
+# PYSPARK_DRIVER_PYTHON_OPTS="'notebook' pyspark"

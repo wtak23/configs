@@ -6,6 +6,7 @@
 	"installed_packages":
 	[
 		"Alignment",
+		"AlignTab",
 		"All Autocomplete",
 		"BracketHighlighter",
 		"BufferScroll",
@@ -15,6 +16,7 @@
 		"Fold Python",
 		"Git",
 		"GitGutter",
+		"InsertDate",
 		"Jinja2",
 		"LaTeXing",
 		"LaTeXTools",

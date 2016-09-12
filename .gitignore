@@ -6,3 +6,4 @@ source/*/generated/*.rst
 *.png
 debug.log
 *.sublime-workspace
+ignore_dir/
