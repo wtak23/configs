@@ -22,7 +22,7 @@ make html
 #| not 100% happy with this approach in SO:
 #| http://stackoverflow.com/questions/14345922/how-to-do-a-link-to-a-file-in-rst-with-sphinx
 #| so i'm just gonna manually copy and paste pdf files to the build directory here
-cp -r ./source/_static/configs.pdf ./build/html/
+# cp -r ./source/_static/configs.pdf ./build/html/
 
 
 exit 0

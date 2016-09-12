@@ -5,7 +5,7 @@ Computer Setup Notes
     - Personal note for keeping track of my computer **configs**, which I sync using symlinks.
     - Also enjoy being able to version control all of my ``rc`` files.
     - For source files, go to https://github.com/wtak23/configs/tree/master/source
-    - `pdf version <./configs.pdf>`__
+    - `pdf version <./_static/configs.pdf>`__
 
 .. note:: 
 
