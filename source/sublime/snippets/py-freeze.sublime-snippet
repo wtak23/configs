@@ -1,0 +1,16 @@
+<snippet>
+    <content><![CDATA[
+from flask_frozen import Freezer
+from app import app
+
+freezer = Freezer(app)
+
+if __name__ == '__main__':
+    freezer.freeze()
+]]></content>
+    <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+    <tabTrigger>freeze</tabTrigger>
+    <!-- Optional: Set a scope to limit where the snippet will trigger -->
+    <scope>source.python</scope>
+</snippet>
+ <!--  https://gist.github.com/iambibhas/4705378 <- snippet scope -->

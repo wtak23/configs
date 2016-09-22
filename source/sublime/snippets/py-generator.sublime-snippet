@@ -1,0 +1,20 @@
+<snippet>
+    <content><![CDATA[
+# refresher on generator with yield
+def genarators_using_yield(till):
+    current_num = 0
+    while current_num < till:
+        yield current_num
+        current_num += 1
+
+
+for value in genarators_using_yield(10):
+    print(value)
+
+]]></content>
+    <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+    <tabTrigger>generator</tabTrigger>
+    <!-- Optional: Set a scope to limit where the snippet will trigger -->
+    <scope>source.python</scope>
+</snippet>
+ <!--  https://gist.github.com/iambibhas/4705378 <- snippet scope -->

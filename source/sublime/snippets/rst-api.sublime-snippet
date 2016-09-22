@@ -1,0 +1,31 @@
+<snippet>
+    <content><![CDATA[
+``boto3``
+=========
+.. toctree::
+    :maxdepth: 1
+
+    generated/boto3
+    generated/boto3.session
+    generated/boto3.exceptions
+    generated/boto3.utils
+
+
+
+.. autosummary::
+    :toctree:generated/
+    :template:module_custom.rst
+
+    boto3
+    boto3.session
+    boto3.exceptions
+    boto3.utils
+
+
+]]></content>
+    <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+    <tabTrigger>api</tabTrigger>
+    <!-- Optional: Set a scope to limit where the snippet will trigger -->
+    <scope>text.restructuredtext</scope>
+</snippet>
+ <!--  https://gist.github.com/iambibhas/4705378 <- snippet scope -->

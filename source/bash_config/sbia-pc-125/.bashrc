@@ -90,6 +90,7 @@ ____bookmark_default_options____(){ echo "" ; }
   alias grep='grep -P --color=always' # use perl engine as default
   alias egrep='egrep --color=always'  # show differences in colour
   alias fgrep='fgrep --color=always'  # show differences in colour
+  alias less='less -R' # always put color on
   
   # Some shortcuts for different directory listings
   #alias ls='ls -hF --color=tty'                     # classify files in colour
@@ -618,8 +619,31 @@ ____bookmark_snip____(){ echo 'no functionality. just a bookmark for sublime (us
       ' | pygmentize -l sh  
   }
 
+  _snip_php_service(){
+      echo '
+      # http://stackoverflow.com/questions/12235876/python-simplehttpserver-with-php
+          php -S 127.0.0.1:8001 -t .
+      ' | pygmentize -l sh  
+  
+  }
+
+
 #*****************************************************************************#
 # Everything below here are unsorted. Categorized later.
 # Last organized: 02 September 2016 (Friday)
 #*****************************************************************************#
 ____bookmark_unsorted____(){ echo "I'm unsorted" ; }
+
+  simple_httpserver(){
+    python -m SimpleHTTPServer $1
+  }
+
+  php_serve(){
+    php -S localhost:$1 -t .
+  }
+  # to get pelican pointing at the right binary (not the one one in /usr/lib/python2.7/dist-packages/pelican/
+  export PATH="/home/takanori/.local/bin:$PATH"
+
+  # http://superuser.com/questions/561087/strange-keyboard-when-using-sqlite-shell-on-linux
+  # http://superuser.com/questions/82408/sqlite-with-readline-support-on-ubuntu
+  alias sqlite3='rlwrap sqlite3' # enable readline support on anaconda install of sqlite3

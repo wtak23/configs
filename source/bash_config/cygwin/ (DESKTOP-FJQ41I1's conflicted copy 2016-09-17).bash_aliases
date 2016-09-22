@@ -145,6 +145,7 @@ ____bookmark_ENVVARS____(){ echo "I'm just a bookmark"; }
   #| for javac
   #| Ref: http://stackoverflow.com/questions/4918830/how-can-i-set-my-cygwin-path-to-find-javac
   export PATH=$PATH:"/cygdrive/C/Program Files/Java/jdk1.8.0_20/bin/"
+  export PATH=$PATH:"C:\Users\takanori\AppData\Roaming\Python\Scripts/" # <- for anaconda stuffs (pelican, etc)
 
   #| to run ipython.bat that shipped with enthrought canopy
   #export PATH=$PATH:"/cygdrive/c/users/takanori/appdata/local/enthought/canopy/user/scripts/"
@@ -775,13 +776,12 @@ ____bookmark_snip____(){ echo 'no functionality. just a bookmark for sublime (us
 #*****************************************************************************#
 ____bookmark_unsorted____(){ echo "I'm unsorted" ; }  
 
-  simple_httpserver(){
-    python -m SimpleHTTPServer $1
-  }
-  php_serve(){
-    php -S localhost:$1 -t .
-  }
-
+php_serve(){
+  php -S localhost:$1 -t .
+}
+simple_httpserver(){
+  python -m SimpleHTTPServer $1
+}
 #=============================================================================#
 # trying to get jupyter and pyspark     
 #=============================================================================#

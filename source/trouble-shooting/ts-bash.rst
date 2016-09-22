@@ -4,10 +4,80 @@ ts-bash (``ts-bash.rst``)
    :depth: 2
    :local:
 
+###############################
+Getting mysql to work on cygwin
+###############################
+- mysqlserver: http://dev.mysql.com/downloads/mysql/
+
+Installed ``mysql-installer-community-5.7.15.0.msi``
+
+.. code-block:: bash
+
+    apt-cyg install mysql
+    apt-cyg install mysqlclient
+
+This thread helped: http://stackoverflow.com/questions/329866/connecting-to-mysql-from-cygwin
+
+*********
+conf file
+*********
+``C:\cygwin64\etc\my.cnf``
+
+Auto completion
+
+http://stackoverflow.com/questions/8332338/autocompletion-in-the-mysql-command-line-client
+
+.. code-block:: bash
+
+    [client]
+    host=127.0.0.1
+    prompt="mysql> "
+
+    [mysql]
+    auto-rehash
+******************************
+pip install mysql doesn't work
+******************************
+so do this
+
+http://stackoverflow.com/questions/26866147/mysql-python-install-fatal-error
+
+
+**********************************
+cygwin apt-cyg didn't work well...
+**********************************
+.. important:: Ignore all this!
+
+    Just kept it for my personal record...
+
+https://www.tutorialspoint.com/mysql/mysql-installation.htm
+
+
+
+.. code-block:: bash
+
+    apt-cyg install mysql
+    apt-cyg install mysqld
+
+- http://stackoverflow.com/questions/5376427/cant-connect-to-local-mysql-server-through-socket-var-mysql-mysql-sock-38
+- http://stackoverflow.com/questions/5376427/cant-connect-to-local-mysql-server-through-socket-var-mysql-mysql-sock-38
+- https://www.percona.com/blog/2014/08/26/mysqld_multi-how-to-run-multiple-instances-of-mysql/
+- http://stackoverflow.com/questions/11893887/cygwin-connecting-to-mysql-cant-connect-to-local-mysql-server-through-socket
+
+****************************
+apt-cyg install md5sum error
+****************************
+- http://superuser.com/questions/894696/apt-cyg-install-return-md5sum-error
+
+    To resolve the issue change the md5sum in line 323 and 326 of the file "apt-cyg" with sha512sum. It should work.
+
+So I went to ``C:\cygwin64\bin\apt-cyg``, and changed md5sum with sha512sum as instructed, and everything worked again.
+
 ######################################
 Old-notes from old config_master repos
 ######################################
 .. note:: imported this from my old config notes. content may be obsolete 09-01-2016 (16:23)
+
 
 
 *************
