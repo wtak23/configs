@@ -44,6 +44,7 @@
 
 <body class="wy-body-for-nav" role="document">
 
+   
   <div class="wy-grid-for-nav">
 
     
@@ -292,7 +293,11 @@
 </li>
 <li class="toctree-l1 current"><a class="reference internal" href="../misc.html">Miscellaneous (<code class="docutils literal"><span class="pre">misc.rst</span></code>)</a><ul class="current">
 <li class="toctree-l2 current"><a class="current reference internal" href="">1 Misc symlinks (<code class="docutils literal"><span class="pre">misc-symlinks.rst</span></code>)</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#sql-related">1.1 SQL related</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#sql-related">1.1 SQL related</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#mysql-setup-windows">1.1.1 MySql setup (windows)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#sqlite-setup">1.1.2 sqlite setup</a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="misc-cuda-old.html">2 cuda-installation (old) (<code class="docutils literal"><span class="pre">misc-cuda-old.rst</span></code>)</a><ul>
@@ -323,8 +328,10 @@
 
       
       <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
-        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-        <a href="../index.html">My Configs</a>
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">My Configs</a>
+        
       </nav>
 
 
@@ -337,20 +344,32 @@
 
 
 
+
+
+
+
+
+
+
+
 <div role="navigation" aria-label="breadcrumbs navigation">
   <ul class="wy-breadcrumbs">
-    <li><a href="../index.html">Docs</a> &raquo;</li>
-      
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
           <li><a href="../misc.html">Miscellaneous (<code class="docutils literal"><span class="pre">misc.rst</span></code>)</a> &raquo;</li>
-      
-    <li>1 Misc symlinks (<code class="docutils literal"><span class="pre">misc-symlinks.rst</span></code>)</li>
+        
+      <li>1 Misc symlinks (<code class="docutils literal"><span class="pre">misc-symlinks.rst</span></code>)</li>
+    
+    
       <li class="wy-breadcrumbs-aside">
         
-          
+            
             <a href="../_sources/misc/misc-symlinks.txt" rel="nofollow"> View page source</a>
           
         
       </li>
+    
   </ul>
   <hr/>
 </div>
@@ -361,8 +380,13 @@
 <h1>1 Misc symlinks (<code class="docutils literal"><span class="pre">misc-symlinks.rst</span></code>)</h1>
 <div class="section" id="sql-related">
 <h2>1.1 SQL related</h2>
-<p>MySql setup</p>
+<div class="section" id="mysql-setup-windows">
+<h3>1.1.1 MySql setup (windows)</h3>
 <div class="highlight-python"><div class="highlight"><pre><span></span>mklink &quot;C:\cygwin64\etc\my.cnf&quot; &quot;C:\Users\takanori\Dropbox\git\configs\source\misc\my.cnf&quot;
+</pre></div>
+</div>
+<div class="highlight-rst"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">literalinclude</span><span class="p">::</span> my.cnf
+    <span class="nc">:language:</span> <span class="nf">python</span>
 </pre></div>
 </div>
 <div class="highlight-python"><div class="highlight"><pre><span></span><span class="p">[</span><span class="n">client</span><span class="p">]</span>
@@ -373,6 +397,20 @@
 <span class="n">auto</span><span class="o">-</span><span class="n">rehash</span>
 <span class="n">prompt</span><span class="o">=</span><span class="s2">&quot;mysql&gt; &quot;</span>
 </pre></div>
+</div>
+</div>
+<div class="section" id="sqlite-setup">
+<h3>1.1.2 sqlite setup</h3>
+<div class="highlight-python"><div class="highlight"><pre><span></span>ln -s &quot;${HOME}/Dropbox/git/configs/source/misc/.sqliterc&quot; &quot;${HOME}&quot;
+</pre></div>
+</div>
+<div class="highlight-rst"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">literalinclude</span><span class="p">::</span> .sqliterc
+</pre></div>
+</div>
+<div class="highlight-python"><div class="highlight"><pre><span></span>.headers on
+.mode column
+</pre></div>
+</div>
 </div>
 </div>
 </div>
