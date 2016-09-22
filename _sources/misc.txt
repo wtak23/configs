@@ -9,5 +9,6 @@ Other stuffs/notes pertaining to my computer setup.
     :numbered:
     :name: misc
 
+    ./misc/misc-symlinks.rst
     ./misc/misc-cuda-old.rst
     ./misc/misc-sbia-setups.rst

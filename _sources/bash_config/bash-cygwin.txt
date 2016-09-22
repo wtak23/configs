@@ -30,12 +30,12 @@ symlink setup
 
     ::
 
-        mklink "c:Users\takanori\.gitignore" "C:\Users\takanori\Dropbox\git\configs\source\bash_config\cygwin\.gitignore"
-        mklink "c:Users\takanori\.gitconfig" "C:\Users\takanori\Dropbox\git\configs\source\bash_config\cygwin\.gitconfig"
-        mklink "c:Users\takanori\.bash_aliases" "C:\Users\takanori\Dropbox\git\configs\source\bash_config\cygwin\.bash_aliases"
-        mklink "c:Users\takanori\.bashrc" "C:\Users\takanori\Dropbox\git\configs\source\bash_config\cygwin\.bashrc"
-        mklink "c:Users\takanori\.inputrc" "C:\Users\takanori\Dropbox\git\configs\source\bash_config\cygwin\.inputrc"
-        mklink "c:Users\takanori\.emacs" "C:\Users\takanori\Dropbox\git\configs\source\bash_config\cygwin\.emacs"
+        mklink "c:\Users\takanori\.gitignore" "C:\Users\takanori\Dropbox\git\configs\source\bash_config\cygwin\.gitignore"
+        mklink "c:\Users\takanori\.gitconfig" "C:\Users\takanori\Dropbox\git\configs\source\bash_config\cygwin\.gitconfig"
+        mklink "c:\Users\takanori\.bash_aliases" "C:\Users\takanori\Dropbox\git\configs\source\bash_config\cygwin\.bash_aliases"
+        mklink "c:\Users\takanori\.bashrc" "C:\Users\takanori\Dropbox\git\configs\source\bash_config\cygwin\.bashrc"
+        mklink "c:\Users\takanori\.inputrc" "C:\Users\takanori\Dropbox\git\configs\source\bash_config\cygwin\.inputrc"
+        mklink "c:\Users\takanori\.emacs" "C:\Users\takanori\Dropbox\git\configs\source\bash_config\cygwin\.emacs"
 
     **(old version)** Below ran on ASUS on 09-01-2016 (17:57)
 
