@@ -67,7 +67,7 @@ ____bookmark_windows_specific_configs____(){ echo "windows specific" ; }
             set $(history | tail -1 )
             shift 2
             path="$*"
-            foxitEx="/cygdrive/C/Program Files (x86)/Foxit Software/Foxit Reader/Foxit Reader.exe"
+            foxitEx="/cygdrive/C/Program Files (x86)/Foxit Software/Foxit Reader/FoxitReader.exe"
 
             # echo $(cygpath -w "$PWD$1")
             # echo $foxitEx $(cygpath -w "$PWD\\$1")
@@ -90,7 +90,7 @@ ____bookmark_windows_specific_configs____(){ echo "windows specific" ; }
             set $(history | tail -1 )
             shift 2
             path="$*"
-            foxitEx="/cygdrive/C/Program Files (x86)/Foxit Software/Foxit Reader/Foxit Reader.exe"
+            foxitEx="/cygdrive/C/Program Files (x86)/Foxit Software/Foxit Reader/FoxitReader.exe"
 
             # echo $(cygpath -w "$PWD$1")
             echo $foxitEx $(cygpath -w "$1")

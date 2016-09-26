@@ -46,12 +46,11 @@
 	"folder_exclude_patterns":
 	[
 		".git",
-		"build*",
 		"__pycache__",
 		"env",
 		"env3"
 	],
-	"font_size": 9,
+	"font_size": 8,
 	"gutter": true,
 	"highlight_line": true,
 	"highlight_modified_tabs": true,

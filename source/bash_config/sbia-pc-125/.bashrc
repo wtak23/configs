@@ -45,14 +45,7 @@ ____bookmark_ENVVARS____(){ echo "I'm just a bookmark"; }
     export PATH=$PATH:~/abin
     alias m2014='/usr/local/MATLAB/R2014b/bin/matlab &'
 
-  #===========================================================================#
-  # Pyspark
-  #===========================================================================#
-    export PATH=$PATH:/home/takanori/mybin/spark-2.0.0-bin-hadoop2.7/bin
 
-    # include pyspark to my python module 07-31-2016 (16:17)
-    export PYTHONPATH=$PYTHONPATH:/home/takanori/mybin/spark-2.0.0-bin-hadoop2.7/python/
-    export PYTHONPATH=$PYTHONPATH:/home/takanori/mybin/spark-2.0.0-bin-hadoop2.7/python/pyspark
 
   #===========================================================================#
   # to get deepnet working
@@ -170,7 +163,8 @@ ____bookmark_background____(){ echo ""; }
 ____bookmark_go____(){ echo ""; }
   alias godrop='cd ~/Dropbox'
   alias gogit='cd ~/Dropbox/git'
-  alias goipynb='cd ~/Dropbox/work/ipynb-notes'
+  alias goipynb='cd ~/Dropbox/git/jupyter-notes'
+  alias gojupyter='cd ~/Dropbox/git/jupyter-notes'
   alias gotex='cd ~/Dropbox/research_dropbox/latex'
   alias gowork='cd ~/Dropbox/work/sbia_work/'
 
@@ -647,3 +641,48 @@ ____bookmark_unsorted____(){ echo "I'm unsorted" ; }
   # http://superuser.com/questions/561087/strange-keyboard-when-using-sqlite-shell-on-linux
   # http://superuser.com/questions/82408/sqlite-with-readline-support-on-ubuntu
   alias sqlite3='rlwrap sqlite3' # enable readline support on anaconda install of sqlite3
+
+
+  #===========================================================================#
+  # Pyspark
+  #===========================================================================#
+    
+    # export PATH=$PATH:/home/takanori/mybin/spark-1.6.2-bin-hadoop2.6/bin
+
+    # include pyspark to my python module 07-31-2016 (16:17)
+    # export PYTHONPATH=$PYTHONPATH:/home/takanori/mybin/spark-2.0.0-bin-hadoop2.7/python/
+    # export PYTHONPATH=$PYTHONPATH:/home/takanori/mybin/spark-2.0.0-bin-hadoop2.7/python/pyspark
+
+  #=========================================================================#
+  # Pyspark setups
+  #=========================================================================#
+  # export PATH=$PATH:"$HOME/mybin/scala-2.11.8/bin"
+  # export PATH="/home/takanori/anaconda2/bin:$PATH"
+  export PATH="/home/takanori/mybin/scala-2.11.8/bin:$PATH"
+
+
+  # PYSPARK_DRIVER_PYTHON="jupyter"
+  # PYSPARK_DRIVER_PYTHON_OPTS="notebook"
+
+
+  # alias scala='/home/takanori/mybin/scala-2.11.8/bin/scala'
+  # export PYSPARK_PYTHON=$HOME/anaconda2/bin/python
+  # # http://www.cloudera.com/documentation/enterprise/latest/topics/spark_ipython.html#ipython__jupyter_install
+  # export PYSPARK_DRIVER=$HOME/anaconda2/bin/jupyter
+  # export PYSPARK_DRIVER_PYTHON_OPTS="notebook --NotebookApp.open_browser=False --NotebookApp.ip='*' --NotebookApp.port=8880"
+
+
+  #=== http://thepowerofdata.io/configuring-jupyteripython-notebook-to-work-with-pyspark-1-4-0/ ===#
+  #export PATH="/home/takanori/anaconda2/bin:$PATH"
+  # export SPARK_HOME="/home/wanderer/spark-1.5.1-bin-hadoop2.6/bin"
+  export SPARK_HOME=$HOME/mybin/spark-2.0.0-bin-hadoop2.7
+  export PATH="$SPARK_HOME:$PATH"
+  export PATH=$PATH:$SPARK_HOME/bin
+  
+  export PYTHONPATH=$SPARK_HOME/python/:$PYTHONPATH
+  # export PYTHONPATH=$SPARK_HOME/python/lib/py4j-0.10.1-src.zip:$PYTHONPATH
+
+  export ANACONDA_ROOT=~/anaconda2
+  export PYSPARK_DRIVER_PYTHON=$ANACONDA_ROOT/bin/jupyter
+  export PYSPARK_DRIVER_PYTHON_OPTS='notebook' pyspark
+  export PYSPARK_PYTHON=$ANACONDA_ROOT/bin/python
