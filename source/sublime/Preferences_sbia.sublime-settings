@@ -58,6 +58,7 @@
 		"env",
 		"env3",
 		"build",
+		"build_bkup",
 		"build_published",
 		"ignore_dir"
 	],

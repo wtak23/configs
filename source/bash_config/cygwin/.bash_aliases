@@ -38,7 +38,7 @@ ____bookmark_windows_specific_configs____(){ echo "windows specific" ; }
         set $(history | tail -1 )
         shift 2
         path="$*"
-        cd $(cygpath "$path") #<- never knew about ``cygpath`` command
+        cd "$(cygpath "$path")" #<- never knew about ``cygpath`` command
     }
 
     #| deprecated...I'd have to include quotes to the argument everytime using below, which is tedious

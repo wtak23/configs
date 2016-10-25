@@ -21,3 +21,4 @@ Jumbled notes on **trouble-shooting** when computer goes through unexpected hicc
   trouble-shooting/ts-bash.rst
   trouble-shooting/ts-sublime.rst    
   trouble-shooting/ts-python.rst
+  trouble-shooting/ts-R.rst

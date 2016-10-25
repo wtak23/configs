@@ -26,6 +26,12 @@
 import os
 import sys
 sys.path.insert(0, os.path.abspath('.'))
+
+# include my module in path
+sys.path.insert(0,os.path.expanduser('~/Dropbox/work/sbia_work/python/modules'))
+# check module exist in my path
+# with open(os.path.expanduser('~/tmp.txt'),'w') as f:
+#     f.write('\n'.join(sys.path))
 # -- General configuration ------------------------------------------------
 
 # If your documentation needs a minimal Sphinx version, state it here.

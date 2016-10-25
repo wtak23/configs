@@ -26,6 +26,7 @@ Computer Setup Notes
     windows.rst
     trouble-shooting.rst
     misc.rst
+    test_autodoc.rst
 
 
 

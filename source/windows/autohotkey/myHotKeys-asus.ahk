@@ -5,7 +5,7 @@
     RegRead, OutputVar, HKEY_CLASSES_ROOT, http\shell\open\command 
     StringReplace, OutputVar, OutputVar," 
     SplitPath, OutputVar,,OutDir,,OutNameNoExt, OutDrive 
-    browser=%OutDir%\%OutNameNoExt%.exe 
+    browser="C:\Program Files (x86)\Google\Chrome\Application\chrome.exe"
 ;******************************************************************************;
 
 ;******************************************************************************;

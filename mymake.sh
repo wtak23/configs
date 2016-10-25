@@ -11,7 +11,7 @@ export PATH="/cygdrive/c/Users/takanori/Anaconda2/Scripts:$PATH" # <- in case i'
 # # which python # <- verify python from anaconda is running
 
 
-make clean
+# make clean
 # # rm -r ./source/generated*
 # # mkdir ./source/generated
 # # mkdir ./source/generated/generated

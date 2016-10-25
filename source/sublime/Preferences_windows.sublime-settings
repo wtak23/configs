@@ -1,4 +1,8 @@
 {
+	"added_words":
+	[
+		"neuroimaging"
+	],
 	"always_show_minimap_viewport": true,
 	"animation_enabled": true,
 	"auto_close_tags": true,
@@ -45,6 +49,8 @@
 	"fold_buttons": true,
 	"folder_exclude_patterns":
 	[
+		"build",
+		"build_published",
 		".git",
 		"__pycache__",
 		"env",

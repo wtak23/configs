@@ -95,7 +95,8 @@ ____bookmark_default_options____(){ echo "" ; }
   alias l='ls -CF'                              #
   # alias ipynb='ipython notebook --browser=/usr/bin/firefox'
 
-  alias gcc='/sbia/sbiasfw/external/gcc/4.7.1/bin/gcc'
+  # alias gcc='/sbia/sbiasfw/external/gcc/4.7.1/bin/gcc'
+# alias gfortran='/usr/bin/gfortran-4.8'
 
 #=============================================================================#
 # General convenience commands (most will go here)
@@ -621,7 +622,16 @@ ____bookmark_snip____(){ echo 'no functionality. just a bookmark for sublime (us
   
   }
 
+_snip_jupyter_toc(){
+  echo '
+  **Table of Contents**
 
+  <div id="toc"></div>
+  <script type="text/javascript"
+  src="https://raw.github.com/kmahelona/ipython_notebook_goodies/master/ipython_notebook_toc.js">
+  </script>
+  ' | pygmentize -l html
+}
 #*****************************************************************************#
 # Everything below here are unsorted. Categorized later.
 # Last organized: 02 September 2016 (Friday)
@@ -686,3 +696,5 @@ ____bookmark_unsorted____(){ echo "I'm unsorted" ; }
   export PYSPARK_DRIVER_PYTHON=$ANACONDA_ROOT/bin/jupyter
   export PYSPARK_DRIVER_PYTHON_OPTS='notebook' pyspark
   export PYSPARK_PYTHON=$ANACONDA_ROOT/bin/python
+### Added by the Heroku Toolbelt
+export PATH="/usr/local/heroku/bin:$PATH"
