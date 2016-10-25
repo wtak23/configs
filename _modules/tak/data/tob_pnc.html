@@ -1,0 +1,1152 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>tak.data.tob_pnc</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../../../_static/terminal.ico"/>
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../../_static/css/my_theme.css" type="text/css" />
+  
+
+  
+
+  
+    <link rel="top" title="" href="../../../index.html"/>
+        <link rel="up" title="Module code" href="../../index.html"/> 
+
+  
+  <script src="../../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../../index.html" class="icon icon-home"> My Configs
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <p class="caption"><span class="caption-text">Table of Contents</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../python.html">Python (<code class="docutils literal"><span class="pre">python.rst</span></code>)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../python/py-sbia.html">1 sbia workstation (<code class="docutils literal"><span class="pre">py-sbia.rst</span></code>)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../python/py-sbia.html#symlink-summary">1.1 symlink summary</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../python/py-sbia.html#ipython-setup">1.2 ipython setup</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../python/py-sbia.html#content-of-ipython-kernel-config">1.2.1 Content of <code class="docutils literal"><span class="pre">ipython_kernel_config</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../python/py-sbia.html#matplotlibrc">1.3 matplotlibrc</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../python/py-sbia.html#content-of-matplotlibrc">1.3.1 Content of <code class="docutils literal"><span class="pre">matplotlibrc</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../python/py-sbia.html#new-symlink-to-sitecustomize-py">1.4 New - symlink to sitecustomize.py</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../python/py-sbia.html#current-content-of-sitecustomize-py">1.4.1 Current content of <code class="docutils literal"><span class="pre">sitecustomize.py</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../python/py-sbia.html#what-does-sitecustomize-py-do">1.4.2 what does sitecustomize.py do?</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../python/py-sbia.html#current-content-of-sitecustomize-spyder-py">1.4.3 Current content of <code class="docutils literal"><span class="pre">sitecustomize_spyder.py</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../python/py-sbia.html#changes-with-original">1.5 Changes with _original</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../python/py-win.html">2 Windows machine (<code class="docutils literal"><span class="pre">py-win.rst</span></code>)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../python/py-win.html#pip-installs">2.1 pip installs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../python/py-win.html#rollback-sphinx-to-version-1-3-5">2.2 Rollback Sphinx to Version 1.3.5</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../python/old/py-old.html">3 old-notes (<code class="docutils literal"><span class="pre">py-old.rst</span></code>)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../python/old/py-old.html#feb-24-2016">3.1 Feb 24, 2016</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../python/old/py-old.html#stuffs-installed-after-03-30-2016">3.2 Stuffs installed after 03-30-2016</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../python/old/py-old.html#bleeding-edge-version-of-lasagne-04-11-2016">3.2.1 Bleeding edge version of lasagne (04/11/2016)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../python/old/py-old.html#reupdate-theano-to-0-8-04-1-2016">3.2.2 Reupdate theano to 0.8 (04/1/2016)</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../python/old/py-old.html#stuffs-installed-11-30-2015">3.3 Stuffs installed (11/30/2015)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../python/old/py-old.html#moduel-install-very-old-modules-install">3.4 moduel-install: VERY old modules install</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../python/old/py-old.html#module-installs-install-modules-sh">3.4.1 <code class="docutils literal"><span class="pre">./module-installs/install_modules.sh</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../python/old/py-old.html#module-installs-pyinstall-sh">3.4.2 <code class="docutils literal"><span class="pre">./module-installs/pyinstall.sh</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../python/old/py-old.html#module-installs-spams-install-sh">3.4.3 <code class="docutils literal"><span class="pre">./module-installs/spams_install.sh</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../python/old/py-old.html#module-installs-tak-install-sh">3.4.4 <code class="docutils literal"><span class="pre">./module-installs/tak_install.sh</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../bash_config.html">Bash config files (<code class="docutils literal"><span class="pre">bash_config.rst</span></code>)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../bash_config/bash-sbia.html">1 SBIA Workstation (<code class="docutils literal"><span class="pre">bash-sbia.rst</span></code>)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../bash_config/bash-sbia.html#symlinks">1.1 Symlinks</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../bash_config/bash-sbia.html#bashrc-contents">1.2 bashrc contents</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../bash_config/bash-sbia.html#gitconfig-content">1.3 gitconfig content</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../bash_config/bash-cygwin.html">2 Cygwin setup (<code class="docutils literal"><span class="pre">bash-cygwin.rst</span></code>)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../bash_config/bash-cygwin.html#symlink-setup">2.1 symlink setup</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../bash_config/bash-cygwin.html#bashrc-content">2.2 bashrc content</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../bash_config/bash-cygwin.html#bash-aliases-content">2.3 bash_aliases content</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../bash_config/bash-cygwin.html#apt-cyg">2.4 apt-cyg</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../bash_config/bash-cygwin.html#things-i-install-on-most-of-my-computers">2.4.1 Things I install on most of my computers</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../bash_config/bash-cygwin.html#git-related-stuffs">2.5 git related stuffs</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../bash_config/bash-cygwin.html#github-sshkey">2.5.1 github sshkey</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../bash_config/bash-cygwin.html#git-code-completion">2.5.2 git code completion</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../bash_config/bash-cygwin.html#random-overflows">2.6 Random overflows</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../bash_config/bash-cygwin.html#to-get-git-gui-working">2.6.1 to get git gui working...</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../bash_config/bash-cygwin.html#xming-setup">2.6.2 xming setup</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../bash_config/bash-cygwin.html#disable-annoying-bell-sound-in-cygwin">2.6.3 disable annoying bell sound in cygwin</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../bash_config/bash-defaults.html">3 Default bash config files (<code class="docutils literal"><span class="pre">bash-defaults.rst</span></code>)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../bash_config/bash-defaults.html#default-bashrc-ubuntu">3.1 Default .bashrc, ubuntu</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../bash_config/bash-defaults.html#default-bashrc-cygwin">3.2 Default .bashrc, cygwin</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../sublime.html">Sublime Text Setup (<code class="docutils literal"><span class="pre">sublime.rst</span></code>)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../sublime/subl-sbia.html">1 SBIA Workstation (<code class="docutils literal"><span class="pre">subl-sbia.rst</span></code>)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../sublime/subl-sbia.html#file-tree">1.1 File-tree</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../sublime/subl-sbia.html#symbolic-links-created">1.2 Symbolic links created</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../sublime/subl-sbia.html#file-wise-setup">1.2.1 File-wise setup</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../sublime/subl-sbia.html#installed-packges">1.3 Installed packges</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../sublime/subl-sbia.html#preferences-sublime-settings-content">1.4 Preferences.sublime-settings Content</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../sublime/subl-sbia.html#default-linux-sublime-keymap-content">1.5 Default (Linux).sublime-keymap Content</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../sublime/subl-win.html">2 Windows setup (<code class="docutils literal"><span class="pre">subl-win.rst</span></code>)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../sublime/subl-win.html#symlinks">2.1 Symlinks</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../sublime/subl-win.html#installed-packages">2.2 Installed Packages</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../sublime/subl-win.html#xps8900">2.2.1 xps8900</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../sublime/subl-win.html#asus">2.2.2 asus</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../sublime/subl-win.html#asus-diff-with-sbia-workstation">2.2.3 asus diff with sbia workstation</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../sublime/subl-win.html#bunch-of-random-helpful-config-stuffs">2.3 Bunch of random helpful config stuffs</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../sublime/subl-win.html#open-cygwin-shell-via-right-click-in-explorer">2.3.1 Open cygwin shell via right-click in explorer</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../sublime/subl-win.html#getting-buildsystem-to-work-with-cygwin">2.3.2 Getting buildsystem to work with cygwin</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../sublime/subl-ref.html">3 References (<code class="docutils literal"><span class="pre">subl-ref.rst</span></code>)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../sublime/subl-ref.html#scope-info-for-snippets-and-build-system">3.1 Scope info (for snippets and build system)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../sublime/subl-ref.html#build-system-info">3.2 Build system info</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../sublime/subl-ref.html#when-sublime-keeps-crashing-at-startup">3.3 When sublime keeps crashing at startup...</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../sublime/subl-defaults.html">4 Default-settings (<code class="docutils literal"><span class="pre">subl-defaults.rst</span></code>)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../sublime/subl-defaults.html#preferences-sublime-settings-linux">4.1 Preferences.sublime-settings (Linux)</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../R.html">R (<code class="docutils literal"><span class="pre">R.rst</span></code>)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../windows.html">Windows machine setup (<code class="docutils literal"><span class="pre">windows.rst</span></code>)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../windows/autohotkey/win-ahk.html">1 Autohotkey (<code class="docutils literal"><span class="pre">win-ahk.rst</span></code>)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../windows/autohotkey/win-ahk.html#main-references">1.1 Main references</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../windows/autohotkey/win-ahk.html#notes">1.2 Notes</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../windows/autohotkey/win-ahk.html#details-on-sentinput">1.2.1 Details on <strong>SentInput</strong></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../windows/autohotkey/win-ahk.html#variables-in-ahk">1.2.2 Variables in AHK</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../windows/autohotkey/win-ahk.html#looping-in-ahk">1.2.3 Looping in AHK</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../windows/autohotkey/win-ahk.html#other-useful-references">1.2.4 other useful references</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../windows/office-setup/win-office.html">2 MS Office Setups (<code class="docutils literal"><span class="pre">win-office.rst</span></code>)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../windows/office-setup/win-office.html#word-macro">2.1 Word macro</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../windows/office-setup/win-office.html#one-note">2.2 One-note</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../windows/win-xps8900.html">3 XPS8900 Desktop settings (<code class="docutils literal"><span class="pre">win-xps8900.rst</span></code>)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../windows/win-xps8900.html#startup-files">3.1 Startup Files</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../windows/win-xps8900.html#symlinks">3.2 symlinks</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../windows/win-xps8900.html#cygwin-configs">3.2.1 cygwin configs</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../windows/win-xps8900.html#sublime-text">3.2.2 Sublime text</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../windows/win-xps8900.html#office">3.2.3 Office</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../windows/win-asus.html">4 ASUS laptop settings (<code class="docutils literal"><span class="pre">win-asus.rst</span></code>)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../windows/win-asus.html#startup-files">4.1 Startup Files</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../windows/win-asus.html#symlinks">4.2 symlinks</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../windows/win-asus.html#cygwin-configs">4.2.1 cygwin configs</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../windows/win-asus.html#sublime-text">4.2.2 Sublime text</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../windows/win-asus.html#office">4.2.3 Office</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../windows/win-old-notes.html">5 (Old) Thing to do on a new computer (<code class="docutils literal"><span class="pre">win-old-notes.rst</span></code>)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../windows/win-old-notes.html#softwares-to-install">5.1 Softwares to install</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../windows/win-old-notes.html#the-essentials">5.1.1 The &#8220;Essentials&#8221;</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../windows/win-old-notes.html#computational">5.1.2 Computational</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../windows/win-old-notes.html#non-essentials">5.1.3 Non-essentials</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../windows/win-old-notes.html#short-cuts-to-add-in-startup-folder">5.2 Short-cuts to add in &#8220;Startup&#8221; folder</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../windows/win-old-notes.html#xming">5.2.1 xming</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../windows/win-old-notes.html#misc">5.3 misc</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../windows/win-old-notes.html#username-change">5.3.1 Username change</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../windows/win-old-notes.html#location-of-normal-dotm">5.3.2 Location of <code class="docutils literal"><span class="pre">Normal.dotm</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../trouble-shooting.html">Trouble-shooting notes (<code class="docutils literal"><span class="pre">trouble-shooting.rst</span></code>)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../trouble-shooting/ts-bash.html">1 ts-bash (<code class="docutils literal"><span class="pre">ts-bash.rst</span></code>)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../trouble-shooting/ts-bash.html#getting-mysql-to-work-on-cygwin">1.1 Getting mysql to work on cygwin</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../trouble-shooting/ts-bash.html#conf-file">1.1.1 conf file</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../trouble-shooting/ts-bash.html#pip-install-mysql-doesn-t-work">1.1.2 pip install mysql doesn&#8217;t work</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../trouble-shooting/ts-bash.html#cygwin-apt-cyg-didn-t-work-well">1.1.3 cygwin apt-cyg didn&#8217;t work well...</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../trouble-shooting/ts-bash.html#apt-cyg-install-md5sum-error">1.1.4 apt-cyg install md5sum error</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../trouble-shooting/ts-bash.html#old-notes-from-old-config-master-repos">1.2 Old-notes from old config_master repos</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../trouble-shooting/ts-bash.html#color-in-less">1.2.1 Color in less</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../trouble-shooting/ts-bash.html#latex-installer-06-15-2016-21-48">1.2.2 Latex installer 06-15-2016 (21:48)</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../trouble-shooting/ts-sublime.html">2 ts-sublime (<code class="docutils literal"><span class="pre">ts-sublime.rst</span></code>)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../trouble-shooting/ts-sublime.html#latexing-complaining-cannot-find-pdflatex-command">2.1 Latexing complaining cannot find pdflatex command</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../trouble-shooting/ts-sublime.html#old-notes-from-old-config-master-repos">2.2 Old-notes from old config_master repos</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../trouble-shooting/ts-sublime.html#how-to-remove-startup-session">2.2.1 How to remove startup session</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../trouble-shooting/ts-sublime.html#omni-markup-error">2.2.2 omni-markup error</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../trouble-shooting/ts-sublime.html#get-images-from-goto">2.2.3 get images from goto</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../trouble-shooting/ts-python.html">3 ts-python (<code class="docutils literal"><span class="pre">ts-python.rst</span></code>)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../trouble-shooting/ts-python.html#getting-theano-to-work-on-windows">3.1 Getting theano to work on Windows</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../trouble-shooting/ts-python.html#no-clue-why-but-jupyter-kernel-keeps-dying">3.2 No clue why, but jupyter kernel keeps dying...</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../trouble-shooting/ts-python.html#pip-install-mysql-doesn-t-work">3.3 pip install mysql doesn&#8217;t work</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../trouble-shooting/ts-python.html#cygwin">3.3.1 cygwin</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../trouble-shooting/ts-python.html#linux-ubutu-14-04">3.3.2 Linux (ubutu 14.04)</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../trouble-shooting/ts-python.html#pip-install-psycopg2-for-postgreql">3.4 pip install psycopg2 for postgreql</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../trouble-shooting/ts-R.html">4 ts-R (<code class="docutils literal"><span class="pre">ts-R.rst</span></code>)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../trouble-shooting/ts-R.html#ggplot2-load-error-on-windows">4.1 ggplot2 load error on windows</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../misc.html">Miscellaneous (<code class="docutils literal"><span class="pre">misc.rst</span></code>)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../misc/misc-symlinks.html">1 Misc symlinks (<code class="docutils literal"><span class="pre">misc-symlinks.rst</span></code>)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../misc/misc-symlinks.html#sql-related">1.1 SQL related</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../misc/misc-symlinks.html#mysql-setup-windows">1.1.1 MySql setup (windows)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../misc/misc-symlinks.html#sqlite-setup">1.1.2 sqlite setup</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../misc/misc-cuda-old.html">2 cuda-installation (old) (<code class="docutils literal"><span class="pre">misc-cuda-old.rst</span></code>)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../misc/misc-cuda-old.html#installing-theano">2.1 Installing Theano</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../misc/misc-cuda-old.html#installing-cuda">2.2 Installing cuda</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../misc/misc-cuda-old.html#references">2.2.1 references</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../misc/misc-cuda-old.html#pre-september">2.3 Pre september</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../misc/misc-cuda-old.html#cuda-install-output">2.4 cuda install output</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../misc/misc-sbia-setups.html">3 Misc symlinks (<code class="docutils literal"><span class="pre">misc-symlinks.rst</span></code>)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../misc/misc-sbia-setups.html#sql-related">3.1 SQL related</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../test_autodoc.html"><code class="docutils literal"><span class="pre">test_autodoc.rst</span></code></a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../test_autodoc.html#visualization">Visualization</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../test_autodoc.html#imconnmat">imconnmat</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../test_autodoc.html#non-negative-matrix-factorization">Non-negative Matrix Factorization</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../test_autodoc.html#nmf-ls-pnmf-admm">nmf.ls_pnmf_admm</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../test_autodoc.html#nmf-ls-sgpnmf-admm">nmf.LS_SGPNMF_ADMM</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../test_autodoc.html#data-io">Data IO</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../test_autodoc.html#data-tob-pnc-load-bct-measures">data.tob_pnc.load_bct_measures</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../test_autodoc.html#data-tob-pnc-load-diffusion-volume-matfile">data.tob_pnc.load_diffusion_volume_matfile</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../test_autodoc.html#data-tob-pnc-load-connectome-matfile">data.tob_pnc.load_connectome_matfile</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">My Configs</a>
+        
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../../index.html">Module code</a> &raquo;</li>
+        
+      <li>tak.data.tob_pnc</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+        
+      </li>
+    
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <h1>Source code for tak.data.tob_pnc</h1><div class="highlight"><pre>
+<span></span><span class="c1"># -*- coding: utf-8 -*-</span>
+<span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">===============================================================================</span>
+<span class="sd">For pnc/tob matched subjects</span>
+
+<span class="sd">-------------------------------------------------------------------------------</span>
+<span class="sd">06/22/2016</span>
+<span class="sd">- filename changed from ``pnc_tob.py`` to ``tob_pnc.py``</span>
+<span class="sd">===============================================================================</span>
+<span class="sd">Created on June 14th, 2016</span>
+
+<span class="sd">@author: takanori</span>
+<span class="sd">&quot;&quot;&quot;</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="kn">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="kn">as</span> <span class="nn">pd</span>
+<span class="kn">from</span> <span class="nn">scipy.io</span> <span class="kn">import</span> <span class="n">loadmat</span>
+
+<span class="kn">import</span> <span class="nn">re</span>
+<span class="kn">import</span> <span class="nn">nibabel</span> <span class="kn">as</span> <span class="nn">nib</span>
+<span class="kn">import</span> <span class="nn">os</span>
+<span class="c1">#import sys</span>
+
+<span class="kn">import</span> <span class="nn">tak</span> <span class="kn">as</span> <span class="nn">tw</span>
+
+
+<span class="kn">from</span> <span class="nn">.util_data</span> <span class="kn">import</span> <span class="n">get_data_path</span><span class="p">,</span> <span class="n">fix_file_list</span>
+<span class="c1">#from .pnc import get_pnc_tob_matched_subjects_0608</span>
+<span class="c1">#%% === path definitions ===</span>
+<span class="c1">#datapath_tobpnc = os.path.expanduser(&#39;~/data/PNC_Tobacco_Merged&#39;)</span>
+<span class="n">datapath_tobpnc</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">get_data_path</span><span class="p">(),</span><span class="s1">&#39;PNC_Tobacco_Merged&#39;</span><span class="p">)</span>
+<span class="c1">#%% === new functions created on 07/05/2016 ===</span>
+<span class="k">def</span> <span class="nf">load_datasheet</span><span class="p">():</span>
+    <span class="sd">&quot;&quot;&quot; Get updated spreadsheet for Tobacco/PNC-merged phenotypes.</span>
+<span class="sd">    </span>
+<span class="sd">    Here, minimal amount of processing of spreadsheet is applied:</span>
+<span class="sd">    </span>
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    df : pandas DataFrame of size (n_samples, n_fields)</span>
+<span class="sd">        Dataframe containing subject phenotypes</span>
+<span class="sd">        </span>
+<span class="sd">    &gt;&gt;&gt; df = tw.data.tob_pnc.load_datasheet()</span>
+<span class="sd">    </span>
+<span class="sd">    History</span>
+<span class="sd">    -------</span>
+<span class="sd">    - 07/05/2016 -- Created.</span>
+<span class="sd">    - 07/18/2016 -- renamed column &#39;Age_years&#39; to &#39;age&#39;</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="c1">#%% === cleanup spreadsheet ====</span>
+    <span class="n">data_path</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">datapath_tobpnc</span><span class="p">,</span>
+                             <span class="s1">&#39;Resources&#39;</span><span class="p">,</span><span class="s1">&#39;PNC_Tobacco_Merged_Dataset2.xlsx&#39;</span><span class="p">)</span>
+    <span class="n">df_in</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_excel</span><span class="p">(</span><span class="n">data_path</span><span class="p">)</span><span class="o">.</span><span class="n">iloc</span><span class="p">[:,:</span><span class="mi">8</span><span class="p">]</span>
+    
+    <span class="n">df_in</span> <span class="o">=</span> <span class="n">df_in</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="n">by</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;ID&#39;</span><span class="p">])</span><span class="o">.</span><span class="n">reset_index</span><span class="p">(</span><span class="n">drop</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+
+    <span class="c1"># rename column    </span>
+    <span class="n">df_in</span> <span class="o">=</span> <span class="n">df_in</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;Age_years&#39;</span><span class="p">:</span><span class="s1">&#39;age&#39;</span><span class="p">})</span>
+    <span class="k">return</span> <span class="n">df_in</span>
+    
+    
+<span class="k">def</span> <span class="nf">load_connectome_matfile</span><span class="p">(</span><span class="n">file_list_only</span><span class="o">=</span><span class="bp">False</span><span class="p">,</span><span class="n">pruned</span><span class="o">=</span><span class="bp">False</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot; Load design matrix for the structural connectome saved as .mat file.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    file_list_only : bool</span>
+<span class="sd">        Just return list of file-names (to save time)</span>
+<span class="sd">    pruned : bool</span>
+<span class="sd">        Get connectomes pruned at density 15%</span>
+<span class="sd">        </span>
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    X : ndarray of shape (n_samples,n_features)=(n,p)</span>
+<span class="sd">        Data matrix with rows as data points</span>
+<span class="sd">    fileList : list of shape (n_samples)</span>
+<span class="sd">        List containing the name of the original image file. </span>
+<span class="sd">        Contains subject&#39;s ID, which will be used as merge-keys with the</span>
+<span class="sd">        spreadsheet info.</span>
+<span class="sd">    </span>
+
+<span class="sd">    Examples</span>
+<span class="sd">    --------</span>
+<span class="sd">    &gt;&gt;&gt; X, fileList = tw.data.tob_pnc.load_connectome_matfile()</span>
+<span class="sd">            </span>
+<span class="sd">    **History**</span>
+<span class="sd">    </span>
+<span class="sd">    - 07/05/2016 -- Created.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="n">pruned</span><span class="p">:</span>
+        <span class="n">filename</span> <span class="o">=</span> <span class="s1">&#39;tob_pnc_connectome_PROB_pruned_0705_2016.mat&#39;</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">filename</span> <span class="o">=</span> <span class="s1">&#39;tob_pnc_connectome_PROB_0705_2016.mat&#39;</span>
+        
+    <span class="n">data_path</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">datapath_tobpnc</span><span class="p">,</span><span class="n">filename</span><span class="p">)</span>
+    
+    <span class="n">fileList</span> <span class="o">=</span> <span class="n">loadmat</span><span class="p">(</span><span class="n">data_path</span><span class="p">,</span><span class="n">variable_names</span><span class="o">=</span><span class="p">(</span><span class="s1">&#39;fileList&#39;</span><span class="p">))[</span><span class="s1">&#39;fileList&#39;</span><span class="p">]</span>
+    <span class="n">fileList</span> <span class="o">=</span> <span class="n">fix_file_list</span><span class="p">(</span><span class="n">fileList</span><span class="p">)</span>
+    <span class="k">assert</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">fileList</span><span class="p">)</span> <span class="o">==</span> <span class="n">fileList</span>
+    
+    <span class="k">if</span> <span class="n">file_list_only</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">fileList</span>
+    
+    <span class="n">X</span> <span class="o">=</span> <span class="n">loadmat</span><span class="p">(</span><span class="n">data_path</span><span class="p">,</span><span class="n">variable_names</span><span class="o">=</span><span class="p">(</span><span class="s1">&#39;connMatrix&#39;</span><span class="p">))[</span><span class="s1">&#39;connMatrix&#39;</span><span class="p">]</span>
+    <span class="n">X</span> <span class="o">=</span> <span class="n">tw</span><span class="o">.</span><span class="n">conn2design</span><span class="p">(</span><span class="n">X</span><span class="p">)</span> <span class="c1"># convert (nROI x nROI x nsubj) to (nsub x nEdges)</span>
+    
+    <span class="k">return</span> <span class="n">X</span><span class="p">,</span> <span class="n">fileList</span>
+
+<div class="viewcode-block" id="load_diffusion_volume_matfile"><a class="viewcode-back" href="../../../test_autodoc.html#tak.data.load_diffusion_volume_matfile">[docs]</a><span class="k">def</span> <span class="nf">load_diffusion_volume_matfile</span><span class="p">(</span><span class="n">modality</span><span class="o">=</span><span class="s1">&#39;FA&#39;</span><span class="p">,</span><span class="n">downsample</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span>
+                                  <span class="n">file_list_only</span><span class="o">=</span><span class="bp">False</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot; Load design matrix for the diffusion volume saved as .mat file.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    modality : string</span>
+<span class="sd">        Type of diffusion measure: ``&#39;FA&#39;,&#39;TR&#39;,&#39;RD&#39;,&#39;AX&#39;``</span>
+<span class="sd">    downsample : bool</span>
+<span class="sd">        Downsampled volume or not.</span>
+<span class="sd">    file_list_only : bool</span>
+<span class="sd">        Just return list of file-names (to save time)</span>
+<span class="sd">        </span>
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    X : ndarray of shape (n_samples,n_features)=(n,p)</span>
+<span class="sd">        Data matrix with rows as data points</span>
+<span class="sd">    fileList : list of shape (n_samples)</span>
+<span class="sd">        List containing the name of the original image file. </span>
+<span class="sd">        Contains subject&#39;s ID, which will be used as merge-keys with the</span>
+<span class="sd">        spreadsheet info.</span>
+<span class="sd">        </span>
+<span class="sd">    Examples</span>
+<span class="sd">    --------</span>
+<span class="sd">    &gt;&gt;&gt; X, fileList = tw.data.tob_pnc.load_diffusion_volume_matfile()</span>
+<span class="sd">            </span>
+<span class="sd">    Notes</span>
+<span class="sd">    -----</span>
+<span class="sd">    - 07/06/2016 -- Created.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">date_str</span><span class="o">=</span><span class="s1">&#39;0706_2016&#39;</span>
+    <span class="k">if</span> <span class="n">downsample</span><span class="p">:</span>
+        <span class="n">filename</span> <span class="o">=</span> <span class="s1">&#39;tobpnc_dsamp_{}_{}.mat&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">modality</span><span class="p">,</span><span class="n">date_str</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">filename</span> <span class="o">=</span> <span class="s1">&#39;tobpnc_full_{}_{}.mat&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">modality</span><span class="p">,</span><span class="n">date_str</span><span class="p">)</span>
+        
+    <span class="n">data_path</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">datapath_tobpnc</span><span class="p">,</span><span class="n">filename</span><span class="p">)</span>
+    
+    <span class="n">fileList</span> <span class="o">=</span> <span class="n">loadmat</span><span class="p">(</span><span class="n">data_path</span><span class="p">,</span><span class="n">variable_names</span><span class="o">=</span><span class="p">(</span><span class="s1">&#39;fileList&#39;</span><span class="p">))[</span><span class="s1">&#39;fileList&#39;</span><span class="p">]</span>
+    <span class="n">fileList</span> <span class="o">=</span> <span class="p">[</span><span class="nb">str</span><span class="p">(</span><span class="n">_file</span><span class="p">)</span> <span class="k">for</span> <span class="n">_file</span> <span class="ow">in</span> <span class="n">fileList</span><span class="p">]</span>
+    <span class="k">assert</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">fileList</span><span class="p">)</span> <span class="o">==</span> <span class="n">fileList</span>
+    
+    <span class="k">if</span> <span class="n">file_list_only</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">fileList</span>
+    
+    <span class="n">X</span> <span class="o">=</span> <span class="n">loadmat</span><span class="p">(</span><span class="n">data_path</span><span class="p">,</span><span class="n">variable_names</span><span class="o">=</span><span class="p">(</span><span class="s1">&#39;X&#39;</span><span class="p">))[</span><span class="s1">&#39;X&#39;</span><span class="p">]</span>
+    
+    <span class="k">return</span> <span class="n">X</span><span class="p">,</span> <span class="n">fileList</span></div>
+    
+<span class="k">def</span> <span class="nf">load_diffusion_volume</span><span class="p">(</span><span class="n">modality</span><span class="o">=</span><span class="s1">&#39;FA&#39;</span><span class="p">,</span><span class="n">dataset</span><span class="o">=</span><span class="s1">&#39;both&#39;</span><span class="p">,</span><span class="n">downsample</span><span class="o">=</span><span class="bp">True</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot; Load design matrix for the diffusion volume.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    modality : string</span>
+<span class="sd">        ``&#39;FA&#39;,&#39;TR&#39;,&#39;AX&#39;,&#39;RD&#39;``</span>
+<span class="sd">    dataset : string</span>
+<span class="sd">        ``&#39;both&#39;,&#39;pnc&#39;,&#39;tob&#39;``</span>
+<span class="sd">    downsample : bool</span>
+<span class="sd">        Downsampled volume</span>
+<span class="sd">        </span>
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    X : ndarray of shape (n_samples,n_features)=(n,p)</span>
+<span class="sd">        Data matrix with rows as data points</span>
+<span class="sd">    df : pandas DataFrame of size (n_samples, n_fields)</span>
+<span class="sd">        Dataframe containing subject phenotypes</span>
+<span class="sd">        </span>
+<span class="sd">    &gt;&gt;&gt; X, df = tw.data.tob_pnc.load_connectome()</span>
+<span class="sd">    &gt;&gt;&gt; age = df[&#39;Age_years&#39;].values</span>
+<span class="sd">    </span>
+<span class="sd">    History</span>
+<span class="sd">    -------</span>
+<span class="sd">    - 07/06/2016 -- Created </span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">X</span><span class="p">,</span><span class="n">fileList</span> <span class="o">=</span> <span class="n">load_diffusion_volume_matfile</span><span class="p">(</span><span class="n">modality</span><span class="p">,</span><span class="n">downsample</span><span class="p">)</span>
+    <span class="n">df</span> <span class="o">=</span> <span class="n">load_datasheet</span><span class="p">()</span>
+    
+    <span class="k">def</span> <span class="nf">file_list_to_id</span><span class="p">():</span>
+        <span class="c1"># select substring containing subject id</span>
+        <span class="k">return</span> <span class="p">[</span><span class="n">_subj</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;_&#39;</span><span class="o">+</span><span class="n">modality</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span> <span class="k">for</span> <span class="n">_subj</span> <span class="ow">in</span> <span class="n">fileList</span><span class="p">]</span>
+    <span class="c1">#%% everything below identical to ``load_connectome``</span>
+    <span class="n">subj_id</span> <span class="o">=</span> <span class="n">file_list_to_id</span><span class="p">()</span>
+    
+    <span class="n">mask</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="n">subj</span> <span class="ow">in</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;ID&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">tolist</span><span class="p">()</span> <span class="k">for</span> <span class="n">i</span><span class="p">,</span><span class="n">subj</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">subj_id</span><span class="p">)])</span>
+    <span class="n">X</span> <span class="o">=</span> <span class="n">X</span><span class="p">[</span><span class="n">mask</span><span class="p">]</span>
+    <span class="n">fileList</span> <span class="o">=</span> <span class="p">[</span><span class="n">fileList</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="k">for</span> <span class="n">i</span><span class="p">,</span><span class="n">_</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">mask</span><span class="p">)</span> <span class="k">if</span> <span class="n">mask</span><span class="p">[</span><span class="n">i</span><span class="p">]]</span>
+    <span class="n">subj_id</span>  <span class="o">=</span> <span class="p">[</span><span class="n">subj_id</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>  <span class="k">for</span> <span class="n">i</span><span class="p">,</span><span class="n">_</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">mask</span><span class="p">)</span> <span class="k">if</span> <span class="n">mask</span><span class="p">[</span><span class="n">i</span><span class="p">]]</span>
+
+    <span class="k">assert</span> <span class="n">subj_id</span> <span class="o">==</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;ID&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">tolist</span><span class="p">()</span>
+    
+    <span class="c1">#--- append ``file_name`` onto second column</span>
+    <span class="n">df</span><span class="p">[</span><span class="s1">&#39;file_name&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">fileList</span>
+    <span class="n">cols</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">columns</span><span class="o">.</span><span class="n">tolist</span><span class="p">()</span>
+    <span class="n">cols</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="n">cols</span><span class="o">.</span><span class="n">pop</span><span class="p">())</span> <span class="c1"># insert last column at 2nd column</span>
+    <span class="n">df</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="n">cols</span><span class="p">]</span>
+    
+    <span class="k">if</span> <span class="n">dataset</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span><span class="o">==</span><span class="s1">&#39;both&#39;</span><span class="p">:</span>
+        <span class="k">pass</span>
+    <span class="k">elif</span> <span class="n">dataset</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span> <span class="o">==</span> <span class="s1">&#39;tob&#39;</span><span class="p">:</span>
+        <span class="n">mask_tob</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">ID</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="s1">&#39;R&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">values</span>
+        <span class="n">df</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="n">mask_tob</span><span class="p">]</span>
+        <span class="n">X</span> <span class="o">=</span> <span class="n">X</span><span class="p">[</span><span class="n">mask_tob</span><span class="p">]</span>
+        <span class="n">df</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="n">mask_tob</span><span class="p">]</span><span class="o">.</span><span class="n">reset_index</span><span class="p">(</span><span class="n">drop</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+    <span class="k">elif</span> <span class="n">dataset</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span> <span class="o">==</span> <span class="s1">&#39;pnc&#39;</span><span class="p">:</span>
+        <span class="n">mask_pnc</span> <span class="o">=</span> <span class="o">~</span><span class="n">df</span><span class="o">.</span><span class="n">ID</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="s1">&#39;R&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">values</span>
+        <span class="n">df</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="n">mask_pnc</span><span class="p">]</span>
+        <span class="n">X</span> <span class="o">=</span> <span class="n">X</span><span class="p">[</span><span class="n">mask_pnc</span><span class="p">]</span>
+        <span class="n">df</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="n">mask_pnc</span><span class="p">]</span><span class="o">.</span><span class="n">reset_index</span><span class="p">(</span><span class="n">drop</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">X</span><span class="p">,</span><span class="n">df</span>
+    
+<span class="k">def</span> <span class="nf">load_connectome</span><span class="p">(</span><span class="n">dataset</span><span class="o">=</span><span class="s1">&#39;both&#39;</span><span class="p">,</span><span class="n">pruned</span><span class="o">=</span><span class="bp">False</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot; Load design matrix for the structural connectome.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    dataset : string</span>
+<span class="sd">        ``&#39;both&#39;,&#39;pnc&#39;,&#39;tob&#39;``</span>
+<span class="sd">    pruned : bool</span>
+<span class="sd">        Get connectomes pruned at density 15%</span>
+<span class="sd">        </span>
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    X : ndarray of shape (n_samples,n_features)=(n,p)</span>
+<span class="sd">        Data matrix with rows as data points</span>
+<span class="sd">    df : pandas DataFrame of size (n_samples, n_fields)</span>
+<span class="sd">        Dataframe containing subject phenotypes</span>
+<span class="sd">        </span>
+<span class="sd">    &gt;&gt;&gt; X, df = tw.data.tob_pnc.load_connectome()</span>
+<span class="sd">    &gt;&gt;&gt; age = df[&#39;age&#39;].values</span>
+<span class="sd">    </span>
+<span class="sd">    History</span>
+<span class="sd">    -------</span>
+<span class="sd">    - 07/05/2016 -- Created </span>
+<span class="sd">      (``dev_0705_tob_pnc_get_connectome.py``)</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">X</span><span class="p">,</span><span class="n">fileList</span> <span class="o">=</span> <span class="n">load_connectome_matfile</span><span class="p">()</span>
+    <span class="n">df</span> <span class="o">=</span> <span class="n">load_datasheet</span><span class="p">()</span>
+    
+    <span class="k">def</span> <span class="nf">file_list_to_id</span><span class="p">():</span>
+        <span class="c1"># select substring containing subject id</span>
+        <span class="k">return</span> <span class="p">[</span><span class="n">_subj</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;_connmat&#39;</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span> <span class="k">for</span> <span class="n">_subj</span> <span class="ow">in</span> <span class="n">fileList</span><span class="p">]</span>
+    
+    <span class="n">subj_id</span> <span class="o">=</span> <span class="n">file_list_to_id</span><span class="p">()</span>
+    
+    <span class="n">mask</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="n">subj</span> <span class="ow">in</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;ID&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">tolist</span><span class="p">()</span> <span class="k">for</span> <span class="n">i</span><span class="p">,</span><span class="n">subj</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">subj_id</span><span class="p">)])</span>
+    <span class="n">X</span> <span class="o">=</span> <span class="n">X</span><span class="p">[</span><span class="n">mask</span><span class="p">]</span>
+    <span class="n">fileList</span> <span class="o">=</span> <span class="p">[</span><span class="n">fileList</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="k">for</span> <span class="n">i</span><span class="p">,</span><span class="n">_</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">mask</span><span class="p">)</span> <span class="k">if</span> <span class="n">mask</span><span class="p">[</span><span class="n">i</span><span class="p">]]</span>
+    <span class="n">subj_id</span>  <span class="o">=</span> <span class="p">[</span><span class="n">subj_id</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>  <span class="k">for</span> <span class="n">i</span><span class="p">,</span><span class="n">_</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">mask</span><span class="p">)</span> <span class="k">if</span> <span class="n">mask</span><span class="p">[</span><span class="n">i</span><span class="p">]]</span>
+
+    <span class="k">assert</span> <span class="n">subj_id</span> <span class="o">==</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;ID&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">tolist</span><span class="p">()</span>
+    
+    <span class="c1">#--- append ``file_name`` onto second column</span>
+    <span class="n">df</span><span class="p">[</span><span class="s1">&#39;file_name&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">fileList</span>
+    <span class="n">cols</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">columns</span><span class="o">.</span><span class="n">tolist</span><span class="p">()</span>
+    <span class="n">cols</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="n">cols</span><span class="o">.</span><span class="n">pop</span><span class="p">())</span> <span class="c1"># insert last column at 2nd column</span>
+    <span class="n">df</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="n">cols</span><span class="p">]</span>
+    
+    <span class="c1">#--- add which dataset the index corresponds to ---</span>
+    <span class="c1">#%%</span>
+    <span class="n">df</span><span class="p">[</span><span class="s1">&#39;site&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
+    <span class="n">df</span><span class="o">.</span><span class="n">ix</span><span class="p">[:</span><span class="mi">105</span><span class="p">,</span><span class="s1">&#39;site&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;pnc&#39;</span>
+    <span class="n">df</span><span class="o">.</span><span class="n">ix</span><span class="p">[</span><span class="mi">105</span><span class="p">:,</span><span class="s1">&#39;site&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;tob&#39;</span>
+    <span class="c1">#df[&#39;site&#39;][:105] = &#39;pnc&#39; </span>
+    <span class="c1">#df[&#39;site&#39;][105:] = &#39;tob&#39; # &lt;- this triggers warning</span>
+    <span class="c1">#see http://pandas.pydata.org/pandas-docs/stable/indexing.html#indexing-view-versus-copy</span>
+    <span class="c1">#%%</span>
+    
+    
+    <span class="k">if</span> <span class="n">dataset</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span><span class="o">==</span><span class="s1">&#39;both&#39;</span><span class="p">:</span>
+        <span class="k">pass</span>
+    <span class="k">elif</span> <span class="n">dataset</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span> <span class="o">==</span> <span class="s1">&#39;tob&#39;</span><span class="p">:</span>
+        <span class="n">mask_tob</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">ID</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="s1">&#39;R&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">values</span>
+        <span class="n">df</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="n">mask_tob</span><span class="p">]</span>
+        <span class="n">X</span> <span class="o">=</span> <span class="n">X</span><span class="p">[</span><span class="n">mask_tob</span><span class="p">]</span>
+        <span class="n">df</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="n">mask_tob</span><span class="p">]</span><span class="o">.</span><span class="n">reset_index</span><span class="p">(</span><span class="n">drop</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+    <span class="k">elif</span> <span class="n">dataset</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span> <span class="o">==</span> <span class="s1">&#39;pnc&#39;</span><span class="p">:</span>
+        <span class="n">mask_pnc</span> <span class="o">=</span> <span class="o">~</span><span class="n">df</span><span class="o">.</span><span class="n">ID</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="s1">&#39;R&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">values</span>
+        <span class="n">df</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="n">mask_pnc</span><span class="p">]</span>
+        <span class="n">X</span> <span class="o">=</span> <span class="n">X</span><span class="p">[</span><span class="n">mask_pnc</span><span class="p">]</span>
+        <span class="n">df</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="n">mask_pnc</span><span class="p">]</span><span class="o">.</span><span class="n">reset_index</span><span class="p">(</span><span class="n">drop</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">X</span><span class="p">,</span><span class="n">df</span>
+    
+<span class="k">def</span> <span class="nf">load_bct_measures</span><span class="p">(</span><span class="n">density</span><span class="o">=</span><span class="mf">0.15</span><span class="p">,</span><span class="n">log_tx</span><span class="o">=</span><span class="bp">False</span><span class="p">,</span><span class="n">return_dict</span><span class="o">=</span><span class="bp">False</span><span class="p">,</span><span class="n">normalized</span><span class="o">=</span><span class="bp">False</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot; Load network measures of interest.</span>
+<span class="sd">    </span>
+<span class="sd">    BCT scores saved via ``save_0721_bct_weighted_tobpnc.py`` using</span>
+<span class="sd">    :func:`bct_network_measures`</span>
+<span class="sd">    </span>
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    density : float</span>
+<span class="sd">        Target edge density upon threhsolding (value between (0,1))</span>
+<span class="sd">    log_tx : bool</span>
+<span class="sd">        Log transformation</span>
+<span class="sd">    return_dict : bool</span>
+<span class="sd">        Return results as dictionary</span>
+<span class="sd">    normalized : bool</span>
+<span class="sd">        Return result from *mean-max-edge* normalized connectomes</span>
+<span class="sd">        </span>
+<span class="sd">    Usage</span>
+<span class="sd">    -----</span>
+<span class="sd">    &gt;&gt;&gt; X = tw.data.pnc.load_connectome()[0]</span>
+<span class="sd">    &gt;&gt;&gt; BC,CC,deg,eff,ASS,CPL,EFF,TRA = tw.data.pnc.load_bct_measures(log_tx=True)</span>
+<span class="sd">    </span>
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    The following are **nodal measures** of shape (n_subj,n_nodes)</span>
+<span class="sd">    </span>
+<span class="sd">    BC : ndarray of shape=(n_subject,n_nodes)</span>
+<span class="sd">        Betweenness centrality (global measure)</span>
+<span class="sd">    CC : ndarray of shape=(n_subject,n_nodes)</span>
+<span class="sd">        Clustering coefficient</span>
+<span class="sd">    deg : ndarray of shape=(n_subject,n_nodes)</span>
+<span class="sd">        Degree</span>
+<span class="sd">    eff : ndarray of shape=(n_subject,n_nodes)</span>
+<span class="sd">        Local efficiency</span>
+<span class="sd">        </span>
+<span class="sd">    The following are **global measures** of shape (n_subj,)</span>
+<span class="sd">    </span>
+<span class="sd">    ASS : </span>
+<span class="sd">        assortativity</span>
+<span class="sd">    CPL :</span>
+<span class="sd">        characteristic path length</span>
+<span class="sd">    EFF : </span>
+<span class="sd">        global efficiency</span>
+<span class="sd">    TRA :</span>
+<span class="sd">        transitivity</span>
+<span class="sd">        </span>
+<span class="sd">    </span>
+<span class="sd">    History</span>
+<span class="sd">    -------</span>
+<span class="sd">    - 07/21/2016 -- Created </span>
+<span class="sd">    - 07/26/2016 -- Updated with option ``normalized``</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="n">normalized</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">log_tx</span><span class="p">:</span>
+            <span class="n">file_name</span> <span class="o">=</span> <span class="s1">&#39;bct_meanMaxNormalized_log_weighted_density{:.1f}.mat&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="mi">100</span><span class="o">*</span><span class="n">density</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">file_name</span> <span class="o">=</span> <span class="s1">&#39;bct_meanMaxNormalized_weighted_density{:.1f}.mat&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="mi">100</span><span class="o">*</span><span class="n">density</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">log_tx</span><span class="p">:</span>
+            <span class="n">file_name</span> <span class="o">=</span> <span class="s1">&#39;bct_logweighted_density{:.1f}.mat&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="mi">100</span><span class="o">*</span><span class="n">density</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">file_name</span> <span class="o">=</span> <span class="s1">&#39;bct_weighted_density{:.1f}.mat&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="mi">100</span><span class="o">*</span><span class="n">density</span><span class="p">)</span>
+    
+    <span class="n">file_path</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">datapath_tobpnc</span><span class="p">,</span><span class="s1">&#39;bct&#39;</span><span class="p">,</span><span class="n">file_name</span><span class="p">)</span>
+    
+    <span class="n">in_data</span> <span class="o">=</span> <span class="n">loadmat</span><span class="p">(</span><span class="n">file_path</span><span class="p">)</span>
+    
+    <span class="c1"># -- global measures ---</span>
+    <span class="c1"># flattening applied since shape=(1,nsubj) when saved via savemat</span>
+    <span class="n">ASS</span> <span class="o">=</span> <span class="n">in_data</span><span class="p">[</span><span class="s1">&#39;ASS&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">ravel</span><span class="p">()</span>
+    <span class="n">CPL</span> <span class="o">=</span> <span class="n">in_data</span><span class="p">[</span><span class="s1">&#39;CPL&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">ravel</span><span class="p">()</span>
+    <span class="n">EFF</span> <span class="o">=</span> <span class="n">in_data</span><span class="p">[</span><span class="s1">&#39;EFF&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">ravel</span><span class="p">()</span>
+    <span class="n">TRA</span> <span class="o">=</span> <span class="n">in_data</span><span class="p">[</span><span class="s1">&#39;TRA&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">ravel</span><span class="p">()</span>
+    
+    <span class="c1"># -- local measures ---</span>
+    <span class="n">BC</span> <span class="o">=</span> <span class="n">in_data</span><span class="p">[</span><span class="s1">&#39;BC&#39;</span><span class="p">]</span>
+    <span class="n">CC</span> <span class="o">=</span> <span class="n">in_data</span><span class="p">[</span><span class="s1">&#39;CC&#39;</span><span class="p">]</span>
+    <span class="n">deg</span> <span class="o">=</span> <span class="n">in_data</span><span class="p">[</span><span class="s1">&#39;deg&#39;</span><span class="p">]</span>
+    <span class="n">eff</span> <span class="o">=</span> <span class="n">in_data</span><span class="p">[</span><span class="s1">&#39;eff&#39;</span><span class="p">]</span>
+    
+    <span class="k">if</span> <span class="n">return_dict</span><span class="p">:</span>
+        <span class="k">return</span> <span class="nb">dict</span><span class="p">(</span><span class="n">BC</span><span class="o">=</span><span class="n">BC</span><span class="p">,</span><span class="n">CC</span><span class="o">=</span><span class="n">CC</span><span class="p">,</span><span class="n">deg</span><span class="o">=</span><span class="n">deg</span><span class="p">,</span><span class="n">eff</span><span class="o">=</span><span class="n">eff</span><span class="p">,</span><span class="n">ASS</span><span class="o">=</span><span class="n">ASS</span><span class="p">,</span><span class="n">CPL</span><span class="o">=</span><span class="n">CPL</span><span class="p">,</span><span class="n">EFF</span><span class="o">=</span><span class="n">EFF</span><span class="p">,</span><span class="n">TRA</span><span class="o">=</span><span class="n">TRA</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">BC</span><span class="p">,</span><span class="n">CC</span><span class="p">,</span><span class="n">deg</span><span class="p">,</span><span class="n">eff</span><span class="p">,</span><span class="n">ASS</span><span class="p">,</span><span class="n">CPL</span><span class="p">,</span><span class="n">EFF</span><span class="p">,</span><span class="n">TRA</span>
+        
+<span class="k">def</span> <span class="nf">load_176roi</span><span class="p">(</span><span class="n">dataset</span><span class="o">=</span><span class="s1">&#39;both&#39;</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot; Load design matrix for the 176 ROI.</span>
+<span class="sd">    </span>
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    dataset : string</span>
+<span class="sd">        ``&#39;both&#39;,&#39;pnc&#39;,&#39;tob&#39;``</span>
+<span class="sd">        </span>
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    df176 : pandas DataFrame of shape (n_samples,n_features)=(n,p)</span>
+<span class="sd">        Data matrix with rows as data points.</span>
+<span class="sd">        p = 176*(4 FA/TR/AX/RD) * (2 Mean/Std) = 1408.</span>
+<span class="sd">    df : pandas DataFrame of size (n_samples, n_fields)</span>
+<span class="sd">        Dataframe containing subject phenotypes</span>
+<span class="sd">        </span>
+<span class="sd">    &gt;&gt;&gt; X, df = tw.data.tob_pnc.load_176roi()</span>
+<span class="sd">    &gt;&gt;&gt; age = df[&#39;Age_years&#39;].values</span>
+<span class="sd">    </span>
+<span class="sd">    To use only the FA Mean features:</span>
+<span class="sd">    </span>
+<span class="sd">    &gt;&gt;&gt; X,df = tw.data.tob_pnc.load_176roi()</span>
+<span class="sd">    &gt;&gt;&gt; mask = X.columns.str.contains(&#39;NZMean.*FA&#39;)</span>
+<span class="sd">    &gt;&gt;&gt; mask += X.columns.str.contains(&#39;NZSigma.*FA&#39;)</span>
+<span class="sd">    &gt;&gt;&gt; X = X.iloc[:,mask].values</span>
+<span class="sd">    </span>
+<span class="sd">    History</span>
+<span class="sd">    -------</span>
+<span class="sd">    - 07/05/2016 -- Created </span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">data_path</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">datapath_tobpnc</span><span class="p">,</span><span class="s1">&#39;Results&#39;</span><span class="p">,</span><span class="s1">&#39;roistats&#39;</span><span class="p">,</span>
+                             <span class="s1">&#39;PNC_Tobacco_Merged_roistats.csv&#39;</span><span class="p">)</span>
+    <span class="n">df176</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">data_path</span><span class="p">,</span><span class="n">index_col</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+    <span class="n">df176</span> <span class="o">=</span> <span class="n">df176</span><span class="o">.</span><span class="n">sort_index</span><span class="p">()</span>
+    
+    <span class="n">df</span><span class="o">=</span><span class="n">tw</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">tob_pnc</span><span class="o">.</span><span class="n">load_datasheet</span><span class="p">()</span>
+    
+    <span class="c1"># remove subjects not contained in the phenotypic spreadsheet</span>
+    <span class="n">mask</span> <span class="o">=</span> <span class="n">df176</span><span class="o">.</span><span class="n">index</span><span class="o">.</span><span class="n">isin</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;ID&#39;</span><span class="p">])</span>
+    <span class="n">df176</span> <span class="o">=</span> <span class="n">df176</span><span class="p">[</span><span class="n">mask</span><span class="p">]</span>
+    
+    <span class="k">assert</span> <span class="n">df176</span><span class="o">.</span><span class="n">index</span><span class="o">.</span><span class="n">tolist</span><span class="p">()</span> <span class="o">==</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;ID&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">tolist</span><span class="p">()</span>
+    
+    <span class="k">if</span> <span class="n">dataset</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span><span class="o">==</span><span class="s1">&#39;both&#39;</span><span class="p">:</span>
+        <span class="k">pass</span>
+    <span class="k">elif</span> <span class="n">dataset</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span> <span class="o">==</span> <span class="s1">&#39;tob&#39;</span><span class="p">:</span>
+        <span class="n">mask_tob</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">ID</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="s1">&#39;R&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">values</span>
+        <span class="n">df</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="n">mask_tob</span><span class="p">]</span>
+        <span class="n">df176</span> <span class="o">=</span> <span class="n">df176</span><span class="o">.</span><span class="n">ix</span><span class="p">[</span><span class="n">mask_tob</span><span class="p">,:]</span>
+        <span class="n">df</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="n">mask_tob</span><span class="p">]</span><span class="o">.</span><span class="n">reset_index</span><span class="p">(</span><span class="n">drop</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+    <span class="k">elif</span> <span class="n">dataset</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span> <span class="o">==</span> <span class="s1">&#39;pnc&#39;</span><span class="p">:</span>
+        <span class="n">mask_pnc</span> <span class="o">=</span> <span class="o">~</span><span class="n">df</span><span class="o">.</span><span class="n">ID</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="s1">&#39;R&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">values</span>
+        <span class="n">df</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="n">mask_pnc</span><span class="p">]</span>
+        <span class="n">df176</span> <span class="o">=</span> <span class="n">df176</span><span class="o">.</span><span class="n">ix</span><span class="p">[</span><span class="n">mask_pnc</span><span class="p">,:]</span>
+        <span class="n">df</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="n">mask_pnc</span><span class="p">]</span><span class="o">.</span><span class="n">reset_index</span><span class="p">(</span><span class="n">drop</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">df176</span><span class="p">,</span> <span class="n">df</span>
+
+
+<span class="k">def</span> <span class="nf">load_brainmask</span><span class="p">(</span><span class="n">downsampled</span><span class="o">=</span><span class="bp">False</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot; Get brain mask</span>
+<span class="sd">    </span>
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    downsampled : bool</span>
+<span class="sd">        Downsampled resolution</span>
+<span class="sd">        </span>
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    mask_vol : ndarray of shape=(nx,ny,nz)</span>
+<span class="sd">        Binary brain mask</span>
+<span class="sd">        </span>
+<span class="sd">    Usage</span>
+<span class="sd">    -----</span>
+<span class="sd">    &gt;&gt;&gt; mask_vol = load_brainmask()</span>
+<span class="sd">        </span>
+<span class="sd">    History</span>
+<span class="sd">    -------</span>
+<span class="sd">    - 07/06/2016 -- Created.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="n">downsampled</span><span class="p">:</span>
+        <span class="n">filename</span> <span class="o">=</span> <span class="s1">&#39;intersection_mask_dsamp.nii.gz&#39;</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">filename</span> <span class="o">=</span> <span class="s1">&#39;intersection_mask.nii.gz&#39;</span>
+    <span class="n">filepath</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">datapath_tobpnc</span><span class="p">,</span><span class="n">filename</span><span class="p">)</span>
+    <span class="n">brainmask</span> <span class="o">=</span> <span class="n">nib</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">filepath</span><span class="p">)</span><span class="o">.</span><span class="n">get_data</span><span class="p">()</span>
+    <span class="k">return</span> <span class="n">brainmask</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">bool</span><span class="p">)</span>
+    
+    
+<span class="k">def</span> <span class="nf">load_eve176</span><span class="p">(</span><span class="n">downsampled</span><span class="o">=</span><span class="bp">False</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot; Get eve176 template volume</span>
+<span class="sd">    </span>
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    downsampled : bool</span>
+<span class="sd">        Downsampled resolution</span>
+<span class="sd">        </span>
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    eve176 : ndarray of shape=(nx,ny,nz)</span>
+<span class="sd">        Eve176 segmentation atlas</span>
+<span class="sd">        </span>
+<span class="sd">    Usage</span>
+<span class="sd">    -----</span>
+<span class="sd">    &gt;&gt;&gt; eve176 = load_eve176()</span>
+<span class="sd">        </span>
+<span class="sd">    History</span>
+<span class="sd">    -------</span>
+<span class="sd">    - 07/06/2016 -- Created.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="n">downsampled</span><span class="p">:</span>
+        <span class="n">filename</span> <span class="o">=</span> <span class="s1">&#39;JHU_2m_lps_WMPM1_dsamp.nii.gz&#39;</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">filename</span> <span class="o">=</span> <span class="s1">&#39;JHU_2m_lps_WMPM1.nii.gz&#39;</span>
+    <span class="n">filepath</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">datapath_tobpnc</span><span class="p">,</span><span class="n">filename</span><span class="p">)</span>
+    <span class="n">eve176</span> <span class="o">=</span> <span class="n">nib</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">filepath</span><span class="p">)</span><span class="o">.</span><span class="n">get_data</span><span class="p">()</span>
+    <span class="k">return</span> <span class="n">eve176</span>
+    
+    
+<span class="k">def</span> <span class="nf">load_template</span><span class="p">(</span><span class="n">mode</span><span class="o">=</span><span class="s1">&#39;FA&#39;</span><span class="p">,</span><span class="n">downsampled</span><span class="o">=</span><span class="bp">False</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot; Get T1 template volume</span>
+<span class="sd">    </span>
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    downsampled : bool</span>
+<span class="sd">        Downsampled resolution</span>
+<span class="sd">        </span>
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    template: ndarray of shape=(nx,ny,nz)</span>
+<span class="sd">        Template volume</span>
+<span class="sd">        </span>
+<span class="sd">    Usage</span>
+<span class="sd">    -----</span>
+<span class="sd">    &gt;&gt;&gt; FA_template = load_template(&#39;FA&#39;)</span>
+<span class="sd">    &gt;&gt;&gt; T1_template = load_template(&#39;T1&#39;)</span>
+<span class="sd">        </span>
+<span class="sd">    History</span>
+<span class="sd">    -------</span>
+<span class="sd">    - 07/06/2016 -- Created.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="n">mode</span> <span class="o">==</span> <span class="s1">&#39;FA&#39;</span><span class="p">:</span>
+        <span class="n">filename</span> <span class="o">=</span> <span class="s1">&#39;JHU_2m_lps_nii_FA&#39;</span>
+    <span class="k">elif</span> <span class="n">mode</span> <span class="o">==</span> <span class="s1">&#39;T1&#39;</span><span class="p">:</span>
+        <span class="n">filename</span> <span class="o">=</span> <span class="s1">&#39;JHU_2m_lps_T1&#39;</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">pass</span>
+    
+    <span class="k">if</span> <span class="n">downsampled</span><span class="p">:</span>
+        <span class="n">filename</span> <span class="o">+=</span> <span class="s1">&#39;_dsamp.nii.gz&#39;</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">filename</span> <span class="o">+=</span> <span class="s1">&#39;.nii.gz&#39;</span>
+    <span class="n">filepath</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">datapath_tobpnc</span><span class="p">,</span><span class="n">filename</span><span class="p">)</span>
+    <span class="n">template</span> <span class="o">=</span> <span class="n">nib</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">filepath</span><span class="p">)</span><span class="o">.</span><span class="n">get_data</span><span class="p">()</span>
+    <span class="k">return</span> <span class="n">template</span>
+<span class="c1">#%% === everything below deprecated on 07/05/2016 ====</span>
+<span class="c1">#%% print module-name warning</span>
+<span class="c1">#def print_warning(fn):</span>
+<span class="c1">#    def wrapper():</span>
+<span class="c1">#        #from warnings import warn</span>
+<span class="c1">#        #warn(&#39;module-name changed from &quot;pnc_tob&quot; to &quot;tob_pnc&quot; on 06/22/2016&#39;)</span>
+<span class="c1">#        &quot;&quot;&quot;ipython only prints warning the first call time...so just use print</span>
+<span class="c1">#           to make sure i get the message&quot;&quot;&quot;</span>
+<span class="c1">#        print(&#39;module-name changed from &quot;pnc_tob&quot; to &quot;tob_pnc&quot; on 06/22/2016&#39;)</span>
+<span class="c1">#    return wrapper</span>
+<span class="c1">##%%</span>
+<span class="c1">#def get_tob_pnc_path():</span>
+<span class="c1">#    return os.path.join(get_data_path(),&#39;tob_pnc_matched&#39;)</span>
+<span class="c1">#</span>
+<span class="c1">##@print_warning</span>
+<span class="c1">#def get_matched_subjects():</span>
+<span class="c1">#    &quot;&quot;&quot; Get list of *matched* pnc/tob subjects</span>
+<span class="c1">#    </span>
+<span class="c1">#    </span>
+<span class="c1">#    Usage</span>
+<span class="c1">#    -----</span>
+<span class="c1">#    &gt;&gt;&gt; df_pnc, df_tob = get_matched_subjects_0614()</span>
+<span class="c1">#    </span>
+<span class="c1">#    History</span>
+<span class="c1">#    -------</span>
+<span class="c1">#    - Created 06/14/2016</span>
+<span class="c1">#    - 06/22/2016 -- update on spreadsheet data location.</span>
+<span class="c1">#      also changed filename from ``get_matched_subjects_0614`` to </span>
+<span class="c1">#      ``get_matched_subjects``.</span>
+<span class="c1">#    &quot;&quot;&quot;</span>
+<span class="c1">#    xls_path = os.path.join(get_tob_pnc_path(),&#39;PNC_Tobacco_Merged_Dataset.xlsx&#39;)</span>
+<span class="c1">#    df = pd.read_excel(xls_path).iloc[:,:8] # only the first 8 columns are relevant</span>
+<span class="c1">#    </span>
+<span class="c1">#    # first 111 subjects are tobacco, last 111 subj are from pnc</span>
+<span class="c1">#    df_tob = df[:111]</span>
+<span class="c1">#    df_pnc = df[111:]</span>
+<span class="c1">#    </span>
+<span class="c1">#    # sort rows of each dataframes by ID</span>
+<span class="c1">#    df_tob = df_tob.sort_values(by=[&#39;ID&#39;])</span>
+<span class="c1">#    df_pnc = df_pnc.sort_values(by=[&#39;ID&#39;])</span>
+<span class="c1">#    </span>
+<span class="c1">#    # reset index (my preference, so the pandas index can be used as counterse</span>
+<span class="c1">#    df_tob.reset_index(drop=True,inplace=True)</span>
+<span class="c1">#    df_pnc.reset_index(drop=True,inplace=True)</span>
+<span class="c1">#    </span>
+<span class="c1">#    #_,_,df_ = get_pnc_0523()</span>
+<span class="c1">#    #%%</span>
+<span class="c1">#    return df_pnc, df_tob</span>
+<span class="c1">#    </span>
+<span class="c1">#    </span>
+<span class="c1">#def get_176roi():</span>
+<span class="c1">#    &quot;&quot;&quot;Get 176roi diffusion for **matched** pnc/tob subjects.</span>
+<span class="c1">#    </span>
+<span class="c1">#    Usage</span>
+<span class="c1">#    -----</span>
+<span class="c1">#    &gt;&gt;&gt; tob176, pnc176, roi_name = tw.data.tob_pnc.get_176roi()</span>
+<span class="c1">#    </span>
+<span class="c1">#    Get mean-FA 176 ROIs</span>
+<span class="c1">#    </span>
+<span class="c1">#    &gt;&gt;&gt; mask_fa=pnc176.columns.str.startswith(&#39;mean_FA&#39;)</span>
+<span class="c1">#    &gt;&gt;&gt; pnc_meanFA = pnc176.iloc[:,mask_fa]</span>
+<span class="c1">#    </span>
+<span class="c1">#    Sanity check on ID matching</span>
+<span class="c1">#    </span>
+<span class="c1">#    &gt;&gt;&gt; df_pnc, df_tob = tw.data.tob_pnc.get_matched_subjects()</span>
+<span class="c1">#    &gt;&gt;&gt; tob176, pnc176, roi_name = tw.data.tob_pnc.get_176roi()</span>
+<span class="c1">#    &gt;&gt;&gt; print pd.Series.equals( df_pnc[&#39;ID&#39;], pnc176.reset_index()[&#39;ID&#39;])</span>
+<span class="c1">#    &gt;&gt;&gt; print pd.Series.equals( df_tob[&#39;ID&#39;], tob176.reset_index()[&#39;ID&#39;])</span>
+<span class="c1">#    </span>
+<span class="c1">#    History</span>
+<span class="c1">#    -------</span>
+<span class="c1">#    - Created 06/14/2016</span>
+<span class="c1">#    - 06/22/2016 -- update on spreadsheet data location.</span>
+<span class="c1">#      also changed filename from ``get_176roi_0614`` to ``get_176roi``</span>
+<span class="c1">#    &quot;&quot;&quot;</span>
+<span class="c1">#    data_dir = os.path.join(get_tob_pnc_path(),&#39;176roi&#39;)</span>
+<span class="c1">#    fname = &#39;PNC_Tobacco_Merged_roistats.csv&#39;</span>
+<span class="c1">#    fpath = os.path.join(data_dir,fname)</span>
+<span class="c1">#    df = pd.read_csv(fpath)</span>
+<span class="c1">#    </span>
+<span class="c1">#    # set 1st column name to &#39;ID&#39;</span>
+<span class="c1">#    cols = df.columns.tolist()</span>
+<span class="c1">#    cols[0] = &#39;ID&#39;</span>
+<span class="c1">#    df.columns = cols</span>
+<span class="c1">#    </span>
+<span class="c1">#    # first 111 subjects are pnc, last 111 subj are from tob</span>
+<span class="c1">#    &quot;&quot;&quot;WARNING: opposite of the convention in PNC_Tobacco_Merged_Dataset.xlsx&quot;&quot;&quot;</span>
+<span class="c1">#    pnc176 = df[:111]</span>
+<span class="c1">#    tob176 = df[111:]</span>
+<span class="c1">#    </span>
+<span class="c1">#    # sort rows of each dataframes by ID</span>
+<span class="c1">#    #tob176.sort_values(by=[&#39;ID&#39;],inplace=True)</span>
+<span class="c1">#    #pnc176.sort_values(by=[&#39;ID&#39;],inplace=True) #&lt;- inplace=True raises warnings...</span>
+<span class="c1">#    tob176=tob176.sort_values(by=[&#39;ID&#39;])</span>
+<span class="c1">#    pnc176=pnc176.sort_values(by=[&#39;ID&#39;])</span>
+<span class="c1">#    </span>
+<span class="c1">#    # reset index (my preference, so the pandas index can be used as counters</span>
+<span class="c1">#    tob176.reset_index(drop=True,inplace=True)</span>
+<span class="c1">#    pnc176.reset_index(drop=True,inplace=True)</span>
+<span class="c1">#    </span>
+<span class="c1">#    </span>
+<span class="c1">#    # set ID as index</span>
+<span class="c1">#    tob176.set_index([&#39;ID&#39;],inplace=True)</span>
+<span class="c1">#    pnc176.set_index([&#39;ID&#39;],inplace=True)</span>
+<span class="c1">#    </span>
+<span class="c1">#    #return tob176,pnc176</span>
+<span class="c1">#    &quot;&quot;&quot;</span>
+<span class="c1">#    from pprint import pprint</span>
+<span class="c1">#    pprint(set([str_[:tw.str_find_nth(str_,&#39;_&#39;,2)] for str_ in pnc176.columns.tolist()]))</span>
+<span class="c1">#        set([</span>
+<span class="c1">#         &#39;NZMean_AX&#39;,</span>
+<span class="c1">#         &#39;NZMean_FA&#39;,</span>
+<span class="c1">#         &#39;NZMean_RAD&#39;,</span>
+<span class="c1">#         &#39;NZMean_TR&#39;,</span>
+<span class="c1">#         &#39;NZSigma_AX&#39;,</span>
+<span class="c1">#         &#39;NZSigma_FA&#39;,</span>
+<span class="c1">#         &#39;NZSigma_RAD&#39;,</span>
+<span class="c1">#         &#39;NZSigma_TR&#39;])</span>
+<span class="c1">#     &quot;&quot;&quot;</span>
+<span class="c1">#    #%% extract ROI-names</span>
+<span class="c1">#    # err...pandas str.replace supports regular expressions...wish i knew that earlier...</span>
+<span class="c1">#    roi_name = pnc176.columns[:176]</span>
+<span class="c1">#    </span>
+<span class="c1">#    #http://stackoverflow.com/questions/493819/python-join-why-is-it-string-joinlist-instead-of-list-joinstring</span>
+<span class="c1">#    #roi_name = roi_name.str.split(&#39;(_)&#39;) # split string but also keep underscore (via paranthesis capturer)</span>
+<span class="c1">#    roi_name = roi_name.str.split(&#39;_&#39;) </span>
+<span class="c1">#    roi_name = roi_name.str[-2:] # take last 2 items in list</span>
+<span class="c1">#    roi_name = roi_name.str.join(&#39;_&#39;).tolist() # join strings with &#39;_&#39; concatenating the strings</span>
+<span class="c1">#    #%% cleanup column names</span>
+<span class="c1">#    def rename_columns(dataframe):</span>
+<span class="c1">#        &quot;&quot;&quot; rename names like ``mean_AX_111_SMG_R`` to ``mean_AX_111_SMG_R``&quot;&quot;&quot;</span>
+<span class="c1">#        # ``tmp_`` here represents a Pandas Index class</span>
+<span class="c1">#        colname = dataframe.columns</span>
+<span class="c1">#        colname=colname.str.replace(&#39;NZMean_FA&#39;,  &#39;mean_FA&#39;)</span>
+<span class="c1">#        colname=colname.str.replace(&#39;NZMean_AX&#39;,  &#39;mean_AX&#39;)</span>
+<span class="c1">#        colname=colname.str.replace(&#39;NZMean_TR&#39;,  &#39;mean_TR&#39;)</span>
+<span class="c1">#        colname=colname.str.replace(&#39;NZMean_RAD&#39;, &#39;mean_RD&#39;)</span>
+<span class="c1">#        </span>
+<span class="c1">#        colname=colname.str.replace(&#39;NZSigma_FA&#39;,  &#39;sigma_FA&#39;)</span>
+<span class="c1">#        colname=colname.str.replace(&#39;NZSigma_AX&#39;,  &#39;sigma_AX&#39;)</span>
+<span class="c1">#        colname=colname.str.replace(&#39;NZSigma_TR&#39;,  &#39;sigma_TR&#39;)</span>
+<span class="c1">#        colname=colname.str.replace(&#39;NZSigma_RAD&#39;, &#39;sigma_RD&#39;)</span>
+<span class="c1">#        </span>
+<span class="c1">#        # only extract the first 3 &quot;parts&quot; broken up by &#39;_&#39;</span>
+<span class="c1">#        colname = colname.str.split(&#39;_&#39;).str[:3].str.join(&#39;_&#39;).tolist()</span>
+<span class="c1">#        dataframe.columns = colname</span>
+<span class="c1">#        return dataframe</span>
+<span class="c1">#    </span>
+<span class="c1">#    # rename columns </span>
+<span class="c1">#    tob176 = rename_columns(tob176)</span>
+<span class="c1">#    pnc176 = rename_columns(pnc176)</span>
+<span class="c1">#    return tob176, pnc176, roi_name</span>
+<span class="c1">#    #%% create dataframes for each modality</span>
+<span class="c1">##    tob_mean_FA = df_tob.iloc[:,tob176.columns.str.startswith(&#39;NZMean_FA&#39;)]</span>
+<span class="c1">##    pnc_mean_FA = df_tob.iloc[:,pnc176.columns.str.startswith(&#39;NZMean_FA&#39;)]</span>
+<span class="c1">##    </span>
+<span class="c1">##    return pnc176, tob176</span>
+</pre></div>
+
+           </div>
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+      Last updated on Oct 25, 2016.
+
+    </p>
+  </div> 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../../',
+            VERSION:'',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../../_static/doctools.js"></script>
+      <script type="text/javascript" src="../../../_static/copybutton.js"></script>
+      <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

@@ -5,6 +5,20 @@ ts-sublime (``ts-sublime.rst``)
    :depth: 2
    :local:
  
+#################################################
+Latexing complaining cannot find pdflatex command
+#################################################
+(2016-10-09)
+
+Add the following to ``LaTeXing.sublime-settings``
+
+::
+
+    "path":
+    [
+        "C:\\Program Files\\MiKTeX 2.9\\miktex\\bin\\x64"
+    ],
+
 ######################################
 Old-notes from old config_master repos
 ######################################

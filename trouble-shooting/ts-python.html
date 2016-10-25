@@ -287,6 +287,12 @@
 <li class="toctree-l2 current"><a class="current reference internal" href="">3 ts-python (<code class="docutils literal"><span class="pre">ts-python.rst</span></code>)</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#getting-theano-to-work-on-windows">3.1 Getting theano to work on Windows</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#no-clue-why-but-jupyter-kernel-keeps-dying">3.2 No clue why, but jupyter kernel keeps dying...</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#pip-install-mysql-doesn-t-work">3.3 pip install mysql doesn&#8217;t work</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#cygwin">3.3.1 cygwin</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#linux-ubutu-14-04">3.3.2 Linux (ubutu 14.04)</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#pip-install-psycopg2-for-postgreql">3.4 pip install psycopg2 for postgreql</a></li>
 </ul>
 </li>
 </ul>
@@ -312,6 +318,24 @@
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../misc/misc-sbia-setups.html">3 Misc symlinks (<code class="docutils literal"><span class="pre">misc-symlinks.rst</span></code>)</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../misc/misc-sbia-setups.html#sql-related">3.1 SQL related</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../test_autodoc.html"><code class="docutils literal"><span class="pre">test_autodoc.rst</span></code></a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../test_autodoc.html#visualization">Visualization</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../test_autodoc.html#imconnmat">imconnmat</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../test_autodoc.html#non-negative-matrix-factorization">Non-negative Matrix Factorization</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../test_autodoc.html#nmf-ls-pnmf-admm">nmf.ls_pnmf_admm</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../test_autodoc.html#nmf-ls-sgpnmf-admm">nmf.LS_SGPNMF_ADMM</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../test_autodoc.html#data-io">Data IO</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../test_autodoc.html#data-tob-pnc-load-bct-measures">data.tob_pnc.load_bct_measures</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../test_autodoc.html#data-tob-pnc-load-diffusion-volume-matfile">data.tob_pnc.load_diffusion_volume_matfile</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../test_autodoc.html#data-tob-pnc-load-connectome-matfile">data.tob_pnc.load_connectome_matfile</a></li>
 </ul>
 </li>
 </ul>
@@ -383,6 +407,12 @@
 <ul class="simple">
 <li><a class="reference internal" href="#getting-theano-to-work-on-windows" id="id1">Getting theano to work on Windows</a></li>
 <li><a class="reference internal" href="#no-clue-why-but-jupyter-kernel-keeps-dying" id="id2">No clue why, but jupyter kernel keeps dying...</a></li>
+<li><a class="reference internal" href="#pip-install-mysql-doesn-t-work" id="id3">pip install mysql doesn&#8217;t work</a><ul>
+<li><a class="reference internal" href="#cygwin" id="id4">cygwin</a></li>
+<li><a class="reference internal" href="#linux-ubutu-14-04" id="id5">Linux (ubutu 14.04)</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#pip-install-psycopg2-for-postgreql" id="id6">pip install psycopg2 for postgreql</a></li>
 </ul>
 </div>
 <div class="section" id="getting-theano-to-work-on-windows">
@@ -399,6 +429,55 @@
 <p>Somehow, this rollback to older Ipython version solved it....hacky but will go with this for now... 09-19-2016 (23:21)</p>
 <div class="highlight-python"><div class="highlight"><pre><span></span><span class="c1"># *upgrade* not true, i had ipython 4.5</span>
 <span class="n">pip</span> <span class="n">install</span> <span class="o">--</span><span class="n">user</span> <span class="o">--</span><span class="n">upgrade</span> <span class="n">ipython</span><span class="o">==</span><span class="mf">4.1</span><span class="o">.</span><span class="mi">1</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="pip-install-mysql-doesn-t-work">
+<h2><a class="toc-backref" href="#id3">3.3 pip install mysql doesn&#8217;t work</a></h2>
+<div class="section" id="cygwin">
+<h3><a class="toc-backref" href="#id4">3.3.1 cygwin</a></h3>
+<p>For windows, do this (ref: <a class="reference external" href="http://stackoverflow.com/questions/26866147/mysql-python-install-fatal-error">http://stackoverflow.com/questions/26866147/mysql-python-install-fatal-error</a>)</p>
+<div class="highlight-bash"><div class="highlight"><pre><span></span>pip install MySQL_python-1.2.5-cp27-none-win_amd64.whl --user
+</pre></div>
+</div>
+</div>
+<div class="section" id="linux-ubutu-14-04">
+<h3><a class="toc-backref" href="#id5">3.3.2 Linux (ubutu 14.04)</a></h3>
+<p>On linux, do this (ref: <a class="reference external" href="http://stackoverflow.com/questions/5178292/pip-install-mysql-python-fails-with-environmenterror-mysql-config-not-found">http://stackoverflow.com/questions/5178292/pip-install-mysql-python-fails-with-environmenterror-mysql-config-not-found</a>)</p>
+<div class="highlight-bash"><div class="highlight"><pre><span></span>$ sudo apt-get install libmysqlclient-dev
+</pre></div>
+</div>
+<p>Now everything is in business</p>
+<div class="highlight-bash"><div class="highlight"><pre><span></span>$ pip install mysql --user
+Collecting mysql
+  Using cached mysql-0.0.1.tar.gz
+Collecting MySQL-python <span class="o">(</span>from mysql<span class="o">)</span>
+  Using cached MySQL-python-1.2.5.zip
+Building wheels <span class="k">for</span> collected packages: mysql, MySQL-python
+  Running setup.py bdist_wheel <span class="k">for</span> mysql ... <span class="k">done</span>
+  Stored in directory: /home/takanori/.cache/pip/wheels/3a/83/02/e5a659e28b517bff04eee83a5fed1f36761afe8d591835cd29
+  Running setup.py bdist_wheel <span class="k">for</span> MySQL-python ... <span class="k">done</span>
+  Stored in directory: /home/takanori/.cache/pip/wheels/38/a3/89/ec87e092cfb38450fc91a62562055231deb0049a029054dc62
+Successfully built mysql MySQL-python
+Installing collected packages: MySQL-python, mysql
+Successfully installed MySQL-python-1.2.5 mysql-0.0.1
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="pip-install-psycopg2-for-postgreql">
+<h2><a class="toc-backref" href="#id6">3.4 pip install psycopg2 for postgreql</a></h2>
+<p><a class="reference external" href="http://stackoverflow.com/questions/11618898/pg-config-executable-not-found">http://stackoverflow.com/questions/11618898/pg-config-executable-not-found</a></p>
+<div class="highlight-bash"><div class="highlight"><pre><span></span>$ sudo apt-get install libpq-dev
+$ pip install psycopg2 --user
+Collecting psycopg2
+  Using cached psycopg2-2.6.2.tar.gz
+Building wheels <span class="k">for</span> collected packages: psycopg2
+  Running setup.py bdist_wheel <span class="k">for</span> psycopg2 ... <span class="k">done</span>
+  Stored in directory: /home/takanori/.cache/pip/wheels/49/47/2a/5c3f874990ce267228c2dfe7a0589f3b0651aa590e329ad382
+Successfully built psycopg2
+Installing collected packages: psycopg2
+Successfully installed psycopg2-2.6.2
 </pre></div>
 </div>
 </div>
@@ -423,7 +502,7 @@
 
   <div role="contentinfo">
     <p>
-      Last updated on Sep 22, 2016.
+      Last updated on Sep 27, 2016.
 
     </p>
   </div> 

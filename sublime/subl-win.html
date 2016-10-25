@@ -276,10 +276,11 @@
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../trouble-shooting/ts-sublime.html">2 ts-sublime (<code class="docutils literal"><span class="pre">ts-sublime.rst</span></code>)</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../trouble-shooting/ts-sublime.html#old-notes-from-old-config-master-repos">2.1 Old-notes from old config_master repos</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../trouble-shooting/ts-sublime.html#how-to-remove-startup-session">2.1.1 How to remove startup session</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../trouble-shooting/ts-sublime.html#omni-markup-error">2.1.2 omni-markup error</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../trouble-shooting/ts-sublime.html#get-images-from-goto">2.1.3 get images from goto</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../trouble-shooting/ts-sublime.html#latexing-complaining-cannot-find-pdflatex-command">2.1 Latexing complaining cannot find pdflatex command</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../trouble-shooting/ts-sublime.html#old-notes-from-old-config-master-repos">2.2 Old-notes from old config_master repos</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../trouble-shooting/ts-sublime.html#how-to-remove-startup-session">2.2.1 How to remove startup session</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../trouble-shooting/ts-sublime.html#omni-markup-error">2.2.2 omni-markup error</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../trouble-shooting/ts-sublime.html#get-images-from-goto">2.2.3 get images from goto</a></li>
 </ul>
 </li>
 </ul>
@@ -287,6 +288,16 @@
 <li class="toctree-l2"><a class="reference internal" href="../trouble-shooting/ts-python.html">3 ts-python (<code class="docutils literal"><span class="pre">ts-python.rst</span></code>)</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../trouble-shooting/ts-python.html#getting-theano-to-work-on-windows">3.1 Getting theano to work on Windows</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../trouble-shooting/ts-python.html#no-clue-why-but-jupyter-kernel-keeps-dying">3.2 No clue why, but jupyter kernel keeps dying...</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../trouble-shooting/ts-python.html#pip-install-mysql-doesn-t-work">3.3 pip install mysql doesn&#8217;t work</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../trouble-shooting/ts-python.html#cygwin">3.3.1 cygwin</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../trouble-shooting/ts-python.html#linux-ubutu-14-04">3.3.2 Linux (ubutu 14.04)</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../trouble-shooting/ts-python.html#pip-install-psycopg2-for-postgreql">3.4 pip install psycopg2 for postgreql</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../trouble-shooting/ts-R.html">4 ts-R (<code class="docutils literal"><span class="pre">ts-R.rst</span></code>)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../trouble-shooting/ts-R.html#ggplot2-load-error-on-windows">4.1 ggplot2 load error on windows</a></li>
 </ul>
 </li>
 </ul>
@@ -312,6 +323,24 @@
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../misc/misc-sbia-setups.html">3 Misc symlinks (<code class="docutils literal"><span class="pre">misc-symlinks.rst</span></code>)</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../misc/misc-sbia-setups.html#sql-related">3.1 SQL related</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../test_autodoc.html"><code class="docutils literal"><span class="pre">test_autodoc.rst</span></code></a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../test_autodoc.html#visualization">Visualization</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../test_autodoc.html#imconnmat">imconnmat</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../test_autodoc.html#non-negative-matrix-factorization">Non-negative Matrix Factorization</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../test_autodoc.html#nmf-ls-pnmf-admm">nmf.ls_pnmf_admm</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../test_autodoc.html#nmf-ls-sgpnmf-admm">nmf.LS_SGPNMF_ADMM</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../test_autodoc.html#data-io">Data IO</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../test_autodoc.html#data-tob-pnc-load-bct-measures">data.tob_pnc.load_bct_measures</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../test_autodoc.html#data-tob-pnc-load-diffusion-volume-matfile">data.tob_pnc.load_diffusion_volume_matfile</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../test_autodoc.html#data-tob-pnc-load-connectome-matfile">data.tob_pnc.load_connectome_matfile</a></li>
 </ul>
 </li>
 </ul>
@@ -475,7 +504,9 @@ mklink &quot;c:\users\takanori\AppData\Roaming\Sublime Text 3\Packages\User\add_
 33
 34
 35
-36</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="p">{</span>
+36
+37
+38</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="p">{</span>
 	<span class="nt">&quot;bootstrapped&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
 	<span class="nt">&quot;in_process_packages&quot;</span><span class="p">:</span>
 	<span class="p">[</span>
@@ -487,6 +518,7 @@ mklink &quot;c:\users\takanori\AppData\Roaming\Sublime Text 3\Packages\User\add_
 		<span class="s2">&quot;All Autocomplete&quot;</span><span class="p">,</span>
 		<span class="s2">&quot;BracketHighlighter&quot;</span><span class="p">,</span>
 		<span class="s2">&quot;BufferScroll&quot;</span><span class="p">,</span>
+		<span class="s2">&quot;ColorPicker&quot;</span><span class="p">,</span>
 		<span class="s2">&quot;Diffy&quot;</span><span class="p">,</span>
 		<span class="s2">&quot;FileDiffs&quot;</span><span class="p">,</span>
 		<span class="s2">&quot;Fold Comments&quot;</span><span class="p">,</span>
@@ -495,6 +527,7 @@ mklink &quot;c:\users\takanori\AppData\Roaming\Sublime Text 3\Packages\User\add_
 		<span class="s2">&quot;GitGutter&quot;</span><span class="p">,</span>
 		<span class="s2">&quot;InsertDate&quot;</span><span class="p">,</span>
 		<span class="s2">&quot;Jinja2&quot;</span><span class="p">,</span>
+		<span class="s2">&quot;LaTeX-cwl&quot;</span><span class="p">,</span>
 		<span class="s2">&quot;LaTeXing&quot;</span><span class="p">,</span>
 		<span class="s2">&quot;LaTeXTools&quot;</span><span class="p">,</span>
 		<span class="s2">&quot;OmniMarkupPreviewer&quot;</span><span class="p">,</span>
@@ -644,15 +677,17 @@ mklink &quot;c:\users\takanori\AppData\Roaming\Sublime Text 3\Packages\User\add_
 47
 48
 49
-50</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="gd">--- Package Control_asus.sublime-settings</span>
+50
+51</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="gd">--- Package Control_asus.sublime-settings</span>
 <span class="gi">+++ Package Control_sbia.sublime-settings</span>
-<span class="gu">@@ -5,28 +5,43 @@</span>
+<span class="gu">@@ -5,28 +5,44 @@</span>
  	],
  	&quot;installed_packages&quot;:
  	[
 <span class="gd">-		&quot;Alignment&quot;,</span>
 <span class="gi">+		&quot;AdvancedNewFile&quot;,</span>
  		&quot;All Autocomplete&quot;,
+<span class="gi">+		&quot;Anaconda&quot;,</span>
 <span class="gi">+		&quot;Better Completion&quot;,</span>
 <span class="gi">+		&quot;BetterFindBuffer&quot;,</span>
  		&quot;BracketHighlighter&quot;,
@@ -742,7 +777,7 @@ mklink &quot;c:\users\takanori\AppData\Roaming\Sublime Text 3\Packages\User\add_
 
   <div role="contentinfo">
     <p>
-      Last updated on Sep 22, 2016.
+      Last updated on Oct 25, 2016.
 
     </p>
   </div> 
