@@ -25,7 +25,7 @@ make html
 # cp -r ./source/_static/configs.pdf ./build/html/
 
 
-exit 0
+# exit 0
 # --- browse result in chrome? --- #
 # BROWSE=false
 # if [[ ! BROWSE ]]; then exit 0; fi
