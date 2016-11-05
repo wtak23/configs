@@ -5,7 +5,6 @@
 	],
 	"installed_packages":
 	[
-		"AdvancedNewFile",
 		"All Autocomplete",
 		"Anaconda",
 		"Better Completion",
@@ -31,6 +30,7 @@
 		"PackageResourceViewer",
 		"Pylinter",
 		"R-Box",
+		"R-snippets",
 		"SFTP",
 		"SideBarEnhancements",
 		"SideBarFolders",

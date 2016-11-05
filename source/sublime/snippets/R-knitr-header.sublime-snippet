@@ -1,0 +1,29 @@
+<snippet>
+    <content><![CDATA[
+#' ---
+#' title: "${1:TITLE}"
+#' author: Takanori Watanabe
+#' date: Nov 1, 2016
+#' output:
+#'    html_document:
+#'      keep_md: true
+#'      toc: true
+#'      toc_depth: 2
+#' ---
+
+#'
+#' 
+#' # ${2:HEADING1}
+
+
+#+ results = 'asis'
+
+
+$3
+]]></content>
+    <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+    <tabTrigger>knitr</tabTrigger>
+    <!-- Optional: Set a scope to limit where the snippet will trigger -->
+    <scope>source.r</scope>
+</snippet>
+ <!--  https://gist.github.com/iambibhas/4705378 <- snippet scope -->

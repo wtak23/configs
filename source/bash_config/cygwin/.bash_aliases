@@ -796,3 +796,29 @@ ____bookmark_unsorted____(){ echo "I'm unsorted" ; }
 # PATH=$PATH:"C:\spark-2.0.0-bin-hadoop2.7\bin"
 # PYSPARK_DRIVER_PYTHON=ipython
 # PYSPARK_DRIVER_PYTHON_OPTS="'notebook' pyspark"
+
+
+export PATH=$PATH:"/cygdrive/c/Users/takanori/AppData/Local/Pandoc"
+
+md_knit_to_rst(){
+  # http://stackoverflow.com/questions/965053/extract-filename-and-extension-in-bash
+  filename="${1%.*}"
+
+  # echo "${filename}.rst  ${filename}.md"
+  pandoc --from=markdown --to=rst --output="${filename}.rst" "${filename}.md"
+
+  # replace "code:: r" => "code-block:: R" for proper syntax highlighting
+  sed -i 's/code:: r/code-block:: R/' ${filename}.rst
+
+  # change the header level for the first line (replace "=" with double-quotes)
+  sed -i '2s/=/"/g' ${filename}.rst
+
+  # insert download link to the source R script
+  sed -i "3i The source R script available :download:\`here <${filename}\.R>\`\n" ${filename}.rst
+
+  # insert table styler template (for Sphinx...hacky but gets the job done)
+  sed -i '5i .. include:: /table-template-knitr.rst' ${filename}.rst
+
+  # insert TOC at 7th line
+  sed -i '7i .. contents:: `Contents`\n    :depth: 2\n    :local:\n' ${filename}.rst
+}

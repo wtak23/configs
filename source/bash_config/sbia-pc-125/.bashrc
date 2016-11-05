@@ -17,6 +17,7 @@ ____bookmark_ENVVARS____(){ echo "I'm just a bookmark"; }
 
   export PATH=$PATH:/home/takanori/mybin/Slicer-4.4.0-linux-amd64
   export PATH=$PATH:/home/takanori/mybin/ImageJ
+  export PATH=$PATH:/home/takanori/mybin
 
   export PATH=$PATH:~/mybin/itksnap-3.2.0-20141023-Linux-x86_64/bin/
   export PATH=$PATH:/usr/local/cuda-6.5/bin
@@ -698,3 +699,30 @@ ____bookmark_unsorted____(){ echo "I'm unsorted" ; }
   export PYSPARK_PYTHON=$ANACONDA_ROOT/bin/python
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
+
+
+md_knit_to_rst(){
+  # http://stackoverflow.com/questions/965053/extract-filename-and-extension-in-bash
+  filename="${1%.*}"
+
+  # echo "${filename}.rst  ${filename}.md"
+  pandoc --from=markdown --to=rst --output="${filename}.rst" "${filename}.md"
+
+  # replace "code:: r" => "code-block:: R" for proper syntax highlighting
+  sed -i 's/code:: r/code-block:: R/' ${filename}.rst
+
+  # change the header level for the first line (replace "=" with double-quotes)
+  sed -i '2s/=/"/g' ${filename}.rst
+
+  # insert download link to the source R script
+  sed -i "3i The source R script available :download:\`here <${filename}\.R>\`\n" ${filename}.rst
+
+  # insert table styler template (for Sphinx...hacky but gets the job done)
+  sed -i '5i .. include:: /table-template-knitr.rst' ${filename}.rst
+
+  # insert TOC at 7th line
+  sed -i '7i .. contents:: `Contents`\n    :depth: 2\n    :local:\n' ${filename}.rst
+}
+
+
+alias R_edit_keyboard_shortcuts="subl ${HOME}/.R/rstudio/keybindings/rstudio_bindings.json"

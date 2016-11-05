@@ -1,11 +1,50 @@
-# --- above i modified --- #
-# (below are from default)
+snippet knitr_figsize
+	#+ fig.width=6, fig.height=2.5
+
+#http://stackoverflow.com/questions/13672720/r-command-for-setting-working-directory-to-source-file-location
+snippet setwd_current_file
+	this.dir <- dirname(parent.frame(2)$ofile)
+	setwd(this.dir)
+
+snippet show_error_line
+	options(show.error.locations = TRUE)
+	
+snippet knitr_show_dataframe
+	#+ results = 'asis'
+	print(xtable::xtable(head(${1:dataframe-name},n=10)), type='html')
+	
+snippet knitr_top
+	#' ---
+	#' title: "${1:TITLE}"
+	#' author: 
+	#' date: 
+	#' output:
+	#'    html_document:
+	#'      fig_width: 12
+	#'      fig_height: 12
+	#'      keep_md: true
+	#'      toc: true
+	#'      toc_depth: 2
+	#' ---
+	#'
+	#' **About this document**
+	#' ${2: About the document}
+	#' 
+	#'
+	#' # ${3:HEADER-1}
+	#'
+	
+	$4
+
 snippet rem
 	rm(list = ls())
 
 snippet rm
 	rm(list = ls())
 	
+# --- above i modified --- #
+# (below are from default)
+
 snippet lib
 	library(${1:package})
 

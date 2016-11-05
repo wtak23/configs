@@ -23,7 +23,7 @@
               ]
     }, 
     // switching focus http://stackoverflow.com/questions/11995591/sublime-text-2-show-file-navigation-in-sidebar?rq=1
-    { "keys": ["ctrl+1"], "command": "focus_side_bar" }, // default is ctrl+0
+    // { "keys": ["ctrl+1"], "command": "focus_side_bar" }, // default is ctrl+0
 
     //{ "keys": ["ctrl+d"], "command": "run_macro_file", "args": {"file": "res://Packages/Default/Delete Line.sublime-macro"} },
     { "keys": ["ctrl+shift++"], "command": "header_change_level", "context":
@@ -172,6 +172,7 @@
     //%========================================================================%
     { "keys": ["ctrl+shift+c"], "command": "toggle_comment", "args": { "block": false } },    
 
+    { "keys": ["ctrl+enter"], "command": "run_macro_file", "args": {"file": "Packages/User/test_macro.sublime-macro"} },
     // "shift+enter" to go to new line without indent (gedit like feel)
     // https://www.sublimetext.com/forum/viewtopic.php?f=3&t=2040
     { "keys": ["shift+enter"], "command": "run_macro_file", "args": {"file": "Packages/User/my_shift_newLine.sublime-macro"} }

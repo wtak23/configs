@@ -1,0 +1,9 @@
+<snippet>
+    <content><![CDATA[
+<br/>
+]]></content>
+    <!-- http://stackoverflow.com/questions/10376206/what-is-the-preferred-bash-shebang -->
+    <tabTrigger>br</tabTrigger>
+    <scope>text.html</scope>
+</snippet>
+<!-- https://gist.github.com/iambibhas/4705378 -->
