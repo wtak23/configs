@@ -29,7 +29,7 @@ r.snippets
 **********
 
 .. literalinclude:: ./R/r.snippets
-    :language: bash
+    :language: R
     :linenos:
 
 
@@ -37,5 +37,5 @@ r.snippets
 hotkeys
 *******
 .. literalinclude:: ./R/rstudio_bindings.json
-    :language: bash
+    :language: json
     :linenos:
