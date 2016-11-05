@@ -822,3 +822,5 @@ md_knit_to_rst(){
   # insert TOC at 7th line
   sed -i '7i .. contents:: `Contents`\n    :depth: 2\n    :local:\n' ${filename}.rst
 }
+
+export PYTHONPATH="C:\Users\takanori\Dropbox\work\sbia_work\python\modules"
