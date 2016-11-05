@@ -8,6 +8,7 @@ Sublime Text Setup (``sublime.rst``)
     :name: configs.sublime
     :numbered:
 
+    ./sublime/subl-gen
     ./sublime/subl-sbia
     ./sublime/subl-win
     ./sublime/subl-ref
