@@ -204,6 +204,7 @@
 </ul>
 </li>
 <li class="toctree-l1 current"><a class="current reference internal" href="">R (<code class="docutils literal"><span class="pre">R.rst</span></code>)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#configuring-r-startup">Configuring R startup</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#linux-sylminks">Linux - sylminks</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#windows-symlinks">Windows - symlinks</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#config-file-contents">Config file contents</a><ul>
@@ -402,10 +403,27 @@
             
   <div class="section" id="r-r-rst">
 <h1>R (<code class="docutils literal"><span class="pre">R.rst</span></code>)</h1>
+<div class="section" id="configuring-r-startup">
+<h2>Configuring R startup</h2>
+<ul class="simple">
+<li><a class="reference external" href="https://www.r-bloggers.com/fun-with-rprofile-and-customizing-r-startup/">https://www.r-bloggers.com/fun-with-rprofile-and-customizing-r-startup/</a></li>
+<li><a class="reference external" href="http://www.statmethods.net/interface/customizing.html">http://www.statmethods.net/interface/customizing.html</a></li>
+</ul>
+</div>
 <div class="section" id="linux-sylminks">
 <h2>Linux - sylminks</h2>
-<div class="highlight-bash"><div class="highlight"><pre><span></span><span class="c1"># snippets</span>
+<div class="highlight-bash"><div class="highlight"><pre><span></span><span class="c1"># my functions</span>
+mklink <span class="s2">&quot;C:\Users\takanori\Documents\tak.R&quot;</span> <span class="s2">&quot;C:\Users\takanori\Dropbox\git\configs\source\R\tak.R&quot;</span>
+
+<span class="c1"># snippets</span>
 ln -s ~/Dropbox/git/configs/source/R/r.snippets ~/.R/snippets/r.snippets
+
+<span class="c1"># hotkeys</span>
+ln -s ~/Dropbox/git/configs/source/R/rstudio_bindings.json ~/.R/rstudio/keybindings/rstudio_bindings.json
+
+<span class="c1"># R-startup (see http://www.statmethods.net/interface/customizing.html)</span>
+<span class="c1"># (also see ?Startup() in an R session for detailed info)</span>
+ln -s ~/Dropbox/git/configs/source/R/.Rprofile ~/.Rprofile
 </pre></div>
 </div>
 </div>
@@ -423,7 +441,7 @@ mklink &quot;C:\Users\takanori\Documents\.R\rstudio\keybindings\rstudio_bindings
 <h2>Config file contents</h2>
 <div class="section" id="r-snippets">
 <h3>r.snippets</h3>
-<div class="highlight-bash"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>  1
+<div class="highlight-R"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>  1
   2
   3
   4
@@ -555,22 +573,58 @@ mklink &quot;C:\Users\takanori\Documents\.R\rstudio\keybindings\rstudio_bindings
 130
 131
 132
-133</pre></div></td><td class="code"><div class="highlight"><pre><span></span>snippet knitr_figsize
+133
+134
+135
+136
+137
+138
+139
+140
+141
+142
+143
+144
+145
+146
+147
+148
+149
+150
+151</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="c1"># this one to suppress messages (i use it when loading libraries)</span>
+snippet knitr_suppress_message
+	<span class="c1">#+ warning=FALSE, message=FALSE</span>
+
+snippet knitr_top
+	<span class="o">---</span>
+	title<span class="o">:</span> <span class="s">&quot;Elementary Statistics with R&quot;</span>
+	author<span class="o">:</span> 
+	<span class="kp">date</span><span class="o">:</span> 
+	output<span class="o">:</span>
+	   html_document<span class="o">:</span>
+	     fig_width<span class="o">:</span> <span class="m">8</span>
+	     fig_height<span class="o">:</span> <span class="m">8</span>
+	     keep_md<span class="o">:</span> true
+	     toc<span class="o">:</span> true
+	     toc_depth<span class="o">:</span> <span class="m">2</span>
+	<span class="o">---</span>
+
+snippet knitr_figsize
 	<span class="c1">#+ fig.width=6, fig.height=2.5</span>
 
 <span class="c1">#http://stackoverflow.com/questions/13672720/r-command-for-setting-working-directory-to-source-file-location</span>
 snippet setwd_current_file
-	this.dir &lt;- dirname<span class="o">(</span>parent.frame<span class="o">(</span>2<span class="o">)</span><span class="nv">$ofile</span><span class="o">)</span>
-	setwd<span class="o">(</span>this.dir<span class="o">)</span>
+	this.dir <span class="o">&lt;-</span> <span class="kp">dirname</span><span class="p">(</span><span class="kp">parent.frame</span><span class="p">(</span><span class="m">2</span><span class="p">)</span><span class="o">$</span>ofile<span class="p">)</span>
+	<span class="kp">setwd</span><span class="p">(</span>this.dir<span class="p">)</span>
 
 snippet show_error_line
-	options<span class="o">(</span>show.error.locations <span class="o">=</span> TRUE<span class="o">)</span>
+	<span class="kp">options</span><span class="p">(</span>show.error.locations <span class="o">=</span> <span class="kc">TRUE</span><span class="p">)</span>
 	
 snippet knitr_show_dataframe
 	<span class="c1">#+ results = &#39;asis&#39;</span>
-	print<span class="o">(</span>xtable::xtable<span class="o">(</span>head<span class="o">(</span><span class="si">${</span><span class="nv">1</span><span class="p">:</span><span class="nv">dataframe</span><span class="p">-name</span><span class="si">}</span>,n<span class="o">=</span>10<span class="o">))</span>, <span class="nv">type</span><span class="o">=</span><span class="s1">&#39;html&#39;</span><span class="o">)</span>
+	<span class="kp">print</span><span class="p">(</span>xtable<span class="o">::</span>xtable<span class="p">(</span><span class="kp">head</span><span class="p">(</span><span class="o">$</span><span class="p">{</span><span class="m">1</span><span class="o">:</span>dataframe<span class="o">-</span>name<span class="p">},</span>n<span class="o">=</span><span class="m">10</span><span class="p">)),</span> type<span class="o">=</span><span class="s">&#39;html&#39;</span><span class="p">)</span>
 	
-snippet knitr_top
+snippet knitr_top2
 	<span class="c1">#&#39; ---</span>
 	<span class="c1">#&#39; title: &quot;${1:TITLE}&quot;</span>
 	<span class="c1">#&#39; author: </span>
@@ -591,115 +645,133 @@ snippet knitr_top
 	<span class="c1">#&#39; # ${3:HEADER-1}</span>
 	<span class="c1">#&#39;</span>
 	
-	<span class="nv">$4</span>
+	<span class="o">$</span><span class="m">4</span>
 
 snippet rem
-	rm<span class="o">(</span><span class="nv">list</span> <span class="o">=</span> ls<span class="o">())</span>
+	<span class="kp">rm</span><span class="p">(</span><span class="kt">list</span> <span class="o">=</span> <span class="kp">ls</span><span class="p">())</span>
 
-snippet rm
-	rm<span class="o">(</span><span class="nv">list</span> <span class="o">=</span> ls<span class="o">())</span>
+snippet <span class="kp">rm</span>
+	<span class="kp">rm</span><span class="p">(</span><span class="kt">list</span> <span class="o">=</span> <span class="kp">ls</span><span class="p">())</span>
 	
 <span class="c1"># --- above i modified --- #</span>
 <span class="c1"># (below are from default)</span>
 
 snippet lib
-	library<span class="o">(</span><span class="si">${</span><span class="nv">1</span><span class="p">:</span><span class="nv">package</span><span class="si">}</span><span class="o">)</span>
+	<span class="kn">library</span><span class="p">(</span><span class="o">$</span><span class="p">{</span><span class="m">1</span><span class="o">:</span>package<span class="p">})</span>
 
 snippet req
-	require<span class="o">(</span><span class="si">${</span><span class="nv">1</span><span class="p">:</span><span class="nv">package</span><span class="si">}</span><span class="o">)</span>
+	<span class="kn">require</span><span class="p">(</span><span class="o">$</span><span class="p">{</span><span class="m">1</span><span class="o">:</span>package<span class="p">})</span>
 
 snippet src
-	source<span class="o">(</span><span class="s2">&quot;</span><span class="si">${</span><span class="nv">1</span><span class="p">:</span><span class="nv">file</span><span class="p">.R</span><span class="si">}</span><span class="s2">&quot;</span><span class="o">)</span>
+	<span class="kn">source</span><span class="p">(</span><span class="s">&quot;${1:file.R}&quot;</span><span class="p">)</span>
 
 snippet ret
-	<span class="k">return</span><span class="o">(</span><span class="si">${</span><span class="nv">1</span><span class="p">:</span><span class="nv">code</span><span class="si">}</span><span class="o">)</span>
+	<span class="kr">return</span><span class="p">(</span><span class="o">$</span><span class="p">{</span><span class="m">1</span><span class="o">:</span>code<span class="p">})</span>
 
 snippet mat
-	matrix<span class="o">(</span><span class="si">${</span><span class="nv">1</span><span class="p">:</span><span class="nv">data</span><span class="si">}</span>, <span class="nv">nrow</span> <span class="o">=</span> <span class="si">${</span><span class="nv">2</span><span class="p">:</span><span class="nv">rows</span><span class="si">}</span>, <span class="nv">ncol</span> <span class="o">=</span> <span class="si">${</span><span class="nv">3</span><span class="p">:</span><span class="nv">cols</span><span class="si">}</span><span class="o">)</span>
+	<span class="kt">matrix</span><span class="p">(</span><span class="o">$</span><span class="p">{</span><span class="m">1</span><span class="o">:</span>data<span class="p">},</span> nrow <span class="o">=</span> <span class="o">$</span><span class="p">{</span><span class="m">2</span><span class="o">:</span>rows<span class="p">},</span> ncol <span class="o">=</span> <span class="o">$</span><span class="p">{</span><span class="m">3</span><span class="o">:</span>cols<span class="p">})</span>
 
 snippet sg
-	setGeneric<span class="o">(</span><span class="s2">&quot;</span><span class="si">${</span><span class="nv">1</span><span class="p">:</span><span class="nv">generic</span><span class="si">}</span><span class="s2">&quot;</span>, <span class="k">function</span><span class="o">(</span><span class="si">${</span><span class="nv">2</span><span class="p">:</span><span class="nv">x</span><span class="p">, ...</span><span class="si">}</span><span class="o">)</span> <span class="o">{</span>
-		standardGeneric<span class="o">(</span><span class="s2">&quot;</span><span class="si">${</span><span class="nv">1</span><span class="p">:</span><span class="nv">generic</span><span class="si">}</span><span class="s2">&quot;</span><span class="o">)</span>
-	<span class="o">})</span>
+	setGeneric<span class="p">(</span><span class="s">&quot;${1:generic}&quot;</span><span class="p">,</span> <span class="kr">function</span><span class="p">(</span><span class="o">$</span><span class="p">{</span><span class="m">2</span><span class="o">:</span>x<span class="p">,</span> <span class="kc">...</span><span class="p">})</span> <span class="p">{</span>
+		<span class="kp">standardGeneric</span><span class="p">(</span><span class="s">&quot;${1:generic}&quot;</span><span class="p">)</span>
+	<span class="p">})</span>
 
 snippet sm
-	setMethod<span class="o">(</span><span class="s2">&quot;</span><span class="si">${</span><span class="nv">1</span><span class="p">:</span><span class="nv">generic</span><span class="si">}</span><span class="s2">&quot;</span>, <span class="si">${</span><span class="nv">2</span><span class="p">:</span><span class="nv">class</span><span class="si">}</span>, <span class="k">function</span><span class="o">(</span><span class="si">${</span><span class="nv">2</span><span class="p">:</span><span class="nv">x</span><span class="p">, ...</span><span class="si">}</span><span class="o">)</span> <span class="o">{</span>
-		<span class="si">${</span><span class="nv">0</span><span class="si">}</span>
-	<span class="o">})</span>
+	setMethod<span class="p">(</span><span class="s">&quot;${1:generic}&quot;</span><span class="p">,</span> <span class="o">$</span><span class="p">{</span><span class="m">2</span><span class="o">:</span><span class="kp">class</span><span class="p">},</span> <span class="kr">function</span><span class="p">(</span><span class="o">$</span><span class="p">{</span><span class="m">2</span><span class="o">:</span>x<span class="p">,</span> <span class="kc">...</span><span class="p">})</span> <span class="p">{</span>
+		<span class="o">$</span><span class="p">{</span><span class="m">0</span><span class="p">}</span>
+	<span class="p">})</span>
 
 snippet sc
-	setClass<span class="o">(</span><span class="s2">&quot;</span><span class="si">${</span><span class="nv">1</span><span class="p">:</span><span class="nv">Class</span><span class="si">}</span><span class="s2">&quot;</span>, <span class="nv">slots</span> <span class="o">=</span> c<span class="o">(</span><span class="si">${</span><span class="nv">2</span><span class="p">:</span><span class="nv">name</span><span class="p"> = </span><span class="s2">&quot;type&quot;</span><span class="si">}</span><span class="o">))</span>
+	setClass<span class="p">(</span><span class="s">&quot;${1:Class}&quot;</span><span class="p">,</span> slots <span class="o">=</span> <span class="kt">c</span><span class="p">(</span><span class="o">$</span><span class="p">{</span><span class="m">2</span><span class="o">:</span>name <span class="o">=</span> <span class="s">&quot;type&quot;</span><span class="p">}))</span>
 
-snippet <span class="k">if</span>
-	<span class="k">if</span> <span class="o">(</span><span class="si">${</span><span class="nv">1</span><span class="p">:</span><span class="nv">condition</span><span class="si">}</span><span class="o">)</span> <span class="o">{</span>
-		<span class="si">${</span><span class="nv">0</span><span class="si">}</span>
-	<span class="o">}</span>
+snippet <span class="kr">if</span>
+	<span class="kr">if</span> <span class="p">(</span><span class="o">$</span><span class="p">{</span><span class="m">1</span><span class="o">:</span>condition<span class="p">})</span> <span class="p">{</span>
+		<span class="o">$</span><span class="p">{</span><span class="m">0</span><span class="p">}</span>
+	<span class="p">}</span>
 
 snippet el
-	<span class="k">else</span> <span class="o">{</span>
-		<span class="si">${</span><span class="nv">0</span><span class="si">}</span>
-	<span class="o">}</span>
+	<span class="kr">else</span> <span class="p">{</span>
+		<span class="o">$</span><span class="p">{</span><span class="m">0</span><span class="p">}</span>
+	<span class="p">}</span>
 
 snippet ei
-	<span class="k">else</span> <span class="k">if</span> <span class="o">(</span><span class="si">${</span><span class="nv">1</span><span class="p">:</span><span class="nv">condition</span><span class="si">}</span><span class="o">)</span> <span class="o">{</span>
-		<span class="si">${</span><span class="nv">0</span><span class="si">}</span>
-	<span class="o">}</span>
+	<span class="kr">else</span> <span class="kr">if</span> <span class="p">(</span><span class="o">$</span><span class="p">{</span><span class="m">1</span><span class="o">:</span>condition<span class="p">})</span> <span class="p">{</span>
+		<span class="o">$</span><span class="p">{</span><span class="m">0</span><span class="p">}</span>
+	<span class="p">}</span>
 
 snippet fun
-	<span class="si">${</span><span class="nv">1</span><span class="p">:</span><span class="nv">name</span><span class="si">}</span> &lt;- <span class="k">function</span><span class="o">(</span><span class="si">${</span><span class="nv">2</span><span class="p">:</span><span class="nv">variables</span><span class="si">}</span><span class="o">)</span> <span class="o">{</span>
-		<span class="si">${</span><span class="nv">0</span><span class="si">}</span>
-	<span class="o">}</span>
+	<span class="o">$</span><span class="p">{</span><span class="m">1</span><span class="o">:</span>name<span class="p">}</span> <span class="o">&lt;-</span> <span class="kr">function</span><span class="p">(</span><span class="o">$</span><span class="p">{</span><span class="m">2</span><span class="o">:</span>variables<span class="p">})</span> <span class="p">{</span>
+		<span class="o">$</span><span class="p">{</span><span class="m">0</span><span class="p">}</span>
+	<span class="p">}</span>
 
-snippet <span class="k">for</span>
-	<span class="k">for</span> <span class="o">(</span><span class="si">${</span><span class="nv">1</span><span class="p">:</span><span class="nv">variable</span><span class="si">}</span> in <span class="si">${</span><span class="nv">2</span><span class="p">:</span><span class="nv">vector</span><span class="si">}</span><span class="o">)</span> <span class="o">{</span>
-		<span class="si">${</span><span class="nv">0</span><span class="si">}</span>
-	<span class="o">}</span>
+snippet <span class="kr">for</span>
+	<span class="kr">for</span> <span class="p">(</span><span class="o">$</span><span class="p">{</span><span class="m">1</span><span class="o">:</span>variable<span class="p">}</span> <span class="kr">in</span> <span class="o">$</span><span class="p">{</span><span class="m">2</span><span class="o">:</span><span class="kt">vector</span><span class="p">})</span> <span class="p">{</span>
+		<span class="o">$</span><span class="p">{</span><span class="m">0</span><span class="p">}</span>
+	<span class="p">}</span>
 
-snippet <span class="k">while</span>
-	<span class="k">while</span> <span class="o">(</span><span class="si">${</span><span class="nv">1</span><span class="p">:</span><span class="nv">condition</span><span class="si">}</span><span class="o">)</span> <span class="o">{</span>
-		<span class="si">${</span><span class="nv">0</span><span class="si">}</span>
-	<span class="o">}</span>
+snippet <span class="kr">while</span>
+	<span class="kr">while</span> <span class="p">(</span><span class="o">$</span><span class="p">{</span><span class="m">1</span><span class="o">:</span>condition<span class="p">})</span> <span class="p">{</span>
+		<span class="o">$</span><span class="p">{</span><span class="m">0</span><span class="p">}</span>
+	<span class="p">}</span>
 
-snippet switch
-	switch <span class="o">(</span><span class="si">${</span><span class="nv">1</span><span class="p">:</span><span class="nv">object</span><span class="si">}</span>,
-		<span class="si">${</span><span class="nv">2</span><span class="p">:</span><span class="nv">case</span><span class="si">}</span> <span class="o">=</span> <span class="si">${</span><span class="nv">3</span><span class="p">:</span><span class="nv">action</span><span class="si">}</span>
-	<span class="o">)</span>
+snippet <span class="kr">switch</span>
+	<span class="kr">switch</span> <span class="p">(</span><span class="o">$</span><span class="p">{</span><span class="m">1</span><span class="o">:</span>object<span class="p">},</span>
+		<span class="o">$</span><span class="p">{</span><span class="m">2</span><span class="o">:</span>case<span class="p">}</span> <span class="o">=</span> <span class="o">$</span><span class="p">{</span><span class="m">3</span><span class="o">:</span>action<span class="p">}</span>
+	<span class="p">)</span>
 
-snippet apply
-	apply<span class="o">(</span><span class="si">${</span><span class="nv">1</span><span class="p">:</span><span class="nv">array</span><span class="si">}</span>, <span class="si">${</span><span class="nv">2</span><span class="p">:</span><span class="nv">margin</span><span class="si">}</span>, <span class="si">${</span><span class="nv">3</span><span class="p">:...</span><span class="si">}</span><span class="o">)</span>
+snippet <span class="kp">apply</span>
+	<span class="kp">apply</span><span class="p">(</span><span class="o">$</span><span class="p">{</span><span class="m">1</span><span class="o">:</span><span class="kt">array</span><span class="p">},</span> <span class="o">$</span><span class="p">{</span><span class="m">2</span><span class="o">:</span>margin<span class="p">},</span> <span class="o">$</span><span class="p">{</span><span class="m">3</span><span class="o">:</span><span class="kc">...</span><span class="p">})</span>
 
-snippet lapply
-	lapply<span class="o">(</span><span class="si">${</span><span class="nv">1</span><span class="p">:</span><span class="nv">list</span><span class="si">}</span>, <span class="si">${</span><span class="nv">2</span><span class="p">:</span><span class="nv">function</span><span class="si">}</span><span class="o">)</span>
+snippet <span class="kp">lapply</span>
+	<span class="kp">lapply</span><span class="p">(</span><span class="o">$</span><span class="p">{</span><span class="m">1</span><span class="o">:</span><span class="kt">list</span><span class="p">},</span> <span class="o">$</span><span class="p">{</span><span class="m">2</span><span class="o">:</span><span class="kr">function</span><span class="p">})</span>
 
-snippet sapply
-	sapply<span class="o">(</span><span class="si">${</span><span class="nv">1</span><span class="p">:</span><span class="nv">list</span><span class="si">}</span>, <span class="si">${</span><span class="nv">2</span><span class="p">:</span><span class="nv">function</span><span class="si">}</span><span class="o">)</span>
+snippet <span class="kp">sapply</span>
+	<span class="kp">sapply</span><span class="p">(</span><span class="o">$</span><span class="p">{</span><span class="m">1</span><span class="o">:</span><span class="kt">list</span><span class="p">},</span> <span class="o">$</span><span class="p">{</span><span class="m">2</span><span class="o">:</span><span class="kr">function</span><span class="p">})</span>
 
-snippet mapply
-	mapply<span class="o">(</span><span class="si">${</span><span class="nv">1</span><span class="p">:</span><span class="nv">function</span><span class="si">}</span>, <span class="si">${</span><span class="nv">2</span><span class="p">:...</span><span class="si">}</span><span class="o">)</span>
+snippet <span class="kp">mapply</span>
+	<span class="kp">mapply</span><span class="p">(</span><span class="o">$</span><span class="p">{</span><span class="m">1</span><span class="o">:</span><span class="kr">function</span><span class="p">},</span> <span class="o">$</span><span class="p">{</span><span class="m">2</span><span class="o">:</span><span class="kc">...</span><span class="p">})</span>
 
-snippet tapply
-	tapply<span class="o">(</span><span class="si">${</span><span class="nv">1</span><span class="p">:</span><span class="nv">vector</span><span class="si">}</span>, <span class="si">${</span><span class="nv">2</span><span class="p">:</span><span class="nv">index</span><span class="si">}</span>, <span class="si">${</span><span class="nv">3</span><span class="p">:</span><span class="nv">function</span><span class="si">}</span><span class="o">)</span>
+snippet <span class="kp">tapply</span>
+	<span class="kp">tapply</span><span class="p">(</span><span class="o">$</span><span class="p">{</span><span class="m">1</span><span class="o">:</span><span class="kt">vector</span><span class="p">},</span> <span class="o">$</span><span class="p">{</span><span class="m">2</span><span class="o">:</span>index<span class="p">},</span> <span class="o">$</span><span class="p">{</span><span class="m">3</span><span class="o">:</span><span class="kr">function</span><span class="p">})</span>
 
-snippet vapply
-	vapply<span class="o">(</span><span class="si">${</span><span class="nv">1</span><span class="p">:</span><span class="nv">list</span><span class="si">}</span>, <span class="si">${</span><span class="nv">2</span><span class="p">:</span><span class="nv">function</span><span class="si">}</span>, FUN.VALUE <span class="o">=</span> <span class="si">${</span><span class="nv">3</span><span class="p">:</span><span class="nv">type</span><span class="si">}</span>, <span class="si">${</span><span class="nv">4</span><span class="p">:...</span><span class="si">}</span><span class="o">)</span>
+snippet <span class="kp">vapply</span>
+	<span class="kp">vapply</span><span class="p">(</span><span class="o">$</span><span class="p">{</span><span class="m">1</span><span class="o">:</span><span class="kt">list</span><span class="p">},</span> <span class="o">$</span><span class="p">{</span><span class="m">2</span><span class="o">:</span><span class="kr">function</span><span class="p">},</span> FUN.VALUE <span class="o">=</span> <span class="o">$</span><span class="p">{</span><span class="m">3</span><span class="o">:</span>type<span class="p">},</span> <span class="o">$</span><span class="p">{</span><span class="m">4</span><span class="o">:</span><span class="kc">...</span><span class="p">})</span>
 
-snippet rapply
-	rapply<span class="o">(</span><span class="si">${</span><span class="nv">1</span><span class="p">:</span><span class="nv">list</span><span class="si">}</span>, <span class="si">${</span><span class="nv">2</span><span class="p">:</span><span class="nv">function</span><span class="si">}</span><span class="o">)</span>
+snippet <span class="kp">rapply</span>
+	<span class="kp">rapply</span><span class="p">(</span><span class="o">$</span><span class="p">{</span><span class="m">1</span><span class="o">:</span><span class="kt">list</span><span class="p">},</span> <span class="o">$</span><span class="p">{</span><span class="m">2</span><span class="o">:</span><span class="kr">function</span><span class="p">})</span>
 
 snippet ts
-	<span class="sb">`</span>r paste<span class="o">(</span><span class="s2">&quot;#&quot;</span>, date<span class="o">()</span>, <span class="s2">&quot;------------------------------\n&quot;</span><span class="o">)</span><span class="sb">`</span>
+	<span class="sb">`r paste(&quot;#&quot;, date(), &quot;------------------------------\n&quot;)`</span>
 </pre></div>
 </td></tr></table></div>
 </div>
 <div class="section" id="hotkeys">
 <h3>hotkeys</h3>
-<div class="highlight-bash"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
-2
-3
-4</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="o">{</span>
-    <span class="s2">&quot;saveSourceDocAs&quot;</span> : <span class="s2">&quot;Ctrl+Shift+S&quot;</span>,
-    <span class="s2">&quot;sourceActiveDocument&quot;</span> : <span class="s2">&quot;&quot;</span>
-<span class="o">}</span>
+<div class="highlight-json"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="p">{</span>
+    <span class="nt">&quot;executeCode&quot;</span> <span class="p">:</span> <span class="s2">&quot;Ctrl+Enter&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;executeCurrentFunction&quot;</span> <span class="p">:</span> <span class="s2">&quot;Ctrl+Alt+F&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;executeCurrentSection&quot;</span> <span class="p">:</span> <span class="s2">&quot;Alt+1&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;jumpToMatching&quot;</span> <span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;modifyKeyboardShortcuts&quot;</span> <span class="p">:</span> <span class="s2">&quot;Alt+3&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;saveSourceDocAs&quot;</span> <span class="p">:</span> <span class="s2">&quot;Ctrl+Shift+S&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;showOptions&quot;</span> <span class="p">:</span> <span class="s2">&quot;Alt+2&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;sourceActiveDocument&quot;</span> <span class="p">:</span> <span class="s2">&quot;Shift+Alt+S&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;sourceNavigateBack&quot;</span> <span class="p">:</span> <span class="s2">&quot;Ctrl+Tab&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;sourceNavigateForward&quot;</span> <span class="p">:</span> <span class="s2">&quot;Ctrl+Shift+Tab&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;switchToTab&quot;</span> <span class="p">:</span> <span class="s2">&quot;Ctrl+E&quot;</span>
+<span class="p">}</span>
 </pre></div>
 </td></tr></table></div>
 </div>
@@ -725,7 +797,7 @@ snippet ts
 
   <div role="contentinfo">
     <p>
-      Last updated on Nov 05, 2016.
+      Last updated on Nov 26, 2016.
 
     </p>
   </div> 
