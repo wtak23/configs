@@ -1,3 +1,31 @@
+snippet switch
+	switch (${1:object},
+		${2:case} = ${3:action}
+	)
+	
+snippet dashed_equal
+	# ============================================================================ #
+	# ${1}
+	# ============================================================================ #
+	${2}
+	
+snippet knitr_suppress_message
+	#+ warning=FALSE, message=FALSE
+	
+snippet knitr_top
+	---
+	title: "Elementary Statistics with R"
+	author:
+	date:
+	output:
+		html_document:
+			fig_widht: 8
+			fig_height: 8
+			keep_md: true
+			toc: true
+			toc_depth: 2
+	---
+	
 snippet knitr_figsize
 	#+ fig.width=6, fig.height=2.5
 
@@ -13,7 +41,7 @@ snippet knitr_show_dataframe
 	#+ results = 'asis'
 	print(xtable::xtable(head(${1:dataframe-name},n=10)), type='html')
 	
-snippet knitr_top
+snippet knitr_top2
 	#' ---
 	#' title: "${1:TITLE}"
 	#' author: 
@@ -102,11 +130,6 @@ snippet while
 	while (${1:condition}) {
 		${0}
 	}
-
-snippet switch
-	switch (${1:object},
-		${2:case} = ${3:action}
-	)
 
 snippet apply
 	apply(${1:array}, ${2:margin}, ${3:...})

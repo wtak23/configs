@@ -62,12 +62,13 @@
 		"build_published",
 		"ignore_dir"
 	],
-	"font_size": 8,
+	"font_size": 12,
 	"gutter": true,
 	"highlight_line": true,
 	"highlight_modified_tabs": true,
 	"ignored_packages":
 	[
+		"BracketHighlighter",
 		"Gist",
 		"GitGutter",
 		"Local History",

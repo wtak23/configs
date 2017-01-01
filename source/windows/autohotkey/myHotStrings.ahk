@@ -182,8 +182,9 @@ PasteVString(String)
         String=
         (
 Takanori Watanabe
-PhD Candidate, University of Michigan - Ann Arbor
-Department of EECS (Machine Learning)
+Postdoctoral Research Fellow
+Center for Biomedical Image Computing and Analytics
+Perelman School of Medicine, University of Pennsylvania
 http://www.takwatanabe.me
         )
         PasteString(String)
@@ -2664,6 +2665,7 @@ int main()
 ; ...penn related
 ;------------------------------------------------------------------------------;
 :*:#upenn::University of Pennsylvania
+:*:#pennmed::Perelman School of Medicine at the University of Pennsylvania
 :*:#philly::Philadelphia
 :*:#phil::Philadelphia
 :*:#mass::Massachusetts

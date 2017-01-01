@@ -726,3 +726,19 @@ md_knit_to_rst(){
 
 
 alias R_edit_keyboard_shortcuts="subl ${HOME}/.R/rstudio/keybindings/rstudio_bindings.json"
+
+symlink_matplotlib(){
+  # http://takwatanabe.me/configs/python/py-sbia.html#matplotlibrc
+
+  # get path to rc file
+  ipython -c "import matplotlib as mpl; from os.path import dirname; print dirname(mpl.matplotlib_fname())"
+
+  #=========================================================================#
+  # create symlink
+  #=========================================================================#
+  SOURCE="${HOME}/Dropbox/git/configs/source/python/sbia"
+  MPL_TARGET=$(ipython -c "import matplotlib as mpl; from os.path import dirname; print dirname(mpl.matplotlib_fname())")
+
+  # matlotlibrc symlink
+  ln -fs "${SOURCE}/matplotlibrc" "${MPL_TARGET}"
+}

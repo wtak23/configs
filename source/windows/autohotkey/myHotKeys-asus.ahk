@@ -299,7 +299,8 @@ MButton & r::
 if GetKeyState("Shift","P")
     RunOrActivate("control.exe desk.cpl,Settings,@Settings")
 else
-    RunOrActivate("C:\Program Files (x86)\SumatraPDF\SumatraPDF.exe")
+    ; RunOrActivate("C:\Program Files (x86)\SumatraPDF\SumatraPDF.exe")
+    RunOrActivate("C:\Program Files\RStudio\bin\rstudio.exe")
 return
 
 #!r::RunOrActivate("C:\Program Files (x86)\SumatraPDF\SumatraPDF.exe") ; alt+win+r

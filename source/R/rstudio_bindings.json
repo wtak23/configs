@@ -1,4 +1,13 @@
 {
+    "executeCode" : "Ctrl+Enter",
+    "executeCurrentFunction" : "",
+    "executeCurrentSection" : "Ctrl+Shift+T",
+    "jumpToMatching" : "",
+    "modifyKeyboardShortcuts" : "Alt+3",
     "saveSourceDocAs" : "Ctrl+Shift+S",
-    "sourceActiveDocument" : ""
+    "showOptions" : "Alt+2",
+    "sourceActiveDocument" : "Shift+Alt+S",
+    "sourceNavigateBack" : "Ctrl+Tab",
+    "sourceNavigateForward" : "Ctrl+Shift+Tab",
+    "switchToTab" : "Ctrl+E"
 }
