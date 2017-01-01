@@ -591,24 +591,39 @@ mklink &quot;C:\Users\takanori\Documents\.R\rstudio\keybindings\rstudio_bindings
 148
 149
 150
-151</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="c1"># this one to suppress messages (i use it when loading libraries)</span>
+151
+152
+153
+154
+155
+156</pre></div></td><td class="code"><div class="highlight"><pre><span></span>snippet <span class="kr">switch</span>
+	<span class="kr">switch</span> <span class="p">(</span><span class="o">$</span><span class="p">{</span><span class="m">1</span><span class="o">:</span>object<span class="p">},</span>
+		<span class="o">$</span><span class="p">{</span><span class="m">2</span><span class="o">:</span>case<span class="p">}</span> <span class="o">=</span> <span class="o">$</span><span class="p">{</span><span class="m">3</span><span class="o">:</span>action<span class="p">}</span>
+	<span class="p">)</span>
+	
+snippet dashed_equal
+	<span class="c1"># ============================================================================ #</span>
+	<span class="c1"># ${1}</span>
+	<span class="c1"># ============================================================================ #</span>
+	<span class="o">$</span><span class="p">{</span><span class="m">2</span><span class="p">}</span>
+	
 snippet knitr_suppress_message
 	<span class="c1">#+ warning=FALSE, message=FALSE</span>
-
+	
 snippet knitr_top
 	<span class="o">---</span>
 	title<span class="o">:</span> <span class="s">&quot;Elementary Statistics with R&quot;</span>
-	author<span class="o">:</span> 
-	<span class="kp">date</span><span class="o">:</span> 
+	author<span class="o">:</span>
+	<span class="kp">date</span><span class="o">:</span>
 	output<span class="o">:</span>
-	   html_document<span class="o">:</span>
-	     fig_width<span class="o">:</span> <span class="m">8</span>
-	     fig_height<span class="o">:</span> <span class="m">8</span>
-	     keep_md<span class="o">:</span> true
-	     toc<span class="o">:</span> true
-	     toc_depth<span class="o">:</span> <span class="m">2</span>
+		html_document<span class="o">:</span>
+			fig_widht<span class="o">:</span> <span class="m">8</span>
+			fig_height<span class="o">:</span> <span class="m">8</span>
+			keep_md<span class="o">:</span> true
+			toc<span class="o">:</span> true
+			toc_depth<span class="o">:</span> <span class="m">2</span>
 	<span class="o">---</span>
-
+	
 snippet knitr_figsize
 	<span class="c1">#+ fig.width=6, fig.height=2.5</span>
 
@@ -714,11 +729,6 @@ snippet <span class="kr">while</span>
 		<span class="o">$</span><span class="p">{</span><span class="m">0</span><span class="p">}</span>
 	<span class="p">}</span>
 
-snippet <span class="kr">switch</span>
-	<span class="kr">switch</span> <span class="p">(</span><span class="o">$</span><span class="p">{</span><span class="m">1</span><span class="o">:</span>object<span class="p">},</span>
-		<span class="o">$</span><span class="p">{</span><span class="m">2</span><span class="o">:</span>case<span class="p">}</span> <span class="o">=</span> <span class="o">$</span><span class="p">{</span><span class="m">3</span><span class="o">:</span>action<span class="p">}</span>
-	<span class="p">)</span>
-
 snippet <span class="kp">apply</span>
 	<span class="kp">apply</span><span class="p">(</span><span class="o">$</span><span class="p">{</span><span class="m">1</span><span class="o">:</span><span class="kt">array</span><span class="p">},</span> <span class="o">$</span><span class="p">{</span><span class="m">2</span><span class="o">:</span>margin<span class="p">},</span> <span class="o">$</span><span class="p">{</span><span class="m">3</span><span class="o">:</span><span class="kc">...</span><span class="p">})</span>
 
@@ -761,8 +771,8 @@ snippet ts
 12
 13</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="p">{</span>
     <span class="nt">&quot;executeCode&quot;</span> <span class="p">:</span> <span class="s2">&quot;Ctrl+Enter&quot;</span><span class="p">,</span>
-    <span class="nt">&quot;executeCurrentFunction&quot;</span> <span class="p">:</span> <span class="s2">&quot;Ctrl+Alt+F&quot;</span><span class="p">,</span>
-    <span class="nt">&quot;executeCurrentSection&quot;</span> <span class="p">:</span> <span class="s2">&quot;Alt+1&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;executeCurrentFunction&quot;</span> <span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;executeCurrentSection&quot;</span> <span class="p">:</span> <span class="s2">&quot;Ctrl+Shift+T&quot;</span><span class="p">,</span>
     <span class="nt">&quot;jumpToMatching&quot;</span> <span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
     <span class="nt">&quot;modifyKeyboardShortcuts&quot;</span> <span class="p">:</span> <span class="s2">&quot;Alt+3&quot;</span><span class="p">,</span>
     <span class="nt">&quot;saveSourceDocAs&quot;</span> <span class="p">:</span> <span class="s2">&quot;Ctrl+Shift+S&quot;</span><span class="p">,</span>
@@ -797,7 +807,7 @@ snippet ts
 
   <div role="contentinfo">
     <p>
-      Last updated on Nov 26, 2016.
+      Last updated on Jan 01, 2017.
 
     </p>
   </div> 

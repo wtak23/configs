@@ -1166,7 +1166,23 @@ ln -s <span class="s2">&quot;</span><span class="si">${</span><span class="nv">S
 725
 726
 727
-728</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="c1">#*****************************************************************************#</span>
+728
+729
+730
+731
+732
+733
+734
+735
+736
+737
+738
+739
+740
+741
+742
+743
+744</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="c1">#*****************************************************************************#</span>
 <span class="c1"># Did a cleanup on 09-02-2016</span>
 <span class="c1"># (the indentation is to allow code-folding in sublime-text)</span>
 <span class="c1">#*****************************************************************************#</span>
@@ -1894,6 +1910,22 @@ md_knit_to_rst<span class="o">(){</span>
 
 
 <span class="nb">alias</span> <span class="nv">R_edit_keyboard_shortcuts</span><span class="o">=</span><span class="s2">&quot;subl </span><span class="si">${</span><span class="nv">HOME</span><span class="si">}</span><span class="s2">/.R/rstudio/keybindings/rstudio_bindings.json&quot;</span>
+
+symlink_matplotlib<span class="o">(){</span>
+  <span class="c1"># http://takwatanabe.me/configs/python/py-sbia.html#matplotlibrc</span>
+
+  <span class="c1"># get path to rc file</span>
+  ipython -c <span class="s2">&quot;import matplotlib as mpl; from os.path import dirname; print dirname(mpl.matplotlib_fname())&quot;</span>
+
+  <span class="c1">#=========================================================================#</span>
+  <span class="c1"># create symlink</span>
+  <span class="c1">#=========================================================================#</span>
+  <span class="nv">SOURCE</span><span class="o">=</span><span class="s2">&quot;</span><span class="si">${</span><span class="nv">HOME</span><span class="si">}</span><span class="s2">/Dropbox/git/configs/source/python/sbia&quot;</span>
+  <span class="nv">MPL_TARGET</span><span class="o">=</span><span class="k">$(</span>ipython -c <span class="s2">&quot;import matplotlib as mpl; from os.path import dirname; print dirname(mpl.matplotlib_fname())&quot;</span><span class="k">)</span>
+
+  <span class="c1"># matlotlibrc symlink</span>
+  ln -fs <span class="s2">&quot;</span><span class="si">${</span><span class="nv">SOURCE</span><span class="si">}</span><span class="s2">/matplotlibrc&quot;</span> <span class="s2">&quot;</span><span class="si">${</span><span class="nv">MPL_TARGET</span><span class="si">}</span><span class="s2">&quot;</span>
+<span class="o">}</span>
 </pre></div>
 </td></tr></table></div>
 </div>
@@ -2196,7 +2228,7 @@ md_knit_to_rst<span class="o">(){</span>
 
   <div role="contentinfo">
     <p>
-      Last updated on Nov 26, 2016.
+      Last updated on Jan 01, 2017.
 
     </p>
   </div> 

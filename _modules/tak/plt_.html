@@ -867,7 +867,7 @@
     <span class="sd">&quot;&quot;&quot; My figure generator with control over figure size and position</span>
 
 <span class="sd">    Usage</span>
-<span class="sd">    -------</span>
+<span class="sd">    -----</span>
 <span class="sd">    &gt;&gt;&gt; fig = tw.figure(&#39;full&#39;)</span>
 
 <span class="sd">    Parameter</span>
@@ -900,7 +900,7 @@
 <span class="sd">    figure number</span>
 
 <span class="sd">    Reference</span>
-<span class="sd">    -----------</span>
+<span class="sd">    ---------</span>
 <span class="sd">    - http://doc.qt.io/qt-4.8/qwidget.html for api</span>
 <span class="sd">    - http://stackoverflow.com/questions/7449585/how-do-you-set-the-absolute-position-of-figure-windows-with-matplotlib</span>
 <span class="sd">    &quot;&quot;&quot;</span>
@@ -914,12 +914,11 @@
     <span class="c1">#%%</span>
     <span class="k">return</span> <span class="n">fig</span>
 
-
 <span class="k">def</span> <span class="nf">fig_set_geom</span><span class="p">(</span><span class="n">pos</span> <span class="o">=</span> <span class="n">_screen_default</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot; Set figure dimension</span>
 
 <span class="sd">    Usage</span>
-<span class="sd">    -------</span>
+<span class="sd">    -----</span>
 <span class="sd">    &gt;&gt;&gt; plt.figure()</span>
 <span class="sd">    &gt;&gt;&gt; tw.fig_set_geom(&#39;full&#39;)</span>
 
@@ -945,9 +944,8 @@
 <span class="sd">        - ``&#39;bl&#39;`` or ``&#39;bottomleft&#39;``</span>
 <span class="sd">        - ``&#39;br&#39;`` or ``&#39;bottomright&#39;``</span>
 
-
 <span class="sd">    Reference</span>
-<span class="sd">    -----------</span>
+<span class="sd">    ---------</span>
 <span class="sd">    - http://doc.qt.io/qt-4.8/qwidget.html for api</span>
 <span class="sd">    - http://stackoverflow.com/questions/7449585/how-do-you-set-the-absolute-position-of-figure-windows-with-matplotlib</span>
 <span class="sd">    &quot;&quot;&quot;</span>
@@ -1016,7 +1014,7 @@
 <span class="sd">            return x,y,dx,dy</span>
 
 <span class="sd">    Reference</span>
-<span class="sd">    -----------</span>
+<span class="sd">    ---------</span>
 <span class="sd">    - http://doc.qt.io/qt-4.8/qwidget.html for api</span>
 <span class="sd">    - http://stackoverflow.com/questions/7449585/how-do-you-set-the-absolute-position-of-figure-windows-with-matplotlib</span>
 <span class="sd">    &quot;&quot;&quot;</span>
@@ -1258,7 +1256,6 @@
             <span class="n">plt</span><span class="o">.</span><span class="n">colorbar</span><span class="p">(</span><span class="n">plt</span><span class="o">.</span><span class="n">gci</span><span class="p">(),</span><span class="n">fraction</span><span class="o">=</span><span class="mf">0.046</span><span class="p">,</span> <span class="n">pad</span><span class="o">=</span><span class="mf">0.04</span><span class="p">,</span><span class="n">orientation</span><span class="o">=</span><span class="n">orientation</span><span class="p">)</span>
         <span class="k">elif</span> <span class="n">orientation</span><span class="o">==</span><span class="s1">&#39;horizontal&#39;</span><span class="p">:</span>
             <span class="n">plt</span><span class="o">.</span><span class="n">colorbar</span><span class="p">(</span><span class="n">plt</span><span class="o">.</span><span class="n">gci</span><span class="p">(),</span><span class="n">fraction</span><span class="o">=</span><span class="mf">0.046</span><span class="p">,</span> <span class="n">pad</span><span class="o">=-</span><span class="mf">0.25</span><span class="p">,</span><span class="n">orientation</span><span class="o">=</span><span class="n">orientation</span><span class="p">)</span>
-        
 
     <span class="k">if</span> <span class="n">clim</span> <span class="ow">is</span> <span class="ow">not</span> <span class="bp">None</span><span class="p">:</span>
         <span class="n">plt</span><span class="o">.</span><span class="n">gci</span><span class="p">()</span><span class="o">.</span><span class="n">set_clim</span><span class="p">(</span><span class="n">clim</span><span class="p">)</span>
@@ -1275,9 +1272,7 @@
     <span class="c1"># put xticks on top (not bottom)</span>
     <span class="n">ax</span><span class="o">.</span><span class="n">tick_params</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="s1">&#39;x&#39;</span><span class="p">,</span><span class="n">which</span><span class="o">=</span><span class="s1">&#39;major&#39;</span><span class="p">,</span><span class="n">labeltop</span><span class="o">=</span><span class="s1">&#39;on&#39;</span><span class="p">,</span><span class="n">labelbottom</span><span class="o">=</span><span class="s1">&#39;off&#39;</span><span class="p">)</span>
     <span class="c1">#plt.tick_params(axis=&#39;x&#39;,which=&#39;major&#39;,labeltop=&#39;off&#39;,labelbottom=&#39;on&#39;)</span>
-    
     <span class="k">return</span> <span class="n">img</span>
-
 
 <span class="k">def</span> <span class="nf">imtakk</span><span class="p">(</span><span class="n">im</span><span class="p">,</span><span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot; for kwargs, see imtak&quot;&quot;&quot;</span>
@@ -2024,7 +2019,7 @@
 
   <div role="contentinfo">
     <p>
-      Last updated on Nov 26, 2016.
+      Last updated on Jan 01, 2017.
 
     </p>
   </div> 
